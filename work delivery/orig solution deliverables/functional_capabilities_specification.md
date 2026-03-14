@@ -6,9 +6,9 @@ A Functional Capabilities document defines **WHAT** the solution must be able to
 
 Functional Capabilities describe business abilities. They do not describe workflows, sequencing, implementation design, technical details, or test cases.
 
-## 2. Role in the Project Delivery Framework
+## 2. Role in the Work Delivery Framework
 
-Functional Capabilities define the approval-level functional scope in **Stage 2 (Delivery Definition)**.
+Functional Capabilities define the approval-level functional scope in **Stage 2 (Work Definition)**.
 
 They serve as the baseline from which:
 

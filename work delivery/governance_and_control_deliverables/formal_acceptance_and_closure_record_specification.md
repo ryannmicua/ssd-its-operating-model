@@ -42,6 +42,7 @@ Must include:
 - record version or date
 - prepared by
 - closure status
+- statement of the closure boundary, such as full initiative closure, phase closure, or closure by exception
 
 This section identifies the closure decision record.
 
@@ -63,12 +64,15 @@ Use controlled status values such as:
 
 This table shows whether closure is actually supported by prior acceptance.
 
+If a required deliverable or domain was excluded from closure, the reason and authorizing decision should be visible.
+
 ### 3. Residual obligations and transition items
 
 Must include:
 
 - unresolved items, transition actions, contractual obligations, or residual conditions that remain after closure
 - owner for each material follow-up item
+- due date or next review point for each material follow-up item where timing matters
 
 This section makes it clear what closure does and does not mean.
 
@@ -80,6 +84,7 @@ Must include:
 - named closing authority
 - decision date
 - approval reference
+- explicit statement when closure is being granted despite outstanding items, risks, or conditions
 
 This section is the formal act of closure.
 
@@ -90,6 +95,7 @@ Keep entries short:
 - `Acceptance reference`: point to the authoritative acceptance record, not a narrative summary
 - `Open conditions`: record only what still matters after closure
 - `Closed by exception`: use only when formal authority has approved closure despite outstanding items
+- Residual obligations should remain actionable, with clear owners and due dates rather than general comments
 
 ## What to Keep Out
 
@@ -115,6 +121,7 @@ The record is normally finalized once closure is approved. If closure is conditi
 
 - Does the record show clearly that required acceptance happened before closure?
 - Are residual obligations or exceptions explicit?
+- Does the record make it obvious whether closure is full, phased, or exception-based?
 - Is the closing decision attributable to a named authority and date?
 - Does the artifact avoid becoming a full narrative history of the initiative?
 

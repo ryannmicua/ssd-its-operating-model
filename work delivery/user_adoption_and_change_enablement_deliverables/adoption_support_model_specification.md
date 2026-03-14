@@ -50,6 +50,7 @@ Must include:
 - support channels and points of contact
 - hypercare or transition assumptions where relevant
 - ownership of support actions and decision-making
+- how and when support responsibility shifts from hypercare or project-led support into steady-state support
 
 This section shows how users access support and who is responsible for helping them.
 
@@ -60,6 +61,7 @@ Must include:
 - issue triage expectations
 - escalation routes
 - known adoption risks and mitigation or support approach
+- any user groups requiring targeted support because of higher change impact, lower readiness, or business criticality
 
 This section ensures that user issues move predictably when they cannot be resolved at first contact.
 
@@ -98,6 +100,7 @@ Update when rollout timing, hypercare coverage, support channels, or ownership c
 
 - Is it clear how users get help after go-live?
 - Are hypercare assumptions and escalation routes explicit?
+- Is the handoff from project-led adoption support to steady-state support clear?
 - Are adoption risks reflected in the support approach?
 - Does the model stay focused on user adoption support rather than generic service management detail?
 

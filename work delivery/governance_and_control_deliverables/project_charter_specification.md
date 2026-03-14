@@ -54,6 +54,7 @@ Must include:
 - decision authority or approving body
 - authorization date
 - authority granted to the Delivery Owner
+- any explicit conditions, limits, or decision assumptions attached to the authorization
 
 This section is the core control statement of the charter.
 
@@ -66,6 +67,7 @@ Must include:
 - approved budget or funding commitment
 - key constraints and high-level risks
 - reporting or acceptance expectations
+- reference to the authoritative Initiative Definition Document version that this authorization is based on
 
 This section shows what the organization is committing to and on what basis.
 
@@ -81,6 +83,7 @@ Recommended fields:
 | Funding | Approved amount, funding source, and conditions if any |
 | Authority granted | What the Delivery Owner is empowered to do |
 | Constraints | Major limitations or conditions that shape delivery |
+| Acceptance expectations | Who must accept the outcome or domain-level deliverables before closure |
 
 Use short, decision-focused entries rather than narrative paragraphs where possible.
 
@@ -110,6 +113,7 @@ The charter is normally stable once approved. Issue a new version or formal revi
 
 - Does the charter clearly show who authorized the work and what authority was granted?
 - Is the approved purpose, funding, and scope summary clear without becoming a full project document?
+- Are any authorization conditions or decision limits explicit enough to prevent assumed authority?
 - Could an auditor or new leader identify the decision basis quickly?
 - Does the artifact stay focused on authorization rather than delivery detail?
 

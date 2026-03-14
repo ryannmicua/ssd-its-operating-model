@@ -39,6 +39,7 @@ Must include:
 - readiness record ID or version
 - date prepared
 - prepared by
+- statement of the readiness boundary, such as full production handover, limited release, or conditional operational acceptance
 
 This section identifies the formal readiness record.
 
@@ -58,6 +59,7 @@ Must include:
 
 - confirmation that required design, administration, support, monitoring, and recovery artifacts exist
 - reference to the evidence or authoritative artifacts reviewed
+- note of any required artifact, support arrangement, or dependency that is still incomplete or accepted only under condition
 
 This section shows the basis for readiness review.
 
@@ -70,11 +72,12 @@ If a readiness table is used, each row must include:
 - status
 - gap or condition
 - owner
+- due date or next review point where follow-up is required
 
 Recommended columns:
 
-| Readiness area | Evidence reference | Status | Gap or condition | Owner |
-| --- | --- | --- | --- | --- |
+| Readiness area | Evidence reference | Status | Gap or condition | Owner | Due date or next review |
+| --- | --- | --- | --- | --- | --- |
 
 Use controlled status values such as:
 
@@ -92,6 +95,7 @@ Must include:
 - approving operational authority
 - decision date
 - follow-up actions if readiness is conditional
+- explicit statement of any conditions under which operations is accepting responsibility despite open gaps
 
 This section is the formal handover decision.
 
@@ -120,6 +124,7 @@ Update until the operational decision is final. If acceptance is conditional, tr
 
 - Does the record show clearly whether operational ownership is willing to accept the solution?
 - Are material readiness gaps or conditions explicit and owned?
+- Does the record make the readiness boundary and any condition-based acceptance explicit enough for audit and handover?
 - Does it rely on references instead of copying detailed content?
 - Is the formal operational decision unambiguous?
 

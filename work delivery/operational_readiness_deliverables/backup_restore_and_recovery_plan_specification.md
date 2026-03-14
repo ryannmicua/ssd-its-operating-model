@@ -38,6 +38,7 @@ Must include:
 - systems, data, configurations, or services covered
 - key exclusions where relevant
 - assumptions about what is backed up or otherwise recoverable
+- recovery objectives or tolerances where relevant, such as target recovery time or point expectations
 
 This section defines what the plan actually protects.
 
@@ -48,6 +49,7 @@ Must include:
 - backup and restore approach
 - rollback approach for failed release or change where relevant
 - other recovery paths used for major failure or disruption
+- triggers or decision points for when each recovery path should be invoked
 
 This section explains how recovery is expected to happen.
 
@@ -68,6 +70,7 @@ Must include:
 
 - how the recovery path will be tested, demonstrated, or otherwise validated
 - what evidence should exist to show the plan is credible
+- when the validation should be repeated, refreshed, or revisited after change
 
 This section prevents the plan from being purely theoretical.
 
@@ -106,6 +109,7 @@ Update when data scope, hosting, recovery tools, dependencies, or recovery objec
 
 - Is it clear what can be restored and under what conditions?
 - Are recovery roles, dependencies, and constraints explicit?
+- Are recovery objectives, invocation triggers, and validation expectations clear enough to make the plan operationally credible?
 - Is there a clear expectation that recovery is validated rather than only described?
 - Does the artifact stay focused on the solution-level recovery plan rather than enterprise continuity in general?
 

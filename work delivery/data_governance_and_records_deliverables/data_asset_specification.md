@@ -60,6 +60,7 @@ Must include:
 - system of record declaration
 - responsible owner
 - Data Steward
+- note of any other system that republishes, caches, or derives the data where that affects authority or reconciliation
 
 This section makes governance and correctness accountability explicit.
 
@@ -71,6 +72,7 @@ Must include:
 - retention rules
 - lifecycle or archival treatment
 - backup or recovery inclusion status where applicable
+- disposal or decommissioning treatment where relevant
 
 This section shows how the asset is managed over time.
 
@@ -112,6 +114,7 @@ Update when data structure, ownership, system of record, storage, retention, or 
 - Does it make the data asset understandable to someone other than the original designer?
 - Are ownership, system of record, and storage locations clear?
 - Are lifecycle and recoverability expectations visible?
+- Is the system-of-record boundary clear enough to support reconciliation, migration, and audit?
 - Does it stay focused on the governed asset rather than drifting into full technical schema detail?
 
 If weak, add stewardship clarity, simplify the structure description, and make the lifecycle rules easier to find.

@@ -24,7 +24,7 @@ It is recommended for most multi-capability initiatives and especially useful fo
 
 ## Intended Project Context
 
-Use this artifact after the Functional Capabilities Baseline is approved and before detailed behavioral definition is complete. It is most useful where the team needs clear units of delivery and evidence without changing approved business scope.
+Use this artifact after the Functional Capabilities artifact is approved and before detailed behavioral definition is complete. It is most useful where the team needs clear units of delivery and evidence without changing approved business scope.
 
 It should align with PMI scope-structuring and work decomposition practice by grouping approved scope into manageable units without changing the authorized baseline. It should also align with ITIL 4 release and service validation thinking by creating meaningful units of delivery and acceptance.
 
@@ -42,7 +42,7 @@ Must include:
 
 - initiative or solution name
 - version and status
-- reference to the approved Functional Capabilities Baseline
+- reference to the approved Functional Capabilities artifact
 - short explanation of how modules are being used in this initiative
 
 This section tells the reader how to interpret the module set.
@@ -72,6 +72,7 @@ Each module entry should include when relevant:
 - dependencies on other modules or external systems
 - planned use case references
 - release or phase note
+- validation or acceptance focus note when the module is used as a distinct evidence grouping
 
 Each module entry must not include:
 
@@ -109,6 +110,7 @@ Must include:
 
 - how modules support testing, deployment, or acceptance grouping
 - statement that module validation must be traceable back to approved capabilities and related use cases
+- statement on how cross-module behavior or shared dependencies will be handled when evidence cannot be isolated to one module
 
 This section explains why the module structure matters operationally.
 
@@ -124,7 +126,7 @@ Keep the following out of this artifact:
 
 ## Relationships to Other Artifacts
 
-This artifact depends on the Functional Capabilities Baseline and should inform Use Case Narratives, validation structure, deployment planning, and acceptance evidence.
+This artifact depends on the Functional Capabilities artifact and should inform Use Case Narratives, validation structure, deployment planning, and acceptance evidence.
 
 ## Ownership, Review, and Acceptance Expectations
 
@@ -141,6 +143,7 @@ Maintain the module structure while the initiative is being elaborated and deliv
 - Does each module group approved capabilities in a coherent way?
 - Can a reviewer see that modules organize scope rather than change it?
 - Are all approved capabilities assigned to one or more modules?
+- Is it clear how cross-module behavior will be validated without creating ownership ambiguity?
 - Is the per-module information specific enough to guide use cases and evidence planning?
 - Does the artifact avoid drifting into task planning or design?
 
@@ -162,6 +165,6 @@ If weak, clarify module purpose, add the missing mapping, and remove content tha
 
 ### Validation prompts
 
-> Check whether any module entry implies new business scope not present in the Functional Capabilities Baseline.
+> Check whether any module entry implies new business scope not present in the Functional Capabilities artifact.
 
 > Check whether the module set is clear enough to support use case drafting and module-level validation.

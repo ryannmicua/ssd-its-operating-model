@@ -84,6 +84,7 @@ Must include:
 - task frequency where relevant
 - expected results or checks
 - known cautions or dependencies
+- any required operational records, tickets, or evidence that administrators must create or update as part of controlled operation
 
 This section defines the ongoing administration workload.
 
@@ -96,6 +97,7 @@ Must include:
 - what to do when abnormal conditions are found
 - common operational issues, likely causes, and first-line corrective actions
 - escalation points when local resolution is not appropriate
+- vendor or specialist escalation dependencies where local teams cannot fully resolve the issue
 
 This section supports supportability and operational continuity.
 
@@ -138,6 +140,7 @@ This is a living operational document. Update it when administrative steps, tool
 
 - Can another administrator operate the system safely from this guide?
 - Are deployment, maintenance, monitoring, and troubleshooting steps practical?
+- Does the guide make evidence, escalation, and vendor-dependency expectations explicit enough for controlled support?
 - Are access, records, and recovery references clear?
 - Does the guide avoid becoming a design document or a secret repository?
 

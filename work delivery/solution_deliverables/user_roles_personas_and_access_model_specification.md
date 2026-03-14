@@ -57,6 +57,7 @@ Each role entry must include:
 - primary goals
 - key actions or responsibilities in the solution
 - access boundary
+- role authority or business ownership note where the role carries approval, stewardship, or control responsibility
 - data sensitivity or control notes where relevant
 
 Each role entry should include when useful:
@@ -75,6 +76,7 @@ Must include where relevant:
 - separation-of-duties assumptions
 - visibility rules between roles
 - any role interactions that materially affect behavior or access control
+- identification of privileged, supervisory, or exception-handling roles that need higher scrutiny
 
 This section is important whenever relationships between roles affect the correctness or control of the solution.
 
@@ -126,7 +128,9 @@ Keep the following out of this artifact:
 
 ## Relationships to Other Artifacts
 
-This artifact should align with the Functional Capabilities Baseline, Use Case Narratives, Access Control & Authorization Model, Security & Privacy Risk Assessment, Training & Enablement Materials, and Adoption Support Model.
+This artifact should align with the Functional Capabilities, Use Case Narratives, Access Control & Authorization Model, Security & Privacy Risk Assessment, Training & Enablement Materials, and Adoption Support Model.
+
+Where detailed authorization logic, provisioning rules, or technical enforcement are required, the formal Access Control & Authorization Model remains the authoritative control artifact.
 
 ## Ownership, Review, and Acceptance Expectations
 
@@ -143,6 +147,7 @@ Update when role responsibilities, approval boundaries, privileged actions, or s
 - Are the role entries distinct and practically useful?
 - Are access boundaries and sensitive interactions explicit where needed?
 - Are role relationships captured where they materially affect behavior or control?
+- Are approval, stewardship, or privileged-role responsibilities visible where they affect governance or separation of duties?
 - If personas are used, do they improve clarity without adding hidden scope?
 - Could downstream artifacts use this model without inventing missing actor detail?
 

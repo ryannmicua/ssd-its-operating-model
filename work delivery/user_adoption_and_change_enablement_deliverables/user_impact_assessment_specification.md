@@ -52,6 +52,7 @@ Each impacted group entry must include:
 - future-state behavior summary
 - nature and scale of change
 - main adoption risks or resistance factors
+- business criticality or consequence if the group does not adopt correctly where that matters
 
 This section is the core impact model of the artifact.
 
@@ -100,6 +101,7 @@ Update when user groups change, solution behavior changes materially, or new ado
 
 - Does it clearly identify who is affected and how?
 - Are major adoption risks and resistance factors visible?
+- Does the assessment make it clear which impacted groups matter most to business continuity or control?
 - Can downstream communication and training decisions be based on it?
 - Does it focus on behavior and readiness rather than general stakeholder commentary?
 

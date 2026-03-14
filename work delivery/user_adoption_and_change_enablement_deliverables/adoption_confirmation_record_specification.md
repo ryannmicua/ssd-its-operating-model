@@ -39,6 +39,7 @@ Must include:
 - record version and date
 - prepared by
 - scope of user groups covered
+- statement of whether the record covers full rollout readiness, phased readiness, or a limited audience subset
 
 This section identifies what readiness claim the record is making.
 
@@ -51,11 +52,12 @@ Each row must include:
 - enablement completed
 - remaining risk or condition
 - evidence reference
+- readiness status where a group is deferred, conditionally ready, or not yet covered
 
 Recommended table:
 
-| User group | Communication completed | Enablement completed | Remaining risk or condition | Evidence reference |
-| --- | --- | --- | --- | --- |
+| User group | Communication completed | Enablement completed | Readiness status | Remaining risk or condition | Evidence reference |
+| --- | --- | --- | --- | --- | --- |
 
 This row structure makes the basis for readiness visible and reviewable.
 
@@ -95,6 +97,7 @@ Update until readiness is confirmed. If readiness is conditional, keep the condi
 
 - Does the record show clearly which user groups were prepared and how?
 - Are remaining risks or conditions visible?
+- Does the record make partial, phased, or conditional readiness explicit rather than implied?
 - Is the Business Owner acknowledgment explicit?
 - Does the record rely on evidence references rather than unsupported readiness claims?
 

@@ -81,6 +81,7 @@ Must include where relevant:
 - important data-handling design choices
 - important configuration assumptions
 - security, resilience, capacity, and performance considerations
+- operationally significant failure points, single points of dependency, or support-sensitive design constraints
 
 This section helps reviewers understand what technical choices materially affect risk and supportability.
 
@@ -90,6 +91,7 @@ Must include:
 
 - decisions that future maintainers or operators need to understand
 - technical assumptions or constraints that affect later change
+- note of any design decisions that require specific operational capability, vendor dependency, or non-standard support arrangement
 
 This section keeps critical design reasoning from being lost.
 
@@ -105,7 +107,7 @@ Keep the following out of this artifact:
 
 ## Relationships to Other Artifacts
 
-This artifact should align with the Initiative Definition Document, Functional Capabilities Baseline, security and data artifacts, System Administration Guide, Operations & Support Model, and Backup, Restore & Recovery Plan.
+This artifact should align with the Initiative Definition Document, Functional Capabilities, security and data artifacts, System Administration Guide, Operations & Support Model, and Backup, Restore & Recovery Plan.
 
 ## Ownership, Review, and Acceptance Expectations
 
@@ -121,6 +123,7 @@ Update the document when architecture, environments, dependencies, or material t
 
 - Does it explain how the solution is built and what it depends on?
 - Are the key technical assumptions, constraints, and control-relevant choices visible?
+- Does it make support-sensitive constraints and dependency risks visible enough for operations and handover review?
 - Does it stay at design level rather than drifting into operational procedure?
 - Could another technical team understand the solution without relying on the original implementer?
 

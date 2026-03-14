@@ -60,6 +60,7 @@ Should include:
 
 - whether the material is self-service, facilitated, walkthrough-based, or quick-reference based
 - any role-specific constraints affecting how the material should be used
+- accessibility, language, timing, or format considerations where those factors affect effective adoption
 
 This section helps teams choose the right enablement form, not just the right content.
 
@@ -88,6 +89,7 @@ Update when user tasks, interfaces, rules, or support channels change materially
 - Can the intended user complete the task correctly using the material?
 - Is the content tailored to a role or audience rather than generic?
 - Are support channels or help paths visible?
+- Does the material format suit the real constraints of the target audience?
 - Does the material stay task-focused rather than drifting into design or policy documentation?
 
 If weak, simplify the content, focus it on real tasks, and remove design-heavy explanations.

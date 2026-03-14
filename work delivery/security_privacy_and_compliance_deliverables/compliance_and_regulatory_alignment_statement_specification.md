@@ -50,14 +50,15 @@ Each obligation row must include:
 - obligation or requirement
 - why it applies
 - how it is addressed
+- evidence or authoritative reference showing where alignment is implemented or recorded
 - owner
 - status
 - gap or note
 
 Recommended table:
 
-| Obligation | Why it applies | How it is addressed | Owner | Status | Gap or note |
-| --- | --- | --- | --- | --- | --- |
+| Obligation | Why it applies | How it is addressed | Evidence or reference | Owner | Status | Gap or note |
+| --- | --- | --- | --- | --- | --- | --- |
 
 Use controlled status values where helpful, such as `addressed`, `in progress`, `gap`, or `waiver required`.
 
@@ -99,6 +100,7 @@ Update when obligations change, solution scope changes, or compliance gaps are d
 
 - Does the statement show clearly what obligations apply and why?
 - Can a reviewer see how each obligation is being addressed?
+- Is there enough evidence or reference detail to verify the claimed alignment?
 - Are unresolved gaps, waivers, or dependencies explicit?
 - Is ownership assigned for material obligations?
 

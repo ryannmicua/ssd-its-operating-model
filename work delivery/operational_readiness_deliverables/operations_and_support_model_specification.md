@@ -48,6 +48,7 @@ Must include:
 - support tiers or equivalent responsibility split
 - internal and external support boundaries
 - vendor or partner dependencies where relevant
+- note of any known concentration risk, such as reliance on one specialist, one vendor path, or one team for critical support knowledge
 
 This section defines how support is organized.
 
@@ -58,6 +59,7 @@ Must include:
 - escalation paths
 - escalation triggers or conditions
 - incident or support response expectations where relevant
+- decision points for when issues must be transferred from delivery or hypercare into steady-state support ownership
 
 This section shows how issues move when they cannot be resolved at the first point of contact.
 
@@ -69,6 +71,7 @@ Must include:
 - support coverage or service hours where relevant
 - hypercare, transition, and steady-state assumptions
 - operational constraints or risks that affect supportability
+- any service-level assumptions, priority handling rules, or dependency obligations that materially affect support expectations
 
 This section connects support ownership to the real operating model.
 
@@ -108,6 +111,7 @@ Keep it current when ownership, support coverage, escalation, vendor dependencie
 
 - Are service and support ownership explicit?
 - Can a reviewer see who supports what and when escalation happens?
+- Are concentration risks, dependency assumptions, and transition-to-steady-state expectations visible?
 - Are transition assumptions and known operational constraints visible?
 - Does the artifact define the operating model without drifting into runbook detail?
 

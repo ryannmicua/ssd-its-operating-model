@@ -1,8 +1,8 @@
-# Functional Capabilities Baseline Specification
+# Functional Capabilities Specification
 
 ## Purpose and Intended Outcome
 
-The Functional Capabilities Baseline defines the approved business abilities the solution must provide. It is the functional scope baseline for the initiative.
+The Functional Capabilities artifact defines the approved business abilities the solution must provide. It is the functional scope baseline for the initiative.
 
 It exists to make scope clear before detailed design, build, testing, and acceptance begin. A useful baseline helps business and delivery teams agree what the solution must be able to do without mixing in workflow detail, screen design, or implementation choices.
 
@@ -44,6 +44,7 @@ Must include:
 - baseline version and status
 - reference to the Initiative Definition Document
 - short statement of the business outcome or scope area this baseline supports
+- short statement of the approval boundary the baseline is intended to control
 
 This section identifies the scope baseline and shows what approval context it belongs to.
 
@@ -68,6 +69,7 @@ Each capability entry should include when useful:
 
 - primary user role or beneficiary
 - linked outcome, success measure, or scope reference
+- acceptance-significant notes where a capability has material control, compliance, or operational importance
 - short clarification note where ambiguity would otherwise remain
 
 Each capability entry must not include:
@@ -107,6 +109,7 @@ Should include:
 - known exclusions
 - phased items
 - dependencies that materially affect delivery of a capability
+- explicit note of any approved business outcomes that are intentionally outside this baseline
 
 This helps avoid false assumptions about completeness or timing.
 
@@ -150,6 +153,7 @@ This is a controlled baseline. Update it only when approved scope changes or whe
 - Is each capability understandable on its own?
 - Are document-level and per-entry requirements both clear?
 - Is the baseline governance rule explicit enough to prevent silent scope growth?
+- Does the baseline make the approval boundary and known exclusions visible enough for later acceptance review?
 - Could a human or AI drafter derive downstream artifacts without major guessing?
 
 If weak, split combined capabilities, remove non-scope detail, and strengthen the baseline control rules.
@@ -158,7 +162,7 @@ If weak, split combined capabilities, remove non-scope detail, and strengthen th
 
 ### Starter prompt
 
-> Draft a Functional Capabilities Baseline for this initiative.
+> Draft a Functional Capabilities artifact for this initiative.
 > Define the approved business abilities the solution must provide, using stable capability IDs and short value statements.
 > Keep the entries atomic, business-focused, and free of workflow, design, and implementation detail.
 

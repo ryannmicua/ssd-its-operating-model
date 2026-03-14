@@ -50,6 +50,7 @@ Must include:
 - threat, misuse, failure, or exposure scenarios
 - assets, services, or data affected
 - why the scenario matters
+- source of exposure or threat path where that is needed to understand the risk realistically
 
 This section makes the risks concrete enough to assess.
 
@@ -78,6 +79,7 @@ Must include:
 
 - remaining risk after planned controls
 - whether formal residual risk acceptance is required
+- trigger for escalation or re-assessment where the residual exposure cannot be accepted as-is
 
 This section prevents silent risk acceptance.
 
@@ -108,6 +110,7 @@ Update when design, access, data handling, threat exposure, hosting, or regulato
 - Does the assessment explain what could go wrong and why it matters?
 - Are required controls and treatment owners explicit?
 - Is residual risk visible after mitigation rather than assumed away?
+- Can a decision-maker tell which risks still need explicit acceptance, redesign, or control strengthening?
 - Could a decision-maker understand what action or acceptance is required?
 
 If weak, improve the scenario description, impact statement, and treatment ownership.

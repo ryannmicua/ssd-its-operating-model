@@ -59,6 +59,7 @@ Must include:
 - what should trigger alerting or review
 - who reviews or responds
 - escalation expectations where relevant
+- any coverage limitations, response dependencies, or known blind spots that materially affect detection confidence
 
 This section connects visibility to operational action.
 
@@ -69,6 +70,7 @@ Must include where relevant:
 - authoritative log sources or systems
 - traceability expectations
 - retention or evidence considerations that materially affect auditability
+- ownership or custody expectations for retained evidence where that affects investigation or compliance handling
 
 This section shows how the information remains usable for later investigation or review.
 
@@ -108,6 +110,7 @@ Update when monitored events, alert logic, retention needs, or response ownershi
 - Are the important actions and events clearly identified?
 - Can a reviewer tell how sensitive or high-risk activity becomes visible?
 - Are escalation and review responsibilities clear?
+- Are any material limitations or blind spots explicit rather than implied?
 - Does the summary stay focused on high-value audit and monitoring expectations?
 
 If weak, focus the summary on high-value events and clarify who acts on them.

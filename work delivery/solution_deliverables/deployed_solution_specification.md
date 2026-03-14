@@ -47,6 +47,7 @@ Must include:
 - deployment date
 - deployment owner
 - live status such as `pilot`, `limited release`, `live`, `rolled back`, or `retired`
+- clear statement of the live boundary, such as which users, sites, business units, or channels are included in this release
 
 This section identifies exactly what live state the artifact is describing.
 
@@ -55,8 +56,9 @@ This section identifies exactly what live state the artifact is describing.
 Must include:
 
 - the approved capabilities, modules, or outcome areas delivered by this deployment
-- reference to the approved Functional Capabilities Baseline and related Solution Modules
+- reference to the approved Functional Capabilities artifact and related Solution Modules
 - clear note of any deferred, excluded, or phased items
+- statement on whether this release is a full-scope release or a controlled subset of the approved scope
 
 This section helps a reviewer confirm what approved scope is actually represented in the live release.
 
@@ -66,6 +68,7 @@ Must include:
 
 - major modules, components, integrations, or services now live
 - critical dependencies needed for the live solution to operate
+- note of any production-authoritative data feeds, external services, or control points that materially affect business operation
 - reference to the authoritative Technical Design Document for technical detail
 
 This section gives operations and reviewers enough context to understand what was activated without repeating the full design.
@@ -77,6 +80,7 @@ Must include:
 - named Service Owner and Support Owner, or reference to the authoritative Operations & Support Model
 - whether monitoring, support, and recovery arrangements are in effect
 - any temporary operating conditions such as hypercare, manual controls, limited support windows, or known restrictions
+- any release conditions that materially limit who may use the solution or how it may be used
 
 This section makes the operational state of the live release visible.
 
@@ -88,6 +92,7 @@ Must include:
 - reference to release or deployment evidence
 - statement on whether any known behavior remains outside approved acceptance scope
 - reference to the current Acceptance Record or equivalent formal decision record
+- reference to any required operational-readiness or change-approval evidence where those controls apply
 
 This section shows the basis for trusting the live release and accepting it.
 
@@ -124,7 +129,7 @@ Reference the authoritative artifacts instead.
 
 ## Relationships to Other Artifacts
 
-This artifact should align with the Initiative Definition Document, Functional Capabilities Baseline, Solution Modules, Use Case Narratives, Technical Design Document, Operations & Support Model, System Administration Guide, and Acceptance Record.
+This artifact should align with the Initiative Definition Document, Functional Capabilities, Solution Modules, Use Case Narratives, Technical Design Document, Operations & Support Model, System Administration Guide, and Acceptance Record.
 
 It may also support the Operational Readiness Confirmation Record and Formal Acceptance & Closure Record.
 
@@ -141,6 +146,7 @@ Update the artifact at each material live release until the solution has been fu
 ## Validation Guide
 
 - Does the artifact show clearly what is live, where, and under what status?
+- Does it make the live boundary explicit enough that readers can tell who or what is actually included?
 - Can a reviewer tell what approved scope is represented in the live release?
 - Are operational ownership and any live conditions visible?
 - Does the artifact reference evidence instead of duplicating full detail?

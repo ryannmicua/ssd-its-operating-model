@@ -58,13 +58,14 @@ Each decision row must include:
 - decision maker or approving authority
 - rationale or basis
 - impacted artifacts or deliverables
+- baseline impact or change implication where the decision alters approved scope, cost, authority, risk position, or acceptance approach
 - follow-up owner where action is required
 - current status
 
 Recommended columns:
 
-| Decision ID | Date | Title | Category | Decision | Authority | Rationale | Impacted artifacts | Follow-up owner | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Decision ID | Date | Title | Category | Decision | Authority | Rationale | Impacted artifacts | Baseline impact | Follow-up owner | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 Use controlled status values such as:
 
@@ -82,6 +83,7 @@ Must include:
 - what kinds of decisions belong in the log
 - rule that superseded decisions remain visible rather than deleted
 - rule that routine low-impact operational choices should not overload the log
+- rule that decisions requiring artifact updates, re-approval, or new acceptance conditions must identify the affected baseline or record explicitly
 
 This section keeps the log useful and governable.
 
@@ -93,6 +95,7 @@ Use short entries:
 - `Decision`: the conclusion, not the meeting discussion
 - `Rationale`: a short reason, not full minutes
 - `Impacted artifacts`: name the records or specifications that must align to the decision
+- `Baseline impact`: state whether the decision confirms the current baseline, changes it, or creates a follow-up action to revise it
 
 ## What to Keep Out
 
@@ -118,6 +121,7 @@ Update the log as decisions occur. If a decision changes, mark the original entr
 ## Validation Guide
 
 - Does each entry identify the decision, authority, rationale, and impacted artifacts clearly?
+- Can a reader tell whether the decision changed an approved baseline or only clarified it?
 - Can a reader tell which decisions are still current?
 - Is the log short enough to scan and strong enough to support audit or future change review?
 - Does the log avoid becoming a copy of meeting minutes?

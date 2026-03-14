@@ -2,19 +2,19 @@
 
 ## 1. Purpose
 
-This specification defines what **User Roles** are, how a **User Roles** document must be written, and how it supports the **Project Delivery Framework**.
+This specification defines what **User Roles** are, how a **User Roles** document must be written, and how it supports the **Work Delivery Framework**.
 
 User Roles define **who uses the solution** and what access boundaries must exist (e.g., applicant vs staff). They provide shared language for drafting Functional Capabilities, Solution Modules, and Use Cases.
 
 Personas are optional. When used, they add human context and help teams write clearer Use Cases and acceptance Success Conditions.
 
 
-## 2. Role in the Project Delivery Framework
+## 2. Role in the Work Delivery Framework
 
 User Roles support consistent delivery by providing stable actors and access assumptions.
 
-- **Stage 2 (Delivery Definition):** clarify actors, responsibilities, and access boundaries before approving Functional Capabilities and Solution Modules.
-- **Stage 4 (Delivery Elaboration):** used directly in Use Cases to define primary/supporting actors and to check module boundaries.
+- **Stage 2 (Work Definition):** clarify actors, responsibilities, and access boundaries before approving Functional Capabilities and Solution Modules.
+- **Stage 4 (Work Definition Details):** used directly in Use Cases to define primary/supporting actors and to check module boundaries.
 - **Delivery and acceptance:** help ensure behavior is validated for the right users and that role-based access rules are respected.
 
 User Roles do not define solution scope by themselves. They describe actors for the approved scope.
@@ -123,7 +123,7 @@ Use personas when:
 - Adoption risk is high (new process, new audience, low digital literacy).
 - Communication flows matter (notifications, approvals, handoffs).
 
-Personas can also add value outside delivery definition:
+Personas can also add value outside work definition:
 
 - **User enablement and training:** tailor guides to real user constraints.
 - **Support workflows:** anticipate common failures and support needs.

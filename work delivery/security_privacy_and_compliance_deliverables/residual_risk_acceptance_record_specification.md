@@ -51,14 +51,15 @@ Each row must include:
 - residual risk description
 - controls applied
 - impact summary
+- basis for acceptance, such as business necessity, implementation timing, or compensating control position
 - review date
 - accepting authority
 - conditions
 
 Recommended columns:
 
-| Risk ID | Residual risk | Controls applied | Impact summary | Review date | Accepting authority | Conditions |
-| --- | --- | --- | --- | --- | --- | --- |
+| Risk ID | Residual risk | Controls applied | Impact summary | Basis for acceptance | Review date | Accepting authority | Conditions |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
 This row structure ensures the decision basis is explicit rather than implied.
 
@@ -97,6 +98,7 @@ Review the record at the stated review date, when controls change, or when the r
 - Is the residual risk described clearly enough for a decision maker to understand it?
 - Is the accepting authority explicit and appropriate?
 - Are any conditions or review dates visible?
+- Does the record explain why acceptance was chosen instead of further treatment or rejection?
 - Does the record distinguish clearly between risk description and formal acceptance?
 
 If weak, tighten the risk statement and make the formal acceptance wording explicit.

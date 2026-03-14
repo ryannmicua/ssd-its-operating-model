@@ -54,6 +54,7 @@ Must include:
 - reference to approved capabilities, modules, behaviors, or deliverables being accepted
 - reference to validation evidence
 - reference to any related Deployed Solution or release identifier
+- statement of the acceptance boundary, including whether the record covers full scope, a phase, or a controlled subset
 
 This section shows what acceptance is based on.
 
@@ -63,14 +64,15 @@ Each acceptance row must include:
 
 - item reviewed
 - what was reviewed
+- related approved scope reference, such as Capability IDs, Module IDs, or deliverable name
 - evidence reference
 - status
 - notes
 
 Recommended columns:
 
-| Item | What was reviewed | Evidence reference | Status | Notes |
-| --- | --- | --- | --- | --- |
+| Item | What was reviewed | Approved scope reference | Evidence reference | Status | Notes |
+| --- | --- | --- | --- | --- | --- |
 
 Use controlled status values such as:
 
@@ -86,6 +88,7 @@ This row structure is the main control model of the artifact.
 Must include:
 
 - statement on whether delivered behavior remains within approved scope
+- statement on whether all in-scope items for this acceptance boundary were reviewed or explicitly deferred
 - any approved exclusions, waivers, or phased items
 - any open items not yet accepted
 
@@ -99,6 +102,7 @@ Must include:
 - decision date
 - formal decision outcome
 - any conditions, follow-up actions, and owners if acceptance is conditional
+- explicit statement when any residual unaccepted behavior, defect, or variance is being carried forward under condition rather than silently accepted
 
 This section makes the decision attributable and actionable.
 
@@ -107,6 +111,7 @@ This section makes the decision attributable and actionable.
 Use short entries:
 
 - `What was reviewed`: capability set, module, behavior area, or deliverable
+- `Approved scope reference`: cite the authoritative capability, module, or deliverable identifiers that define the acceptance boundary
 - `Evidence reference`: point to the evidence location, not the full evidence itself
 - `Status`: use the controlled status values only
 - `Notes`: use for conditions, exclusions, or clarifications, not hidden decisions
@@ -123,7 +128,7 @@ Keep the following out of this artifact:
 
 ## Relationships to Other Artifacts
 
-This record should align with the Functional Capabilities Baseline, Solution Modules, Use Case Narratives, Deployed Solution artifact, and final closure records where applicable.
+This record should align with the Functional Capabilities, Solution Modules, Use Case Narratives, Deployed Solution artifact, and final closure records where applicable.
 
 ## Ownership, Review, and Acceptance Expectations
 
@@ -139,6 +144,7 @@ Update the record until the decision is final. If acceptance is conditional or p
 
 - Can a reviewer understand what was accepted without reading every supporting artifact in full?
 - Is the acceptance basis traceable to approved scope and evidence?
+- Does the record make it clear whether all approved items in the acceptance boundary were accepted, deferred, or excluded?
 - Are conditions, exclusions, and deferred items explicit?
 - Is the decision attributable to a named authority and date?
 - Does the record rely on controlled statuses rather than ambiguous wording?

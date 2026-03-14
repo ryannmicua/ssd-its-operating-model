@@ -60,6 +60,7 @@ Must include:
 - privileged access cases
 - stronger controls for elevated access where needed
 - separation-of-duties assumptions where relevant
+- emergency, temporary, or break-glass access handling where such access is possible
 
 This section helps protect high-risk actions from casual or ambiguous handling.
 
@@ -71,6 +72,7 @@ Must include:
 - change or approval expectations
 - periodic review expectations
 - de-provisioning expectations
+- treatment of non-human, shared, or service access where those access paths exist
 
 This section makes access governance operational rather than theoretical.
 
@@ -109,6 +111,7 @@ Update when roles, privileges, approval logic, identity integration, or review r
 
 - Is it clear who can do what and under what approval basis?
 - Are privileged and sensitive actions handled more strictly where needed?
+- Are emergency, temporary, and non-human access paths governed clearly enough for audit and control review?
 - Are provisioning and removal expectations visible?
 - Does the artifact support review and audit rather than just initial setup?
 

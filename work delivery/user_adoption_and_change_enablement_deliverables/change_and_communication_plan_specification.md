@@ -53,11 +53,12 @@ Each communication row must include:
 - channel
 - sender or owner
 - feedback or escalation path
+- intended communication outcome where clarity, action, or reassurance differs by audience
 
 Recommended columns:
 
-| Audience | Key message | Timing | Channel | Sender | Feedback or escalation |
-| --- | --- | --- | --- | --- | --- |
+| Audience | Key message | Timing | Channel | Sender | Intended outcome | Feedback or escalation |
+| --- | --- | --- | --- | --- | --- | --- |
 
 This row structure keeps the plan audience-specific and actionable.
 
@@ -105,6 +106,7 @@ Update when rollout timing, impacted audiences, message content, or feedback cha
 
 - Are the right audiences identified with meaningful messages?
 - Is the timing and delivery approach practical?
+- Is the intended outcome of each communication clear enough to judge whether the message actually did its job?
 - Are leadership expectations and feedback paths explicit?
 - Does the plan stay focused on change communications rather than turning into a training pack or web requirements document?
 

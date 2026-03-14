@@ -24,7 +24,7 @@ It is especially important for role-based workflows, approvals, exception handli
 
 ## Intended Project Context
 
-Use this artifact after the Functional Capabilities Baseline and Solution Modules are defined. It is most useful when the team needs business-behavior detail that remains traceable to approved scope.
+Use this artifact after the Functional Capabilities artifact and Solution Modules are defined. It is most useful when the team needs business-behavior detail that remains traceable to approved scope.
 
 It should align with ISO/IEC/IEEE 29148 requirements-elaboration principles by turning approved scope into clearer behavioral detail without changing the baseline. It should also align with ITIL 4 service validation and testing intent by making expected behavior explicit, reviewable, and testable.
 
@@ -41,7 +41,7 @@ This artifact should define both the required content for each use case and the 
 Must include:
 
 - reference to the Initiative Definition Document
-- reference to the Functional Capabilities Baseline and Solution Modules
+- reference to the Functional Capabilities artifact and Solution Modules
 - version or status of the use case set
 
 This section identifies what approved baseline the behavior descriptions belong to.
@@ -59,6 +59,7 @@ Each use case must include:
 - trigger
 - intended outcome
 - preconditions
+- postconditions or resulting state where that matters to validation, auditability, or downstream processing
 - main flow
 - alternate and exception paths where relevant
 - business rules and validations
@@ -79,6 +80,7 @@ The use case entry should describe the following in practical terms:
 - `Business rules and validations`: the checks or conditions that materially affect correct behavior
 - `Access expectations`: which role may perform the action and any separation-of-duties or sensitivity constraints
 - `Auditability requirements`: what must be traceable and why
+- `Postconditions or resulting state`: what should be true after completion if the use case succeeds or fails materially
 - `Acceptance criteria`: observable results that prove the use case works correctly
 
 This section keeps the required structure usable rather than heading-only.
@@ -129,7 +131,7 @@ Keep the following out of this artifact:
 
 ## Relationships to Other Artifacts
 
-This artifact should align with the Functional Capabilities Baseline, Solution Modules, User Roles, Personas & Access Model, Access Control & Authorization Model, Audit & Monitoring Design Summary, and final validation evidence.
+This artifact should align with the Functional Capabilities, Solution Modules, User Roles, Personas & Access Model, Access Control & Authorization Model, Audit & Monitoring Design Summary, and final validation evidence.
 
 ## Ownership, Review, and Acceptance Expectations
 
@@ -146,6 +148,7 @@ Keep the use case set current while behavior is still being elaborated and whene
 - Does every use case trace back to approved modules and capabilities?
 - Is each use case complete enough to understand expected behavior without major guessing?
 - Are alternate paths, rules, and sensitive behaviors visible where they matter?
+- Are the resulting state and downstream effects clear where acceptance or control depends on them?
 - Are acceptance criteria observable and testable?
 - Does the artifact stay at business-behavior level rather than drifting into design?
 

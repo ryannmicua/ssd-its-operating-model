@@ -61,6 +61,7 @@ Must include:
 - internal policy implications
 - regulatory, contractual, or privacy implications where relevant
 - operational or lifecycle impacts that require governance attention
+- retention, archival, disposal, backup, or recovery obligations where the data creates those requirements
 
 This section shows why the data matters beyond implementation.
 
@@ -71,6 +72,7 @@ Must include:
 - named Data Steward
 - other governance or privacy contacts where relevant
 - ownership assumptions that affect data quality, retention, or access
+- any authority split between business ownership, stewardship, operational custody, or vendor custody where relevant
 
 This section makes accountability explicit.
 
@@ -112,6 +114,7 @@ Update when data categories, sensitivity, stewardship, storage patterns, or trig
 - Does the assessment make the handled data and its sensitivity clear?
 - Are stewardship and governance accountability explicit?
 - Are material compliance, privacy, or operational impacts visible?
+- Does the assessment make lifecycle and custody obligations visible enough for later operational and security planning?
 - Does the artifact show what action is required where risk or obligation exists?
 
 If weak, sharpen the data categories, add accountability, and state the triggered obligations more plainly.

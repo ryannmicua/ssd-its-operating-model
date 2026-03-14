@@ -99,6 +99,7 @@ Must include:
 - Acceptance Authority for each deliverable or domain
 - acceptance focus or what matters for sign-off
 - current status
+- note of any deliverables or domains intentionally excluded, deferred, or to be confirmed later, with reason
 
 Recommended columns:
 
@@ -114,6 +115,7 @@ Must include:
 - major delivery or feasibility risks
 - material dependencies
 - major operational, financial, regulatory, or support implications
+- any material assumptions about funding, risk tolerance, or organizational readiness that decision-makers are being asked to accept
 
 This section helps define what decision-makers are being asked to commit to.
 
@@ -139,7 +141,9 @@ Keep the following out of this artifact:
 
 ## Relationships to Other Artifacts
 
-This artifact anchors the Project Charter, Functional Capabilities Baseline, domain-specific deliverables, decision records, and final acceptance and closure records.
+This artifact anchors the Project Charter, Functional Capabilities, domain-specific deliverables, decision records, and final acceptance and closure records.
+
+The Project Charter should not contradict this document. If authorization, funding, scope, ownership, or required deliverables change materially, the Initiative Definition Document should be updated first or in controlled parallel with the related governance decision.
 
 ## Ownership, Review, and Acceptance Expectations
 
@@ -156,6 +160,7 @@ This is a living governance document. Keep deliverables, owners, decision refere
 - Can a new reader understand why the initiative exists and what it is intended to achieve?
 - Are the scope boundaries and ownership model explicit?
 - Are deliverables and Acceptance Authorities visible enough to govern downstream work?
+- Does the document make visible what is excluded, still undecided, or dependent on later authorization?
 - Does the document stay at governance level rather than becoming detailed design or execution content?
 - Could another person maintain the document without relying on the original author?
 

@@ -12,11 +12,11 @@ Use Case Narratives:
 
 Use cases explain behavior in business language. They are not technical design documents.
 
-## 2. Role in the Project Delivery Framework
+## 2. Role in the Work Delivery Framework
 
 Use Case Narratives are part of the **Solution Deliverables** domain.
 
-They are normally produced in **Stage 4 — Delivery Elaboration**, after scope is authorized and the team is structuring the approved scope.
+They are normally produced in **Stage 4 — Work Definition Details**, after scope is authorized and the team is structuring the approved scope.
 
 They support:
 
@@ -35,7 +35,7 @@ Rules from the Solution Documentation Process apply:
 - each use case must reference a **Solution Module ID (SM-###)**
 - each use case must reference one or more **Capability IDs (FC-###)**
 - no behavior is allowed without traceability to approved Capability IDs
-- if new capability intent is discovered, update the Functional Capabilities baseline through governance before continuing
+- if new capability intent is discovered, update the Functional Capabilities document through governance before continuing
 
 ## 4. Inputs and Preconditions
 
@@ -70,7 +70,7 @@ Each Use Case Narrative must include the sections below.
 - **Use Case ID:** UC-###
 - **Use Case Name:** clear verb phrase (e.g., “Submit Request”, “Approve Application”)
 - **Solution Module ID:** SM-###
-- **Capability IDs:** FC-###, FC-### (must exist in the Functional Capabilities baseline)
+- **Capability IDs:** FC-###, FC-### (must exist in the Functional Capabilities document)
 
 ### 6.2 Actors
 

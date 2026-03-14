@@ -44,6 +44,7 @@ Must include:
 - sequencing or cutover approach
 - rollback or recovery considerations
 - responsibilities and prerequisites
+- statement of which source and target become authoritative before and after cutover where that matters
 
 This section explains how the migration is intended to happen.
 
@@ -55,6 +56,7 @@ Must include:
 - summary of results
 - exceptions identified and their disposition
 - steward or Acceptance Authority sign-off
+- validation thresholds, tolerances, or acceptance basis where results are not expected to be exact-match in every case
 
 This section shows whether the migration was successful and trustworthy.
 
@@ -95,6 +97,7 @@ Keep the record current through planning, execution, and final validation. If mi
 - Does the record explain what is moving, how, and under what control?
 - Is the validation method clear enough to trust the result?
 - Are exceptions explicit and formally dispositioned?
+- Can a reviewer tell when authority moved from source to target and on what validation basis that shift was accepted?
 - Is steward or acceptance sign-off visible?
 
 If weak, clarify the migration boundary, make reconciliation evidence more specific, and show who accepted the result.
