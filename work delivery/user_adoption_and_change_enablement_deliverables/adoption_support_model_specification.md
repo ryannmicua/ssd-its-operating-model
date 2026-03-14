@@ -1,0 +1,110 @@
+# Adoption Support Model Specification
+
+## Purpose
+
+The Adoption Support Model defines how users receive help after go-live, how early adoption issues are handled, and what temporary or ongoing support arrangements are needed to protect outcomes.
+
+It exists to make user support intentional rather than assumed. A useful model shows where users go for help, how support is triaged and escalated, what hypercare exists, and which adoption risks need targeted support.
+
+## When It Is Required
+
+This artifact is required when user adoption risk, process change, or rollout complexity means post-launch support needs to be organized explicitly.
+
+## Intended Readers and Users
+
+- Business Owner
+- Change or Communications Lead
+- support teams
+- Delivery Owner
+- IT Operations / Service Owner where service support overlaps
+
+## Intended Project Context
+
+Use this artifact before go-live and during transition. It is most useful where users need defined help channels and where early-adoption issues could affect business outcomes or operational stability.
+
+It should align with ITIL 4 Service Desk, Incident Management, and organizational change management practice by making user-facing support entry points, escalation paths, and transition support explicit.
+
+## How Much Detail to Include
+
+Include enough detail to explain support channels, hypercare assumptions, escalation routes, and ownership of adoption issues. Do not turn it into a full incident management process.
+
+## Required Content or Minimum Structure
+
+### 1. Support context
+
+Must include:
+
+- initiative or rollout name
+- scope of adoption support
+- owner
+- support period or phase covered
+
+This section identifies what support window and audience the model applies to.
+
+### 2. Support model
+
+Must include:
+
+- support channels and points of contact
+- hypercare or transition assumptions where relevant
+- ownership of support actions and decision-making
+
+This section shows how users access support and who is responsible for helping them.
+
+### 3. Escalation and risk handling
+
+Must include:
+
+- issue triage expectations
+- escalation routes
+- known adoption risks and mitigation or support approach
+
+This section ensures that user issues move predictably when they cannot be resolved at first contact.
+
+### 4. Template guide
+
+Recommended summary columns:
+
+| Support area | Channel or contact | Owner | Escalation path | Risk or note |
+| --- | --- | --- | --- | --- |
+
+Use short entries and reference technical support procedures elsewhere.
+
+## What to Keep Out
+
+Keep the following out of this artifact:
+
+- full technical runbooks
+- detailed defect registers
+- generic IT support policies not specific to the adoption context
+
+## Relationships to Other Artifacts
+
+This artifact should align with the Change & Communication Plan, Training & Enablement Materials, User Impact Assessment, Operations & Support Model, and Operational Readiness Confirmation Record where support responsibilities intersect.
+
+## Ownership, Review, and Acceptance Expectations
+
+The change lead or Business Owner usually coordinates this artifact with support and operations teams.
+
+Review should include the teams expected to receive user issues.
+
+## Maintenance Expectations
+
+Update when rollout timing, hypercare coverage, support channels, or ownership changes.
+
+## Validation Guide
+
+- Is it clear how users get help after go-live?
+- Are hypercare assumptions and escalation routes explicit?
+- Are adoption risks reflected in the support approach?
+- Does the model stay focused on user adoption support rather than generic service management detail?
+
+If weak, make the support entry points and ownership easier to see.
+
+## Prompt Guide for Drafting the Artifact
+
+### Starter prompt
+
+> Draft an Adoption Support Model for this initiative.
+> Define how users receive help after go-live, what hypercare or transition support exists, how issues are escalated, and which adoption risks need focused support.
+> Keep it practical and user-facing.

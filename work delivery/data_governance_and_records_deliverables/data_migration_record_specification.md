@@ -1,0 +1,106 @@
+# Data Migration Record Specification
+
+## Purpose
+
+The Data Migration Record documents both the planned migration approach and the evidence confirming that the migration was completed successfully.
+
+It exists to make migration controlled, reviewable, and attributable rather than an informal technical exercise. A useful migration record shows what is moving, how it is being transformed or reconciled, what the cutover and recovery considerations are, and how correctness was verified.
+
+## When It Is Required
+
+This artifact is required when data is materially migrated, transformed, restructured, consolidated, or loaded into a new authoritative location.
+
+## Intended Readers and Users
+
+- Data Steward
+- migration and delivery leads
+- IT Operations / Service Owner
+- security and audit reviewers
+- Acceptance Authorities
+
+## Intended Project Context
+
+Use this artifact when migration correctness, reconciliation, cutover, rollback, or stewardship sign-off matter. It is most useful where data integrity and traceability must be demonstrated, not just assumed.
+
+It should align with NIST planning and integrity expectations by making migration scope, validation, and rollback thinking explicit. It should also align with practical governance expectations for stewardship sign-off and exception handling.
+
+## How Much Detail to Include
+
+Keep the record focused on migration logic, validation basis, exceptions, and sign-off. Reference detailed scripts or mapping files instead of copying them wholesale.
+
+## Required Content or Minimum Structure
+
+This artifact normally has two major parts.
+
+### 1. Migration plan
+
+Must include:
+
+- source and target systems or datasets
+- scope of migrated data
+- mapping or transformation summary
+- sequencing or cutover approach
+- rollback or recovery considerations
+- responsibilities and prerequisites
+
+This section explains how the migration is intended to happen.
+
+### 2. Validation evidence
+
+Must include:
+
+- reconciliation or validation approach
+- summary of results
+- exceptions identified and their disposition
+- steward or Acceptance Authority sign-off
+
+This section shows whether the migration was successful and trustworthy.
+
+### 3. Template guide
+
+Recommended validation table:
+
+| Check | Method | Result | Exception | Disposition |
+| --- | --- | --- | --- | --- |
+
+Use the `Disposition` field to show how each exception was resolved, accepted, deferred, or escalated.
+
+## What to Keep Out
+
+Keep the following out of this artifact:
+
+- full script bodies unless the record is the approved execution artifact
+- raw export files
+- unrelated transformation design detail
+- hidden exception handling in free-text notes
+
+## Relationships to Other Artifacts
+
+This artifact should align with the Data Asset Specification, Technical Design Document, Backup, Restore & Recovery Plan, Acceptance Record, and decision or risk records where migration risk is material.
+
+## Ownership, Review, and Acceptance Expectations
+
+The migration lead or data lead usually prepares the record with steward involvement.
+
+The Data Steward and other relevant Acceptance Authorities should review and confirm the validation outcome.
+
+## Maintenance Expectations
+
+Keep the record current through planning, execution, and final validation. If migration occurs in waves, maintain versioned records or clearly separate each wave.
+
+## Validation Guide
+
+- Does the record explain what is moving, how, and under what control?
+- Is the validation method clear enough to trust the result?
+- Are exceptions explicit and formally dispositioned?
+- Is steward or acceptance sign-off visible?
+
+If weak, clarify the migration boundary, make reconciliation evidence more specific, and show who accepted the result.
+
+## Prompt Guide for Drafting the Artifact
+
+### Starter prompt
+
+> Draft a Data Migration Record for this initiative.
+> Include the migration plan, mapping or transformation summary, cutover and rollback considerations, validation method, results, exceptions, and steward sign-off.
+> Keep it practical, traceable, and exception-aware.
