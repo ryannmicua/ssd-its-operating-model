@@ -1,10 +1,12 @@
 # Data Asset Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Data Asset Specification provides authoritative documentation of the key data handled by the initiative so that ownership, structure, storage, lifecycle, and recoverability are clear.
 
 It exists to make the data understandable and governable beyond the original designer. A useful specification helps operations, support, security, governance, and future change teams understand what the asset is, where it lives, who owns it, and how it should be managed over time.
+
+The intended outcome is that the data asset can be governed, protected, supported, and changed with clear ownership and without needing to rediscover core facts about the data.
 
 ## When It Is Required
 

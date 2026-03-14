@@ -1,10 +1,12 @@
 # Operations & Support Model Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Operations & Support Model defines who owns the live service, how support is structured, where escalation occurs, and what operating assumptions govern steady-state service.
 
 It exists to make long-term accountability explicit and to prevent unsupported handover. A useful model shows who owns the service, who supports it, how incidents and escalations move, and what constraints or dependencies affect support.
+
+The intended outcome is that the live service remains supportable beyond the delivery team, with clear ownership, support boundaries, escalation paths, and sustainable operating responsibilities.
 
 ## When It Is Required
 

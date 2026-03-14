@@ -1,10 +1,12 @@
 # Project Charter Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Project Charter formally records sponsorship, authority, priority, funding commitment, and the decision to proceed with delivery.
 
 It exists to confirm that the initiative has been intentionally authorized and that the Delivery Owner has clear authority to act within the approved boundary. A useful charter makes the authorization basis, key commitments, and accountability model easy to understand and audit.
+
+The intended outcome is that the initiative proceeds with explicit sponsorship, approved authority, and visible commitment of funding and accountability.
 
 ## When It Is Required
 

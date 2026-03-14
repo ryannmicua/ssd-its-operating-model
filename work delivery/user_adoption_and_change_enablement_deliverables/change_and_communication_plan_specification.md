@@ -1,10 +1,12 @@
 # Change & Communication Plan Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Change & Communication Plan defines how the initiative will be explained, promoted, reinforced, and managed across affected stakeholders and user groups.
 
 It exists to make communications intentional, audience-aware, and linked to readiness rather than treated as an afterthought. A useful plan shows who needs to hear what, when they need to hear it, who will communicate it, and how feedback or escalation will be handled.
+
+The intended outcome is that the right audiences receive the right messages at the right time to support awareness, readiness, reinforcement, and adoption.
 
 ## When It Is Required
 

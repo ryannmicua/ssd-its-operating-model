@@ -1,10 +1,12 @@
 # Residual Risk Acceptance Record Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Residual Risk Acceptance Record documents the formal acknowledgment and acceptance of material risk that remains after planned controls or mitigations have been applied.
 
 It exists to keep risk acceptance explicit, attributable, and reviewable rather than silent or assumed. A useful record shows what risk remains, why it remains, what controls are in place, and who accepted the exposure.
+
+The intended outcome is that material residual risk is consciously accepted by the right authority with a clear record of the remaining exposure, its basis, and any conditions attached to that acceptance.
 
 ## When It Is Required
 

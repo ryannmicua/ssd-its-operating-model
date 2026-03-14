@@ -1,10 +1,12 @@
 # Technical Design Document Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Technical Design Document explains how the solution is structured, what it depends on, and what technical decisions affect deployment, operation, security, resilience, and future change.
 
 It exists to make the technical design understandable to people other than the original implementer. A useful Technical Design Document helps delivery, operations, support, security, and future maintainers understand how the solution is built without turning into a runbook.
+
+The intended outcome is that the solution's technical design can be reviewed, supported, changed, and governed without relying on undocumented knowledge held by the original implementer.
 
 ## When It Is Required
 

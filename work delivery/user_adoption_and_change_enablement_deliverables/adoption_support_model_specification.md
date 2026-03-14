@@ -1,10 +1,12 @@
 # Adoption Support Model Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Adoption Support Model defines how users receive help after go-live, how early adoption issues are handled, and what temporary or ongoing support arrangements are needed to protect outcomes.
 
 It exists to make user support intentional rather than assumed. A useful model shows where users go for help, how support is triaged and escalated, what hypercare exists, and which adoption risks need targeted support.
+
+The intended outcome is that users receive timely, structured help after go-live so adoption issues are resolved quickly and intended business outcomes are protected.
 
 ## When It Is Required
 

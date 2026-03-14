@@ -1,10 +1,12 @@
 # Use Case Narratives Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 Use Case Narratives describe how users achieve defined outcomes using the solution. They turn approved capabilities into reviewable, testable, and acceptance-ready behavior.
 
 This artifact exists to reduce ambiguity about how the solution should behave from the user's point of view. A useful use case set shows who is acting, what triggers the action, what outcome is intended, what rules matter, what exceptions are important, and what observable conditions prove the behavior is correct.
+
+The intended outcome is that user-visible behavior and expected results are explicit enough to guide design, validation, and acceptance without guesswork.
 
 ## When It Is Required
 

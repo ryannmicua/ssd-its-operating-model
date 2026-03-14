@@ -1,10 +1,12 @@
 # Access Control & Authorization Model Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Access Control & Authorization Model defines how access to the solution is granted, restricted, reviewed, and governed.
 
 It exists to make access decisions intentional, reviewable, and aligned with role responsibilities and risk. A useful model supports least privilege, separation of duties, and accountable access lifecycle management.
+
+The intended outcome is that access remains deliberately controlled, appropriately limited, and reviewable across the full user lifecycle, with clear accountability for privileged and sensitive access.
 
 ## When It Is Required
 

@@ -1,10 +1,12 @@
 # Security & Privacy Risk Assessment Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Security & Privacy Risk Assessment identifies, evaluates, and records the security and privacy risks introduced or changed by the solution, along with the controls or treatment actions needed to reduce those risks.
 
 It exists to make risk visible before it becomes an operational surprise. A useful assessment shows what could go wrong, what assets or data are affected, how serious the impact could be, what controls are already in place, and what residual risk remains.
+
+The intended outcome is that material security and privacy risks are understood early, addressed deliberately, and carried forward into control decisions, readiness, and risk acceptance.
 
 ## When It Is Required
 

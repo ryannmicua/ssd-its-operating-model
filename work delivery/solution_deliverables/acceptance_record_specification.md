@@ -1,10 +1,12 @@
 # Acceptance Record Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Acceptance Record provides the consolidated decision trail showing what solution deliverables were reviewed, what evidence supports acceptance, what conditions remain, and whether the named Acceptance Authority has formally accepted the result.
 
 It exists to keep acceptance explicit and auditable. A useful Acceptance Record gives reviewers a concise and attributable basis for sign-off without forcing them to read every supporting artifact in full.
+
+The intended outcome is that solution acceptance is traceable to approved scope and evidence, with any conditions or exclusions made visible at the point of sign-off.
 
 ## When It Is Required
 

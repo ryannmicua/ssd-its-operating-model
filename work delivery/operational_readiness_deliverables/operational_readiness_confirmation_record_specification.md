@@ -1,10 +1,12 @@
 # Operational Readiness Confirmation Record Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Operational Readiness Confirmation Record provides formal confirmation that the solution is ready to be accepted into operational responsibility, or it records the explicit conditions under which that readiness is accepted.
 
 It exists to make handover explicit, attributable, and reviewable. A useful readiness record shows what evidence was reviewed, who is assuming service ownership, what gaps remain, and what decision was made.
+
+The intended outcome is that transfer into operational responsibility is a clear, evidence-based decision with named ownership, visible conditions, and no hidden assumptions about readiness.
 
 ## When It Is Required
 

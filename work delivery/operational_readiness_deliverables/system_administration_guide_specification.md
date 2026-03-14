@@ -1,10 +1,12 @@
 # System Administration Guide Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The System Administration Guide defines how the solution is deployed, configured, administered, monitored, and supported in day-to-day operation.
 
 It exists to convert technical and implementation knowledge into repeatable operating guidance that another competent administrator can follow without relying on the original implementer. A useful guide supports handover, continuity, supportability, and controlled day-to-day administration.
+
+The intended outcome is that routine administration can be carried out consistently, safely, and independently by a competent administrator who was not part of the original implementation.
 
 ## When It Is Required
 

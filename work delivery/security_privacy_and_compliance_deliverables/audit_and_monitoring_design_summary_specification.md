@@ -1,10 +1,12 @@
 # Audit & Monitoring Design Summary Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Audit & Monitoring Design Summary describes how key actions, states, and exceptions within the solution are logged, monitored, reviewed, and escalated.
 
 It exists to support accountability, forensic reconstruction, and operational response without becoming a full SIEM implementation guide. A useful summary tells reviewers what events matter, how they become visible, who acts on them, and what limitations remain.
+
+The intended outcome is that material events and exceptions are visible early enough to support accountability, investigation, response, and ongoing operational oversight.
 
 ## When It Is Required
 

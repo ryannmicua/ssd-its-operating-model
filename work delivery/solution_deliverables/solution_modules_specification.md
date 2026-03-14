@@ -1,10 +1,12 @@
 # Solution Modules Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 Solution Modules organize approved functional scope into coherent delivery and acceptance groupings. They show how approved capabilities are bundled into manageable units for elaboration, validation, deployment, and acceptance.
 
 This artifact exists to support controlled delivery without redefining scope. A useful Solution Modules artifact helps teams see how the approved capabilities are grouped, what each grouping enables, and how those groupings support later use cases and evidence.
+
+The intended outcome is that approved capabilities are organized into manageable units that support controlled elaboration, validation, deployment sequencing, and acceptance without changing scope intent.
 
 ## When It Is Required
 

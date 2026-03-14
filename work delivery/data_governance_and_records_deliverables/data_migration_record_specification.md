@@ -1,10 +1,12 @@
 # Data Migration Record Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Data Migration Record documents both the planned migration approach and the evidence confirming that the migration was completed successfully.
 
 It exists to make migration controlled, reviewable, and attributable rather than an informal technical exercise. A useful migration record shows what is moving, how it is being transformed or reconciled, what the cutover and recovery considerations are, and how correctness was verified.
+
+The intended outcome is that migration can be approved, executed, validated, and later reviewed with a clear record of what changed, how it was controlled, and how success was confirmed.
 
 ## When It Is Required
 

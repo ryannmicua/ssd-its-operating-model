@@ -1,10 +1,12 @@
 # Compliance & Regulatory Alignment Statement Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Compliance & Regulatory Alignment Statement documents how the initiative aligns with applicable internal policies, contractual obligations, regulatory requirements, and data protection expectations.
 
 It exists to make compliance exposure visible, interpreted, and attributable before and after implementation. A useful statement shows what obligations apply, why they apply, how they are being addressed, and what gaps or dependencies remain.
+
+The intended outcome is that applicable obligations are translated into clear accountability, visible alignment decisions, and understood gaps that can be acted on before they become audit or operational issues.
 
 ## When It Is Required
 

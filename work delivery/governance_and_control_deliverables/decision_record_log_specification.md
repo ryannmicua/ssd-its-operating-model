@@ -1,10 +1,12 @@
 # Decision Record Log Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Decision Record Log maintains an attributable history of material decisions affecting scope, funding, sequencing, risk treatment, architecture direction, compliance position, or acceptance.
 
 It exists to make important decisions visible after the meeting or conversation where they were made. A useful Decision Record Log helps delivery teams, reviewers, and future maintainers understand what was decided, why, by whom, and what changed as a result.
+
+The intended outcome is that material decisions remain traceable, do not need to be rediscovered or re-litigated, and can be followed through into delivery, governance, and acceptance actions.
 
 ## When It Is Required
 

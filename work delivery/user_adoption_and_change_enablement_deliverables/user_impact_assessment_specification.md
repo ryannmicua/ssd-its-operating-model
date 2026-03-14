@@ -1,10 +1,12 @@
 # User Impact Assessment Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The User Impact Assessment identifies which user groups are affected by the initiative, what changes in their behavior or process, and what adoption risks must be managed.
 
 It exists to make user change visible before communications, training, and support plans are finalized. A useful assessment tells the organization who is affected, how their work changes, where the change is most difficult, and which groups need focused support.
+
+The intended outcome is that user impacts and adoption risks are understood early enough to shape targeted communications, training, support, and readiness decisions.
 
 ## When It Is Required
 

@@ -1,10 +1,12 @@
 # Initiative Definition Document Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Initiative Definition Document explains what the initiative is, why it exists, what outcomes it is intended to achieve, and what boundaries govern delivery.
 
 It is the main baseline for intent, scope, ownership, and deliverable expectations. A useful Initiative Definition Document supports approval, downstream planning, change control, and later acceptance without becoming a catch-all repository for detailed design or execution content.
+
+The intended outcome is that the initiative has a single authoritative baseline for outcomes, scope boundaries, ownership, and required deliverables that all downstream work can align to and be tested against.
 
 ## When It Is Required
 

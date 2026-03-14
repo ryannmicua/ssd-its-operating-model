@@ -1,10 +1,12 @@
 # Training & Enablement Materials Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 Training & Enablement Materials provide the practical guidance users need to perform expected behaviors correctly and consistently after the change.
 
 They exist to translate solution behavior into usable guidance for real user groups. A useful training and enablement set helps users complete their tasks correctly, understand important cautions, and know where to get help when they are unsure.
+
+The intended outcome is that affected users can perform the new or changed work correctly, consistently, and with enough confidence to reduce adoption friction and avoid preventable errors.
 
 ## When It Is Required
 

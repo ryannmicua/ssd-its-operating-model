@@ -1,10 +1,12 @@
 # Functional Capabilities Baseline Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Functional Capabilities Baseline defines the approved business abilities the solution must provide. It is the functional scope baseline for the initiative.
 
 It exists to make scope clear before detailed design, build, testing, and acceptance begin. A useful baseline helps business and delivery teams agree what the solution must be able to do without mixing in workflow detail, screen design, or implementation choices.
+
+The intended outcome is that the initiative has a stable, outcome-aligned functional scope baseline that downstream design, build, testing, and acceptance work can trace back to.
 
 ## When It Is Required
 

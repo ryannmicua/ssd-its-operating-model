@@ -1,10 +1,12 @@
 # Data Governance & Impact Assessment Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Data Governance & Impact Assessment identifies the data categories handled by the initiative, the governance implications they create, and the operational, privacy, or compliance impacts that must be managed.
 
 It exists to make data accountability visible before implementation is finalized. A useful assessment tells the organization what data is in play, how sensitive it is, who is accountable, what obligations are triggered, and what impacts require action.
+
+The intended outcome is that data-related obligations, sensitivities, and required actions are identified early enough to shape design, controls, approvals, and operational readiness.
 
 ## When It Is Required
 

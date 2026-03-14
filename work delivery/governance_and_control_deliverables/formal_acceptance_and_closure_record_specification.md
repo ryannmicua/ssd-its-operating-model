@@ -1,10 +1,12 @@
 # Formal Acceptance & Closure Record Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Formal Acceptance & Closure Record confirms that required deliverables or deliverable domains have been accepted, that the relevant authorities have signed off, and that the initiative is formally closed or conditionally closed.
 
 It exists to prevent informal completion and to preserve a clear decision trail at the end of the initiative. A useful record shows what was accepted, what remains open, and who authorized closure.
+
+The intended outcome is that initiative completion or conditional closure is explicit, attributable, and supported by a clear record of accepted results, remaining actions, and accountable sign-off.
 
 ## When It Is Required
 

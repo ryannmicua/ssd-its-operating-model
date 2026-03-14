@@ -1,10 +1,12 @@
 # Adoption Confirmation Record Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Adoption Confirmation Record provides formal confirmation that impacted user groups were informed, required enablement activities occurred, key adoption risks were reviewed, and the Business Owner acknowledges user readiness.
 
 It exists to keep readiness evidence visible rather than assumed. A useful record shows which groups were prepared, what evidence supports that conclusion, what risks remain, and who confirmed readiness.
+
+The intended outcome is that user readiness is acknowledged on the basis of visible evidence, with remaining adoption risks and conditions made explicit before release or handover.
 
 ## When It Is Required
 

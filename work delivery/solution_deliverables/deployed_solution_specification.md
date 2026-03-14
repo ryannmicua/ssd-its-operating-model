@@ -1,10 +1,12 @@
 # Deployed Solution Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Deployed Solution artifact records what approved solution behavior is actually live, where it is live, and under what operational and acceptance conditions it has been released.
 
 It exists to make the live outcome visible and attributable. A useful Deployed Solution artifact helps reviewers confirm that the implementation aligns to approved scope, helps operations understand what has entered service, and helps acceptance authorities see what evidence supports live release.
+
+The intended outcome is that the live implementation is clearly understood as an accountable, supportable, in-scope release rather than an assumed technical state.
 
 ## When It Is Required
 

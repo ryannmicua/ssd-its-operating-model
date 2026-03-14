@@ -1,12 +1,14 @@
 # User Roles, Personas & Access Model Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 This artifact defines the categories of users who interact with the solution, the responsibilities and goals associated with those roles, and the access boundaries that govern what each role is allowed or expected to do.
 
 Optional personas add practical human context where role names alone are not enough to support clear use cases, access review, training, or adoption planning.
 
 The artifact exists to make user assumptions explicit before build and acceptance. A useful role and access model gives the project a stable actor model, a clear view of role boundaries, and a practical basis for access, behavior, and enablement decisions.
+
+The intended outcome is that user roles, access expectations, and relevant personas are clear enough to support consistent design, access control, testing, training, and acceptance decisions.
 
 ## When It Is Required
 

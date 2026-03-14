@@ -1,10 +1,12 @@
 # Backup, Restore & Recovery Plan Specification
 
-## Purpose
+## Purpose and Intended Outcome
 
 The Backup, Restore & Recovery Plan defines how the solution can be backed up, restored, recovered, or rolled back after failure, error, disruption, or failed change.
 
 It exists to make recovery realistic, owned, and reviewable rather than assumed. A useful plan helps the organization restore service or data without relying on undocumented knowledge or untested assumptions.
+
+The intended outcome is that backup, restore, recovery, and rollback can be performed in a controlled way that protects service continuity, data integrity, and operational accountability.
 
 ## When It Is Required
 
