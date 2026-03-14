@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Provide a practical reference list of common deliverables used in initiatives governed by the Project Delivery Framework.
+Provide a practical reference list of common deliverables used in initiatives governed by the Work Delivery Framework.
 
 This document helps teams think through what artifacts may be needed across different areas of an initiative (such as solution design, data, operations, security, governance, and user adoption).
 
@@ -14,7 +14,7 @@ Each domain covers one important area of delivery, such as solution design, gove
 
 Using domains helps teams answer a simple question early: **"Have we covered all critical areas, not only build work?"**
 
-During Delivery Definition, the team confirms which domains are in scope. Not every initiative needs every domain.
+During Work Definition, the team confirms which domains are in scope. Not every initiative needs every domain.
 
 ## How to Use Standard Deliverables
 
@@ -37,7 +37,7 @@ Deliver the approved business outcomes through an implemented solution that rema
 ### Standard Deliverables (as applicable)
 
 - **Deployed Solution**
-- **Functional Capabilities Baseline**
+- **Functional Capabilities**
 - **Solution Modules**
 - **Use Case Narratives**
 - **User Roles, Personas & Access Model**
@@ -49,7 +49,7 @@ The implemented system behavior that delivers the approved business capabilities
 
 The deployed solution must remain within the intent and boundaries of the authorized scope.
 
-### Functional Capabilities Baseline
+### Functional Capabilities
 
 Defines the approved functional scope of the initiative, including:
 
@@ -623,27 +623,27 @@ Accountable for user readiness, communications, and adoption enablement activiti
 
 This document serves as the authoritative catalog of standard deliverables and acceptance expectations across deliverable domains.
 
-It does not make every deliverable mandatory for every initiative. During Delivery Definition, teams determine which deliverable domains are in scope and which standard deliverables are appropriate for the initiative’s nature, scale, and risk.
+It does not make every deliverable mandatory for every initiative. During Work Definition, teams determine which deliverable domains are in scope and which standard deliverables are appropriate for the initiative's nature, scale, and risk.
 
-### During Delivery Definition (Stage 2)
+### During Work Definition (Stage 2)
 
 - Confirm which deliverable domains are in scope (each domain is explicitly included or excluded).
 - Identify the Acceptance Authority for every in-scope domain.
 - Agree which standard deliverables are expected for each in-scope domain (as applicable), at approval-level depth.
 - Use the Acceptance Focus questions as the basis for defining what “done” will mean later at acceptance.
 
-### During Delivery Authorization (Stage 3)
+### During Work Authorization (Stage 3)
 
 - Confirm that scope, ownership, funding commitments, and risk implications are decision-ready.
 - Confirm Acceptance Authorities remain valid for each in-scope domain.
 - Record the authorization decision and associated commitments.
 
-### During Delivery Elaboration (Stage 4)
+### During Work Definition Details (Stage 4)
 
 - Produce the detailed versions of in-scope deliverables needed to build, test, transition, and accept the solution.
 - Ensure elaboration remains consistent with the authorized scope and intent.
 
-### During Execution & Control (Stage 6)
+### During Work Delivery (Stage 6)
 
 - Produce the required deliverables for each in-scope domain and collect acceptance evidence.
 - Use the Acceptance Focus questions to drive validation and evidence collection.

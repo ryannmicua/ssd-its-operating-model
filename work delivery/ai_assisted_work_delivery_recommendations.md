@@ -15,7 +15,7 @@ The recommendations focus on:
 
 Based on review of the current framework and references:
 
-- The Project Delivery Framework clearly defines stage gates and control intent, but practitioners may still struggle with "what to produce now" at each stage.
+- The Work Delivery Framework clearly defines stage gates and control intent, but practitioners may still struggle with "what to produce now" at each stage.
 - The Solution Documentation Process is strong on traceability but is currently described as a document standard, not yet as an explicit AI-assisted operating workflow.
 - The Standard Deliverables Reference is now easier to read, but teams still need implementation guidance on how to generate deliverables quickly and consistently with AI while preserving governance controls.
 - Specification documents for non-solution domains now exist, but they should be adopted with a common AI prompt protocol, review protocol, and version discipline.
@@ -33,7 +33,7 @@ This keeps delivery fast without weakening governance.
 
 ## 4. Cross-Document Recommendations
 
-## 4.1 Project Delivery Framework Recommendations
+## 4.1 Work Delivery Framework Recommendations
 
 1. Add a "Stage Output Checklist" subsection under each stage with:
    - mandatory artifacts
@@ -155,7 +155,7 @@ This reduces rework and inconsistent outputs.
 ## Phase 1 (Immediate: 1-2 weeks)
 
 - Add AI-Assisted workflow sections to:
-  - Project Delivery Framework
+- Work Delivery Framework
   - Solution Documentation Process
   - Standard Deliverables Reference
 - Publish a single reusable "Codex prompting standard" page in `work delivery`.
@@ -190,7 +190,7 @@ If implemented, this model should produce:
 
 Approve this recommendation set, then prioritize three immediate edits:
 
-1. Add stage-level AI usage and output checklists in the Project Delivery Framework.
+1. Add stage-level AI usage and output checklists in the Work Delivery Framework.
 2. Add explicit AI-assisted step prompts and human validation gates in the Solution Documentation Process.
 3. Add domain selection matrix + minimum viable deliverable guidance in the Standard Deliverables Reference.
 

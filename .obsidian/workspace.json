@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "its_work_management_model.md",
+                "file": "specification_writing_guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "its_work_management_model"
+              "title": "specification_writing_guide"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "its_work_management_model.md",
+                "file": "specification_writing_guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for its_work_management_model"
+              "title": "Backlinks for specification_writing_guide"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "its_work_management_model.md",
+                "file": "specification_writing_guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of its_work_management_model"
+              "title": "Outline of specification_writing_guide"
             }
           }
         ],
@@ -200,11 +200,11 @@
   },
   "active": "f207c11363b7b25c",
   "lastOpenFiles": [
+    "its_work_management_model.md",
     "its_operating_model.md",
     "work delivery/work_delivery_framework.md",
     "governance_and_control_deliverables.md",
     "work delivery/ai_assisted_work_delivery_recommendations.md",
-    "its_work_management_model.md",
     "work delivery/project_delivery_framework.md",
     "work delivery/solution_documentation_process.md",
     "work delivery/deliverable_specifications_index.md",

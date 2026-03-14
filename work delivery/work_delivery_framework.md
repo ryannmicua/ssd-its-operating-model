@@ -1,10 +1,10 @@
-# Project Delivery Framework
+# Work Delivery Framework
 
 ## Purpose
 
 This framework governs planned delivery initiatives, including projects and significant enhancements.
 
-It puts the Define–Decide–Deliver (DDD) Work Management Model into practice by defining the required documents, decision points, and sign-off steps for disciplined delivery at scale.
+It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by defining the required documents, decision points, and sign-off steps for disciplined delivery at scale.
 
 ## Outcome
 
@@ -21,25 +21,25 @@ The organization operates with clear, auditable delivery decisions.
 
 ## End-to-End Stages and Artifacts
 
-## Stage 1 — Opportunity Assessment
+## Stage 1 - Work Assessment
 
-**Purpose:** Determine whether an idea or request is worth any further investment before entering Delivery Definition.
+**Purpose:** Determine whether an idea or request is worth any further investment before entering Work Definition.
 
-This stage applies the Opportunity Assessment Framework to determine whether an initiative may proceed to Delivery Definition.
+This stage applies the Work Assessment Framework to determine whether an initiative may proceed to Work Definition.
 
 ### Primary Artifact
 
-- Opportunity Assessment Report
+- Work Assessment Report
 
-All validation discussions, feasibility notes, and stakeholder findings are incorporated into the Opportunity Assessment Report. Stage 1 does not produce separate validation documents.
+All validation discussions, feasibility notes, and stakeholder findings are incorporated into the Work Assessment Report. Stage 1 does not produce separate validation documents.
 
 ### Activities
 
-| Activity                              | Required / Optional                               | Must Attend                                                    | Artifacts Used                                        |
-| ------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
-| Intake & Sponsorship Alignment        | Required                                          | Requestor, Sponsor (or candidate), ITS Intake / Portfolio role | Intake submission, preliminary problem statement      |
-| Validation and feasibility check  | Optional (as needed for clarity or risk exposure) | Sponsor, subject matter experts, Technical Lead (as applicable)                  | Notes incorporated into Opportunity Assessment Report |
-| Decision meeting (Proceed / Defer / Reject) | Required                                          | Decision Authority, Sponsor, Portfolio / Governance role       | Opportunity Assessment Report                         |
+| Activity | Required / Optional | Must Attend | Artifacts Used |
+| --- | --- | --- | --- |
+| Intake & Sponsorship Alignment | Required | Requestor, Sponsor (or candidate), ITS Intake / Portfolio role | Intake submission, preliminary problem statement |
+| Validation and feasibility check | Optional (as needed for clarity or risk exposure) | Sponsor, subject matter experts, Technical Lead (as applicable) | Notes incorporated into Work Assessment Report |
+| Decision meeting (Proceed / Defer / Reject) | Required | Decision Authority, Sponsor, Portfolio / Governance role | Work Assessment Report |
 
 ### Exit Criteria
 
@@ -47,22 +47,22 @@ All validation discussions, feasibility notes, and stakeholder findings are inco
 - Sponsorship confirmed
 - Strategic alignment and early risk indicators understood
 - Decision recorded (Proceed / Defer / Reject)
-- If Proceed, ready to enter Stage 2 — Delivery Definition
+- If Proceed, ready to enter Stage 2 - Work Definition
 
-## Stage 2 — Delivery Definition
+## Stage 2 - Work Definition
 
-**Purpose:** Define enough to enable an informed Delivery Authorization decision — no more, no less.
+**Purpose:** Define enough to enable an informed Work Authorization decision - no more, no less.
 
-Stage 2 stays at approval-level detail: enough clarity on scope, value, owners, risks, and cost to approve delivery — without producing build-level design details.
+Stage 2 stays at approval-level detail: enough clarity on scope, value, owners, risks, and cost to approve delivery - without producing build-level design details.
 
 Stage 2 determines which Deliverable Domains (deliverable categories), as defined in the Standard Deliverables & Acceptance Guide, are in scope.
 Each domain must be explicitly scoped in or excluded, and a named Acceptance Authority identified for every in-scope domain.
 
-### Delivery Definition Package
+### Work Definition Package
 
-The Delivery Definition Package documents, at approval-level detail, the intended deliverables organized by Deliverable Domain, consistent with the Standard Deliverables & Acceptance Guide.
+The Work Definition Package documents, at approval-level detail, the intended deliverables organized by Deliverable Domain, consistent with the Standard Deliverables & Acceptance Guide.
 
-Within each in-scope domain, only deliverables relevant to the initiative’s nature, scale, and risk are required.
+Within each in-scope domain, only deliverables relevant to the initiative's nature, scale, and risk are required.
 
 **1. Solution Deliverables**
 
@@ -108,11 +108,11 @@ Keep this at approval-level detail; do not include build-level design details, r
 
 ### Activities
 
-| Activity                                          | Required / Optional                                                    | Must Attend                                                 | Artifacts Used                                                 |
-| ------------------------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------- |
-| Definition & Capability Structuring Session(s)    | Required                                                               | Outcome Owner, Delivery Owner, Key Stakeholders, subject matter experts       | Draft Delivery Definition Package, capability definitions      |
-| Scope, Acceptance & Stakeholder Validation Review | Required                                                               | Outcome Owner, Named Acceptance Authorities, Delivery Owner | Defined scope boundaries, acceptance focus, Deliverable Domains |
-| Operational & Support Impact Review               | Conditionally Required (for system-impacting or medium/high-risk work) | Delivery Owner, Support / Ops representatives               | Support model summary, operational impact summary              |
+| Activity | Required / Optional | Must Attend | Artifacts Used |
+| --- | --- | --- | --- |
+| Definition & Capability Structuring Session(s) | Required | Outcome Owner, Delivery Owner, Key Stakeholders, subject matter experts | Draft Work Definition Package, capability definitions |
+| Scope, Acceptance & Stakeholder Validation Review | Required | Outcome Owner, Named Acceptance Authorities, Delivery Owner | Defined scope boundaries, acceptance focus, Deliverable Domains |
+| Operational & Support Impact Review | Conditionally Required (for system-impacting or medium/high-risk work) | Delivery Owner, Support / Ops representatives | Support model summary, operational impact summary |
 
 ### Exit Criteria
 
@@ -121,10 +121,10 @@ Keep this at approval-level detail; do not include build-level design details, r
 - Support and Operational Owners identified
 - Approval-level cost estimate and financial impact summarized
 - Risk exposure and delivery feasibility clearly documented at authorization depth
-- Definition sufficient for an informed go / no-go Delivery Authorization decision
-- Ready to seek Delivery Authorization
+- Definition sufficient for an informed go / no-go Work Authorization decision
+- Ready to seek Work Authorization
 
-## Stage 3 — Delivery Authorization
+## Stage 3 - Work Authorization
 
 **Purpose:** Explicitly authorize delivery by committing people, time, funding, and risk to the defined outcomes, capabilities, and scope.
 
@@ -137,12 +137,12 @@ This stage is the go/no-go commitment point and protects delivery teams from inf
 
 ### Activities
 
-| Activity                                        | Required / Optional | Must Attend                                                | Artifacts Used                                                   |
-| ----------------------------------------------- | ------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
-| Project Proposal Authorization Meeting          | Required            | Decision Authority, Sponsor, Outcome Owner, Delivery Owner | Delivery Definition Package, risk summary, draft Project Charter |
-| Sponsorship, funding, and priority confirmation | Required            | Sponsor, Finance (if applicable), Decision Authority       | Budget estimate, priority ranking, capacity overview             |
-| Conditional approval discussion                 | Optional            | Decision Authority, Sponsor                                | Risk mitigation summary, dependency analysis                     |
-| Phased or constrained authorization discussion  | Optional            | Decision Authority, Sponsor, Delivery Owner                | Phased delivery concept, milestone outline                       |
+| Activity | Required / Optional | Must Attend | Artifacts Used |
+| --- | --- | --- | --- |
+| Project Proposal Authorization Meeting | Required | Decision Authority, Sponsor, Outcome Owner, Delivery Owner | Work Definition Package, risk summary, draft Project Charter |
+| Sponsorship, funding, and priority confirmation | Required | Sponsor, Finance (if applicable), Decision Authority | Budget estimate, priority ranking, capacity overview |
+| Conditional approval discussion | Optional | Decision Authority, Sponsor | Risk mitigation summary, dependency analysis |
+| Phased or constrained authorization discussion | Optional | Decision Authority, Sponsor, Delivery Owner | Phased delivery concept, milestone outline |
 
 ### Exit Criteria
 
@@ -153,15 +153,15 @@ This stage is the go/no-go commitment point and protects delivery teams from inf
 - Implementation budget approved at required authority level
 - Ongoing OpEx impact acknowledged and accepted
 - Financial risks explicitly reviewed and accepted by Decision Authority
-- Work may proceed to Delivery Elaboration
+- Work may proceed to Work Definition Details
 
 ### Hard Rule
 
-No delivery work may start without explicit Delivery Authorization
+No delivery work may start without explicit Work Authorization
 
-## Stage 4 — Delivery Elaboration
+## Stage 4 - Work Definition Details
 
-**Purpose:** Develop the detailed design needed to build what was approved in Stage 2 — without changing scope, outcomes, capabilities, or acceptance structure.
+**Purpose:** Develop the detailed design needed to build what was approved in Stage 2 - without changing scope, outcomes, capabilities, or acceptance structure.
 
 Stage 4 develops the Detailed Design Package that the delivery team will use to build, test, and transition the solution.
 
@@ -185,7 +185,7 @@ If elaboration introduces new or expanded capabilities not defined in Stage 2, t
 - No material scope creep from the approved definition
 - Ready to set up the delivery team
 
-## Stage 5 — Delivery Mobilization
+## Stage 5 - Delivery Mobilization
 
 **Purpose:** Prepare the organization and delivery team to execute the detailed design with clear governance, roles, meeting rhythm, and ways of working.
 
@@ -202,7 +202,7 @@ If elaboration introduces new or expanded capabilities not defined in Stage 2, t
 - Task breakdown supports controlled execution
 - Ready to begin execution
 
-## Stage 6 — Execution & Control
+## Stage 6 - Work Delivery
 
 **Purpose:** Produce the authorized deliverables, validate them against the acceptance focus defined in Stage 2, and ensure completion with evidence and sign-off.
 
@@ -229,7 +229,7 @@ A deliverable is not complete until:
 - No unresolved sign-off issues
 - Ready for Stage 7 Acceptance, Transition & Closure
 
-## Stage 7 — Acceptance, Transition & Closure
+## Stage 7 - Acceptance, Transition & Closure
 
 **Purpose:** Formally accept outcomes and transition into operations.
 
@@ -239,13 +239,12 @@ Delivered without acceptance is not complete
 
 ## Artifact Summary by Stage
 
-| Stage                  | Artifacts                                                       |
-| ---------------------- | --------------------------------------------------------------- |
-| Opportunity Assessment | Opportunity Assessment Report                                   |
-| Delivery Definition    | Delivery Definition Package including Functional Capabilities   |
-| Delivery Authorization | Decision record, approved Project Charter, funding confirmation |
-| Delivery Elaboration   | Detailed Design Package based on approved scope      |
-| Delivery Mobilization  | Delivery Charter, communication plan, task breakdown            |
-| Execution & Control    | Deliverables, evidence, documentation, change records           |
-| Acceptance & Closure   | Acceptance records, handover, closure                           |
-
+| Stage | Artifacts |
+| --- | --- |
+| Work Assessment | Work Assessment Report |
+| Work Definition | Work Definition Package including Functional Capabilities |
+| Work Authorization | Decision record, approved Project Charter, funding confirmation |
+| Work Definition Details | Detailed Design Package based on approved scope |
+| Delivery Mobilization | Delivery Charter, communication plan, task breakdown |
+| Work Delivery | Deliverables, evidence, documentation, change records |
+| Acceptance & Closure | Acceptance records, handover, closure |

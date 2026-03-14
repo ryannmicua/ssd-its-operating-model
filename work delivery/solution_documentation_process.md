@@ -2,7 +2,7 @@
 
 ## 1. Purpose
 
-Define the recommended workflow for producing, structuring, evidencing, and preparing Solution Deliverables for acceptance within the Project Delivery Framework.
+Define the recommended workflow for producing, structuring, evidencing, and preparing Solution Deliverables for acceptance within the Work Delivery Framework.
 
 This process:
 
@@ -231,5 +231,4 @@ IDs exist to preserve clear traceability from approved capabilities through impl
 - Acceptance without evidence
 - Documentation created after implementation rather than guiding it
 
-This process governs how Solution Deliverables are documented and evidenced once they are in scope under the Project Delivery Framework.
-
+This process governs how Solution Deliverables are documented and evidenced once they are in scope under the Work Delivery Framework.

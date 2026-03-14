@@ -203,7 +203,7 @@ The ID is the authoritative definition of what is being delivered.
 
 **May include (as applicable):**
 
-- Opportunity Assessment document(s) and supporting analysis
+- Work Assessment document(s) and supporting analysis
 - Strategic or policy references relevant to this initiative
 - Standards used
 - Vendor documentation, contracts, or licensing references
@@ -212,27 +212,27 @@ The ID is the authoritative definition of what is being delivered.
 
 ## 7. Lifecycle of the ID
 
-### Stage 1 — Opportunity Assessment&#x20;
+### Stage 1 — Work Assessment&#x20;
 
 - ID not created yet.
-- Inputs are captured in the opportunity assessment material.
+- Inputs are captured in the work assessment material.
 
-### Stage 2 — Definition
+### Stage 2 — Work Definition
 
-- Create the ID based on the Opportunity Assessment material.
+- Create the ID based on the Work Assessment material.
 - Identify Outcome Owner, Delivery Owner, Sponsor, Decision Authorities, required level of authorization (Personal/Departmental/Committee/Organization), and the authorization record (email, committee action, resolution, contract, etc.)
 - Define outcomes, scope boundaries, owners, and deliverable domains.
 - Identify required deliverables using the Standard Deliverables Reference and define new ones as appropriate.
 - For each deliverable, identify Delivery Owners, Acceptance Authorities and document acceptance focus.
 - Finalize the ID for authorization review (status remains **Draft** until authorized).
 
-### Stage 3 — Decision / Authorization&#x20;
+### Stage 3 — Work Authorization&#x20;
 
 - The Draft ID is used to support the authorization decision.
 - Once formally authorized, update status to **Active**.
 - After authorization, the ID becomes the controlled reference for the initiative and must follow the Change Rule (Section 8) for material changes.
 
-### Stage 4 — Detailed Design and Planning&#x20;
+### Stage 4 — Work Definition Details&#x20;
 
 - Update the ID only to improve clarity, confirm deliverables, and maintain current status.
 - Do not change outcomes/scope unless handled through the change rule.
@@ -243,7 +243,7 @@ The ID is the authoritative definition of what is being delivered.
 - Confirm that deliverables, owners, and acceptance authorities remain current in the ID.
 - Confirm delivery team understands what needs to be delivered.
 
-### Stage 6 — Delivery and Execution
+### Stage 6 — Work Delivery
 
 - Keep Section 6.6 current:
   - Update deliverable status
@@ -314,8 +314,6 @@ The following questions are provided as a **recommended self-check** to assess t
 ### Change control
 
 16. Are material changes handled via the change rule (Section 8), with re-authorization when required?
-
-
 
 
 

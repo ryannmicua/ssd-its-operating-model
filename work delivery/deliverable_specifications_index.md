@@ -12,23 +12,22 @@ Use the specification in the relevant domain folder as the primary drafting guid
 
 ## Solution Deliverables
 
-Folder: `work delivery/solution_deliverables`
-
-- `deployed_solution_specification.md`
-- `functional_capabilities_baseline_specification.md`
-- `solution_modules_specification.md`
-- `use_case_narratives_specification.md`
-- `user_roles_personas_and_access_model_specification.md`
-- `acceptance_record_specification.md`
+Folder: [work delivery/solution_deliverables](solution_deliverables)
+- [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
+- [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
+- [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md)
+- [solution_modules_specification](solution_deliverables/solution_modules_specification.md)
+- [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md)
+- [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
 
 ## Governance & Control Deliverables
 
-Folder: `work delivery/governance_and_control_deliverables`
+Folder: [work delivery/governance_and_control_deliverables](governance_and_control_deliverables)
 
-- `initiative_definition_document_specification.md`
-- `project_charter_specification.md`
-- `decision_record_log_specification.md`
-- `formal_acceptance_and_closure_record_specification.md`
+- [initiative_definition_document_specification](governance_and_control_deliverables/initiative_definition_document_specification.md)
+- [project_charter_specification](governance_and_control_deliverables/project_charter_specification.md)
+- [decision_record_log_specification](governance_and_control_deliverables/decision_record_log_specification.md)
+- [formal_acceptance_and_closure_record_specification](governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
 ## Operational Readiness Deliverables
 
