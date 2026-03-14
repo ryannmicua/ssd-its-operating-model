@@ -267,20 +267,42 @@ Avoid vague shorthand such as:
 
 ### 5.7 Required Content or Minimum Structure
 
-List the sections, content elements, or information categories the artifact must contain.
+This section is the main drafting control of the specification.
+
+Define the minimum useful information model for the artifact, not only its headings.
+
+List the sections, content elements, records, fields, or information categories the artifact must contain.
 
 Do not stop at naming the headings only.
 
-Where possible, explain in short, usable terms what each required section, content item, or information category is for and what it should help the reader understand or do.
+For each required section, content item, or information category, explain in short, usable terms:
+
+- what it must include
+- what it is for
+- what it should help the reader understand, decide, do, validate, or accept
 
 When the artifact naturally has major parts, structure this section in a way that reflects those parts rather than using one flat list.
+
+When the artifact is entry-based, record-based, log-based, or table-based, define the required fields for each entry or row, not only the overall document sections.
+
+When useful, distinguish clearly between:
+
+- document-level required content
+- per-entry or per-record required content
+- required content
+- recommended content
+- optional content
+- prohibited content
 
 For example, a strong specification may:
 
 - break the required content into meaningful sub-sections
 - say what each sub-section must include
 - add a short explanation of why that sub-section matters
-- distinguish clearly between required and optional content
+- define stable IDs, mappings, or traceability fields where control depends on them
+- define controlled values for statuses, decisions, classifications, or outcomes where ambiguity would create governance risk
+- provide a recommended table structure or short template guide when the artifact is naturally tabular or form-like
+- add short cautions where a section commonly becomes overloaded or is often misused
 
 Use direct wording such as:
 
@@ -289,7 +311,17 @@ Use direct wording such as:
 - May include
 - Must not include
 
-This is the main control section of the specification and should be detailed enough that a human or agent could draft the target artifact with minimal guessing.
+Avoid writing this section as:
+
+- headings only
+- a generic blank template with no guidance
+- a long flat list when the artifact naturally has major parts
+
+This section should be detailed enough that:
+
+- a human drafter could produce the artifact with minimal guessing
+- a reviewer could assess completeness and usefulness section by section
+- an AI agent could generate a practical first draft without inventing major structure, fields, or control content
 
 ### 5.8 What to Keep Out
 
