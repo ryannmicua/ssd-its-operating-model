@@ -127,7 +127,7 @@ Recommended columns:
 | Deliverable or domain | Description | Delivery Owner | Acceptance Authority | Acceptance focus | Status | Reference |
 | --- | --- | --- | --- | --- | --- | --- |
 
-When Deliverable Domains are first mentioned in an Initiative Definition Document, reference the [Standard Deliverables Reference](../standard_deliverables_reference.md) so the reader can understand the domain structure being used.
+When Deliverable Domains are first mentioned in an Initiative Definition Document, reference the [Standard Deliverables Guide](../standard_deliverables_guide.md) so the reader can understand the domain structure being used.
 
 If the Initiative Definition Document is the sole artifact for the initiative, the acceptance focus may be expressed directly as the acceptance criteria.
 
@@ -283,7 +283,7 @@ Use this checklist when reviewing a produced or written Initiative Definition Do
 8. Confirm that the acceptance focus is clearly defined for each deliverable, or that acceptance criteria are stated where the Initiative Definition Document is the sole artifact.
 9. Confirm that excluded, deferred, or still-to-be-confirmed deliverables are visible with reasons.
 10. Confirm that deliverable status uses the defined status values: Draft, Planned, In Progress, Delivered, or Accepted.
-11. If Deliverable Domains are used, confirm that the document references the [Standard Deliverables Reference](../standard_deliverables_reference.md) when the domains are first introduced.
+11. If Deliverable Domains are used, confirm that the document references the [Standard Deliverables Guide](../standard_deliverables_guide.md) when the domains are first introduced.
 
 ### 12.4. Living document expectations
 

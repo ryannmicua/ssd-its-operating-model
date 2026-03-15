@@ -1,12 +1,12 @@
-# Standard Deliverables Reference
+# Standard Deliverables Guide
 
-## Purpose
+## 1. Purpose
 
 Provide a practical reference list of common deliverables used in initiatives governed by the Work Delivery Framework.
 
 This document helps teams think through what artifacts may be needed across different areas of an initiative (such as solution design, data, operations, security, governance, and user adoption).
 
-## Deliverable Domains
+## 2. Deliverable Domains
 
 A deliverable domain is a practical grouping of related deliverables.
 
@@ -14,33 +14,36 @@ Each domain covers one important area of delivery, such as solution design, gove
 
 Using domains helps teams answer a simple question early: **"Have we covered all critical areas, not only build work?"**
 
-During Work Definition, the team confirms which domains are in scope. Not every initiative needs every domain.
+During Work Definition, the team uses domains to organize the deliverables view. Domains do not replace visibility of the actual deliverables expected for the initiative.
 
-## How to Use Standard Deliverables
+Not every initiative needs every domain.
+
+## 3. How to Use Standard Deliverables
 
 Use this document as a **selection and control guide**, not as a requirement to produce every document listed.
 
-1. Confirm which deliverable domains are in scope for the initiative.
-2. For each in-scope domain, select the standard deliverables that fit the initiative size, risk, and complexity.
+1. Confirm which deliverables are required for the initiative, using deliverable domains as an organizing structure where useful.
+2. For each relevant domain, select the standard deliverables that fit the initiative size, risk, and complexity.
 3. Assign a clear owner and Acceptance Authority for each selected deliverable.
 4. Use the domain Acceptance Focus questions to define what "done" means.
 5. Collect acceptance evidence as delivery progresses, then record formal acceptance.
 
-If a deliverable is excluded, record why it is excluded. This keeps governance decisions visible and auditable.
+Deliverables not needed for authorization may still be listed at summary level during Work Definition so the likely delivery footprint remains visible, even if they will only be elaborated later.
 
-## Operational Use Model
+## 4. Operational Use Model
 
 Use this reference differently at each stage:
 
-- **Stage 2 - Work Definition:** decide which domains are in scope, identify Acceptance Authorities, and define the minimum acceptable output for each in-scope domain.
+- **Stage 2 - Work Definition:** identify the required deliverables for the initiative, use domains to organize them where helpful, identify Acceptance Authorities, and define the minimum authorization-level output needed for a sound decision.
 - **Stage 3 - Work Authorization:** confirm that selected domains, owners, acceptance approach, and major cost/risk implications are decision-ready.
-- **Stage 4 - Work Definition Details:** elaborate only the in-scope domains that are needed to build, test, transition, and accept the work.
+- **Stage 4 - Work Definition Details:** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.
+- **Stage 5 - Delivery Mobilization:** activate the delivery governance and execution controls needed to run the authorized work in a controlled and visible way.
 - **Stage 6 - Work Delivery:** produce the selected deliverables and collect evidence against the agreed acceptance focus.
 - **Stage 7 - Acceptance, Transition & Closure:** confirm that each in-scope domain has evidence and explicit acceptance.
 
 For smaller initiatives, use the minimum viable deliverable depth. The framework does not require every listed deliverable; it requires deliberate choices, explicit ownership, and acceptance-ready outputs.
 
-## Minimum Viable Deliverable Depth
+## 5. Minimum Viable Deliverable Depth
 
 Apply the lightest depth that still makes the work understandable, controllable, and supportable.
 
@@ -50,7 +53,7 @@ Apply the lightest depth that still makes the work understandable, controllable,
 | Medium complexity / cross-team impact | Separate artifacts for the core in-scope domains, with explicit owners and acceptance evidence |
 | High complexity / high risk / regulated / operationally critical | Full domain-specific artifacts, stronger traceability, and more formal review and evidence |
 
-## AI Drafting Guidance
+## 6. AI Drafting Guidance
 
 AI is most useful when the team provides:
 
@@ -63,13 +66,22 @@ AI is most useful when the team provides:
 
 AI should help accelerate drafting, summarization, and traceability checks. It should not decide whether a domain is in scope, assign Acceptance Authorities, or claim that a deliverable is complete without human confirmation.
 
-## 1. Solution Deliverables
+Where a selected deliverable is written as a structured document with multiple sections or sub-sections, visible section numbering is recommended so the content is easier to review, reference, approve, and update.
 
-### Purpose
+Use numbering consistently in headings where practical, for example:
+
+- `## 1. Purpose and Intended Outcome`
+- `## 7. Required Content or Minimum Structure`
+- `### 7.1. Record identity`
+- `### 12.3. Validation prompts`
+
+## 7. Solution Deliverables
+
+### 7.1. Purpose
 
 Deliver the approved business outcomes through an implemented solution that remains aligned to authorized scope and is supported by clear documentation governing scope, structure, behavior, roles, and acceptance.
 
-### Standard Deliverables (as applicable)
+### 7.2. Standard Deliverables (as applicable)
 
 - **Deployed Solution**
 - **Functional Capabilities**
@@ -78,13 +90,13 @@ Deliver the approved business outcomes through an implemented solution that rema
 - **User Roles, Personas & Access Model**
 - **Acceptance Record**
 
-### Deployed Solution
+### 7.3. Deployed Solution
 
 The implemented system behavior that delivers the approved business capabilities and outcomes.
 
 The deployed solution must remain within the intent and boundaries of the authorized scope.
 
-### Functional Capabilities
+### 7.4. Functional Capabilities
 
 Defines the approved functional scope of the initiative, including:
 
@@ -92,13 +104,13 @@ Defines the approved functional scope of the initiative, including:
 
 This document establishes what the solution must be able to do.
 
-### Solution Modules
+### 7.5. Solution Modules
 
 Organizes the approved capabilities into coherent, testable segments that support controlled delivery and acceptance.
 
 This document clarifies how approved capabilities are grouped for build, testing, deployment, and validation, without redefining scope.
 
-### Use Case Narratives
+### 7.6. Use Case Narratives
 
 Describe how users achieve outcomes using the solution.
 
@@ -112,7 +124,7 @@ Use cases define:
 
 This is the behavioral validation artifact.
 
-### User Roles, Personas & Access Model
+### 7.7. User Roles, Personas & Access Model
 
 Defines:
 
@@ -126,7 +138,7 @@ Personas, where used, add clarity to user behavior, constraints, and adoption co
 
 This artifact ensures user behavior, access expectations, and governance assumptions are explicit, reviewable, and aligned with the approved scope.
 
-### Acceptance Record
+### 7.8. Acceptance Record
 
 Provides consolidated evidence that:
 
@@ -137,7 +149,7 @@ Provides consolidated evidence that:
 
 This artifact demonstrates that the delivered solution aligns with what was authorized.
 
-### Acceptance Focus
+### 7.9. Acceptance Focus
 
 Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
@@ -151,47 +163,64 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Is there clear evidence showing that the solution was validated against the defined outcomes?
 - Has the named Acceptance Authority formally accepted the solution?
 
-### Recommended Acceptance Evidence
+### 7.10. Recommended Acceptance Evidence
 
 - Completed Solution Acceptance & Traceability Record
 - Evidence of validation and formal acceptance
 
-### Recommended Acceptance Authority
+### 7.11. Recommended Acceptance Authority
 
 - Business Owner / Process Owner
 
-## 2. Governance & Control Deliverables
+## 8. Governance & Control Deliverables
 
-### Purpose
+### 8.1. Purpose
 
 Ensure that intent, scope, authority, funding, risk acceptance, and closure decisions are explicit, attributable, and auditable across the lifecycle of the initiative.
 
-### Standard Deliverables (as applicable)
+### 8.2. Standard Deliverables (as applicable)
 
 - **Initiative Definition Document**
 - **Project Charter**
+- **Delivery Charter**
 - **Decision Record Log**
 - **Formal Acceptance & Closure Record**
 
-### Initiative Definition Document
+### 8.3. Initiative Definition Document
 
 Defines the problem, future state, outcomes, scope boundaries, and high-level approach that justify investment and guide all downstream artifacts.
 
 It establishes the baseline intent against which scope, design, and acceptance are validated. No downstream artifact may contradict this document without formal revision.
 
-### Project Charter
+### 8.4. Project Charter
 
 Formally records sponsorship, authority, priority, and commitment to deliver the defined outcomes.
 
 This document confirms that people, time, and funding are intentionally committed.
 
-### Decision Record Log
+### 8.5. Delivery Charter
+
+Defines how the authorized initiative will be executed and governed during delivery.
+
+This should make visible:
+
+- the delivery coordination model
+- reporting and review rhythm
+- change and escalation path
+- control expectations for execution
+- acceptance-readiness management expectations
+
+This artifact supports controlled execution after authorization. It does not replace the Project Charter, detailed delivery plans, or active trackers.
+
+This deliverable is primarily used in **Stage 5 - Delivery Mobilization**, though it may be prepared in draft form earlier if helpful.
+
+### 8.6. Decision Record Log
 
 Maintains a clear record of material decisions affecting scope, funding, risk, sequencing, or acceptance.
 
 This ensures that governance decisions are attributable and reviewable.
 
-### Formal Acceptance & Closure Record
+### 8.7. Formal Acceptance & Closure Record
 
 Provides documented confirmation that:
 
@@ -201,37 +230,39 @@ Provides documented confirmation that:
 
 This prevents informal completion without accountability.
 
-### Acceptance Focus
+### 8.8. Acceptance Focus
 
 Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
 - What organizational problem and outcome justified this initiative?
 - Are scope boundaries explicit and consistently respected?
 - Who authorized the work, and on what basis?
+- Is the delivery governance model defined clearly enough for controlled execution and escalation?
 - Are material decisions recorded and attributable?
 - Is funding formally approved and acknowledged within the Initiative Definition and Project Charter?
 - Have financial and risk implications been explicitly reviewed and accepted by the appropriate authority?
 - Has the initiative been formally accepted against defined outcomes?
 - Has closure been explicitly recorded?
 
-### Recommended Acceptance Evidence
+### 8.9. Recommended Acceptance Evidence
 
 - Approved Initiative Definition Document
 - Approved Project Charter
+- Approved Delivery Charter where controlled mobilization is required
 - Maintained Decision Record Log
 - Completed Formal Acceptance & Closure Record
 
-### Recommended Acceptance Authority
+### 8.10. Recommended Acceptance Authority
 
 - Sponsor or Delegated Decision Authority
 
-## 3. Operational Readiness Deliverables
+## 9. Operational Readiness Deliverables
 
-### Purpose
+### 9.1. Purpose
 
 Ensure the solution can be deployed, administered, operated, supported, restored, and sustained under clear operational ownership beyond the original delivery team.
 
-### Standard Deliverables (as applicable)
+### 9.2. Standard Deliverables (as applicable)
 
 - **Technical Design Document**
 - **System Administration Guide**
@@ -239,7 +270,7 @@ Ensure the solution can be deployed, administered, operated, supported, restored
 - **Backup, Restore & Recovery Plan**
 - **Operational Readiness Confirmation Record**
 
-### Technical Design Document
+### 9.3. Technical Design Document
 
 Documents the technical design of the solution so that delivery, operations, and support teams can understand how it is structured, what it depends on, and what technical assumptions affect operation and change.
 
@@ -255,7 +286,7 @@ This should define the design-level view of the solution, including:
 
 This artifact explains how the solution is built. It does not replace operating procedures, support processes, or step-by-step administration instructions.
 
-### System Administration Guide
+### 9.4. System Administration Guide
 
 Provides the practical instructions and reference information needed to deploy, configure, maintain, troubleshoot, and support the solution in day-to-day operations.
 
@@ -270,7 +301,7 @@ This should define the execution-level guidance needed to operate the solution i
 
 This artifact explains how the solution is administered and supported in practice. It complements the Technical Design Document by converting design knowledge into repeatable operational guidance.
 
-### Operations & Support Model
+### 9.5. Operations & Support Model
 
 Defines:
 
@@ -284,7 +315,7 @@ Defines:
 
 This artifact ensures the solution has clear long-term accountability.
 
-### Backup, Restore & Recovery Plan
+### 9.6. Backup, Restore & Recovery Plan
 
 Defines how the solution can be backed up, restored, recovered, or rolled back in the event of failure or deployment issue, including:
 
@@ -297,7 +328,7 @@ Defines how the solution can be backed up, restored, recovered, or rolled back i
 
 This artifact ensures the solution can survive incidents and disruption without relying on undocumented knowledge.
 
-### Operational Readiness Confirmation Record
+### 9.7. Operational Readiness Confirmation Record
 
 Provides formal confirmation that:
 
@@ -310,7 +341,7 @@ Provides formal confirmation that:
 
 This artifact prevents informal or unsupported handover.
 
-### Acceptance Focus
+### 9.8. Acceptance Focus
 
 Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
@@ -325,7 +356,7 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Are unresolved readiness gaps or transition conditions explicitly recorded and owned?
 - Has operational ownership formally accepted responsibility for the system?
 
-### Recommended Acceptance Evidence
+### 9.9. Recommended Acceptance Evidence
 
 - Approved Technical Design Document
 - Approved System Administration Guide
@@ -333,23 +364,23 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Approved Backup, Restore & Recovery Plan
 - Completed Operational Readiness Confirmation Record
 
-### Recommended Acceptance Authority
+### 9.10. Recommended Acceptance Authority
 
 - IT Operations / Service Owner
 
-## 4. Data Governance & Records Deliverables
+## 10. Data Governance & Records Deliverables
 
-### Purpose
+### 10.1. Purpose
 
 Ensure data produced, stored, or processed by the initiative is explicitly defined, governed, owned, and auditable, with clear operational and lifecycle accountability.
 
-### Standard Deliverables (as applicable)
+### 10.2. Standard Deliverables (as applicable)
 
 - **Data Governance & Impact Assessment**
 - **Data Asset Specification**
 - **Data Migration Record** (if applicable)
 
-### Data Governance & Impact Assessment
+### 10.3. Data Governance & Impact Assessment
 
 Defines the governance and organizational impact of data handled by the initiative, including:
 
@@ -359,7 +390,7 @@ Defines the governance and organizational impact of data handled by the initiati
 - Operational and governance impact considerations
 - Identified Data Steward
 
-### Data Asset Specification
+### 10.4. Data Asset Specification
 
 Provides authoritative documentation of the known data handled by the initiative, including:
 
@@ -371,7 +402,7 @@ Provides authoritative documentation of the known data handled by the initiative
 - Retention and lifecycle rules
 - Backup inclusion status (as applicable)
 
-### Data Migration Record
+### 10.5. Data Migration Record
 
 Used when data is materially migrated, transformed, or restructured.
 
@@ -393,7 +424,7 @@ May include:
 - Exceptions identified and their disposition
 - Steward or Acceptance Authority sign-off
 
-### Acceptance Focus
+### 10.6. Acceptance Focus
 
 Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
@@ -408,25 +439,25 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Is the data included in backup and recovery processes?
 - Can the data be reconstructed, validated, or audited if required?
 
-### Recommended Acceptance Evidence
+### 10.7. Recommended Acceptance Evidence
 
 - Approved Data Governance & Impact Assessment
 - Approved Data Asset Specification
 - Approved Data Migration Record (if applicable)
 - Steward or Data Governance sign-off
 
-### Recommended Acceptance Authority
+### 10.8. Recommended Acceptance Authority
 
 - Data Steward (dataset correctness and stewardship accountability)
 - Data Governance Officer (governance compliance)
 
-## 5. Security, Privacy & Compliance Deliverables
+## 11. Security, Privacy & Compliance Deliverables
 
-### Purpose
+### 11.1. Purpose
 
 Ensure that security, privacy, and regulatory risks introduced by the initiative are explicitly identified, evaluated, controlled, and formally accepted where necessary.
 
-### Standard Deliverables (as applicable)
+### 11.2. Standard Deliverables (as applicable)
 
 - **Security & Privacy Risk Assessment**
 - **Access Control & Authorization Model**
@@ -434,7 +465,7 @@ Ensure that security, privacy, and regulatory risks introduced by the initiative
 - **Compliance & Regulatory Alignment Statement**
 - **Residual Risk Acceptance Record** (if applicable)
 
-### Security & Privacy Risk Assessment
+### 11.3. Security & Privacy Risk Assessment
 
 Identifies and evaluates security and privacy risks associated with the solution, including:
 
@@ -445,7 +476,7 @@ Identifies and evaluates security and privacy risks associated with the solution
 
 This artifact clarifies what could go wrong and how risk is reduced.
 
-### Access Control & Authorization Model
+### 11.4. Access Control & Authorization Model
 
 Defines how access to the solution is controlled, including:
 
@@ -456,7 +487,7 @@ Defines how access to the solution is controlled, including:
 
 This ensures access decisions are intentional and reviewable.
 
-### Audit & Monitoring Design Summary
+### 11.5. Audit & Monitoring Design Summary
 
 Describes how key actions within the solution are logged and monitored, including:
 
@@ -466,19 +497,19 @@ Describes how key actions within the solution are logged and monitored, includin
 
 This ensures accountability and forensic reconstructability.
 
-### Compliance & Regulatory Alignment Statement
+### 11.6. Compliance & Regulatory Alignment Statement
 
 Documents how the initiative aligns with applicable internal policies, regulatory obligations, and data protection requirements.
 
 This ensures that compliance exposure is evaluated before and after implementation.
 
-### Residual Risk Acceptance Record (if applicable)
+### 11.7. Residual Risk Acceptance Record (if applicable)
 
 Records formal acknowledgment and acceptance of any material risks that remain after mitigation controls are applied.
 
 This prevents silent or assumed risk acceptance.
 
-### Acceptance Focus
+### 11.8. Acceptance Focus
 
 Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
@@ -490,7 +521,7 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Are any remaining material risks explicitly documented and accepted by the appropriate authority?
 - Has the responsible security or data protection authority formally reviewed the solution?
 
-### Recommended Acceptance Evidence
+### 11.9. Recommended Acceptance Evidence
 
 - Approved Security & Privacy Risk Assessment
 - Approved Access Control & Authorization Model
@@ -498,17 +529,17 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Approved Compliance & Regulatory Alignment Statement
 - Residual Risk Acceptance Record (if applicable)
 
-### Recommended Acceptance Authority
+### 11.10. Recommended Acceptance Authority
 
 - Security / Data Protection Officer
 
-## 6. User Adoption & Change Enablement Deliverables
+## 12. User Adoption & Change Enablement Deliverables
 
-### Purpose
+### 12.1. Purpose
 
 Ensure that impacted users understand the change, are prepared to use the solution correctly, and can adopt it without introducing avoidable operational risk or resistance.
 
-### Standard Deliverables (as applicable)
+### 12.2. Standard Deliverables (as applicable)
 
 - **User Impact Assessment**
 - **Change & Communication Plan**
@@ -516,7 +547,7 @@ Ensure that impacted users understand the change, are prepared to use the soluti
 - **Adoption Support Model**
 - **Adoption Confirmation Record**
 
-### User Impact Assessment
+### 12.3. User Impact Assessment
 
 Identifies:
 
@@ -527,7 +558,7 @@ Identifies:
 
 This artifact clarifies who is affected and what will change for them.
 
-### Change & Communication Plan
+### 12.4. Change & Communication Plan
 
 Defines how the change will be communicated and managed, including:
 
@@ -542,7 +573,7 @@ This ensures that change is intentional rather than assumed.
 Clarification:
 Promotional or informational websites created solely to support awareness, communication, or adoption of the initiative fall within this domain. If a website or portal delivers core business capabilities (e.g., application submission, transactions, self-service functionality), it is part of the Solution Deliverables domain and must be governed under authorized scope, behavioral definition, and acceptance controls.
 
-### Training & Enablement Materials
+### 12.5. Training & Enablement Materials
 
 Provide structured support for users to perform required behaviors, including:
 
@@ -552,7 +583,7 @@ Provide structured support for users to perform required behaviors, including:
 
 This ensures users can perform expected tasks correctly and consistently.
 
-### Adoption Support Model
+### 12.6. Adoption Support Model
 
 Defines how users receive help after go-live, including:
 
@@ -562,7 +593,7 @@ Defines how users receive help after go-live, including:
 
 This ensures adoption issues do not silently degrade outcomes.
 
-### Adoption Confirmation Record
+### 12.7. Adoption Confirmation Record
 
 Provides confirmation that:
 
@@ -573,7 +604,7 @@ Provides confirmation that:
 
 This prevents informal or assumed adoption.
 
-### Acceptance Focus
+### 12.8. Acceptance Focus
 
 Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
@@ -584,7 +615,7 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Is post-launch support defined and understood?
 - Has the Business Owner confirmed that users are reasonably prepared to adopt the solution?
 
-### Recommended Acceptance Evidence
+### 12.9. Recommended Acceptance Evidence
 
 - Approved User Impact Assessment
 - Approved Change & Communication Plan
@@ -592,12 +623,12 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Defined Adoption Support Model
 - Completed Adoption Confirmation Record
 
-### Recommended Acceptance Authority
+### 12.10. Recommended Acceptance Authority
 
 - Business Owner
 - Change or Communications Lead
 
-## Summary Table
+## 13. Summary Table
 
 | Deliverable Domain                | Primary Intent                                                                 |
 | --------------------------------- | ------------------------------------------------------------------------------ |
@@ -608,107 +639,107 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 | Security, Privacy & Compliance    | Identify, reduce, and explicitly accept security, privacy, and compliance risk |
 | User Adoption & Change Enablement | Prepare users for change, reduce adoption risk, and support sustained usage    |
 
-## Appendix B - Domain Selection Matrix
+## 14. Appendix B - Domain Selection Matrix
 
 Use this matrix during Work Definition to decide which domains should be in scope.
 
 | Domain | Common trigger conditions | Minimum viable output | Expand depth when | Do not use this domain for |
 | --- | --- | --- | --- | --- |
 | Solution Deliverables | New or changed user-facing or system behavior | Functional Capabilities plus concise acceptance approach | Behavior is complex, multi-step, or needs structured validation | General communications, training-only content, or governance-only decisions |
-| Governance & Control | Formal sponsorship, funding, prioritization, or closure is needed | Initiative Definition, Project Charter, and decision record | Funding, risk, or closure requires stronger traceability | Technical design or operational procedures |
+| Governance & Control | Formal sponsorship, funding, prioritization, controlled delivery governance, or closure is needed | Initiative Definition, Project Charter, and decision record, with Delivery Charter where controlled mobilization is needed | Funding, risk, delivery governance, or closure requires stronger traceability | Technical design or operational procedures |
 | Operational Readiness | Service, system, or support impact exists | Named support ownership plus minimum run / recovery view | The solution affects production support, recovery, or long-term maintainability | Business-only justification or user comms |
 | Data Governance & Records | Data is created, changed, migrated, classified, or governed | Data impact summary with steward and system-of-record view | Data structures, migration, retention, or stewardship are material | General functional behavior that does not materially affect governed data |
 | Security, Privacy & Compliance | Sensitive data, access control, logging, or regulatory exposure exists | Risk summary plus minimum control intent | Privacy, audit, or compliance obligations are material | General project management or user enablement |
 | User Adoption & Change Enablement | User behavior, communications, or training are materially affected | Impact summary plus basic communication / enablement approach | Rollout is broad, high-impact, or behavior change is significant | Core solution functionality or system design |
 
-## Appendix C - Minimum Viable Outputs by Domain
+## 15. Appendix C - Minimum Viable Outputs by Domain
 
 | Domain | Smallest acceptable content set |
 | --- | --- |
 | Solution Deliverables | Approved scope, key capabilities, acceptance focus, and evidence of behavior validation |
-| Governance & Control | Named owners, authorization basis, key decisions, and closure confirmation |
+| Governance & Control | Named owners, authorization basis, key decisions, and delivery governance / closure confirmation as applicable |
 | Operational Readiness | Named run/support owners, basic support approach, and recovery intent |
 | Data Governance & Records | Data impact summary, steward, system of record, and major data obligations |
 | Security, Privacy & Compliance | Risk summary, key controls, and required authority review |
 | User Adoption & Change Enablement | Impacted users, communication approach, enablement actions, and adoption owner |
 
-## Appendix A — Role Glossary
+## 16. Appendix A — Role Glossary
 
-### Sponsor
+### 16.1. Sponsor
 
 Authorizes the initiative, commits funding and priority, and accepts organizational risk.
 
-### Decision Authority
+### 16.2. Decision Authority
 
 Accountable for the go / no-go decision to commit organizational capacity, time, funding, and risk to delivery.
 
-### Acceptance Authority
+### 16.3. Acceptance Authority
 
 Accountable for formally accepting deliverables within an in-scope deliverable domain based on defined acceptance focus and evidence.
 
-### Outcome Owner
+### 16.4. Outcome Owner
 
 Accountable for achieving the intended business outcomes and confirming that delivered value meets the agreed success measures.
 
-### Business Owner / Process Owner
+### 16.5. Business Owner / Process Owner
 
 Accountable for the business process outcomes supported by the solution and commonly serves as the Acceptance Authority for Solution Deliverables.
 
-### Data Steward
+### 16.6. Data Steward
 
 Accountable for dataset correctness, quality, and governance obligations.
 
-### Data Governance Officer (DGO)
+### 16.7. Data Governance Officer (DGO)
 
 Oversees data governance standards and compliance.
 
-### Delivery Owner
+### 16.8. Delivery Owner
 
 Accountable for delivery execution, stage discipline, and ensuring required deliverables and evidence are produced.
 
-### IT Operations / Service Owner
+### 16.9. IT Operations / Service Owner
 
 Accountable for ongoing operation and support of the system.
 
-### Security / Data Protection Officer
+### 16.10. Security / Data Protection Officer
 
 Accountable for privacy, security, and regulatory compliance.
 
-### Change or Communications Lead
+### 16.11. Change or Communications Lead
 
 Accountable for user readiness, communications, and adoption enablement activities.
 
-## How to Use This Document
+## 17. How to Use This Document
 
 This document serves as the authoritative catalog of standard deliverables and acceptance expectations across deliverable domains.
 
 It does not make every deliverable mandatory for every initiative. During Work Definition, teams determine which deliverable domains are in scope and which standard deliverables are appropriate for the initiative's nature, scale, and risk.
 
-### During Work Definition (Stage 2)
+### 17.1. During Work Definition (Stage 2)
 
 - Confirm which deliverable domains are in scope (each domain is explicitly included or excluded).
 - Identify the Acceptance Authority for every in-scope domain.
 - Agree which standard deliverables are expected for each in-scope domain (as applicable), at approval-level depth.
 - Use the Acceptance Focus questions as the basis for defining what “done” will mean later at acceptance.
 
-### During Work Authorization (Stage 3)
+### 17.2. During Work Authorization (Stage 3)
 
 - Confirm that scope, ownership, funding commitments, and risk implications are decision-ready.
 - Confirm Acceptance Authorities remain valid for each in-scope domain.
 - Record the authorization decision and associated commitments.
 
-### During Work Definition Details (Stage 4)
+### 17.3. During Work Definition Details (Stage 4)
 
 - Produce the detailed versions of in-scope deliverables needed to build, test, transition, and accept the solution.
 - Ensure elaboration remains consistent with the authorized scope and intent.
 
-### During Work Delivery (Stage 6)
+### 17.4. During Work Delivery (Stage 6)
 
 - Produce the required deliverables for each in-scope domain and collect acceptance evidence.
 - Use the Acceptance Focus questions to drive validation and evidence collection.
 - Track progress by accepted deliverables and evidence, not activity.
 
-### During Acceptance, Transition & Closure (Stage 7)
+### 17.5. During Acceptance, Transition & Closure (Stage 7)
 
 - Validate that Acceptance Focus questions are answered for every in-scope domain.
 - Ensure required evidence is complete, reviewable, and attributable.

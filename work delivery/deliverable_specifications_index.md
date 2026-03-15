@@ -5,7 +5,7 @@
 This index lists the current deliverable specification set created from:
 
 - `specification_writing_guide.md`
-- `work delivery/standard_deliverables_reference.md`
+- `work delivery/standard_deliverables_guide.md`
 - `work delivery/specification_best_practice_reference.md`
 
 Use the specification in the relevant domain folder as the primary drafting guide for that deliverable.
