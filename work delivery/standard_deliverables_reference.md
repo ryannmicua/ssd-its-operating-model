@@ -28,6 +28,41 @@ Use this document as a **selection and control guide**, not as a requirement to 
 
 If a deliverable is excluded, record why it is excluded. This keeps governance decisions visible and auditable.
 
+## Operational Use Model
+
+Use this reference differently at each stage:
+
+- **Stage 2 - Work Definition:** decide which domains are in scope, identify Acceptance Authorities, and define the minimum acceptable output for each in-scope domain.
+- **Stage 3 - Work Authorization:** confirm that selected domains, owners, acceptance approach, and major cost/risk implications are decision-ready.
+- **Stage 4 - Work Definition Details:** elaborate only the in-scope domains that are needed to build, test, transition, and accept the work.
+- **Stage 6 - Work Delivery:** produce the selected deliverables and collect evidence against the agreed acceptance focus.
+- **Stage 7 - Acceptance, Transition & Closure:** confirm that each in-scope domain has evidence and explicit acceptance.
+
+For smaller initiatives, use the minimum viable deliverable depth. The framework does not require every listed deliverable; it requires deliberate choices, explicit ownership, and acceptance-ready outputs.
+
+## Minimum Viable Deliverable Depth
+
+Apply the lightest depth that still makes the work understandable, controllable, and supportable.
+
+| Initiative profile | Expected depth |
+| --- | --- |
+| Low complexity / low risk | Concise artifact, possibly combined into one controlled document or appendix |
+| Medium complexity / cross-team impact | Separate artifacts for the core in-scope domains, with explicit owners and acceptance evidence |
+| High complexity / high risk / regulated / operationally critical | Full domain-specific artifacts, stronger traceability, and more formal review and evidence |
+
+## AI Drafting Guidance
+
+AI is most useful when the team provides:
+
+- the relevant stage and artifact type
+- in-scope and out-of-scope boundaries
+- named owner and reviewer
+- source notes or reference materials
+- the required structure or specification
+- any required IDs or traceability references
+
+AI should help accelerate drafting, summarization, and traceability checks. It should not decide whether a domain is in scope, assign Acceptance Authorities, or claim that a deliverable is complete without human confirmation.
+
 ## 1. Solution Deliverables
 
 ### Purpose
@@ -572,6 +607,30 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 | Data Governance & Records         | Make data and records explicit, governed, owned, and auditable                 |
 | Security, Privacy & Compliance    | Identify, reduce, and explicitly accept security, privacy, and compliance risk |
 | User Adoption & Change Enablement | Prepare users for change, reduce adoption risk, and support sustained usage    |
+
+## Appendix B - Domain Selection Matrix
+
+Use this matrix during Work Definition to decide which domains should be in scope.
+
+| Domain | Common trigger conditions | Minimum viable output | Expand depth when | Do not use this domain for |
+| --- | --- | --- | --- | --- |
+| Solution Deliverables | New or changed user-facing or system behavior | Functional Capabilities plus concise acceptance approach | Behavior is complex, multi-step, or needs structured validation | General communications, training-only content, or governance-only decisions |
+| Governance & Control | Formal sponsorship, funding, prioritization, or closure is needed | Initiative Definition, Project Charter, and decision record | Funding, risk, or closure requires stronger traceability | Technical design or operational procedures |
+| Operational Readiness | Service, system, or support impact exists | Named support ownership plus minimum run / recovery view | The solution affects production support, recovery, or long-term maintainability | Business-only justification or user comms |
+| Data Governance & Records | Data is created, changed, migrated, classified, or governed | Data impact summary with steward and system-of-record view | Data structures, migration, retention, or stewardship are material | General functional behavior that does not materially affect governed data |
+| Security, Privacy & Compliance | Sensitive data, access control, logging, or regulatory exposure exists | Risk summary plus minimum control intent | Privacy, audit, or compliance obligations are material | General project management or user enablement |
+| User Adoption & Change Enablement | User behavior, communications, or training are materially affected | Impact summary plus basic communication / enablement approach | Rollout is broad, high-impact, or behavior change is significant | Core solution functionality or system design |
+
+## Appendix C - Minimum Viable Outputs by Domain
+
+| Domain | Smallest acceptable content set |
+| --- | --- |
+| Solution Deliverables | Approved scope, key capabilities, acceptance focus, and evidence of behavior validation |
+| Governance & Control | Named owners, authorization basis, key decisions, and closure confirmation |
+| Operational Readiness | Named run/support owners, basic support approach, and recovery intent |
+| Data Governance & Records | Data impact summary, steward, system of record, and major data obligations |
+| Security, Privacy & Compliance | Risk summary, key controls, and required authority review |
+| User Adoption & Change Enablement | Impacted users, communication approach, enablement actions, and adoption owner |
 
 ## Appendix A — Role Glossary
 
