@@ -35,7 +35,7 @@ Deliverables not needed for authorization may still be listed at summary level d
 Use this reference differently at each stage:
 
 - **Stage 2 - Work Definition:** identify the required deliverables for the initiative, use domains to organize them where helpful, identify Acceptance Authorities, and define the minimum authorization-level output needed for a sound decision.
-- **Stage 3 - Work Authorization:** confirm that selected domains, owners, acceptance approach, and major cost/risk implications are decision-ready.
+- **Stage 3 - Work Authorization:** confirm that selected deliverables, owners, acceptance approach, and major cost/risk implications are decision-ready.
 - **Stage 4 - Work Definition Details:** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.
 - **Stage 5 - Delivery Mobilization:** activate the delivery governance and execution controls needed to run the authorized work in a controlled and visible way.
 - **Stage 6 - Work Delivery:** produce the selected deliverables and collect evidence against the agreed acceptance focus.
@@ -713,35 +713,43 @@ Accountable for user readiness, communications, and adoption enablement activiti
 
 This document serves as the authoritative catalog of standard deliverables and acceptance expectations across deliverable domains.
 
-It does not make every deliverable mandatory for every initiative. During Work Definition, teams determine which deliverable domains are in scope and which standard deliverables are appropriate for the initiative's nature, scale, and risk.
+It does not make every deliverable mandatory for every initiative. During Work Definition, teams determine which domains are relevant and which standard deliverables are appropriate for the initiative's nature, scale, and risk.
+
+Deliverable domains mainly organize the deliverables view. The team should still make the actual required deliverables visible.
 
 ### 17.1. During Work Definition (Stage 2)
 
-- Confirm which deliverable domains are in scope (each domain is explicitly included or excluded).
-- Identify the Acceptance Authority for every in-scope domain.
-- Agree which standard deliverables are expected for each in-scope domain (as applicable), at approval-level depth.
+- Confirm which deliverables are required for the initiative, using deliverable domains as an organizing structure where useful.
+- Identify the Acceptance Authority for every required deliverable or clearly defined deliverable grouping.
+- Agree which standard deliverables are expected for each relevant domain, at authorization-level depth.
+- Additional expected deliverables not needed for authorization may be listed at summary level so likely effort remains visible.
 - Use the Acceptance Focus questions as the basis for defining what “done” will mean later at acceptance.
 
 ### 17.2. During Work Authorization (Stage 3)
 
 - Confirm that scope, ownership, funding commitments, and risk implications are decision-ready.
-- Confirm Acceptance Authorities remain valid for each in-scope domain.
+- Confirm Acceptance Authorities remain valid for each required deliverable or deliverable grouping.
 - Record the authorization decision and associated commitments.
 
 ### 17.3. During Work Definition Details (Stage 4)
 
-- Produce the detailed versions of in-scope deliverables needed to build, test, transition, and accept the solution.
+- Elaborate the required deliverables identified in Stage 2 and produce any additional definition deliverables needed to build, test, transition, and accept the solution.
 - Ensure elaboration remains consistent with the authorized scope and intent.
 
-### 17.4. During Work Delivery (Stage 6)
+### 17.4. During Delivery Mobilization (Stage 5)
 
-- Produce the required deliverables for each in-scope domain and collect acceptance evidence.
+- Activate the Delivery Charter and related execution controls needed for controlled delivery.
+- Confirm reporting rhythm, escalation path, change path, and acceptance-readiness tracking are in place.
+
+### 17.5. During Work Delivery (Stage 6)
+
+- Produce the required deliverables for each relevant domain and collect acceptance evidence.
 - Use the Acceptance Focus questions to drive validation and evidence collection.
 - Track progress by accepted deliverables and evidence, not activity.
 
-### 17.5. During Acceptance, Transition & Closure (Stage 7)
+### 17.6. During Acceptance, Transition & Closure (Stage 7)
 
-- Validate that Acceptance Focus questions are answered for every in-scope domain.
+- Validate that Acceptance Focus questions are answered for every required deliverable domain.
 - Ensure required evidence is complete, reviewable, and attributable.
 - Record formal acceptance by the named Acceptance Authorities and formally close the initiative.
 
