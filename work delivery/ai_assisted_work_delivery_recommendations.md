@@ -2,196 +2,116 @@
 
 ## 1. Purpose
 
-This document provides practical recommendations to make the work delivery model easier to understand, easier to execute, and better suited to an AI-assisted workflow in the Codex app.
+This document provides practical recommendations for operating the repository as a **human-steered, AI-assisted delivery system**.
 
-The recommendations focus on:
+It has been updated to align with the current repository baseline, including:
 
-- execution clarity for delivery teams
-- stronger ownership and decision traceability
-- controlled AI-assisted document production with human steering
-- faster review and revision cycles directly in Codex
+- the stage-structured [Work Delivery Framework](work_delivery_framework.md)
+- the domain-based [Standard Deliverables Guide](standard_deliverables_guide.md)
+- the renamed [Solution Design Process](solution_design_process.md)
+- expanded Governance deliverables, including Delivery Charter and Delivery Roadmap specifications
 
-## 2. Current-State Observations
+## 2. Repository Alignment Snapshot
 
-Based on review of the current framework and references:
+The current repository now provides strong structural foundations for AI-assisted delivery:
 
-- The Work Delivery Framework clearly defines stage gates and control intent, but practitioners may still struggle with "what to produce now" at each stage.
-- The Solution Documentation Process is strong on traceability but is currently described as a document standard, not yet as an explicit AI-assisted operating workflow.
-- The Standard Deliverables Guide is now easier to read, but teams still need implementation guidance on how to generate deliverables quickly and consistently with AI while preserving governance controls.
-- Specification documents for non-solution domains now exist, but they should be adopted with a common AI prompt protocol, review protocol, and version discipline.
+1. Work stages include output checklists and AI-use boundaries.
+2. Governance and control deliverables are clearly defined, including mobilization-focused artifacts.
+3. Deliverable specifications exist across domains, with an index for navigation.
+4. The Solution Design Process includes validation gates, prompt structure, and traceability rules.
+
+Remaining opportunity is to improve **consistency of daily AI usage** across teams.
 
 ## 3. Target Operating Intent
 
-Adopt a **Human-Steered, AI-Produced, Authority-Approved** delivery model:
+Adopt and enforce this operating model:
 
-1. Humans define intent, scope boundaries, constraints, and acceptance expectations.
-2. AI drafts and revises deliverables using approved templates and traceability rules.
-3. Named owners review and refine.
-4. Acceptance Authorities formally approve based on evidence.
+1. Humans define scope, ownership, constraints, and decision intent.
+2. AI drafts and revises artifacts using approved specifications.
+3. Humans validate scope, traceability, and accountability.
+4. Named authorities approve decisions and acceptance outcomes.
 
-This keeps delivery fast without weakening governance.
+AI accelerates drafting and review; it does not replace authority.
 
-## 4. Cross-Document Recommendations
+## 4. Updated Recommendations
 
-## 4.1 Work Delivery Framework Recommendations
+## 4.1. Standardize prompts and review loops across all domains
 
-1. Add a "Stage Output Checklist" subsection under each stage with:
-   - mandatory artifacts
-   - conditional artifacts
-   - owner accountable for each artifact
-   - acceptance authority for each domain
-2. Add a short "AI Use in This Stage" note per stage describing:
-   - what AI can draft
-   - what humans must approve
-   - prohibited AI actions (e.g., changing authorized scope)
-3. Add a "Decision Record Minimum" standard for Stage 1, 2, 3, and 7 decisions:
-   - decision taken
-   - decision authority
-   - basis/evidence used
-   - conditions and follow-up owner
-4. Add one single visual flow (or compact table) mapping:
-   - stage -> key decisions -> expected artifact maturity -> go/no-go outcome
+Use one common prompting pattern for every governed artifact:
 
-Result: teams can execute the framework without interpreting long prose under time pressure.
+1. objective and artifact type
+2. stage and required depth
+3. in-scope / out-of-scope boundaries
+4. required IDs, references, and source inputs
+5. required structure/specification
+6. review and acceptance criteria
 
-## 4.2 Solution Documentation Process Recommendations
+Use the same review loop consistently:
 
-1. Add an "AI-Assisted Authoring Workflow" section aligned to Steps 1-4:
-   - Step 1 prompt set (Functional Capabilities)
-   - Step 2 prompt set (Modules and Use Cases)
-   - Step 3 prompt set (Evidence packaging)
-   - Step 4 prompt set (Acceptance readiness review)
-2. Add "Human Validation Gates" after each step:
-   - scope check (no new FC intent)
-   - traceability check (FC -> SM -> UC -> evidence)
-   - ownership check (named owner and reviewer)
-3. Add a "Codex Review Loop" pattern:
-   - reviewer comment in document
-   - AI revision request with explicit instruction
-   - change summary generated in the same session
-4. Add a "Definition of Ready to Generate" rule before AI drafting starts:
-   - authorized scope available
-   - required IDs established
-   - acceptance authority named
+- reviewer comment
+- explicit revision instruction
+- AI revision
+- concise change summary
+- owner confirmation
 
-Result: AI generation becomes controlled, repeatable, and audit-friendly.
+## 4.2. Enforce stage-aware drafting discipline
 
-## 4.3 Standard Deliverables Guide Recommendations
+When AI drafts any artifact, it should be told:
 
-1. Add a "Domain Selection Matrix" appendix with quick criteria:
-   - trigger conditions
-   - typical risk indicators
-   - minimum deliverables by risk profile (low/medium/high)
-2. Add "Minimum Viable Deliverable (MVD)" guidance for each domain:
-   - smallest acceptable content set
-   - when to expand depth
-3. Add an "AI Drafting Guidance" block per domain:
-   - required inputs
-   - output format expectations
-   - mandatory traceability fields
-4. Add a "Do Not Use This Domain For" note per domain to prevent boundary confusion.
+- current stage in the Work Delivery Framework
+- whether output is authorization-level, elaboration-level, or execution evidence
+- what decisions this artifact is intended to support
 
-Result: teams can rapidly choose and right-size deliverables instead of over-documenting.
+This avoids premature detail in Stage 2 and uncontrolled scope expansion in Stage 4+.
 
-## 4.4 Non-Solution Deliverable Specifications Recommendations
+## 4.3. Treat Delivery Roadmap as a governed, evolving artifact
 
-1. Introduce a common, explicit front-matter standard in every specification:
-   - document owner
-   - review frequency
-   - acceptance authority
-   - classification/sensitivity (if relevant)
-   - source references
-2. Add a "Prompt Seed" section in each specification with:
-   - one initial drafting prompt
-   - one review prompt
-   - one quality check prompt
-3. Add "evidence examples" per specification so teams know what good acceptance evidence looks like.
-4. Add a simple "quality scorecard" (clear/complete/traceable/actionable) to support fast reviews in Codex.
+Use Delivery Roadmap progression as a control rule:
 
-Result: every specification becomes executable, not just descriptive.
+- Stage 2: high-level draft for decision visibility
+- Stage 4: elaborated baseline for sequencing and dependencies
+- Stage 5: team-confirmed roadmap for mobilization
 
-## 5. Codex-Centered AI Workflow Recommendation
+All material roadmap updates should reference change/decision records.
 
-## 5.1 Standard Workflow
+## 4.4. Use Delivery Charter as the mobilization contract
 
-1. **Initiate**
-   - Human provides context, constraints, and required domain.
-2. **Generate**
-   - AI drafts artifact using the relevant specification.
-3. **Review in Codex**
-   - Reviewer adds inline comments.
-4. **Revise**
-   - AI applies comments and produces a structured change summary.
-5. **Validate**
-   - AI runs checklist validation against acceptance focus and traceability rules.
-6. **Approve**
-   - Named owner and Acceptance Authority sign off.
-7. **Record**
-   - Final artifact version + decision log + evidence links recorded.
+Use the Delivery Charter to explicitly communicate:
 
-## 5.2 Mandatory Control Rules for AI-Assisted Work
+- what delivery teams are expected to do
+- communication methods and cadence
+- escalation and change control paths
+- acceptance-readiness expectations
 
-- AI must not change authorized scope without explicit instruction and governance update.
-- AI output must include owner, date, and version metadata.
-- AI revisions must preserve ID stability (FC/SM/UC and evidence IDs).
-- Every material revision must include a concise "what changed and why" note.
-- Acceptance decisions remain human authority decisions.
+Where practical, use it as kickoff agenda + record.
 
-## 5.3 Recommended Prompting Standard
+## 4.5. Improve cross-document navigation and reuse
 
-Use this instruction order in Codex prompts:
+Continue linking framework, guide, process, and specification documents with relative links so practitioners and agents can move directly to authoritative references.
 
-1. Objective and domain
-2. Scope boundaries (in-scope / out-of-scope)
-3. Required structure/template
-4. Traceability IDs and references
-5. Required output format
-6. Review criteria
+## 5. Recommended Control Rules for AI-Assisted Work
 
-This reduces rework and inconsistent outputs.
+1. AI must not alter approved scope unless explicitly directed and governance-updated.
+2. AI must not mark deliverables as accepted or complete without human confirmation.
+3. AI outputs should include version/date context where relevant.
+4. Stable IDs (for example FC/SM/UC/evidence IDs) must be preserved across revisions.
+5. Material revisions should include a concise change summary.
 
-## 6. Implementation Plan (Practical)
+## 6. What to Apply Now
 
-## Phase 1 (Immediate: 1-2 weeks)
+Apply the following as default operating practice:
 
-- Add AI-Assisted workflow sections to:
-- Work Delivery Framework
-  - Solution Documentation Process
-- Standard Deliverables Guide
-- Publish a single reusable "Codex prompting standard" page in `work delivery`.
-- Pilot on one initiative with at least three domains in scope.
+1. Use the repository-level [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md) for prompts and review loops.
+2. Use the [Solution Design Process](solution_design_process.md) traceability and validation gates when authoring solution-domain artifacts.
+3. Use the Governance specifications for [Delivery Charter](governance_and_control_deliverables/delivery_charter_specification.md) and [Delivery Roadmap](governance_and_control_deliverables/delivery_roadmap_specification.md) during mobilization planning.
+4. Record decisions, roadmap changes, and acceptance readiness in linked governance artifacts.
 
-## Phase 2 (Near Term: 2-4 weeks)
+## 7. Success Indicators
 
-- Add prompt seeds and quality scorecards to each non-solution specification.
-- Add domain selection matrix and MVD guidance to Standard Deliverables Guide.
-- Create one acceptance evidence checklist per deliverable domain.
+This recommendation set is working when teams can show:
 
-## Phase 3 (Embed: 4-8 weeks)
-
-- Track adoption metrics:
-  - time to first usable draft
-  - review cycles per artifact
-  - acceptance rework rate
-  - traceability defects found at Stage 6/7
-- Calibrate templates and prompts based on pilot outcomes.
-
-## 7. Governance Benefits Expected
-
-If implemented, this model should produce:
-
-- clearer execution expectations at each stage
-- faster document turnaround without losing control
-- stronger ownership and decision accountability
-- better traceability from intent to acceptance evidence
-- reduced dependency on individual document authors
-
-## 8. Recommended Next Action
-
-Approve this recommendation set, then prioritize three immediate edits:
-
-1. Add stage-level AI usage and output checklists in the Work Delivery Framework.
-2. Add explicit AI-assisted step prompts and human validation gates in the Solution Documentation Process.
-3. Add domain selection matrix + minimum viable deliverable guidance in the Standard Deliverables Guide.
-
-These three changes will deliver the fastest improvement in usability and execution confidence.
+- faster first drafts with fewer governance corrections
+- fewer scope ambiguities at Stage 2 and Stage 4 handoff
+- explicit delivery mobilization expectations via Delivery Charter
+- visible sequencing and dependency control via Delivery Roadmap
+- reliable traceability from authorized scope to acceptance evidence

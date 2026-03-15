@@ -26,11 +26,11 @@ They support:
 
 Use cases may be drafted early to improve clarity, but they must remain consistent with the authorized scope baseline.
 
-## 3. Alignment to the Solution Documentation Process
+## 3. Alignment to the Solution Design Process
 
 Use Case Narratives sit in **Step 2 — Structure Authorized Scope**.
 
-Rules from the Solution Documentation Process apply:
+Rules from the Solution Design Process apply:
 
 - each use case must reference a **Solution Module ID (SM-###)**
 - each use case must reference one or more **Capability IDs (FC-###)**

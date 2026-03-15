@@ -6,6 +6,12 @@ Provide a practical reference list of common deliverables used in initiatives go
 
 This document helps teams think through what artifacts may be needed across different areas of an initiative (such as solution design, data, operations, security, governance, and user adoption).
 
+## Related Documents
+
+- [Work Delivery Framework](work_delivery_framework.md)
+- [Deliverable Specifications Index](deliverable_specifications_index.md)
+- [Solution Design Process](solution_design_process.md)
+
 ## 2. Deliverable Domains
 
 A deliverable domain is a practical grouping of related deliverables.
@@ -66,6 +72,8 @@ AI is most useful when the team provides:
 
 AI should help accelerate drafting, summarization, and traceability checks. It should not decide whether a domain is in scope, assign Acceptance Authorities, or claim that a deliverable is complete without human confirmation.
 
+Use the [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md) as the default prompt and review protocol when drafting these deliverables.
+
 Where a selected deliverable is written as a structured document with multiple sections or sub-sections, visible section numbering is recommended so the content is easier to review, reference, approve, and update.
 
 Use numbering consistently in headings where practical, for example:
@@ -83,12 +91,12 @@ Deliver the approved business outcomes through an implemented solution that rema
 
 ### 7.2. Standard Deliverables (as applicable)
 
-- **Deployed Solution**
-- **Functional Capabilities**
-- **Solution Modules**
-- **Use Case Narratives**
-- **User Roles, Personas & Access Model**
-- **Acceptance Record**
+- **[Deployed Solution](#7.3.%20Deployed%20Solution)**
+- **[Functional Capabilities](#7.4.%20Functional%20Capabilities)**
+- **[Solution Modules](#7.5.%20Solution%20Modules)**
+- **[Use Case Narratives](#7.6.%20Use%20Case%20Narratives)**
+- **[User Roles, Personas & Access Model](#7.7.%20User%20Roles,%20Personas%20&%20Access%20Model)**
+- **[Acceptance Record](#7.8.%20Acceptance%20Record)**
 
 ### 7.3. Deployed Solution
 
@@ -180,11 +188,12 @@ Ensure that intent, scope, authority, funding, risk acceptance, and closure deci
 
 ### 8.2. Standard Deliverables (as applicable)
 
-- **Initiative Definition Document**
-- **Project Charter**
-- **Delivery Charter**
-- **Decision Record Log**
-- **Formal Acceptance & Closure Record**
+- **[Initiative Definition Document](#8.3.%20Initiative%20Definition%20Document)**
+- **[Project Charter](#8.4.%20Project%20Charter)**
+- **[Delivery Charter](#8.5.%20Delivery%20Charter)**
+- **[Delivery Roadmap](#8.6.%20Delivery%20Roadmap)**
+- **[Decision Record Log](#8.7.%20Decision%20Record%20Log)**
+- **[Formal Acceptance & Closure Record](#8.8.%20Formal%20Acceptance%20&%20Closure%20Record)**
 
 ### 8.3. Initiative Definition Document
 
@@ -200,27 +209,46 @@ This document confirms that people, time, and funding are intentionally committe
 
 ### 8.5. Delivery Charter
 
-Defines how the authorized initiative will be executed and governed during delivery.
+Specification: [delivery_charter_specification](governance_and_control_deliverables/delivery_charter_specification.md)
+
+Defines how the authorized initiative team is chartered and mobilized for controlled execution.
 
 This should make visible:
 
-- the delivery coordination model
-- reporting and review rhythm
-- change and escalation path
+- what is expected of the delivery team
+- team roles and operating responsibilities
+- communication methods and operating rhythm
+- change, escalation, and decision paths
 - control expectations for execution
 - acceptance-readiness management expectations
+
+This artifact may also be used as the practical agenda and record for a delivery team kickoff meeting.
 
 This artifact supports controlled execution after authorization. It does not replace the Project Charter, detailed delivery plans, or active trackers.
 
 This deliverable is primarily used in **Stage 5 - Delivery Mobilization**, though it may be prepared in draft form earlier if helpful.
 
-### 8.6. Decision Record Log
+### 8.6. Delivery Roadmap
+
+Specification: [delivery_roadmap_specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
+
+Shows the planned delivery path from mobilization through acceptance, including high-level phases, major milestones, dependencies, and review checkpoints.
+
+Use this deliverable progressively across stages:
+
+- Stage 2: draft a high-level roadmap for authorization-level visibility
+- Stage 4: elaborate the roadmap with releases, dependencies, and control checkpoints
+- Stage 5: confirm and baseline the roadmap with the mobilized delivery team
+
+The roadmap should remain aligned to approved scope and should be revised through change control when material changes occur.
+
+### 8.7. Decision Record Log
 
 Maintains a clear record of material decisions affecting scope, funding, risk, sequencing, or acceptance.
 
 This ensures that governance decisions are attributable and reviewable.
 
-### 8.7. Formal Acceptance & Closure Record
+### 8.8. Formal Acceptance & Closure Record
 
 Provides documented confirmation that:
 
@@ -230,7 +258,7 @@ Provides documented confirmation that:
 
 This prevents informal completion without accountability.
 
-### 8.8. Acceptance Focus
+### 8.9. Acceptance Focus
 
 Acceptance Focus lists the key questions that must be clearly answered before this deliverable domain can be accepted.
 
@@ -244,15 +272,16 @@ Acceptance Focus lists the key questions that must be clearly answered before th
 - Has the initiative been formally accepted against defined outcomes?
 - Has closure been explicitly recorded?
 
-### 8.9. Recommended Acceptance Evidence
+### 8.10. Recommended Acceptance Evidence
 
 - Approved Initiative Definition Document
 - Approved Project Charter
 - Approved Delivery Charter where controlled mobilization is required
+- Delivery Roadmap (drafted in Stage 2, elaborated in Stage 4, and confirmed in Stage 5)
 - Maintained Decision Record Log
 - Completed Formal Acceptance & Closure Record
 
-### 8.10. Recommended Acceptance Authority
+### 8.11. Recommended Acceptance Authority
 
 - Sponsor or Delegated Decision Authority
 
@@ -264,11 +293,11 @@ Ensure the solution can be deployed, administered, operated, supported, restored
 
 ### 9.2. Standard Deliverables (as applicable)
 
-- **Technical Design Document**
-- **System Administration Guide**
-- **Operations & Support Model**
-- **Backup, Restore & Recovery Plan**
-- **Operational Readiness Confirmation Record**
+- **[Technical Design Document](#9.3.%20Technical%20Design%20Document)**
+- **[System Administration Guide](#9.4.%20System%20Administration%20Guide)**
+- **[Operations & Support Model](#9.5.%20Operations%20&%20Support%20Model)**
+- **[Backup, Restore & Recovery Plan](#9.6.%20Backup,%20Restore%20&%20Recovery%20Plan)**
+- **[Operational Readiness Confirmation Record](#9.7.%20Operational%20Readiness%20Confirmation%20Record)**
 
 ### 9.3. Technical Design Document
 
@@ -376,9 +405,9 @@ Ensure data produced, stored, or processed by the initiative is explicitly defin
 
 ### 10.2. Standard Deliverables (as applicable)
 
-- **Data Governance & Impact Assessment**
-- **Data Asset Specification**
-- **Data Migration Record** (if applicable)
+- **[Data Governance & Impact Assessment](#10.3.%20Data%20Governance%20&%20Impact%20Assessment)**
+- **[Data Asset Specification](#10.4.%20Data%20Asset%20Specification)**
+- **[Data Migration Record](#10.5.%20Data%20Migration%20Record)** (if applicable)
 
 ### 10.3. Data Governance & Impact Assessment
 
@@ -459,11 +488,11 @@ Ensure that security, privacy, and regulatory risks introduced by the initiative
 
 ### 11.2. Standard Deliverables (as applicable)
 
-- **Security & Privacy Risk Assessment**
-- **Access Control & Authorization Model**
-- **Audit & Monitoring Design Summary**
-- **Compliance & Regulatory Alignment Statement**
-- **Residual Risk Acceptance Record** (if applicable)
+- **[Security & Privacy Risk Assessment](#11.3.%20Security%20&%20Privacy%20Risk%20Assessment)**
+- **[Access Control & Authorization Model](#11.4.%20Access%20Control%20&%20Authorization%20Model)**
+- **[Audit & Monitoring Design Summary](#11.5.%20Audit%20&%20Monitoring%20Design%20Summary)**
+- **[Compliance & Regulatory Alignment Statement](#11.6.%20Compliance%20&%20Regulatory%20Alignment%20Statement)**
+- **[Residual Risk Acceptance Record](#11.7.%20Residual%20Risk%20Acceptance%20Record%20(if%20applicable))** (if applicable)
 
 ### 11.3. Security & Privacy Risk Assessment
 
@@ -541,11 +570,11 @@ Ensure that impacted users understand the change, are prepared to use the soluti
 
 ### 12.2. Standard Deliverables (as applicable)
 
-- **User Impact Assessment**
-- **Change & Communication Plan**
-- **Training & Enablement Materials**
-- **Adoption Support Model**
-- **Adoption Confirmation Record**
+- **[User Impact Assessment](#12.3.%20User%20Impact%20Assessment)**
+- **[Change & Communication Plan](#12.4.%20Change%20&%20Communication%20Plan)**
+- **[Training & Enablement Materials](#12.5.%20Training%20&%20Enablement%20Materials)**
+- **[Adoption Support Model](#12.6.%20Adoption%20Support%20Model)**
+- **[Adoption Confirmation Record](#12.7.%20Adoption%20Confirmation%20Record)**
 
 ### 12.3. User Impact Assessment
 
@@ -646,7 +675,7 @@ Use this matrix during Work Definition to decide which domains should be in scop
 | Domain | Common trigger conditions | Minimum viable output | Expand depth when | Do not use this domain for |
 | --- | --- | --- | --- | --- |
 | Solution Deliverables | New or changed user-facing or system behavior | Functional Capabilities plus concise acceptance approach | Behavior is complex, multi-step, or needs structured validation | General communications, training-only content, or governance-only decisions |
-| Governance & Control | Formal sponsorship, funding, prioritization, controlled delivery governance, or closure is needed | Initiative Definition, Project Charter, and decision record, with Delivery Charter where controlled mobilization is needed | Funding, risk, delivery governance, or closure requires stronger traceability | Technical design or operational procedures |
+| Governance & Control | Formal sponsorship, funding, prioritization, controlled delivery governance, or closure is needed | Initiative Definition, Project Charter, Decision Record Log, Delivery Charter, and Delivery Roadmap where controlled mobilization is needed | Funding, risk, delivery governance, or closure requires stronger traceability | Technical design or operational procedures |
 | Operational Readiness | Service, system, or support impact exists | Named support ownership plus minimum run / recovery view | The solution affects production support, recovery, or long-term maintainability | Business-only justification or user comms |
 | Data Governance & Records | Data is created, changed, migrated, classified, or governed | Data impact summary with steward and system-of-record view | Data structures, migration, retention, or stewardship are material | General functional behavior that does not materially affect governed data |
 | Security, Privacy & Compliance | Sensitive data, access control, logging, or regulatory exposure exists | Risk summary plus minimum control intent | Privacy, audit, or compliance obligations are material | General project management or user enablement |
@@ -739,6 +768,7 @@ Deliverable domains mainly organize the deliverables view. The team should still
 ### 17.4. During Delivery Mobilization (Stage 5)
 
 - Activate the Delivery Charter and related execution controls needed for controlled delivery.
+- Confirm the Delivery Roadmap with the mobilized delivery team and key stakeholders.
 - Confirm reporting rhythm, escalation path, change path, and acceptance-readiness tracking are in place.
 
 ### 17.5. During Work Delivery (Stage 6)

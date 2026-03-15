@@ -6,6 +6,13 @@ This framework governs planned work delivery initiatives, including projects, si
 
 It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by defining the minimum decisions, documents, ownership, and controls needed to deliver work clearly, accountably, and sustainably.
 
+## Related Documents
+
+- [Standard Deliverables Guide](standard_deliverables_guide.md)
+- [Deliverable Specifications Index](deliverable_specifications_index.md)
+- [Solution Design Process](solution_design_process.md)
+- [AI-Assisted Work Delivery Recommendations](ai_assisted_work_delivery_recommendations.md)
+
 ## 2. Intended Outcome
 
 When applied consistently:
@@ -99,6 +106,8 @@ AI must not:
 
 AI-generated outputs should include clear source context, stable IDs where used, and a concise change summary when materially revised.
 
+Use the [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md) for the default prompt order, review loop, and guardrails across governed artifact drafting.
+
 If an AI agent is asked to draft or revise a governed artifact and any of the following are missing, unclear, or contradictory:
 
 - approved scope boundary
@@ -134,8 +143,8 @@ Accountable means they are accountable for moving the stage forward.
 | 1. Work Assessment                  | Proceed / Defer / Reject                              | ITS + Submitter                                  | Worth defining further or not                                                                                    |
 | 2. Work Definition                  | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Decision-ready Initiative Definition Document with required deliverables and supporting detail as needed         |
 | 3. Work Authorization               | Approve / Defer / Reject / Approve with conditions    | Sponsor with Decision Authority                  | Work formally authorized with funding and accountability.<br><br>Appropriate committee approval may be necessary |
-| 4. Work Definition Details          | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Detailed design and delivery-ready elaboration                                                                   |
-| 5. Delivery Mobilization            | Ready to execute                                      | Delivery Owner                                   | Delivery rhythm, controls, and team setup in place                                                               |
+| 4. Work Definition Details          | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Detailed design, elaborated roadmap, and delivery-ready artifact set                                            |
+| 5. Delivery Mobilization            | Ready to execute                                      | Delivery Owner                                   | Delivery rhythm, controls, and team-aligned roadmap and setup in place                                          |
 | 6. Work Delivery                    | Continue / Escalate / Change / Prepare for acceptance | Delivery Owner                                   | Authorized deliverables produced with evidence                                                                   |
 | 7. Acceptance, Transition & Closure | Accept / Conditionally accept / Reject / Close        | Acceptance Authorities and Sponsor as applicable | Formal acceptance, handover, and closure                                                                         |
 
@@ -201,7 +210,7 @@ The **Initiative Definition Document** is the primary artifact for Stage 2. Supp
 
 As much as possible, the Initiative Definition Document should contain enough information to support authorization without forcing readers to assemble the decision case from many separate documents.
 
-Deliverables not needed for authorization may still be listed in Stage 2 at summary level so the likely delivery footprint and effort remain visible, but they should be elaborated only in Stage 4.
+Deliverables not needed for authorization may still be listed in Stage 2 at summary level so the likely delivery footprint and effort remain visible, but they should be elaborated only in Stage 4. A high-level Delivery Roadmap should be drafted in Stage 2 to support authorization discussions and planning visibility.
 
 ### 10.2. Initiative Definition Document Minimum Content
 
@@ -229,6 +238,7 @@ Additional expected deliverables not needed for authorization may be listed at s
 | Support / operational impact summary            | When service or system impact exists                                               | Delivery Owner with operations                | May be summarized in the Initiative Definition Document with supporting detail referenced separately |
 | Supporting authorization artifacts              | As needed                                                                          | Relevant owner                                | Use only where additional detail is necessary for a sound authorization decision                     |
 | Draft Project Charter                           | Yes                                                                                | Delivery Owner                                | Prepare the decision-ready charter for Stage 3                                                       |
+| Initial Delivery Roadmap (high level)           | Yes                                                                                | Delivery Owner with Project Manager support   | Draft high-level phases, milestones, dependencies, and risks to support authorization-level planning visibility |
 | Stage 2 readiness decision record               | Yes                                                                                | Delivery Owner with Outcome Owner             | Record whether the package is ready or not ready for Work Authorization, with basis and follow-up    |
 
 ### 10.4. AI Use in This Stage
@@ -237,7 +247,7 @@ AI can:
 
 - draft the Initiative Definition Document from structured inputs
 - suggest scope wording, outcome statements, and artifact structure
-- help identify candidate deliverables from the Standard Deliverables Guide
+- help identify candidate deliverables from the [Standard Deliverables Guide](standard_deliverables_guide.md)
 - help list additional expected deliverables that may need elaboration after authorization
 
 AI must not:
@@ -316,6 +326,7 @@ No delivery work may start without explicit Work Authorization.
 ### 12.1. Minimum Outputs
 
 - elaborated versions of required Stage 2 deliverables where further detail is needed
+- elaborated Delivery Roadmap aligned to authorized scope, milestones, and dependencies
 - additional definition deliverables needed for controlled delivery
 - detailed solution and domain-specific design or elaboration artifacts for in-scope work
 - acceptance test approach aligned to Stage 2 acceptance focus
@@ -331,6 +342,7 @@ No delivery work may start without explicit Work Authorization.
 | Acceptance test approach                  | Yes for deliverables requiring testing | Delivery Owner with testers / reviewers     | Show how acceptance will be evidenced                                                             |
 | Data move, rollout, and recovery approach | When applicable                        | Delivery Owner with operations / data leads | Make transition and recovery practical                                                            |
 | Detailed operational design summary       | When system impact exists              | Operations / support lead                   | Confirm how the solution will be run and supported                                                |
+| Delivery Roadmap (elaborated baseline)    | Yes                                    | Delivery Owner with Project Manager support  | Expand Stage 2 roadmap with release sequence, dependencies, and control checkpoints               |
 
 ### 12.3. AI Use in This Stage
 
@@ -365,6 +377,7 @@ AI must not:
 ### 13.1. Minimum Outputs
 
 - Delivery Charter
+- Delivery Roadmap confirmed with the delivery team
 - delivery plan or initial task breakdown
 - communication plan
 - change and escalation rules
@@ -374,7 +387,8 @@ AI must not:
 
 | Output | Required | Accountable | Practical note |
 | --- | --- | --- | --- |
-| Delivery Charter | Yes | Delivery Owner | Define team operating model, reporting, and controls |
+| Delivery Charter | Yes | Delivery Owner | Charter and mobilize the team with clear operating expectations, communication methods, and governance controls |
+| Delivery Roadmap (team-confirmed) | Yes | Delivery Owner with delivery team leads | Confirm scope-aligned sequencing, milestones, dependencies, and ownership with the mobilized team |
 | Initial delivery plan / task breakdown | Yes | Project Manager or Delivery Owner | Enough to start controlled execution |
 | Communication plan | Yes | Delivery Owner | Keep key audiences informed at the right level |
 | Change and escalation rules | Yes | Delivery Owner | Clarify who decides what and how issues are escalated |
@@ -406,6 +420,7 @@ AI must not:
 ### 13.5. Exit Criteria
 
 - the team knows how work will be executed and governed
+- the roadmap is confirmed with the delivery team and understood by key stakeholders
 - plans and trackers exist and are usable
 - status, escalation, and acceptance preparation rhythms are in place
 - the work is ready to begin controlled execution
@@ -526,6 +541,6 @@ Delivered without acceptance is not complete.
 | Work Definition                  | Initiative Definition Document, required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record |
 | Work Authorization               | Decision record, approved Project Charter, funding confirmation                                                                                                                                                                     |
 | Work Definition Details          | Delivery-ready elaboration set, additional definition deliverables as needed, detailed domain artifacts, acceptance test approach                                                                                                   |
-| Delivery Mobilization            | Delivery Charter, communication plan, change and escalation rules, delivery plan, trackers                                                                                                                                          |
+| Delivery Mobilization            | Delivery Charter, team-confirmed Delivery Roadmap, communication plan, change and escalation rules, delivery plan, trackers                                                                                                           |
 | Work Delivery                    | Deliverables, evidence, status reports, decision and change records                                                                                                                                                                 |
 | Acceptance, Transition & Closure | Acceptance records, handover confirmation, closure record                                                                                                                                                                           |
