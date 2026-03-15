@@ -16,6 +16,8 @@ This artifact is required when functional scope must be approved, managed, or ac
 
 It is strongly recommended for any initiative with multiple stakeholders, formal acceptance, phased delivery, or non-trivial scope.
 
+It is typically established in Stage 2 - Work Definition and then used as the approved functional baseline through later elaboration, delivery, and acceptance.
+
 ## 3. Intended Readers and Users
 
 - Sponsor and Decision Authorities
@@ -34,6 +36,8 @@ It should align with ISO/IEC/IEEE 29148-2018 requirements-engineering guidance b
 
 Include enough detail for a reader to understand each approved business ability and why it matters. Do not include workflow steps, detailed business rules, technical design, or full acceptance criteria.
 
+In practice, this artifact should answer a simple question clearly: what must the solution be able to do, before the team decides exactly how that behavior will be grouped, designed, built, or tested?
+
 ## 6. Required Content or Minimum Structure
 
 This artifact should define both the baseline context and the capability entries that make up the approved scope.
@@ -50,6 +54,14 @@ Must include:
 
 This section identifies the scope baseline and shows what approval context it belongs to.
 
+Recommended inputs when drafting:
+
+- outcome statement and success measures from the Initiative Definition
+- scope boundaries and exclusions
+- affected users, roles, or beneficiaries
+- major business, policy, security, or compliance constraints
+- key terms needing consistent interpretation
+
 ### 6.2. Capability grouping approach
 
 Should include:
@@ -65,7 +77,7 @@ These groupings are for readability only. They do not replace the formal Solutio
 
 Each Functional Capability entry must include:
 
-- stable Functional Capability ID
+- stable ID
 - capability statement written as one business ability
 - business intent or value note
 
@@ -85,6 +97,44 @@ Each Functional Capability entry must not include:
 
 The entry structure is the core information model of this artifact. It should allow downstream teams to derive modules, use cases, and validation without inventing new scope.
 
+Practical example:
+
+- Functional Capability: submit a service request
+- Business intent / value: allow staff to initiate support demand through a controlled and trackable channel
+
+Not a Functional Capability:
+
+- user opens the request screen, completes five fields, clicks submit, and receives a confirmation message
+
+### 6.3A. Functional Capability ID generation
+
+Must include a simple rule for generating Functional Capability IDs so they are easy to cite across Solution Modules, Use Case Narratives, validation evidence, and acceptance records.
+
+Recommended format:
+
+- `FC-01`
+- `FC-02`
+- `FC-03`
+
+Recommended generation rules:
+
+- assign the next available sequential number when a new Functional Capability is approved for inclusion in the baseline
+- keep the ID stable once assigned
+- do not renumber existing IDs when entries are reordered, clarified, or grouped differently for readability
+- retire IDs rather than reusing them if a Functional Capability is removed from the baseline
+
+If the initiative needs grouped numbering for readability, the following variant may be used:
+
+- `FC-01.01`
+- `FC-01.02`
+- `FC-02.01`
+
+Use grouped numbering only when the grouping itself is stable and useful for long-term reference. If there is any doubt, prefer the simpler sequential format.
+
+Practical rule:
+
+- assign IDs after the Functional Capability list is stable enough for review, but before Solution Modules, Use Case Narratives, and acceptance evidence start depending on those IDs
+
 ### 6.4. Capability writing rules
 
 Must include rules stating that capability statements are:
@@ -95,6 +145,11 @@ Must include rules stating that capability statements are:
 - bounded to approved scope
 
 This section protects the baseline from becoming a process document or design artifact.
+
+Useful working test:
+
+- If the statement reads like a user journey, move it to a Use Case Narrative.
+- If the statement reads like a design feature or implementation choice, remove or rewrite it.
 
 ### 6.5. Baseline control rules
 
@@ -148,6 +203,8 @@ The baseline is usually authored by a business analyst, product analyst, or deli
 
 It should be reviewed by the Business Owner / Process Owner, Delivery Owner, and any scope governance authority. Approval normally sits with the Business Owner / Process Owner or delegated scope authority.
 
+Downstream teams should be able to form Solution Modules and draft Use Case Narratives from this baseline without needing to reinterpret the approved scope.
+
 ## 10. Maintenance Expectations
 
 This is a controlled baseline. Update it only when approved scope changes or when clarification is needed to remove ambiguity without changing intent. Preserve ID stability across versions.
@@ -169,8 +226,14 @@ If weak, split combined capabilities, remove non-scope detail, and strengthen th
 ### 12.1. Starter prompt
 
 > Draft a Functional Capabilities artifact for this initiative.
-> Define the approved business abilities the solution must provide, using stable Functional Capability references and short value statements.
+> Define the approved business abilities the solution must provide, using stable IDs and short value statements.
 > Keep the entries atomic, business-focused, and free of workflow, design, and implementation detail.
+
+### 12.1A. Practical drafting prompt
+
+> Rewrite these scope notes as Functional Capabilities.
+> Each entry must describe one business ability, explain why it matters, and stay free of process steps, screen descriptions, and technical design.
+> The result should be clear enough that the team can later group the Functional Capabilities into Solution Modules and derive Use Case Narratives without adding hidden scope.
 
 ### 12.2. Section prompts
 

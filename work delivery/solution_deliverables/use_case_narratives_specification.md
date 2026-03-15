@@ -16,6 +16,8 @@ This artifact is required when behavioral clarity is needed to design, validate,
 
 It is especially important for role-based workflows, approvals, exception handling, sensitive actions, and any scope where misunderstanding user behavior would create delivery or acceptance risk.
 
+It is typically produced during detailed definition after scope is approved and Solution Modules are being used to structure delivery and acceptance.
+
 ## 3. Intended Readers and Users
 
 - business reviewers
@@ -32,11 +34,15 @@ It should align with ISO/IEC/IEEE 29148 requirements-elaboration principles by t
 
 The use case set should make it clear what behavior must work for a Solution Module to be considered delivered and ready for acceptance.
 
+In practical terms, the use case set is where the team makes "correct behavior" explicit enough for walkthroughs, testing, and acceptance review.
+
 ## 5. How Much Detail to Include
 
 Include enough detail that a business reviewer, tester, or AI drafter can understand and validate the behavior without inventing missing steps or rules. Keep the description at business-behavior level. Do not turn the artifact into a UI specification, API specification, or full test script.
 
 The level of detail should be sufficient to support module-level walkthroughs, testing, and acceptance evidence.
+
+Each use case should be small enough to test but complete enough to remove ambiguity about the expected outcome, major rules, and important alternate paths.
 
 ## 6. Required Content or Minimum Structure
 
@@ -53,6 +59,14 @@ Must include:
 Should include:
 
 - short statement of how the use case set supports module-level validation and acceptance
+
+Recommended drafting inputs:
+
+- approved Functional Capabilities
+- approved Solution Modules
+- relevant user roles and access expectations
+- known business rules, controls, and audit requirements
+- acceptance focus areas that matter to the Business Owner or Acceptance Authority
 
 This section identifies what approved baseline the behavior descriptions belong to.
 
@@ -95,6 +109,12 @@ The use case entry should describe the following in practical terms:
 
 This section keeps the required structure usable rather than heading-only.
 
+Practical example:
+
+- Trigger: staff member submits a completed request for approval
+- Intended outcome: the request is recorded and routed to the correct approver
+- Acceptance criteria: the request is saved, the correct approver is assigned, and an auditable submission record exists
+
 ### 6.4. Traceability rules
 
 Must include rules stating that:
@@ -115,6 +135,11 @@ Must include:
 - expectation that each module has enough use case coverage to support module-level acceptance
 
 This section helps the use case set function as a complete behavior model instead of a partial sample.
+
+Useful working test:
+
+- If a Solution Module cannot be accepted without inventing extra behavior, the use case coverage is not yet sufficient.
+- If a use case starts to read like a screen script or technical design, it has probably gone too far.
 
 ### 6.6. Template guide
 
@@ -153,6 +178,8 @@ They should be reviewed by the Business Owner / Process Owner, Delivery Owner, t
 
 Use Case Narratives normally support module-level validation and feed the broader Solution Deliverables Acceptance Record rather than functioning as stand-alone acceptance records.
 
+They should give business reviewers, test leads, and implementers a common view of expected behavior before build and acceptance evidence are finalized.
+
 ## 10. Maintenance Expectations
 
 Keep the use case set current while behavior is still being elaborated and whenever approved behavior changes. Update when business rules, roles, or acceptance conditions change materially.
@@ -176,6 +203,12 @@ If weak, tighten traceability, complete the missing sections, and remove technic
 > Draft a Use Case Narrative for this solution behavior.
 > Include the required fields from this specification, keep the behavior traceable to the approved Module and Functional Capabilities, describe the main and alternate paths in business language, and make the acceptance criteria observable and testable.
 > Do not introduce new scope or technical design detail.
+
+### 12.1A. Practical drafting prompt
+
+> Draft the use cases needed to show how this Solution Module will behave when delivered.
+> For each use case, make the actor, trigger, outcome, main flow, major alternate paths, rules, and acceptance criteria clear enough that a business reviewer can walk through it and a tester can validate it.
+> Keep the writing at business-behavior level and do not add scope beyond the approved Functional Capabilities.
 
 ### 12.2. Section prompts
 
