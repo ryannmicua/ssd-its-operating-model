@@ -134,19 +134,41 @@ Use numbering consistently in headings where practical, for example:
 - `### 7.1. Baseline context`
 - `### 12.2. Section prompts`
 
-## 8. End-to-End Stage Summary
+## 8. Practical TL;DR - How This Framework Works in Practice
 
-Accountable means they are accountable for moving the stage forward.
+If you only read one section, read this one.
 
-| Stage                               | Primary Decision                                      | Accountable                                      | Minimum Outcome                                                                                                  |
-| ----------------------------------- | ----------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| 1. Work Assessment                  | Proceed / Defer / Reject                              | ITS + Submitter                                  | Worth defining further or not                                                                                    |
-| 2. Work Definition                  | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Decision-ready Initiative Definition Document with required deliverables and supporting detail as needed         |
-| 3. Work Authorization               | Approve / Defer / Reject / Approve with conditions    | Sponsor with Decision Authority                  | Work formally authorized with funding and accountability.<br><br>Appropriate committee approval may be necessary |
-| 4. Work Definition Details          | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Detailed design, elaborated roadmap, and delivery-ready artifact set                                            |
-| 5. Delivery Mobilization            | Ready to execute                                      | Delivery Owner                                   | Delivery rhythm, controls, and team-aligned roadmap and setup in place                                          |
-| 6. Work Delivery                    | Continue / Escalate / Change / Prepare for acceptance | Delivery Owner                                   | Authorized deliverables produced with evidence                                                                   |
-| 7. Acceptance, Transition & Closure | Accept / Conditionally accept / Reject / Close        | Acceptance Authorities and Sponsor as applicable | Formal acceptance, handover, and closure                                                                         |
+This framework is meant to answer five practical questions before work becomes difficult to control:
+
+- should this work proceed at all
+- what exactly is being approved
+- who is allowed to approve it
+- how will progress and changes be controlled
+- what proves the work is complete and supportable
+
+In practice, the framework works like this:
+
+- Stage 1 Work Assessment - tests whether the work is worth investing in further
+- Stage 2 Work Definition - defines what is being asked for approval, including required deliverables and owners
+- Stage 3 Work Authorization - gives formal authority to proceed
+- Stage 4 Work Definition Details - turns the approved intent into delivery-ready detail without quietly expanding scope
+- Stage 5 Delivery Mobilization - sets up the team rhythm, controls, and trackers needed to execute visibly
+- Stage 6 Work Delivery - delivers the approved outputs and gathers evidence as the work progresses
+- Stage 7 Acceptance, Transition & Closure - formally accepts the result, transfers operational responsibility, and closes the work
+
+Accountable means accountable for moving the stage forward.
+
+| Stage                               | What it means in practice                                                          | Primary Decision                                      | Accountable                                      | Core artifacts                                                                                                      | Minimum outcome                                                                                                     |
+| ----------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| 1. Work Assessment                  | Decide whether the request is worth defining further                               | Proceed / Defer / Reject                              | ITS + Submitter                                  | Work Assessment Report, decision record                                                                             | Worth defining further or not                                                                                       |
+| 2. Work Definition                  | Define the initiative clearly enough for an authorization decision                 | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Initiative Definition Document, required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record | Decision-ready Initiative Definition Document with required deliverables and supporting detail as needed            |
+| 3. Work Authorization               | Formally approve the work, funding, and accountability before delivery starts      | Approve / Defer / Reject / Approve with conditions    | Sponsor with Decision Authority                  | Decision record, approved Project Charter, funding confirmation                                                     | Work formally authorized with funding and accountability.<br><br>Appropriate committee approval may be necessary  |
+| 4. Work Definition Details          | Elaborate the approved work into the detail needed to build, test, and transition  | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Delivery-ready elaboration set, additional definition deliverables as needed, detailed domain artifacts, acceptance test approach | Detailed design, elaborated roadmap, and delivery-ready artifact set                                               |
+| 5. Delivery Mobilization            | Put delivery controls, roles, cadence, roadmap, and trackers in place              | Ready to execute                                      | Delivery Owner                                   | Delivery Charter, team-confirmed Delivery Roadmap, communication plan, change and escalation rules, delivery plan, trackers | Delivery rhythm, controls, and team-aligned roadmap and setup in place                                             |
+| 6. Work Delivery                    | Produce the approved deliverables, manage change visibly, and collect evidence     | Continue / Escalate / Change / Prepare for acceptance | Delivery Owner                                   | Deliverables, evidence, status reports, decision and change records                                                 | Authorized deliverables produced with evidence                                                                      |
+| 7. Acceptance, Transition & Closure | Formally accept the work, confirm handover, and close with ownership still visible | Accept / Conditionally accept / Reject / Close        | Acceptance Authorities and Sponsor as applicable | Acceptance records, handover confirmation, closure record                                                           | Formal acceptance, handover, and closure                                                                            |
+
+The practical implication is simple: work should not move forward because people are busy or because effort has already started. It should move forward because the previous stage produced a clear decision, named ownership, and usable artifacts that make the next stage governable.
 
 ## 9. Stage 1 - Work Assessment
 
@@ -532,15 +554,3 @@ AI must not:
 ### 15.5. Hard Rule
 
 Delivered without acceptance is not complete.
-
-## 16. Artifact Summary by Stage
-
-| Stage                            | Core Artifacts                                                                                                                                                                                                                      |
-| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Work Assessment                  | Work Assessment Report, decision record                                                                                                                                                                                             |
-| Work Definition                  | Initiative Definition Document, required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record |
-| Work Authorization               | Decision record, approved Project Charter, funding confirmation                                                                                                                                                                     |
-| Work Definition Details          | Delivery-ready elaboration set, additional definition deliverables as needed, detailed domain artifacts, acceptance test approach                                                                                                   |
-| Delivery Mobilization            | Delivery Charter, team-confirmed Delivery Roadmap, communication plan, change and escalation rules, delivery plan, trackers                                                                                                           |
-| Work Delivery                    | Deliverables, evidence, status reports, decision and change records                                                                                                                                                                 |
-| Acceptance, Transition & Closure | Acceptance records, handover confirmation, closure record                                                                                                                                                                           |
