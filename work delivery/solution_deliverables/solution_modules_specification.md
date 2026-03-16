@@ -81,9 +81,9 @@ Include:
 
 Use a table like this:
 
-| Module ID | Module name | Behavior focus | Primary roles | Planned use cases | Supporting capabilities | Notes |
-| --- | --- | --- | --- | --- | --- | --- |
-| `SM-001` | Request submission | Lets staff raise and track a new request. | Staff member | `UC-001`, `UC-002` | `FC-001`, `FC-002` | Add only short notes. |
+| Module ID | Module name        | Behavior focus                            | Primary roles | Planned use cases  | Supporting capabilities | Notes                 |
+| --------- | ------------------ | ----------------------------------------- | ------------- | ------------------ | ----------------------- | --------------------- |
+| `SM-001`  | Request submission | Lets staff raise and track a new request. | Staff member  | `UC-001`, `UC-002` | `FC-001`, `FC-002`      | Add only short notes. |
 
 The `Behavior focus` field is important. When drafting the module list, the team should decide and state the behavior focus of each module clearly enough that readers can understand what kind of user outcome or activity the module is meant to cover.
 
