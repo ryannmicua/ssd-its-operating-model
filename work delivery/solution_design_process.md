@@ -5,369 +5,384 @@
 - [Work Delivery Framework](work_delivery_framework.md)
 - [Standard Deliverables Guide](standard_deliverables_guide.md)
 - [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
-- [Solution Design Process Streamlining Recommendations](solution_design_process_streamlining_recommendations.md)
+- [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
+- [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
+- [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
+- [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
+- [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
+- [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)
+- [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
+- [Delivery Charter Specification](governance_and_control_deliverables/delivery_charter_specification.md)
+
+## Quick Start
+
+Use this guide when your initiative includes new or changed solution behavior and you need a simple, governed path from approved scope to formal acceptance.
+
+In this guide, stage references mean stages in the Work Delivery Framework. You can still use this process as a practical solution-design guide even if your team is not applying the full framework strictly. In that case, use the stages as a helpful sequence and control check, not as a hard dependency.
+
+This guide is mainly for:
+
+- Delivery Owners and project managers
+- analysts and solution leads
+- developers and testers
+- reviewers and Acceptance Authorities
+
+If you are new to the process, follow this order:
+
+1. In Stage 2, define the approved scope in [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md).
+2. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into [Solution Modules](solution_deliverables/solution_modules_specification.md), and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
+3. In Stage 6, record what is actually live in the [Deployed Solution](solution_deliverables/deployed_solution_specification.md) and gather evidence.
+4. In Stage 7, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md) and get an explicit acceptance decision.
+
+What to produce by stage:
+
+| Stage | Main solution deliverables |
+| --- | --- |
+| Stage 2 - Work Definition | Functional Capabilities |
+| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules, Use Case Narratives |
+| Stage 6 - Work Delivery | Deployed Solution, linked evidence, related operational artifacts as needed |
+| Stage 7 - Acceptance, Transition & Closure | Acceptance Record and final acceptance decision |
+
+What not to do:
+
+- do not add new scope in modules, use cases, or design notes
+- do not turn Stage 2 scope into detailed design too early
+- do not treat working drafts as approved baselines
+- do not wait until the end to reconstruct evidence
+- do not mark anything accepted without the named human authority
 
 ## 1. Purpose
 
-Define the practical workflow for producing, structuring, evidencing, and preparing Solution Deliverables for acceptance within the Work Delivery Framework.
+This document is the practical operating guide for solution design inside the Work Delivery Framework.
 
-This process is designed to help:
+It shows teams how to move from approved scope to structured behavior, delivery evidence, and formal acceptance in a way that is easy to follow and easy to review.
 
-- human delivery teams work with consistent structure and traceability
-- project managers and Delivery Owners keep solution documentation controlled and reviewable
-- AI accelerate drafting and revision without weakening governance
+## 2. Where This Process Fits
 
-## 2. Governance Boundary
+This process works inside the Work Delivery Framework. In this document, stage references refer to stages in the Work Delivery Framework. It does not replace stage decisions or governance controls.
 
-This process operates inside the Work Delivery Framework.
+The process can still be used outside strict Work Delivery Framework adoption. When teams use it that way, the stages should be read as practical checkpoints for scope, structure, evidence, and acceptance rather than as mandatory framework gates.
 
-It:
-
-- starts in Stage 2 (Work Definition)
-- elaborates in Stage 4 (Work Definition Details)
-- is executed and evidenced in Stage 6 (Work Delivery)
-- supports formal acceptance in Stage 7 (Acceptance, Transition & Closure)
-
-It does not:
-
-- authorize work
-- create or change Acceptance Authority
-- expand approved scope
-- replace stage-gated controls in the Work Delivery Framework
-
-The authoritative scope baseline is established through the approved Initiative Definition Document, any referenced supporting authorization artifacts, and the Work Authorization decision.
-
-## 3. Core Roles in This Process
-
-| Role | Primary responsibility in this process |
+| Stage | What solution design is doing |
 | --- | --- |
-| Delivery Owner | Ensures documentation is produced, controlled, and aligned to stage gates |
-| Project Manager (if assigned) | Coordinates drafting, review cycles, traceability status, and follow-up actions |
-| Solution Lead / Analyst | Owns the quality of Functional Capabilities, Solution Modules, and Use Cases |
-| Reviewer / SME | Confirms business, operational, or technical correctness |
-| Acceptance Authority | Accepts solution outputs based on defined acceptance focus and evidence |
+| Stage 2 | Define the approval-level solution scope |
+| Stage 4 | Turn approved scope into delivery-ready structure and behavior |
+| Stage 5 | Use the Delivery Charter and Delivery Roadmap to mobilize controlled execution |
+| Stage 6 | Implement, validate, and record evidence |
+| Stage 7 | Present the acceptance package and get a clear decision |
 
-## 4. Definition of Ready to Generate
+Coordination artifacts matter here:
 
-Before AI or human drafting begins for a governed solution artifact, the following should be available:
+- the [Delivery Roadmap](governance_and_control_deliverables/delivery_roadmap_specification.md) shows when solution work, validation, and acceptance checkpoints will happen
+- the [Delivery Charter](governance_and_control_deliverables/delivery_charter_specification.md) shows how the team will operate, escalate, and manage acceptance readiness
 
-- a clear objective for the artifact
-- the current scope boundaries
-- the relevant stage and expected depth
+These artifacts support the process. They do not replace solution scope, behavior, traceability, or acceptance controls.
+
+## 3. Who Does What
+
+| Role | What to focus on in this guide |
+| --- | --- |
+| Delivery Owner | Keep the artifact set moving, controlled, owned, and ready for stage reviews |
+| Project Manager | Coordinate review cycles, version control, roadmap timing, follow-up actions, and evidence readiness |
+| Solution Lead / Analyst | Make scope, module boundaries, roles, and behavior clear enough to build and validate |
+| Developer / Tester | Build and validate only what traces back to approved scope and documented behavior |
+| Reviewer / SME | Check that the content is correct, practical, and still inside scope |
+| Acceptance Authority | Decide based on visible scope, evidence, open conditions, and readiness for use |
+
+Simple usage guidance:
+
+- IT managers should use this guide to check that scope, ownership, and acceptance decisions are visible.
+- Delivery Owners and PMs should use it to keep drafting, review, evidence, and handoff in the right order.
+- Analysts and solution leads should use it to write the artifacts in sequence without mixing stages.
+- Developers and testers should use it to confirm what behavior is approved and what evidence is needed.
+
+## 4. Before You Start
+
+Before drafting a governed solution artifact, make sure you have at least:
+
+- a clear objective
+- the current stage
+- the in-scope and out-of-scope boundary
 - the named owner and reviewer
-- the required IDs or ID pattern, where traceability applies
+- the IDs already assigned, or the ID pattern you will use
 - the acceptance focus or validation intent
 
-If these inputs are missing, the artifact may still be drafted as a working draft, but it should not be treated as controlled or decision-ready.
+If any of these are missing, you can still draft a working document, but label it clearly as a working draft and do not treat it as controlled or decision-ready.
 
-## 5. Process Overview
+## 5. Step Summary
 
-| Step | Work Delivery Framework Stage | Main Outcome |
-| --- | --- | --- |
-| 1. Define Authorized Scope | Stage 2 - Work Definition | Approval-level Functional Capabilities and solution scope baseline |
-| 2. Structure Authorized Scope | Stage 4 - Work Definition Details | Solution Modules and Use Case Narratives that elaborate approved scope |
-| 3. Implement and Evidence | Stage 6 - Work Delivery | Implemented solution plus traceable evidence |
-| 4. Prepare for Formal Acceptance | Stage 7 - Acceptance, Transition & Closure | Acceptance-ready documentation and evidence package |
+Use this table as the day-to-day entry point.
 
-Reversing or blending these steps creates governance risk and usually causes rework.
+| Step | Minimum inputs | Required outputs | Completion check | Accountable owner |
+| --- | --- | --- | --- | --- |
+| 1. Define authorized scope | approved initiative intent, scope boundary, owner, reviewer, acceptance focus | Functional Capabilities | scope is clear, IDs are stable, no design detail added | Delivery Owner with Solution Lead / Analyst |
+| 2. Structure the solution | approved Functional Capabilities, user context, business rules, review inputs | User Roles, Personas & Access Model, Solution Modules, Use Case Narratives | every module and use case traces to approved capabilities, actors are clear, no new scope added | Delivery Owner with Solution Lead / Analyst |
+| 3. Implement and evidence | approved design set, test and evidence approach, delivery roadmap, operational inputs | Deployed Solution, linked evidence, related delivery and operational records | delivered behavior can be traced back to approved scope and supported with evidence | Delivery Owner with delivery and operational leads |
+| 4. Prepare for formal acceptance | evidence, open issues, deployment status, operational handoff status | Acceptance Record and acceptance-ready package | acceptance authority can see what is being accepted, on what basis, and under what conditions | Delivery Owner with Acceptance Authority |
 
-## 6. Step 1 - Define Authorized Scope
+## 6. Guided Workflow
 
-### Primary Artifact
+### 6.1. Step 1 - Define Authorized Scope
+
+Use this step in Stage 2.
+
+Goal:
+State clearly what the solution must be able to do before the team starts detailed design.
+
+Use these specs:
+
+- [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
+
+Do this:
+
+1. Start from the approved initiative outcome, scope boundary, and exclusions.
+2. Write one Functional Capability per approved business ability.
+3. Assign stable `FC-###` IDs.
+4. Remove workflow detail, screen detail, and technical design.
+5. Review for overlap, ambiguity, and hidden scope growth.
+
+Produce:
 
 - Functional Capabilities
 
-### Purpose
+Do:
 
-Define the approval-level functional scope for Solution Deliverables.
+- keep statements short and business-focused
+- make exclusions visible
+- keep IDs stable once assigned
 
-### Must Include
+Do not:
 
-- outcome statement and measurable success indicators
-- explicit in-scope and out-of-scope boundaries
-- atomic Functional Capability statements
-- stable Capability IDs (`FC-###`)
-- reference to the named Acceptance Authority from Stage 2
-- version metadata
+- write use case flows
+- group by sprint, team, or system layer
+- add technical design or test evidence
 
-### Must Not Include
+Step 1 is done when:
 
-- detailed workflows or sequencing
-- business rule detail that belongs in use cases
-- technical design or architecture
-- test scripts or acceptance evidence
-- task plans or implementation detail
+- the approved scope is understandable to business and delivery readers
+- each capability is atomic enough to trace later
+- the owner and reviewer are named
 
-### Human Validation Gate
+### 6.2. Step 2 - Structure the Solution
 
-Before Step 1 is treated as complete, confirm:
+Use this step in Stage 4.
 
-- scope check: no capability contradicts or exceeds agreed Stage 2 boundaries
-- ownership check: owner and reviewer are named
-- readability check: the artifact is understandable to business and delivery readers
+Goal:
+Turn approved scope into delivery-ready structure and reviewable behavior without expanding scope.
 
-### AI Use in Step 1
+Use these specs:
 
-AI can:
+- [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
+- [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
+- [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
 
-- draft capability statements from approved scope inputs
-- normalize wording and structure
-- suggest missing cross-references or duplicated capability statements
+Do this in order:
 
-AI must not:
+1. Confirm who the users are and what boundaries matter.
+2. Group approved capabilities into Solution Modules that can be explained, validated, and accepted as meaningful units.
+3. Write Use Case Narratives that show how each module behaves.
+4. Check that every use case references a module and approved capability IDs.
+5. Remove anything that introduces behavior not covered by the approved baseline.
 
-- invent new capability intent
-- convert approval-level scope into detailed design
+Produce:
 
-## 7. Step 2 - Structure Authorized Scope
-
-### Primary Artifacts
-
+- User Roles, Personas & Access Model
 - Solution Modules
 - Use Case Narratives
 
-### Purpose
+Do:
 
-Organize approved Capability IDs into coherent, testable behavior without expanding scope.
+- use actors and access expectations consistently
+- keep module boundaries easy to explain
+- make acceptance criteria observable
 
-### Solution Modules Must:
+Do not:
 
-- group approved Capability IDs into bounded solution segments
-- reference included Capability IDs explicitly
-- remain fully traceable to Functional Capabilities
-- avoid introducing new scope
+- turn modules into task plans
+- turn use cases into UI scripts or technical specs
+- use personas to add hidden scope
 
-Each Solution Module should include:
+Step 2 is done when:
 
-- Solution Module ID (`SM-###`)
-- name and short description
-- included Capability IDs (`FC-###`)
-- associated user roles
-- contained Use Case IDs (`UC-###`)
+- every module maps back to approved `FC-###` IDs
+- every use case references one `SM-###` and one or more `FC-###` IDs
+- reviewers can understand expected behavior without guessing
 
-### Each Use Case Must:
+### 6.3. Step 3 - Implement and Evidence
 
-1. reference a Solution Module ID
-2. reference one or more Capability IDs
-3. identify primary actor(s)
-4. describe the triggering event
-5. define the intended outcome
-6. describe the high-level workflow
-7. define business rules and validations
-8. define access expectations
-9. define auditability requirements where relevant
-10. define acceptance criteria
+Use this step in Stage 6.
 
-### Human Validation Gate
+Goal:
+Show what was delivered, what is live, and what evidence proves the delivered behavior stays inside approved scope.
 
-Before Step 2 is treated as complete, confirm:
+Use these specs:
 
-- scope check: every module and use case maps back to approved Capability IDs
-- traceability check: no behavior exists without an `FC-###` reference
-- ownership check: owner and reviewer are named for the produced artifacts
+- [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
+- related operational and technical specs when design, support, deployment, or recovery records are required
 
-### AI Use in Step 2
+Do this:
 
-AI can:
+1. Build and validate only what is approved or formally changed.
+2. Collect evidence as work is completed.
+3. Record what is actually live, where it is live, and under what conditions.
+4. Link evidence back to capabilities, modules, and use cases where appropriate.
+5. Confirm operational ownership and support readiness for what is going live.
 
-- draft module structures and use case narratives from approved Functional Capabilities
-- help identify missing links between modules, actors, and capabilities
-- suggest clearer behavioral wording
+Produce:
 
-AI must not:
+- Deployed Solution
+- linked validation and deployment evidence
+- related technical or operational records where required
 
-- add behavior that requires new capability approval
-- hide missing traceability
+Do:
 
-## 8. Step 3 - Implement and Evidence
+- keep evidence attributable and reviewable
+- note any phased, deferred, or conditional live scope
+- make support conditions visible
 
-### Primary Output
+Do not:
 
-- Delivery and Operations Pack
+- invent evidence
+- hide defects or conditions in narrative text
+- claim that live scope is larger than what was approved
 
-### Purpose
+Step 3 is done when:
 
-Implement the approved capabilities and assemble the evidence needed for validation, acceptance, and operational continuity.
+- evidence exists for what is claimed as delivered
+- the live boundary is clear
+- support and handoff expectations are visible where required
 
-### Should Include As Applicable
+### 6.4. Step 4 - Prepare for Formal Acceptance
 
-**Build and Design**
+Use this step in Stage 7.
 
-- execution-level design needed to implement approved Solution Modules
-- integration definitions
-- configuration and data structure details
+Goal:
+Give the Acceptance Authority a clean, reviewable, evidence-based package for a clear decision.
 
-**Test and Evidence**
+Use these specs:
 
-- acceptance test plan mapped to Capability IDs
-- test results traceable to Capability, Module, and Use Case IDs where appropriate
-- defect log or issue record where used
+- [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)
 
-**Deploy and Recover**
+Do this:
 
-- deployment documentation
-- migration or cutover approach
-- rollback or recovery approach
+1. Define the acceptance boundary clearly.
+2. List what was reviewed and the evidence used.
+3. Show whether delivered behavior stayed within approved scope.
+4. Make conditions, exclusions, deferred items, and open issues visible.
+5. Record the named authority, date, and decision outcome.
 
-**Operate and Support**
+Produce:
 
-- runbooks or SOPs aligned to the delivered solution
-- monitoring expectations
-- operational ownership confirmation
+- Acceptance Record
+- acceptance-ready package with linked evidence
 
-### Traceability Rule
+Do:
 
-`Capability ID -> Solution Module ID -> Use Case ID -> Test Evidence -> Deployment Evidence -> Acceptance`
+- keep the record concise
+- use controlled statuses
+- state conditions plainly
 
-### Human Validation Gate
+Do not:
 
-Before Step 3 is treated as complete, confirm:
+- bury open items in notes
+- present conditional acceptance as full acceptance
+- approve on behalf of the named authority
 
-- evidence check: evidence exists for what is claimed as delivered
-- traceability check: evidence can be followed back to approved scope
-- operational check: support and handover artifacts exist where required
+Step 4 is done when:
 
-### AI Use in Step 3
+- the acceptance basis is clear
+- the evidence trail is reviewable
+- the Acceptance Authority knows exactly what they are being asked to accept
 
-AI can:
+## 7. How the Artifacts Fit Together
 
-- help assemble evidence summaries and traceability views
-- draft runbooks, test summaries, and deployment notes from confirmed inputs
-- flag missing references or undocumented handoff gaps
+Use this traceability path throughout the process:
 
-AI must not:
+`Initiative Definition -> Functional Capabilities -> User Roles / Solution Modules -> Use Case Narratives -> Delivery Evidence / Deployed Solution -> Acceptance Record`
 
-- invent test results, deployment outcomes, or operational confirmations
+Practical reading order for first-time practitioners:
 
-## 9. Step 4 - Prepare for Formal Acceptance
+1. Read this guide.
+2. Draft [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md).
+3. Draft [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md).
+4. Draft [Solution Modules](solution_deliverables/solution_modules_specification.md).
+5. Draft [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
+6. During delivery, maintain the [Deployed Solution](solution_deliverables/deployed_solution_specification.md).
+7. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
 
-### Purpose
+## 8. AI-Assisted Authoring Workflow
 
-Prepare a clean, reviewable acceptance package so the Acceptance Authority can make an explicit, evidence-based decision.
+When AI is helping with solution artifacts, use this simple loop:
 
-### Acceptance-Ready Means
+1. Human states the artifact, stage, scope boundary, IDs, and review intent.
+2. AI drafts only within that boundary.
+3. Human reviews for scope, clarity, and traceability.
+4. AI revises using explicit comments.
+5. Human validates the result against the step checks in this guide.
+6. The named owner accepts the artifact for use.
+7. The Acceptance Authority signs only where formal acceptance is required.
 
-- all in-scope Capability IDs are implemented or explicitly dispositioned
-- Solution Modules and Use Cases are complete enough to support validation
-- evidence is complete, attributable, and traceable
-- operational handover artifacts are present where required
-- open issues, conditions, or exceptions are visible
-
-### Human Validation Gate
-
-Before Step 4 is treated as complete, confirm:
-
-- acceptance check: the package addresses the Stage 2 acceptance focus
-- completeness check: required evidence and references are present
-- ownership check: the Acceptance Authority knows what they are being asked to approve
-
-### AI Use in Step 4
-
-AI can:
-
-- assemble acceptance summaries
-- generate traceability tables and evidence indexes
-- draft the final review pack from confirmed records
+AI can help draft, revise, summarize, and check traceability.
 
 AI must not:
 
+- invent new scope
+- invent evidence
 - approve acceptance
-- represent unresolved gaps as closed
+- hide missing ownership, missing IDs, or missing review inputs
 
-## 10. AI-Assisted Authoring Workflow
+## 9. Prompting Standard for Solution Artifacts
 
-Use this workflow whenever AI is helping produce or revise a governed solution artifact:
+When prompting AI for a solution artifact, use this order:
 
-1. **Initiate**
-   - Human provides objective, stage, scope boundaries, required structure, IDs, and review criteria.
-2. **Generate**
-   - AI produces a draft that stays within the supplied scope and structure.
-3. **Review**
-   - Owner or reviewer checks clarity, scope alignment, and traceability.
-4. **Revise**
-   - AI updates the draft using explicit reviewer comments.
-5. **Validate**
-   - Human or AI checks the artifact against the relevant validation gate and traceability rules.
-6. **Approve**
-   - The named owner accepts the draft as ready for use; the Acceptance Authority signs off only where formal acceptance is required.
-7. **Record**
-   - Save the final version, change summary, and linked evidence or decision references.
+1. artifact type
+2. current stage
+3. objective
+4. in-scope and out-of-scope boundary
+5. required IDs and source references
+6. required structure
+7. review criteria
 
-## 11. Codex Review Loop
-
-For practical AI-assisted reviews in Codex:
-
-1. Reviewer comments directly on the draft.
-2. Revision request states exactly what must change and what must not change.
-3. AI revises the document.
-4. AI provides a short change summary.
-5. Owner confirms whether the revision is accepted, needs more work, or requires governance review.
-
-This keeps revision cycles fast while preserving accountability.
-
-## 12. Prompting Standard for Solution Artifacts
-
-When prompting AI, use this order:
-
-1. objective and artifact type
-2. stage and required depth
-3. in-scope and out-of-scope boundaries
-4. required IDs and references
-5. expected structure or template
-6. review criteria
-
-Example prompt skeleton:
+Prompt skeleton:
 
 ```text
 Draft a [artifact type] for Stage [stage].
 Objective: [what this artifact must achieve]
 In scope: [items]
 Out of scope: [items]
-Required IDs and references: [IDs]
-Required structure: [sections]
+Required IDs and references: [IDs and source artifacts]
+Required structure: [sections or table fields]
 Review criteria: [clarity, traceability, no new scope, etc.]
 ```
 
-## 13. Identification and Traceability Standards
+## 10. Appendix A - Acceptance-Readiness Checklist
 
-### Capability ID
+Use this checklist before asking for formal solution acceptance.
 
-- format: `FC-###`
-- stable once assigned
-- never renumbered
-- retired IDs are not reused
+- [ ] The acceptance boundary is clear.
+- [ ] All in-scope `FC-###` items are implemented, deferred, or otherwise explicitly dispositioned.
+- [ ] Solution Modules and Use Case Narratives are complete enough to support validation.
+- [ ] Evidence is linked and attributable.
+- [ ] The live release boundary is clear where deployment has occurred.
+- [ ] Operational ownership, support, and handoff conditions are visible where required.
+- [ ] Open defects, exceptions, exclusions, and conditions are stated clearly.
+- [ ] The named Acceptance Authority is identified.
+- [ ] The Acceptance Record states what was reviewed, on what basis, and with what decision outcome.
 
-### Solution Module ID
+## 11. Governance Health Signals
 
-- format: `SM-###`
-- identifies a stable grouping of Capability IDs
+Good signs:
 
-### Use Case ID
+- approved capabilities stay stable through elaboration
+- modules organize the scope without changing it
+- use cases explain behavior in plain language
+- evidence is gathered during delivery, not reconstructed at the end
+- acceptance decisions are explicit and attributable
 
-- format: `UC-###`
-- must reference a Solution Module ID and one or more Capability IDs
+Warning signs:
 
-### Evidence IDs (recommended)
-
-- `TE-###` for test evidence
-- `DE-###` for deployment evidence
-
-Stable IDs preserve traceability from approved scope through delivery and acceptance.
-
-## 14. Governance Health Indicators
-
-### Positive Signals
-
-- Functional Capabilities remain stable after authorization
-- Solution Modules organize scope without redefining it
-- use cases are behaviorally clear and traceable
-- evidence is linked and reviewable
-- acceptance decisions reference documented outcomes and evidence
-
-### Risk Signals
-
-- capability renumbering or duplication
-- adding new behavior through modules or use cases without scope review
-- undocumented design or evidence gaps
-- acceptance attempted before traceability is ready
-- documentation created after the fact instead of guiding delivery
+- capabilities keep being renumbered or rewritten late
+- modules are grouped by team ownership only
+- use cases introduce new behavior not found in approved scope
+- evidence is missing, unclear, or not traceable
+- acceptance is being prepared before readiness gaps are visible

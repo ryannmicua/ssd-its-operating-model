@@ -1,221 +1,124 @@
 # Solution Modules Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
-Solution Modules organize approved functional scope and related use case behavior into coherent delivery and acceptance groupings. They show how approved Functional Capabilities are bundled into manageable units for elaboration, validation, deployment, and acceptance.
+Solution Modules group approved Functional Capabilities into delivery and acceptance units that people can actually understand.
 
-This artifact exists to support controlled delivery without redefining scope. A useful Solution Modules artifact helps teams see how the approved Functional Capabilities and related Use Case Narratives are grouped, what each grouping enables, and how those groupings support validation evidence and formal acceptance.
+This artifact answers one simple question:
 
-For initiatives using modular delivery, each Solution Module is the primary unit of solution delivery, behavior validation, and business acceptance.
+**How is the approved scope grouped for delivery, validation, and acceptance?**
 
-The intended outcome is that approved Functional Capabilities are organized into manageable units that support controlled elaboration, validation, deployment sequencing, and acceptance without changing scope intent.
+Use modules to organize scope. Do not use them to create new scope.
 
-## 2. When It Is Required
+## 2. When to Use It
 
-This artifact is required when approved scope is large or structured enough that the initiative needs explicit delivery and acceptance groupings.
+Use this artifact in Stage 4 after Functional Capabilities are approved.
 
-It is recommended for most multi-capability initiatives and especially useful for phased delivery or module-level validation.
+It is especially useful when:
 
-Modules may be outlined at authorization level to support planning and decision-making, then refined during detailed definition so long as they do not change approved Functional Capability intent.
+- the scope is large enough to need clear groupings
+- the team will deliver in waves, releases, or meaningful chunks
+- reviewers need to see what will be demonstrated and accepted together
 
-## 3. Intended Readers and Users
+## 3. Before You Start
 
-- Delivery Owner and implementation leads
-- analysts and designers
-- test and validation leads
-- Business Owner / Process Owner
-- release and operations stakeholders
+Make sure you have:
 
-## 4. Intended Project Context
+- the approved Functional Capabilities
+- a working view of user roles and access expectations
+- a clear idea of how delivery and acceptance will be grouped
+- named owner and reviewer
 
-Use this artifact after the Functional Capabilities artifact is approved and before detailed behavioral definition is complete. It is most useful where the team needs clear units of delivery and evidence without changing approved business scope.
+## 4. How to Draft It
 
-It should align with PMI scope-structuring and work decomposition practice by grouping approved scope into manageable units without changing the authorized baseline. It should also align with ITIL 4 release and service validation thinking by creating meaningful units of delivery and acceptance.
+Follow these steps:
 
-The module structure should make it clear what can be delivered, tested, evidenced, and accepted together as one controlled unit.
+1. Read the approved Functional Capabilities and look for natural business groupings.
+2. Group capabilities that belong together as one understandable unit of behavior.
+3. Assign a stable `SM-###` ID to each module.
+4. Name each module in plain language.
+5. List the included `FC-###` IDs.
+6. Note the primary users or roles and the planned `UC-###` IDs.
+7. Check that every approved capability belongs to at least one module.
 
-In practical terms, a Solution Module should represent a meaningful piece of solution behavior that a business reviewer can understand and an implementation team can deliver and validate as one unit.
+Useful test:
 
-## 5. How Much Detail to Include
+- If the grouping only exists because of team ownership or sprint timing, it is probably not a good module.
+- If the grouping can be explained, demonstrated, and accepted as one unit, it is probably a strong module.
 
-Include enough detail to explain what each module is for, which approved Functional Capabilities it contains, which Use Case Narratives define its behavior, and how it supports delivery and acceptance. Do not turn it into a work breakdown structure, sprint plan, or technical architecture document.
+## 5. Minimum Structure
 
-Modules are not backlog buckets and are not team ownership containers. They are controlled solution groupings used to package behavior for delivery and acceptance.
+### 5.1. Document header
 
-## 6. Required Content or Minimum Structure
-
-This artifact should define both the overall module set and the required content for each module entry.
-
-### 6.1. Module set context
-
-Must include:
+Include:
 
 - initiative or solution name
 - version and status
-- reference to the approved Functional Capabilities artifact
-- reference to the related Use Case Narratives set or drafting approach
-- short explanation of how modules are being used in this initiative
+- owner and reviewer
+- reference to the approved Functional Capabilities
+- short note on how modules will be used in this initiative
 
-The explanation of module use must state whether Solution Modules are the primary delivery and acceptance units for the initiative.
+### 5.2. Module summary table
 
-Recommended drafting note:
+Use a table like this:
 
-- state whether modules are expected to be deployed one at a time, accepted one at a time, or accepted together at the end while still tracked separately for evidence
-
-This section tells the reader how to interpret the module set.
-
-### 6.2. Module summary view
-
-Must include a summary of all modules. Recommended columns are:
-
-| Module ID | Module name | Purpose | Included Functional Capabilities | Planned Use Case IDs | Primary users or roles | Acceptance or validation note |
+| Module ID | Module name | Purpose | Included capabilities | Primary roles | Planned use cases | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
+| `SM-001` | Request submission | Lets staff raise and track a new request. | `FC-001`, `FC-002` | Staff member | `UC-001`, `UC-002` | Add only short notes. |
 
-This summary gives a fast view of how approved scope is grouped.
+### 5.3. Coverage check
 
-### 6.3. Required content for each module entry
+Add a simple mapping table:
 
-Each module entry must include:
+| Capability ID | Assigned module ID | Notes |
+| --- | --- | --- |
+| `FC-001` | `SM-001` |  |
 
-- stable Module ID
-- module name
-- module purpose
-- included Functional Capabilities
-- planned or related Use Case IDs
-- short statement of the behavior or outcome area covered
+## 6. Writing Rules
 
-Each module entry should include when relevant:
+Each module should:
 
-- primary user groups or roles
-- dependencies on other modules or external systems
-- release or phase note
-- validation or acceptance focus note when the module is used as a distinct evidence grouping
-- named Acceptance Authority where module-level acceptance is being tracked
+- stay inside approved scope
+- group behavior in a way business reviewers can understand
+- help delivery, testing, and acceptance
 
-Each module entry must not include:
+Keep the following out:
 
-- new capabilities not present in the approved baseline
+- new capabilities
 - detailed use case flows
-- technical design implementation detail
-- task assignments or sprint-level planning
+- task plans
+- sprint plans
+- technical design detail
 
-This entry structure makes the module usable for downstream elaboration and evidence planning.
+## 7. Done When
 
-Practical example:
+This artifact is ready when:
 
-- Module name: Request Submission
-- Purpose: enable a staff member to raise and track an initial request
-- Included Functional Capabilities: create request, validate required request information, confirm request submission
-- Planned Use Case IDs: submit request, resubmit rejected request
+- all approved capabilities are assigned
+- module boundaries are easy to explain
+- reviewers can see what will be delivered and accepted together
+- the set supports straightforward use case drafting
 
-This kind of grouping is useful because the included behavior can be reviewed, tested, and accepted together.
+## 8. What Comes Next
 
-### 6.4. Module boundary rules
+After the modules are stable:
 
-Must include:
+1. write the related behavior using the [Use Case Narratives Specification](use_case_narratives_specification.md)
+2. keep the actor model aligned using the [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
+3. use the module structure to plan evidence and acceptance
 
-- what kinds of behavior are included in a module
-- how exclusions or out-of-bound behavior should be expressed
-- rule that modules organize approved scope and do not authorize new scope
-- rule that related Use Case Narratives must stay within the module's approved capability boundary
+## 9. Prompt Guide
 
-This section prevents modules from becoming hidden change requests.
+Starter prompt:
 
-Useful working test:
+```text
+Draft a Solution Modules artifact for Stage 4.
+Group the approved Functional Capabilities into clear delivery and acceptance units.
+Assign SM IDs, list included FC IDs, identify primary roles, and do not add new scope.
+```
 
-- If the grouping exists only because one technical team owns it, it is probably not a good Solution Module.
-- If the grouping results in behavior that can be demonstrated and accepted coherently, it is probably a stronger Solution Module.
+Validation prompt:
 
-### 6.5. Functional Capability-to-module mapping
-
-Must include a mapping that shows how approved Functional Capabilities are assigned to one or more modules.
-
-Recommended columns:
-
-| Functional Capability | Functional Capability statement | Assigned Module ID | Notes |
-| --- | --- | --- | --- |
-
-This section supports coverage review and prevents orphan capabilities.
-
-Every approved Functional Capability should belong to at least one Solution Module. A Functional Capability may belong to more than one Solution Module when the approved behavior genuinely spans those modules.
-
-### 6.6. Module-level validation expectations
-
-Must include:
-
-- how modules support testing, deployment, or acceptance grouping
-- statement that module validation must be traceable back to approved Functional Capabilities and related use cases
-- statement on how cross-module behavior or shared dependencies will be handled when evidence cannot be isolated to one module
-- statement that a module is accepted when its included Functional Capabilities are implemented and its related use cases meet the agreed validation and acceptance criteria
-
-This section explains why the module structure matters operationally.
-
-Practical validation expectation:
-
-- testing should show how the included Functional Capabilities work together inside the module, not only that each item works in isolation
-
-## 7. What to Keep Out
-
-Keep the following out of this artifact:
-
-- new business scope
-- detailed use case narratives
-- sprint or task plans
-- detailed technical design
-- raw evidence logs
-
-## 8. Relationships to Other Artifacts
-
-This artifact depends on the Functional Capabilities artifact and the related Use Case Narratives. It should inform validation structure, deployment planning, and acceptance evidence.
-
-## 9. Ownership, Review, and Acceptance Expectations
-
-The artifact is usually prepared by the Delivery Owner, business analyst, or solution lead with business owner input.
-
-It should be reviewed by the Business Owner / Process Owner, Delivery Owner, and leads responsible for testing, release, or elaboration.
-
-Where modular delivery is being used, the module definition should be strong enough that reviewers can see what behavior will be delivered and accepted together. Module acceptance evidence should normally be recorded in the broader Solution Deliverables Acceptance Record rather than in this artifact itself.
-
-Final business acceptance should remain with the named Acceptance Authority for the Solution Deliverables domain, even where module-level evidence is collected progressively.
-
-## 10. Maintenance Expectations
-
-Maintain the module structure while the initiative is being elaborated and delivered. Update when approved scope changes, module boundaries shift materially, or coverage gaps are found.
-
-## 11. Validation Guide
-
-- Does each module group approved Functional Capabilities in a coherent way?
-- Can a reviewer see that modules organize scope rather than change it?
-- Are all approved Functional Capabilities assigned to one or more modules?
-- Are the related use cases visible enough to show what behavior will be tested and accepted with the module?
-- Is it clear how cross-module behavior will be validated without creating ownership ambiguity?
-- Is the per-module information specific enough to guide use cases and evidence planning?
-- Does the artifact avoid drifting into task planning or design?
-
-If weak, clarify module purpose, add the missing mapping, and remove content that belongs in use cases or delivery plans.
-
-## 12. Prompt Guide for Drafting the Artifact
-
-### 12.1. Starter prompt
-
-> Draft a Solution Modules artifact that groups the approved Functional Capabilities into coherent delivery and acceptance units.
-> For each module, include its purpose, included Functional Capabilities, primary users or roles, and any dependencies that matter for delivery and validation.
-> Do not invent new scope or turn the modules into task plans.
-
-### 12.1A. Practical drafting prompt
-
-> Group these approved Functional Capabilities into Solution Modules that can be delivered, tested, and accepted as meaningful units of behavior.
-> Prefer groupings that a business reviewer can understand and that can be supported by clear Use Case Narratives and validation evidence.
-> Do not group items only by team ownership, sprint timing, or technical layer.
-
-### 12.2. Section prompts
-
-> Create a module summary table using the required fields in this specification and show how the modules help controlled delivery and acceptance.
-
-> Build a Functional Capability-to-module mapping and identify any approved Functional Capabilities that are currently unassigned or ambiguously assigned.
-
-### 12.3. Validation prompts
-
-> Check whether any module entry implies new business scope not present in the Functional Capabilities artifact.
-
-> Check whether the module set is clear enough to support use case drafting and module-level validation.
+```text
+Check whether any module implies scope that is not present in the approved Functional Capabilities.
+```

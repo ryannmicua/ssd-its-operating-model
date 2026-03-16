@@ -1,223 +1,118 @@
 # Use Case Narratives Specification
 
-## 1. Purpose and Intended Outcome
+## 1. What This Artifact Is For
 
-Use Case Narratives describe how users achieve defined outcomes using the solution. They turn approved Functional Capabilities into reviewable, testable, and acceptance-ready behavior.
+Use Case Narratives describe how the solution should behave from the user's point of view.
 
-This artifact exists to reduce ambiguity about how the solution should behave from the user's point of view. A useful use case set shows who is acting, what triggers the action, what outcome is intended, what rules matter, what exceptions are important, and what observable conditions prove the behavior is correct.
+This artifact answers one simple question:
 
-The intended outcome is that user-visible behavior and expected results are explicit enough to guide design, validation, and acceptance without guesswork.
+**How does this module work when a user tries to achieve an outcome?**
 
-Where Solution Modules are being used as delivery and acceptance units, the Use Case Narratives define the behavior that must be validated for each module.
+Use it to make behavior clear enough for walkthroughs, build, testing, and acceptance.
 
-## 2. When It Is Required
+## 2. When to Use It
 
-This artifact is required when behavioral clarity is needed to design, validate, or accept the solution.
+Use this artifact in Stage 4 after Solution Modules are defined.
 
-It is especially important for role-based workflows, approvals, exception handling, sensitive actions, and any scope where misunderstanding user behavior would create delivery or acceptance risk.
+It is especially useful when:
 
-It is typically produced during detailed definition after scope is approved and Solution Modules are being used to structure delivery and acceptance.
+- user behavior could be misunderstood
+- approvals, exceptions, or sensitive actions matter
+- testers and reviewers need a shared view of correct behavior
 
-## 3. Intended Readers and Users
+## 3. Before You Start
 
-- business reviewers
-- analysts and designers
-- developers and test teams
-- Acceptance Authorities
-- security or control reviewers where sensitive behavior is involved
+Make sure you have:
 
-## 4. Intended Project Context
+- the related Solution Module
+- the approved `FC-###` IDs that the use case must stay within
+- the relevant user roles and access expectations
+- important rules, controls, and acceptance concerns
 
-Use this artifact after the Functional Capabilities artifact and Solution Modules are defined. It is most useful when the team needs business-behavior detail that remains traceable to approved scope.
+## 4. How to Draft It
 
-It should align with ISO/IEC/IEEE 29148 requirements-elaboration principles by turning approved scope into clearer behavioral detail without changing the baseline. It should also align with ITIL 4 service validation and testing intent by making expected behavior explicit, reviewable, and testable.
+Follow these steps:
 
-The use case set should make it clear what behavior must work for a Solution Module to be considered delivered and ready for acceptance.
+1. Pick one module and the related approved capabilities.
+2. Identify the primary actor and any supporting actors or systems.
+3. State the trigger.
+4. State the intended outcome.
+5. Write the main flow in business language.
+6. Add alternate paths and exception paths where they matter.
+7. Add business rules, access expectations, and audit notes where relevant.
+8. Finish with clear acceptance criteria.
 
-In practical terms, the use case set is where the team makes "correct behavior" explicit enough for walkthroughs, testing, and acceptance review.
+Useful test:
 
-## 5. How Much Detail to Include
+- If the use case reads like screen-click instructions, pull it back to business behavior.
+- If it introduces behavior not found in the approved baseline, remove or escalate it.
 
-Include enough detail that a business reviewer, tester, or AI drafter can understand and validate the behavior without inventing missing steps or rules. Keep the description at business-behavior level. Do not turn the artifact into a UI specification, API specification, or full test script.
+## 5. Minimum Structure
 
-The level of detail should be sufficient to support module-level walkthroughs, testing, and acceptance evidence.
+Use this structure for each use case:
 
-Each use case should be small enough to test but complete enough to remove ambiguity about the expected outcome, major rules, and important alternate paths.
+- Use Case ID: `UC-###`
+- Use case name
+- Module ID: one `SM-###`
+- Related Functional Capabilities: one or more `FC-###`
+- Primary actor
+- Supporting actors or systems
+- Trigger
+- Intended outcome
+- Preconditions
+- Main flow
+- Alternate and exception paths
+- Business rules and validations
+- Access expectations
+- Auditability requirements
+- Acceptance criteria
 
-## 6. Required Content or Minimum Structure
+## 6. Writing Rules
 
-This artifact should define both the required content for each use case and the rules that keep the set traceable and bounded.
+Each use case must:
 
-### 6.1. Use case set context
+- reference one defined module
+- reference approved capabilities only
+- stay at business-behavior level
+- be complete enough that reviewers do not have to guess
 
-Must include:
+Keep the following out:
 
-- reference to the Initiative Definition Document
-- reference to the Functional Capabilities artifact and Solution Modules
-- version or status of the use case set
-
-Should include:
-
-- short statement of how the use case set supports module-level validation and acceptance
-
-Recommended drafting inputs:
-
-- approved Functional Capabilities
-- approved Solution Modules
-- relevant user roles and access expectations
-- known business rules, controls, and audit requirements
-- acceptance focus areas that matter to the Business Owner or Acceptance Authority
-
-This section identifies what approved baseline the behavior descriptions belong to.
-
-### 6.2. Required content for each use case
-
-Each use case must include:
-
-- Use Case ID
-- use case name
-- related Module ID
-- related Functional Capabilities
-- primary actor
-- supporting actors or systems where relevant
-- trigger
-- intended outcome
-- preconditions
-- postconditions or resulting state where that matters to validation, auditability, or downstream processing
-- main flow
-- alternate and exception paths where relevant
-- business rules and validations
-- access expectations where relevant
-- auditability requirements where relevant
-- acceptance criteria
-
-Each use case should be self-contained enough that a reviewer can understand the expected behavior without reading multiple other documents first.
-
-### 6.3. Guidance for each required section
-
-The use case entry should describe the following in practical terms:
-
-- `Trigger`: what starts the use case
-- `Intended outcome`: what successful completion means for the user or business process
-- `Main flow`: the high-level business steps and decision points
-- `Alternate and exception paths`: important variations, failures, rejections, or error conditions
-- `Business rules and validations`: the checks or conditions that materially affect correct behavior
-- `Access expectations`: which role may perform the action and any separation-of-duties or sensitivity constraints
-- `Auditability requirements`: what must be traceable and why
-- `Postconditions or resulting state`: what should be true after completion if the use case succeeds or fails materially
-- `Acceptance criteria`: observable results that prove the use case works correctly
-
-This section keeps the required structure usable rather than heading-only.
-
-Practical example:
-
-- Trigger: staff member submits a completed request for approval
-- Intended outcome: the request is recorded and routed to the correct approver
-- Acceptance criteria: the request is saved, the correct approver is assigned, and an auditable submission record exists
-
-### 6.4. Traceability rules
-
-Must include rules stating that:
-
-- every use case must map to one defined Solution Module
-- every use case must reference one or more approved Functional Capabilities
-- no use case may introduce new scope outside the approved baseline
-- module-level validation evidence must be traceable to the use cases used to define the behavior
-
-This section protects scope and supports later evidence tracing.
-
-### 6.5. Coverage expectations
-
-Must include:
-
-- expectation that all in-scope Functional Capabilities are covered by one or more use cases where behavior needs to be defined
-- expectation that overlap and duplication between use cases should be controlled
-- expectation that each module has enough use case coverage to support module-level acceptance
-
-This section helps the use case set function as a complete behavior model instead of a partial sample.
-
-Useful working test:
-
-- If a Solution Module cannot be accepted without inventing extra behavior, the use case coverage is not yet sufficient.
-- If a use case starts to read like a screen script or technical design, it has probably gone too far.
-
-### 6.6. Template guide
-
-Recommended use case headings:
-
-| Field | What it should contain |
-| --- | --- |
-| Use Case ID | Stable ID such as `UC-###` |
-| Use Case name | Clear verb-led title |
-| Module ID | One related Solution Module |
-| Functional Capabilities | Approved Functional Capabilities only |
-| Main flow | High-level business steps and decisions |
-| Acceptance criteria | Observable outcomes, not vague intentions |
-
-If the artifact becomes heavily tabular, keep the flow, exceptions, and rules readable and do not collapse everything into one line per use case.
-
-## 7. What to Keep Out
-
-Keep the following out of this artifact:
-
-- technical implementation design
+- technical design
 - detailed screen layouts
-- API or database specifications
+- API or database design
 - full test scripts
-- new business scope not traceable to approved Functional Capabilities
+- new unapproved scope
 
-## 8. Relationships to Other Artifacts
+## 7. Done When
 
-This artifact should align with the Functional Capabilities artifact, Solution Modules, User Roles, Personas & Access Model, Access Control & Authorization Model, Audit & Monitoring Design Summary, module-level validation evidence, and final acceptance evidence.
+This artifact is ready when:
 
-## 9. Ownership, Review, and Acceptance Expectations
+- the actor, trigger, outcome, and flow are clear
+- important alternate paths and rules are visible
+- acceptance criteria are observable
+- the use case is traceable to one module and approved capabilities
 
-Use Case Narratives are usually authored by analysts or functional leads with business owner input.
+## 8. What Comes Next
 
-They should be reviewed by the Business Owner / Process Owner, Delivery Owner, test lead, and security reviewers where access or sensitive behavior is material.
+After use cases are ready:
 
-Use Case Narratives normally support module-level validation and feed the broader Solution Deliverables Acceptance Record rather than functioning as stand-alone acceptance records.
+1. use them to guide design, build, validation, and evidence collection
+2. keep the live record current in the [Deployed Solution Specification](deployed_solution_specification.md)
+3. use them as part of the basis for the [Acceptance Record Specification](acceptance_record_specification.md)
 
-They should give business reviewers, test leads, and implementers a common view of expected behavior before build and acceptance evidence are finalized.
+## 9. Prompt Guide
 
-## 10. Maintenance Expectations
+Starter prompt:
 
-Keep the use case set current while behavior is still being elaborated and whenever approved behavior changes. Update when business rules, roles, or acceptance conditions change materially.
+```text
+Draft a Use Case Narrative for Stage 4.
+Use one defined module, approved FC IDs, and the required use case structure.
+Keep the writing at business-behavior level and make the acceptance criteria observable.
+```
 
-## 11. Validation Guide
+Validation prompt:
 
-- Does every use case trace back to approved modules and capabilities?
-- Is each use case complete enough to understand expected behavior without major guessing?
-- Are alternate paths, rules, and sensitive behaviors visible where they matter?
-- Are the resulting state and downstream effects clear where acceptance or control depends on them?
-- Are acceptance criteria observable and testable?
-- Is the use case set sufficient to support module-level testing and acceptance without inventing missing behavior?
-- Does the artifact stay at business-behavior level rather than drifting into design?
-
-If weak, tighten traceability, complete the missing sections, and remove technical detail.
-
-## 12. Prompt Guide for Drafting the Artifact
-
-### 12.1. Starter prompt
-
-> Draft a Use Case Narrative for this solution behavior.
-> Include the required fields from this specification, keep the behavior traceable to the approved Module and Functional Capabilities, describe the main and alternate paths in business language, and make the acceptance criteria observable and testable.
-> Do not introduce new scope or technical design detail.
-
-### 12.1A. Practical drafting prompt
-
-> Draft the use cases needed to show how this Solution Module will behave when delivered.
-> For each use case, make the actor, trigger, outcome, main flow, major alternate paths, rules, and acceptance criteria clear enough that a business reviewer can walk through it and a tester can validate it.
-> Keep the writing at business-behavior level and do not add scope beyond the approved Functional Capabilities.
-
-### 12.2. Section prompts
-
-> Draft the main flow and alternate paths so a business reviewer can understand the behavior and a tester can validate it.
-
-> Draft the access, audit, and acceptance sections so sensitive or controlled behavior is explicit and reviewable.
-
-### 12.3. Validation prompts
-
-> Check whether this use case introduces behavior outside the approved Functional Capabilities.
-
-> Check whether the use case is complete enough for a reviewer or AI drafter to use without inventing missing rules or outcomes.
+```text
+Check whether this use case introduces behavior outside the approved Functional Capabilities or leaves key behavior too vague to validate.
+```

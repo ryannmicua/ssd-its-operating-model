@@ -87,124 +87,126 @@ Use numbering consistently in headings where practical, for example:
 
 ### 7.1. Purpose
 
-Deliver the approved business outcomes through an implemented solution that remains aligned to authorized scope and is supported by clear documentation governing scope, structure, behavior, roles, and acceptance.
+Use the Solution Deliverables domain to turn approved scope into a delivered and accepted solution in a controlled, easy-to-follow way.
 
-### 7.2. Standard Deliverables (as applicable)
+This domain answers five practical questions:
 
-- **[Deployed Solution](#7.3.%20Deployed%20Solution)**
+- what is the approved solution scope
+- who uses the solution and under what boundaries
+- how is the approved scope grouped for delivery
+- how should the solution behave
+- what evidence supports formal acceptance
+
+### 7.2. Simple Working Order
+
+If a team is new to solution design, use the deliverables in this order:
+
+| Stage | Deliverable | Why it exists | Specification |
+| --- | --- | --- | --- |
+| Stage 2 | Functional Capabilities | Defines the approved solution scope baseline | [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md) |
+| Stage 4 | User Roles, Personas & Access Model | Clarifies actors, boundaries, and control-sensitive roles | [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md) |
+| Stage 4 | Solution Modules | Groups approved scope into delivery and acceptance units | [solution_modules_specification](solution_deliverables/solution_modules_specification.md) |
+| Stage 4 | Use Case Narratives | Describes expected behavior in plain business language | [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md) |
+| Stage 6 | Deployed Solution | Records what approved scope is actually live | [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md) |
+| Stage 7 | Acceptance Record | Summarizes what was reviewed, what evidence was used, and what decision was made | [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md) |
+
+Use the [Solution Design Process](solution_design_process.md) as the operating guide that tells teams when to use each of these artifacts and how they fit together.
+
+For mobilization and coordination, pair the solution deliverables with:
+
+- [delivery_roadmap_specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
+- [delivery_charter_specification](governance_and_control_deliverables/delivery_charter_specification.md)
+
+These governance artifacts support timing, coordination, and operating rhythm. They do not replace solution scope, behavior, or acceptance controls.
+
+### 7.3. Standard Deliverables (as applicable)
+
 - **[Functional Capabilities](#7.4.%20Functional%20Capabilities)**
+- **[User Roles, Personas & Access Model](#7.7.%20User%20Roles,%20Personas%20&%20Access%20Model)**
 - **[Solution Modules](#7.5.%20Solution%20Modules)**
 - **[Use Case Narratives](#7.6.%20Use%20Case%20Narratives)**
-- **[User Roles, Personas & Access Model](#7.7.%20User%20Roles,%20Personas%20&%20Access%20Model)**
-- **[Acceptance Record](#7.8.%20Acceptance%20Record)**
-
-### 7.3. Deployed Solution
-
-The implemented system behavior that delivers the approved business capabilities and outcomes.
-
-The deployed solution must remain within the intent and boundaries of the authorized scope.
-
-#### Acceptance Criteria
-
-- The solution is deployed or demonstrably ready for deployment in the agreed target environment.
-- Delivered behavior matches the approved scope baseline and accepted changes.
-- No unresolved scope deviation remains without formal approval.
+- **[Deployed Solution](#7.8.%20Deployed%20Solution)**
+- **[Acceptance Record](#7.9.%20Acceptance%20Record)**
 
 ### 7.4. Functional Capabilities
 
-Defines the approved functional scope of the initiative, including:
+The approval-level list of business abilities the solution must provide.
 
-- The set of approved business capabilities
-
-This document establishes what the solution must be able to do.
+This deliverable establishes the solution scope baseline before detailed design begins.
 
 #### Acceptance Criteria
 
-- Each in-scope capability is stated clearly enough to be understood and validated.
-- Capability statements align with the authorized initiative scope and outcomes.
-- Material exclusions, assumptions, or dependencies affecting scope understanding are recorded.
+- Each capability is clear enough to be understood and traced later.
+- Capability statements stay at business ability level.
+- Exclusions, assumptions, or dependencies that affect scope understanding are visible.
 
 ### 7.5. Solution Modules
 
-Organizes the approved Functional Capabilities and related use case behavior into coherent, testable solution increments that support controlled delivery and acceptance.
+The grouping of approved Functional Capabilities into meaningful delivery and acceptance units.
 
-This document clarifies how approved Functional Capabilities and related Use Case Narratives are grouped into delivery and acceptance units for build, testing, deployment, validation, and formal acceptance, without redefining scope.
-
-For initiatives using modular delivery, the Solution Module is the primary unit of solution delivery, behavior validation, and business acceptance.
+This deliverable helps teams organize scope for build, validation, and acceptance without changing the approved baseline.
 
 #### Acceptance Criteria
 
-- Modules are defined with clear purpose and logical grouping of capabilities.
-- Module boundaries do not conflict with the approved functional scope.
-- Related Use Case Narratives can be traced to each module.
-- The structure supports practical planning, testing, deployment, and module-level acceptance tracking.
+- Modules group approved scope in a way reviewers can understand.
+- Module boundaries do not introduce new scope.
+- Each module can be traced to the relevant Functional Capabilities and Use Case Narratives.
 
 ### 7.6. Use Case Narratives
 
-Describe how users achieve outcomes using the solution.
+The business-behavior view of how users achieve outcomes using the solution.
 
-Use cases define:
-
-- Who is acting
-- What triggers the action
-- What outcome is expected
-- What rules and validations apply
-- What must be true for the behavior to be accepted as correct
-
-This is the behavioral validation artifact used to confirm that each Solution Module behaves correctly as a delivery and acceptance unit.
+This deliverable gives developers, testers, reviewers, and Acceptance Authorities a shared view of correct behavior.
 
 #### Acceptance Criteria
 
-- Each priority use case identifies the actor, trigger, expected outcome, and major validation rules.
-- Narratives are specific enough to support walkthroughs, testing, or acceptance review.
-- Use cases are traceable to the relevant Solution Module and Functional Capabilities.
-- No use case introduces behavior outside approved scope without explicit approval.
+- Each use case identifies the actor, trigger, outcome, and major behavior clearly.
+- Rules, exceptions, and acceptance criteria are visible where they matter.
+- Each use case traces back to a Solution Module and approved Functional Capabilities.
 
 ### 7.7. User Roles, Personas & Access Model
 
-Defines:
+The actor model for the solution, including role purpose, access boundaries, and control-sensitive responsibilities.
 
-- The categories of users interacting with the solution
-- Their responsibilities, goals, and behavioral expectations
-- Access boundaries and separation-of-duties assumptions
-- Any sensitive data interactions that affect governance
-- Optional personas that provide practical context for how different users within a role operate in real-world conditions
-
-Personas, where used, add clarity to user behavior, constraints, and adoption considerations without expanding authorized scope. They help ensure use cases, validation, and enablement decisions reflect real user needs.
-
-This artifact ensures user behavior, access expectations, and governance assumptions are explicit, reviewable, and aligned with the approved scope.
+This deliverable keeps role assumptions consistent across modules, use cases, security review, training, and acceptance.
 
 #### Acceptance Criteria
 
-- User roles and access expectations are documented for the relevant actors.
-- Role descriptions and access boundaries are consistent with the intended solution behavior.
-- Sensitive access or separation-of-duties assumptions are stated where relevant.
+- Important roles and access boundaries are documented.
+- Approval, stewardship, or sensitive-role responsibilities are visible where relevant.
+- Persona content, if used, adds context without expanding scope.
 
-### 7.8. Acceptance Record
+### 7.8. Deployed Solution
 
-Provides consolidated evidence that:
+The record of what approved scope is actually live, where it is live, and under what operational conditions.
 
-- All approved Functional Capabilities are implemented
-- Solution Modules defined as delivery and acceptance units have been delivered and validated
-- No unapproved behavior has been introduced
-- Documented behaviors have been validated through the mapped Use Case Narratives
-- Acceptance decisions are formally recorded
-
-This artifact demonstrates that the delivered solution aligns with what was authorized.
+This deliverable makes the live state visible and traceable to approved scope and evidence.
 
 #### Acceptance Criteria
 
-- The record references or attaches the evidence needed to support acceptance.
-- The record shows acceptance status by solution module where modules are being used as delivery and acceptance units.
-- Acceptance status, date, and Acceptance Authority are explicitly recorded.
-- Any conditions, exclusions, or follow-up actions affecting acceptance are documented.
+- The live boundary is clear.
+- Delivered behavior matches approved scope or accepted changes.
+- Operational ownership and open live conditions are visible.
 
-### 7.9. Recommended Acceptance Evidence
+### 7.9. Acceptance Record
 
-- Completed Solution Acceptance & Traceability Record
-- Evidence of validation and formal acceptance
+The formal summary of what was reviewed, what evidence supports acceptance, what conditions remain, and what decision was made.
 
-### 7.10. Recommended Acceptance Authority
+This deliverable keeps sign-off explicit and attributable.
+
+#### Acceptance Criteria
+
+- The record links reviewed items to approved scope and evidence.
+- Acceptance status and decision authority are explicit.
+- Conditions, exclusions, or deferred items are visible.
+
+### 7.10. Recommended Acceptance Evidence
+
+- Completed Acceptance Record
+- linked validation and deployment evidence
+- visible traceability from approved scope to delivered behavior
+
+### 7.11. Recommended Acceptance Authority
 
 - Business Owner / Process Owner
 
@@ -779,7 +781,7 @@ Use this matrix during Work Definition to decide which domains should be in scop
 
 | Domain | Common trigger conditions | Minimum viable output | Expand depth when | Do not use this domain for |
 | --- | --- | --- | --- | --- |
-| Solution Deliverables | New or changed user-facing or system behavior | Functional Capabilities plus concise acceptance approach | Behavior is complex, multi-step, or needs structured validation | General communications, training-only content, or governance-only decisions |
+| Solution Deliverables | New or changed user-facing or system behavior | Functional Capabilities plus concise acceptance approach | Behavior is complex, multi-step, role-sensitive, or needs structured validation through roles, modules, and use cases | General communications, training-only content, or governance-only decisions |
 | Governance & Control | Formal sponsorship, funding, prioritization, controlled delivery governance, or closure is needed | Initiative Definition, Project Charter, Decision Record Log, Delivery Charter, and Delivery Roadmap where controlled mobilization is needed | Funding, risk, delivery governance, or closure requires stronger traceability | Technical design or operational procedures |
 | Operational Readiness | Service, system, or support impact exists | Named support ownership plus minimum run / recovery view | The solution affects production support, recovery, or long-term maintainability | Business-only justification or user comms |
 | Data Governance & Records | Data is created, changed, migrated, classified, or governed | Data impact summary with steward and system-of-record view | Data structures, migration, retention, or stewardship are material | General functional behavior that does not materially affect governed data |
@@ -790,7 +792,7 @@ Use this matrix during Work Definition to decide which domains should be in scop
 
 | Domain | Smallest acceptable content set |
 | --- | --- |
-| Solution Deliverables | Approved scope, key capabilities, acceptance criteria, and evidence of behavior validation |
+| Solution Deliverables | Approved scope baseline, clear actor model where needed, defined behavior, and evidence for acceptance |
 | Governance & Control | Named owners, authorization basis, key decisions, and delivery governance / closure confirmation as applicable |
 | Operational Readiness | Named run/support owners, basic support approach, and recovery intent |
 | Data Governance & Records | Data impact summary, steward, system of record, and major data obligations |

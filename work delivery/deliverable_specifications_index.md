@@ -2,17 +2,28 @@
 
 ## Purpose
 
-This index lists the current deliverable specification set created from:
-
-- `specification_writing_guide.md`
-- `work delivery/standard_deliverables_guide.md`
-- [work delivery/specification_best_practice_reference.md](specification_best_practice_reference.md)
+This index points to the active deliverable specifications in this repository.
 
 Use the specification in the relevant domain folder as the primary drafting guide for that deliverable.
 
+## Solution Design Reading Order
+
+If you are working on solution design, read and use these in this order:
+
+1. [solution_design_process](solution_design_process.md)
+2. [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md)
+3. [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
+4. [solution_modules_specification](solution_deliverables/solution_modules_specification.md)
+5. [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md)
+6. [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
+7. [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
+
+Use the [standard_deliverables_guide](standard_deliverables_guide.md) when you need the wider domain view, and use the [work_delivery_framework](work_delivery_framework.md) when you need the stage-governance view.
+
 ## Solution Deliverables
 
-Folder: [work delivery/solution_deliverables](solution_deliverables)
+Folder: [solution_deliverables](solution_deliverables)
+
 - [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
 - [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
 - [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md)
@@ -22,7 +33,7 @@ Folder: [work delivery/solution_deliverables](solution_deliverables)
 
 ## Governance & Control Deliverables
 
-Folder: [work delivery/governance_and_control_deliverables](governance_and_control_deliverables)
+Folder: [governance_and_control_deliverables](governance_and_control_deliverables)
 
 - [initiative_definition_document_specification](governance_and_control_deliverables/initiative_definition_document_specification.md)
 - [project_charter_specification](governance_and_control_deliverables/project_charter_specification.md)
@@ -33,7 +44,7 @@ Folder: [work delivery/governance_and_control_deliverables](governance_and_contr
 
 ## Operational Readiness Deliverables
 
-Folder: [work delivery/operational_readiness_deliverables](operational_readiness_deliverables)
+Folder: [operational_readiness_deliverables](operational_readiness_deliverables)
 
 - [technical_design_document_specification](operational_readiness_deliverables/technical_design_document_specification.md)
 - [system_administration_guide_specification](operational_readiness_deliverables/system_administration_guide_specification.md)
@@ -43,7 +54,7 @@ Folder: [work delivery/operational_readiness_deliverables](operational_readiness
 
 ## Data Governance & Records Deliverables
 
-Folder: [work delivery/data_governance_and_records_deliverables](data_governance_and_records_deliverables)
+Folder: [data_governance_and_records_deliverables](data_governance_and_records_deliverables)
 
 - [data_governance_and_impact_assessment_specification](data_governance_and_records_deliverables/data_governance_and_impact_assessment_specification.md)
 - [data_asset_specification](data_governance_and_records_deliverables/data_asset_specification.md)
@@ -51,7 +62,7 @@ Folder: [work delivery/data_governance_and_records_deliverables](data_governance
 
 ## Security, Privacy & Compliance Deliverables
 
-Folder: [work delivery/security_privacy_and_compliance_deliverables](security_privacy_and_compliance_deliverables)
+Folder: [security_privacy_and_compliance_deliverables](security_privacy_and_compliance_deliverables)
 
 - [security_and_privacy_risk_assessment_specification](security_privacy_and_compliance_deliverables/security_and_privacy_risk_assessment_specification.md)
 - [access_control_and_authorization_model_specification](security_privacy_and_compliance_deliverables/access_control_and_authorization_model_specification.md)
@@ -61,7 +72,7 @@ Folder: [work delivery/security_privacy_and_compliance_deliverables](security_pr
 
 ## User Adoption & Change Enablement Deliverables
 
-Folder: [work delivery/user_adoption_and_change_enablement_deliverables](user_adoption_and_change_enablement_deliverables)
+Folder: [user_adoption_and_change_enablement_deliverables](user_adoption_and_change_enablement_deliverables)
 
 - [user_impact_assessment_specification](user_adoption_and_change_enablement_deliverables/user_impact_assessment_specification.md)
 - [change_and_communication_plan_specification](user_adoption_and_change_enablement_deliverables/change_and_communication_plan_specification.md)
@@ -73,13 +84,13 @@ Folder: [work delivery/user_adoption_and_change_enablement_deliverables](user_ad
 
 Shared research reference:
 
-- [work delivery/specification_best_practice_reference.md](specification_best_practice_reference.md)
+- [specification_best_practice_reference](specification_best_practice_reference.md)
 
 ## Legacy Material
 
 Older draft material remains in:
 
-- [work delivery/orig solution deliverables](orig%20solution%20deliverables)
-- [work delivery/orig operational readiness deliverables](orig%20operational%20readiness%20deliverables)
+- [orig solution deliverables](orig%20solution%20deliverables)
+- [orig operational readiness deliverables](orig%20operational%20readiness%20deliverables)
 
-These were left in place for reference and were not used as the active output structure.
+These folders are reference material only and are not the active output structure.
