@@ -7,6 +7,7 @@
 - [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
 - [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
 - [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
+- [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
 - [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
 - [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
 - [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
@@ -30,7 +31,7 @@ This guide is mainly for:
 If you are new to the process, follow this order:
 
 1. In Stage 2, define the approved scope in [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md).
-2. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into behavior-centered [Solution Modules](solution_deliverables/solution_modules_specification.md), and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
+2. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into behavior-centered [Solution Modules](solution_deliverables/solution_modules_specification.md), create a detailed [Solution Module Definition](solution_deliverables/solution_module_definition_specification.md) for each non-trivial module, and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
 3. In Stage 6, record what is actually live in the [Deployed Solution](solution_deliverables/deployed_solution_specification.md) and gather evidence.
 4. In Stage 7, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md) and get an explicit acceptance decision.
 
@@ -39,7 +40,7 @@ What to produce by stage:
 | Stage | Main solution deliverables |
 | --- | --- |
 | Stage 2 - Work Definition | Functional Capabilities |
-| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules, Use Case Narratives |
+| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives |
 | Stage 6 - Work Delivery | Deployed Solution, linked evidence, related operational artifacts as needed |
 | Stage 7 - Acceptance, Transition & Closure | Acceptance Record and final acceptance decision |
 
@@ -116,7 +117,7 @@ Use this table as the day-to-day entry point.
 | Step | Minimum inputs | Required outputs | Completion check | Accountable owner |
 | --- | --- | --- | --- | --- |
 | 1. Define authorized scope | approved initiative intent, scope boundary, owner, reviewer, acceptance focus | Functional Capabilities | scope is clear, IDs are stable, no design detail added | Delivery Owner with Solution Lead / Analyst |
-| 2. Structure the solution | approved Functional Capabilities, user context, business rules, review inputs | User Roles, Personas & Access Model, Solution Modules, Use Case Narratives | every module and use case traces to approved capabilities, actors are clear, modules reflect meaningful behaviors, no new scope added | Delivery Owner with Solution Lead / Analyst |
+| 2. Structure the solution | approved Functional Capabilities, user context, business rules, review inputs | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives | every module and use case traces to approved capabilities, actors are clear, modules reflect meaningful behaviors, module-level detail exists where needed, no new scope added | Delivery Owner with Solution Lead / Analyst |
 | 3. Implement and evidence | approved design set, test and evidence approach, delivery roadmap, operational inputs | Deployed Solution, linked evidence, related delivery and operational records | delivered behavior can be traced back to approved scope and supported with evidence | Delivery Owner with delivery and operational leads |
 | 4. Prepare for formal acceptance | evidence, open issues, deployment status, operational handoff status | Acceptance Record and acceptance-ready package | acceptance authority can see what is being accepted, on what basis, and under what conditions | Delivery Owner with Acceptance Authority |
 
@@ -174,6 +175,7 @@ Use these specs:
 
 - [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
 - [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
+- [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
 - [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
 
 Do this in order:
@@ -181,14 +183,16 @@ Do this in order:
 1. Confirm who the users are and what boundaries matter.
 2. Identify meaningful user outcomes, behavior areas, or use case clusters.
 3. Group those behaviors into Solution Modules that can be explained, validated, and accepted as meaningful units.
-4. Write Use Case Narratives that show how each module behaves.
-5. Check that every use case references a module and approved capability IDs, and that every module maps back to approved capabilities.
-6. Remove anything that introduces behavior not covered by the approved baseline.
+4. Create one detailed Solution Module Definition for each non-trivial module.
+5. Write Use Case Narratives that show how each module behaves. These may be kept in one combined use case set or inside each Solution Module Definition.
+6. Check that every use case references a module and approved capability IDs, and that every module maps back to approved capabilities.
+7. Remove anything that introduces behavior not covered by the approved baseline.
 
 Produce:
 
 - User Roles, Personas & Access Model
-- Solution Modules
+- Solution Modules Register
+- Solution Module Definitions
 - Use Case Narratives
 
 Do:
@@ -208,6 +212,7 @@ Step 2 is done when:
 
 - every module maps back to approved `FC-###` IDs even when the module is mainly defined by behaviors or use cases
 - every use case references one `SM-###` and one or more `FC-###` IDs
+- each non-trivial module has a reviewable Solution Module Definition
 - reviewers can understand expected behavior without guessing
 
 ### 6.3. Step 3 - Implement and Evidence
@@ -300,17 +305,18 @@ Step 4 is done when:
 
 Use this traceability path throughout the process:
 
-`Initiative Definition -> Functional Capabilities -> User Roles -> Behavior-Centered Solution Modules -> Use Case Narratives -> Delivery Evidence / Deployed Solution -> Acceptance Record`
+`Initiative Definition -> Functional Capabilities -> User Roles -> Solution Modules Register -> Solution Module Definitions / Use Case Narratives -> Delivery Evidence / Deployed Solution -> Acceptance Record`
 
 Practical reading order for first-time practitioners:
 
 1. Read this guide.
 2. Draft [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md).
 3. Draft [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md).
-4. Draft [Solution Modules](solution_deliverables/solution_modules_specification.md).
-5. Draft [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
-6. During delivery, maintain the [Deployed Solution](solution_deliverables/deployed_solution_specification.md).
-7. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
+4. Draft the [Solution Modules Register](solution_deliverables/solution_modules_specification.md).
+5. Draft one [Solution Module Definition](solution_deliverables/solution_module_definition_specification.md) per non-trivial module.
+6. Draft [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md) as a combined set or inside the module definitions.
+7. During delivery, maintain the [Deployed Solution](solution_deliverables/deployed_solution_specification.md).
+8. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
 
 ## 8. AI-Assisted Authoring Workflow
 

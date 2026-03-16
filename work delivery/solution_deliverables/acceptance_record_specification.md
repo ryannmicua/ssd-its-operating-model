@@ -65,6 +65,7 @@ Include:
 Include:
 
 - approved scope references being accepted
+- related Solution Module Definition reference where module-level documents are being used
 - evidence references
 - deployment or release reference if relevant
 - statement of whether this is full scope or partial scope acceptance

@@ -113,7 +113,8 @@ After this baseline is approved:
 
 1. clarify the actor model in the [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
 2. group the approved scope into behavior-centered modules using the [Solution Modules Specification](solution_modules_specification.md)
-3. describe behavior using the [Use Case Narratives Specification](use_case_narratives_specification.md)
+3. write one detailed module document per non-trivial module using the [Solution Module Definition Specification](solution_module_definition_specification.md)
+4. describe behavior using the [Use Case Narratives Specification](use_case_narratives_specification.md)
 
 ## 9. Prompt Guide
 

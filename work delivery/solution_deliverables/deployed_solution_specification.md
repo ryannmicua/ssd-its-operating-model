@@ -38,10 +38,11 @@ Follow these steps:
 1. Record what release this is and where it is live.
 2. State the live boundary clearly, including who or what is included.
 3. List the approved capabilities or modules represented in the release.
-4. Note what is deferred, excluded, or still limited.
-5. Identify the main dependencies and operational owners.
-6. Link the validation, deployment, and readiness evidence.
-7. Record any open conditions or follow-up actions.
+4. Reference the related Solution Module Definitions where module-level detail is important.
+5. Note what is deferred, excluded, or still limited.
+6. Identify the main dependencies and operational owners.
+7. Link the validation, deployment, and readiness evidence.
+8. Record any open conditions or follow-up actions.
 
 Useful test:
 

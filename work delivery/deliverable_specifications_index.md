@@ -14,9 +14,10 @@ If you are working on solution design, read and use these in this order:
 2. [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md)
 3. [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
 4. [solution_modules_specification](solution_deliverables/solution_modules_specification.md)
-5. [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md)
-6. [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
-7. [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
+5. [solution_module_definition_specification](solution_deliverables/solution_module_definition_specification.md)
+6. [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md)
+7. [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
+8. [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
 
 Use the [standard_deliverables_guide](standard_deliverables_guide.md) when you need the wider domain view, and use the [work_delivery_framework](work_delivery_framework.md) when you need the stage-governance view.
 
@@ -27,6 +28,7 @@ Folder: [solution_deliverables](solution_deliverables)
 - [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
 - [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md)
 - [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md)
+- [solution_module_definition_specification](solution_deliverables/solution_module_definition_specification.md)
 - [solution_modules_specification](solution_deliverables/solution_modules_specification.md)
 - [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md)
 - [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)

@@ -20,11 +20,14 @@ It is especially useful when:
 - approvals, exceptions, or sensitive actions matter
 - testers and reviewers need a shared view of correct behavior
 
+Use cases may be stored in one combined use case document or inside the related `Solution Module Definition`. For non-trivial systems, module-by-module organization is often easier to review and maintain.
+
 ## 3. Before You Start
 
 Make sure you have:
 
 - the related Solution Module
+- the related `Solution Module Definition`, if the team is using one document per module
 - the approved `FC-###` IDs that the use case must stay within
 - the relevant user roles and access expectations
 - important rules, controls, and acceptance concerns
@@ -78,6 +81,8 @@ Each use case must:
 
 In a behavior-centered module model, use cases are the main content that gives the module its shape. They still must map back to approved capabilities.
 
+When the team uses one module document per module, the use case content may sit inside that module document instead of in one separate combined use case file.
+
 Keep the following out:
 
 - technical design
@@ -100,8 +105,9 @@ This artifact is ready when:
 After use cases are ready:
 
 1. use them to guide design, build, validation, and evidence collection
-2. keep the live record current in the [Deployed Solution Specification](deployed_solution_specification.md)
-3. use them as part of the basis for the [Acceptance Record Specification](acceptance_record_specification.md)
+2. keep them aligned with the [Solution Module Definition Specification](solution_module_definition_specification.md) when module-level detail documents are used
+3. keep the live record current in the [Deployed Solution Specification](deployed_solution_specification.md)
+4. use them as part of the basis for the [Acceptance Record Specification](acceptance_record_specification.md)
 
 ## 9. Prompt Guide
 

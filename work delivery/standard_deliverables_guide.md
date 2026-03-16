@@ -105,8 +105,9 @@ If a team is new to solution design, use the deliverables in this order:
 | --- | --- | --- | --- |
 | Stage 2 | Functional Capabilities | Defines the approved solution scope baseline | [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md) |
 | Stage 4 | User Roles, Personas & Access Model | Clarifies actors, boundaries, and control-sensitive roles | [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md) |
-| Stage 4 | Solution Modules | Groups approved scope into behavior-centered delivery and acceptance units | [solution_modules_specification](solution_deliverables/solution_modules_specification.md) |
-| Stage 4 | Use Case Narratives | Describes expected behavior in plain business language | [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md) |
+| Stage 4 | Solution Modules Register | Lists all modules and their traceability at overview level | [solution_modules_specification](solution_deliverables/solution_modules_specification.md) |
+| Stage 4 | Solution Module Definition | Describes one module in detail, including use cases and module acceptance criteria | [solution_module_definition_specification](solution_deliverables/solution_module_definition_specification.md) |
+| Stage 4 | Use Case Narratives | Describes expected behavior in plain business language, either as a combined set or inside module definitions | [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md) |
 | Stage 6 | Deployed Solution | Records what approved scope is actually live | [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md) |
 | Stage 7 | Acceptance Record | Summarizes what was reviewed, what evidence was used, and what decision was made | [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md) |
 
@@ -122,11 +123,12 @@ These governance artifacts support timing, coordination, and operating rhythm. T
 ### 7.3. Standard Deliverables (as applicable)
 
 - **[Functional Capabilities](#7.4.%20Functional%20Capabilities)**
-- **[User Roles, Personas & Access Model](#7.7.%20User%20Roles,%20Personas%20&%20Access%20Model)**
-- **[Solution Modules](#7.5.%20Solution%20Modules)**
-- **[Use Case Narratives](#7.6.%20Use%20Case%20Narratives)**
-- **[Deployed Solution](#7.8.%20Deployed%20Solution)**
-- **[Acceptance Record](#7.9.%20Acceptance%20Record)**
+- **[Solution Modules Register](#7.5.%20Solution%20Modules%20Register)**
+- **[Solution Module Definition](#7.6.%20Solution%20Module%20Definition)**
+- **[Use Case Narratives](#7.7.%20Use%20Case%20Narratives)**
+- **[User Roles, Personas & Access Model](#7.8.%20User%20Roles,%20Personas%20&%20Access%20Model)**
+- **[Deployed Solution](#7.9.%20Deployed%20Solution)**
+- **[Acceptance Record](#7.10.%20Acceptance%20Record)**
 
 ### 7.4. Functional Capabilities
 
@@ -140,19 +142,31 @@ This deliverable establishes the solution scope baseline before detailed design 
 - Capability statements stay at business ability level.
 - Exclusions, assumptions, or dependencies that affect scope understanding are visible.
 
-### 7.5. Solution Modules
+### 7.5. Solution Modules Register
 
-The grouping of approved scope into meaningful, behavior-centered delivery and acceptance units.
+The overview document that lists all approved modules and shows how they relate to roles, use cases, and approved scope.
 
 This deliverable helps teams organize scope around user behaviors and use cases for build, validation, and acceptance without changing the approved baseline.
 
 #### Acceptance Criteria
 
-- Modules group approved scope in a way reviewers can understand from a user-behavior point of view.
+- Modules are listed clearly at overview level.
 - Module boundaries do not introduce new scope.
-- Each module can be traced to the relevant Functional Capabilities and Use Case Narratives.
+- Each module can be traced to the relevant Functional Capabilities and module detail.
 
-### 7.6. Use Case Narratives
+### 7.6. Solution Module Definition
+
+The detailed document for one module, including what it will deliver, the related use cases, and the module-level acceptance criteria.
+
+This deliverable gives reviewers and delivery teams a one-module-at-a-time view of behavior and acceptance.
+
+#### Acceptance Criteria
+
+- The module purpose and boundary are clear.
+- Included use cases and supporting capabilities are visible.
+- Module-level acceptance criteria are reviewable and testable.
+
+### 7.7. Use Case Narratives
 
 The business-behavior view of how users achieve outcomes using the solution.
 
@@ -164,7 +178,7 @@ This deliverable gives developers, testers, reviewers, and Acceptance Authoritie
 - Rules, exceptions, and acceptance criteria are visible where they matter.
 - Each use case traces back to a Solution Module and approved Functional Capabilities.
 
-### 7.7. User Roles, Personas & Access Model
+### 7.8. User Roles, Personas & Access Model
 
 The actor model for the solution, including role purpose, access boundaries, and control-sensitive responsibilities.
 
@@ -176,7 +190,7 @@ This deliverable keeps role assumptions consistent across modules, use cases, se
 - Approval, stewardship, or sensitive-role responsibilities are visible where relevant.
 - Persona content, if used, adds context without expanding scope.
 
-### 7.8. Deployed Solution
+### 7.9. Deployed Solution
 
 The record of what approved scope is actually live, where it is live, and under what operational conditions.
 
@@ -188,7 +202,7 @@ This deliverable makes the live state visible and traceable to approved scope an
 - Delivered behavior matches approved scope or accepted changes.
 - Operational ownership and open live conditions are visible.
 
-### 7.9. Acceptance Record
+### 7.10. Acceptance Record
 
 The formal summary of what was reviewed, what evidence supports acceptance, what conditions remain, and what decision was made.
 
@@ -200,13 +214,13 @@ This deliverable keeps sign-off explicit and attributable.
 - Acceptance status and decision authority are explicit.
 - Conditions, exclusions, or deferred items are visible.
 
-### 7.10. Recommended Acceptance Evidence
+### 7.11. Recommended Acceptance Evidence
 
 - Completed Acceptance Record
 - linked validation and deployment evidence
 - visible traceability from approved scope to delivered behavior
 
-### 7.11. Recommended Acceptance Authority
+### 7.12. Recommended Acceptance Authority
 
 - Business Owner / Process Owner
 
