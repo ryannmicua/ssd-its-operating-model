@@ -6,6 +6,17 @@ This index points to the active deliverable specifications in this repository.
 
 Use the specification in the relevant domain folder as the primary drafting guide for that deliverable.
 
+## Work Assessment Reading Order
+
+If you are screening whether proposed work should proceed into definition, read and use these in this order:
+
+1. [work_assessment_process](work_assessment/work_assessment_process.md)
+2. [initial_review_specification](work_assessment/initial_review_specification.md)
+3. [validation_assessment_specification](work_assessment/validation_assessment_specification.md)
+4. [work_assessment_report_specification](work_assessment/work_assessment_report_specification.md)
+
+Use the [work_delivery_framework](work_delivery_framework.md) when you need the stage-governance view and the [standard_deliverables_guide](standard_deliverables_guide.md) when the work has passed assessment and you need the downstream deliverable-domain view.
+
 ## Solution Design Reading Order
 
 If you are working on solution design, read and use these in this order:
@@ -20,6 +31,18 @@ If you are working on solution design, read and use these in this order:
 8. [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md)
 
 Use the [standard_deliverables_guide](standard_deliverables_guide.md) when you need the wider domain view, and use the [work_delivery_framework](work_delivery_framework.md) when you need the stage-governance view.
+
+## Work Assessment
+
+Folder: [work_assessment](work_assessment)
+
+- [work_assessment_process](work_assessment/work_assessment_process.md)
+- [initial_review_specification](work_assessment/initial_review_specification.md)
+- [initial_review_form](work_assessment/initial_review_form.md)
+- [validation_assessment_specification](work_assessment/validation_assessment_specification.md)
+- [validation_assessment_form](work_assessment/validation_assessment_form.md)
+- [work_assessment_report_specification](work_assessment/work_assessment_report_specification.md)
+- [work_assessment_report_form](work_assessment/work_assessment_report_form.md)
 
 ## Solution Deliverables
 

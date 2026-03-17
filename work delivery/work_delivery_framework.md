@@ -8,6 +8,7 @@ It puts the Define-Decide-Deliver (DDD) Work Management Model into practice by d
 
 ## Related Documents
 
+- [Work Assessment Process](work_assessment/work_assessment_process.md)
 - [Standard Deliverables Guide](standard_deliverables_guide.md)
 - [Deliverable Specifications Index](deliverable_specifications_index.md)
 - [Solution Design Process](solution_design_process.md)
@@ -147,7 +148,7 @@ This framework is meant to answer five practical questions before work becomes d
 
 In practice, the framework works like this:
 
-- Stage 1 Work Assessment - tests whether the work is worth investing in further
+- Stage 1 Work Assessment - screens the work through three increasingly rigorous assessment steps before definition begins
 - Stage 2 Work Definition - defines what is being asked for approval, including required deliverables and owners
 - Stage 3 Work Authorization - gives formal authority to proceed
 - Stage 4 Work Definition Details - turns the approved intent into delivery-ready detail without quietly expanding scope
@@ -159,7 +160,7 @@ Accountable means accountable for moving the stage forward.
 
 | Stage                               | What it means in practice                                                          | Primary Decision                                      | Accountable                                      | Core artifacts                                                                                                      | Minimum outcome                                                                                                     |
 | ----------------------------------- | ---------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| 1. Work Assessment                  | Decide whether the request is worth defining further                               | Proceed / Defer / Reject                              | ITS + Submitter                                  | Work Assessment Report, decision record                                                                             | Worth defining further or not                                                                                       |
+| 1. Work Assessment                  | Screen the request through initial triage, validation, and final assessment before Work Definition | Proceed / Defer / Reject                              | ITS with Assessment Owner and sponsor candidate | Initial Review, Validation Assessment, Work Assessment Report, decision record                                      | Clear recommendation on whether the work should enter Work Definition, with Stage 2 handoff basis if proceeding    |
 | 2. Work Definition                  | Define the initiative clearly enough for an authorization decision                 | Ready / Not ready for authorization                   | Delivery Owner with Outcome Owner                | Initiative Definition Document, required deliverables and Acceptance Authority map, supporting authorization artifacts as needed, Functional Capabilities (if applicable), draft Project Charter, Stage 2 readiness decision record | Decision-ready Initiative Definition Document with required deliverables and supporting detail as needed            |
 | 3. Work Authorization               | Formally approve the work, funding, and accountability before delivery starts      | Approve / Defer / Reject / Approve with conditions    | Sponsor with Decision Authority                  | Decision record, approved Project Charter, funding confirmation                                                     | Work formally authorized with funding and accountability.<br><br>Appropriate committee approval may be necessary  |
 | 4. Work Definition Details          | Elaborate the approved work into the detail needed to build, test, and transition  | Ready to mobilize / Rework / Return to Stage 2        | Delivery Owner with design leads                 | Delivery-ready elaboration set, additional definition deliverables as needed, detailed domain artifacts, acceptance test approach | Detailed design, elaborated roadmap, and delivery-ready artifact set                                               |
@@ -171,47 +172,114 @@ The practical implication is simple: work should not move forward because people
 
 ## 9. Stage 1 - Work Assessment
 
-**Purpose:** Determine whether the request is worth further investment before entering Work Definition.
+**Purpose:** Determine whether the request is worth entering Work Definition by screening it through three increasingly rigorous assessment steps.
 
 **Primary Decision:** Proceed, Defer, or Reject.
 
-**Primary Owner:** ITS, supported by intake / portfolio governance.
+**Primary Owner:** ITS, supported by intake / portfolio governance and the named Assessment Owner.
 
-### 9.1. Minimum Outputs
+### 9.1. Operating Intent
 
+Stage 1 is not one large assessment done at the same depth for every request.
+
+Its purpose is to screen work practically:
+
+- start with the lightest viable triage
+- deepen scrutiny only when the previous step justifies it
+- stop weak, unsupported, misaligned, or low-value work early
+- hand forward only work that is worth defining
+
+The normal three-step sequence is:
+
+1. Initial Review
+2. Validation Assessment
+3. Work Assessment Report
+
+The intended progression from Stage 1 into Stage 2 is:
+
+`Work Assessment Report -> Initiative Definition Document`
+
+### 9.2. Minimum Outputs
+
+- Initial Review
+- Validation Assessment
 - Work Assessment Report
 - decision record
-- named sponsor or sponsor candidate
+- named sponsor or sponsor candidate by the end of Stage 1 if proceeding
 
-### 9.2. Stage Output Checklist
+### 9.3. Stage Output Checklist
 
 | Output                  | Required  | Accountable              | Practical note                                                              |
 | ----------------------- | --------- | ------------------------ | --------------------------------------------------------------------------- |
-| Work Assessment Report  | Yes       | ITS                      | Capture the problem, driver, value, and early concerns in one place         |
-| Early stakeholder input | As needed | ITS                      | Keep notes inside the assessment report unless separate notes are necessary |
+| Initial Review          | Yes       | Assessment Owner         | Fast front-door triage; stop or defer quickly where value, fit, or sponsorship is weak |
+| Validation Assessment   | Yes       | Assessment Owner         | Add higher-confidence validation with requester SMEs and immediate team; decide whether full business analysis is justified |
+| Work Assessment Report  | Yes       | Assessment Owner with ITS leadership | Final Stage 1 recommendation based on completed business analysis and handoff basis for Work Definition |
+| Early stakeholder input | As needed | Assessment Owner         | Keep notes inside the assessment artifacts unless separate notes are necessary |
 | Decision record         | Yes       | ITS / Decision Authority | Record proceed / defer / reject and any conditions                          |
 
-### 9.3. AI Use in This Stage
+### 9.4. Three-Step Practical Flow
+
+#### 9.4.1. Initial Review
+
+Use this step to decide whether the request is worth any further assessment effort at all.
+
+This step should:
+
+- capture the need and desired outcome in plain language
+- identify who is affected and why it matters
+- check obvious dealbreakers
+- result in stop, defer, or proceed to Validation Assessment
+
+#### 9.4.2. Validation Assessment
+
+Use this step only for requests that survive Initial Review.
+
+This step should:
+
+- validate the need with limited evidence
+- confirm business alignment, sponsorship, outcomes, success measures, scope boundaries, and high-level capabilities without design detail
+- compare broad options, including doing nothing
+- surface obvious risk and feasibility concerns
+- result in stop, defer, or proceed to full business analysis
+
+#### 9.4.3. Work Assessment Report
+
+Use this step only for work that survives Validation Assessment.
+
+This step should:
+
+- synthesize the business analysis findings, validated need, options, risks, constraints, and timing
+- recommend whether the work should enter Work Definition
+- identify what Stage 2 must define or resolve next
+- provide the final Stage 1 handoff basis if the work proceeds
+
+### 9.5. AI Use in This Stage
 
 AI can:
 
 - summarize intake material
-- help structure the problem statement
-- draft the Work Assessment Report from supplied inputs
+- help structure the problem statement, options, and recommendations
+- draft any of the three Stage 1 assessment artifacts from supplied inputs
 
 Humans must:
 
-- confirm sponsorship
+- confirm sponsorship and ownership signals
 - decide whether the work should proceed
-- confirm the recorded decision
+- confirm the recorded decision and any conditions
 
-### 9.4. Exit Criteria
+AI must not:
 
-- problem and opportunity are clearly stated
-- sponsorship is confirmed or explicitly unresolved
-- strategic alignment and early risks are understood
-- the decision is recorded
-- if proceeding, the work is ready to enter Stage 2
+- treat a recommendation to proceed as authorization to deliver
+- claim funding, sponsorship, or authority that has not been confirmed
+- invent evidence or stakeholder support
+
+### 9.6. Exit Criteria
+
+- the need and desired outcome are clear enough to explain why the work matters
+- sponsorship is confirmed or explicitly unresolved and treated accordingly
+- high-level options, risks, and feasibility concerns are visible enough for Stage 1 decision-making
+- the final Stage 1 recommendation is explicit and attributable
+- if proceeding, the Work Assessment Report gives Stage 2 a practical handoff basis
 
 ## 10. Stage 2 - Work Definition
 
@@ -224,6 +292,8 @@ Humans must:
 ### 10.1. What Stage 2 Must Produce
 
 Stage 2 stays at authorization-level detail. It defines what the initiative is expected to deliver, why it matters, who owns it, what acceptance will focus on, and what level of cost and risk the organization is being asked to approve.
+
+Stage 2 should normally begin from the completed Work Assessment Report, not from raw intake notes or an unstructured rediscovery exercise.
 
 Deliverable domains may be used to organize the delivery view, but they do not replace visibility of the actual deliverables expected from the initiative.
 

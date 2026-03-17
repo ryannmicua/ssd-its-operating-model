@@ -8,6 +8,7 @@ This document helps teams think through what artifacts may be needed across diff
 
 ## Related Documents
 
+- [Work Assessment Process](work_assessment/work_assessment_process.md)
 - [Work Delivery Framework](work_delivery_framework.md)
 - [Deliverable Specifications Index](deliverable_specifications_index.md)
 - [Solution Design Process](solution_design_process.md)
@@ -40,6 +41,7 @@ Deliverables not needed for authorization may still be listed at summary level d
 
 Use this reference differently at each stage:
 
+- **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition. This guide mainly becomes active after that decision.
 - **Stage 2 - Work Definition:** identify the required deliverables for the initiative, use domains to organize them where helpful, identify Acceptance Authorities, and define the minimum authorization-level output needed for a sound decision.
 - **Stage 3 - Work Authorization:** confirm that selected deliverables, owners, acceptance approach, and major cost/risk implications are decision-ready.
 - **Stage 4 - Work Definition Details:** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.

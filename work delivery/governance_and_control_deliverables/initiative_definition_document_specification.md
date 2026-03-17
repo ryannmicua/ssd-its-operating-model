@@ -214,6 +214,8 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
+This artifact should normally be created from the completed Stage 1 assessment outputs, especially the [Work Assessment Report](../work_assessment/work_assessment_report_specification.md), plus any other initiation inputs that materially affect scope, ownership, risk, or deliverables.
+
 This artifact anchors the Project Charter, Functional Capabilities, domain-specific deliverables, decision records, operational readiness artifacts, and final acceptance and closure records.
 
 The Project Charter should not contradict this document. If authorization, funding, scope, ownership, required deliverables, or major impacts change materially, the Initiative Definition Document should be updated first or in controlled parallel with the related governance decision.
@@ -239,7 +241,9 @@ At minimum:
 
 ### 11.1. Definition stage
 
-Create the document from the work assessment and other initiation inputs. Confirm outcomes, scope boundaries, owners, deliverables, Acceptance Authorities, major impacts, and the expected authorization path.
+Create the document from the completed Stage 1 work assessment outputs and other initiation inputs. In normal use, this means starting from the [Work Assessment Report](../work_assessment/work_assessment_report_specification.md) and carrying forward the validated need, desired outcomes, major risks, dependencies, stakeholder context, and recommended Stage 2 focus.
+
+Confirm outcomes, scope boundaries, owners, deliverables, Acceptance Authorities, major impacts, and the expected authorization path.
 
 ### 11.2. Authorization stage
 
