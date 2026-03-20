@@ -69,11 +69,11 @@ Each principle below is a risk control. Breaking any of them introduces a specif
 
 ### 6.1. Service Operations
 
-**Risk controlled:** Operational risk, continuity risk, and key-person dependency risk.
+**Risk controlled:** Operational risk, security risk, compliance risk, continuity risk, and key-person dependency risk.
 
-ITS should deliver through defined services, not informal personal channels. When service delivery is informal and unstructured, it becomes dependent on individuals, demand is invisible, and quality cannot be maintained.
+ITS should deliver through defined services, not informal personal channels. When service delivery is informal and unstructured, it becomes dependent on individuals, demand is invisible, changes go untracked, and quality cannot be maintained.
 
-**What failure looks like:** Service requests are routed to specific people rather than through a defined path. Incidents are resolved ad hoc without improvement. Demand is invisible and unprioritized. Knowledge about how services run lives only with the people who built them.
+**What failure looks like:** Service requests are routed to specific people rather than through a defined path. Incidents are resolved ad hoc without improvement. Demand is invisible and unprioritized. Changes to services are made without logging, so no one can explain the current state of a system. Access accumulates informally and is never reviewed. Knowledge about how services run lives only with the people who built them.
 
 **What this control requires:**
 
@@ -81,14 +81,17 @@ ITS should deliver through defined services, not informal personal channels. Whe
 - service ownership is named and visible so accountability is clear
 - support demand is routed and prioritized deliberately so capacity is managed
 - recurring issues lead to improvement, not repeated workarounds
+- changes to services are logged and explainable so the state of systems is always known
+- access is governed and attributable so security risk is bounded
+- operational shortcuts do not quietly replace controlled practice
 
 ### 6.2. Planned Work
 
-**Risk controlled:** Operational risk, compliance risk, change risk, and continuity risk.
+**Risk controlled:** Operational risk, security risk, compliance risk, change risk, and continuity risk.
 
-Planned work should move through a governed path from intake to closure. Work that starts without definition, progresses without authorization, and closes without acceptance is uncontrolled activity. Uncontrolled activity is the root cause of most avoidable delivery failures.
+Planned work should move through a governed path from intake to closure. Work that starts without definition, progresses without authorization, makes unlogged changes, and closes without acceptance is uncontrolled activity. Uncontrolled activity is the root cause of most avoidable delivery failures.
 
-**What failure looks like:** Work starts because someone asked verbally or because it seems urgent. Scope expands silently. No one knows the full picture of what is in flight. Ownership is unclear. Closure is assumed rather than confirmed.
+**What failure looks like:** Work starts because someone asked verbally or because it seems urgent. Scope expands silently. Changes are made during delivery without logging, so recovery is blocked when something goes wrong. No one knows the full picture of what is in flight. Ownership is unclear. Closure is assumed rather than confirmed.
 
 **What this control requires:**
 
@@ -96,26 +99,13 @@ Planned work should move through a governed path from intake to closure. Work th
 - scope, outcomes, owners, and deliverables are clear before authorization, so commitments are informed
 - progress is visible through deliverables, evidence, decisions, and current status
 - scope change is explicit and controlled, so commitments remain accurate
+- changes during delivery are logged and traceable so the impact is understood and recovery is possible
+- recovery and rollback are considered before material change is made
 - acceptance, handover, and closure are formal, so the organization knows what it has accepted and who owns it
 
 Planned work follows the [Work Delivery Framework](work%20delivery/work_delivery_framework.md).
 
-### 6.3. Stability and Change Control
-
-**Risk controlled:** Security risk, change risk, and compliance risk.
-
-ITS should operate in a way that keeps changes understandable, recoverable, and reviewable. Uncontrolled changes are a primary source of security incidents, service disruptions, and compliance failures.
-
-**What failure looks like:** Changes are made without logging. Access is granted informally and not reviewed. Problems emerge and recovery is blocked because no one can explain what changed. Operational shortcuts quietly become the standard practice.
-
-**What this control requires:**
-
-- changes are logged and explainable so the state of systems is always known
-- access is governed and attributable so security risk is bounded
-- recovery and rollback are considered before material change, so recovery is possible
-- operational shortcuts do not quietly replace controlled practice
-
-### 6.4. Sustainability and Continuity
+### 6.3. Sustainability and Continuity
 
 **Risk controlled:** Continuity risk, key-person dependency risk, and support risk.
 
