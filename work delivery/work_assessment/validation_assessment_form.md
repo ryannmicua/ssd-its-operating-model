@@ -1,15 +1,15 @@
 # Validation Assessment Form
 
-Use this form for the middle step of Stage 1 - Work Assessment.
+Use this form for the middle step of Work Assessment.
 
 Purpose:
-Work with the requester's subject matter experts and immediate team to decide whether full business analysis is justified.
+Work with the requester's subject matter experts and immediate team to decide whether focused analysis is justified.
 
 Recommendation options:
 
 - Stop
 - Defer
-- Proceed to Full Business Analysis
+- Proceed to Focused Analysis
 
 ---
 
@@ -67,7 +67,7 @@ Guidance:
 
 ## 4. Current-State Snapshot
 
-What current systems, processes, constraints, dependencies, or prior attempts matter to understanding this request?
+What current systems, workflows, constraints, dependencies, or prior attempts matter to understanding this request?
 
 **Response:**  
 
@@ -83,7 +83,7 @@ What current systems, processes, constraints, dependencies, or prior attempts ma
 
 ---
 
-## 6. High-Level Functional Capabilities
+## 6. High-Level Requirements and Capabilities
 
 What must any viable solution be able to do?
 
@@ -92,6 +92,7 @@ Guidance:
 - describe what, not how
 - stay technology-agnostic
 - keep this at high level
+- note any material stakeholder requirements or non-negotiable conditions already visible
 
 **Response:**  
 
@@ -219,7 +220,7 @@ What gets worse, remains weak, or is lost if this is not pursued in the next 12 
 
 - [ ] Stop
 - [ ] Defer
-- [ ] Proceed to Full Business Analysis
+- [ ] Proceed to Focused Analysis
 
 **Relative priority:**  
 
@@ -239,7 +240,7 @@ What gets worse, remains weak, or is lost if this is not pursued in the next 12 
 
 - [ ] Stop
 - [ ] Defer
-- [ ] Proceed to Full Business Analysis
+- [ ] Proceed to Focused Analysis
 
 **Decision Date:**
 
@@ -251,7 +252,7 @@ What gets worse, remains weak, or is lost if this is not pursued in the next 12 
 
 ---
 
-## 13. Handoff Notes for Full Business Analysis
+## 13. Handoff Notes for Focused Analysis
 
 **Key context to carry forward:**  
 
@@ -261,4 +262,16 @@ What gets worse, remains weak, or is lost if this is not pursued in the next 12 
 
 **Stakeholder sensitivities / history:**  
 
+**Key stakeholder groups and their material needs or requirements:**  
+
 **Likely sponsor, Outcome Owner candidate, and Delivery Owner candidate signals (if known):**
+
+**Early signal on likely next definition artifact:**  
+
+- [ ] More likely to remain small enough for a Work Brief
+- [ ] More likely to require an Initiative Definition Document
+- [ ] Too early to judge confidently
+
+**Likely Acceptance Authority signal or ownership gap:**  
+
+**Operational / support ownership signals (if relevant):**  
