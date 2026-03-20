@@ -2,15 +2,15 @@
 
 ## 1. Purpose and Intended Outcome
 
-The Work Assessment Report is the final Stage 1 assessment artifact and the culmination of the full business analysis. It recommends whether the proposed work should enter Work Definition and records the rationale, conditions, and handoff basis for that decision.
+The Work Assessment Report is the final work assessment artifact and the culmination of the focused analysis. It recommends whether the proposed work should enter Work Definition and records the rationale, conditions, and handoff basis for that decision.
 
-It exists to synthesize the earlier screening work and the completed business analysis into one decision-ready view for leadership and governance reviewers. A useful Work Assessment Report is stronger than a triage note but lighter than an Initiative Definition Document. It should make the recommended path, major implications, and next-step expectations clear without turning into authorization content or detailed design.
+It exists to synthesize the earlier screening work and the completed analysis into one decision-ready view for leadership and governance reviewers. A useful Work Assessment Report is stronger than a triage note but lighter than an Initiative Definition Document. It should make the recommended path, major implications, and next-step expectations clear without turning into authorization content or detailed design.
 
 The intended outcome is that the organization has enough information to make an informed decision to define the initiative and move it forward toward authorization, or to stop or defer it with a practical, traceable basis.
 
 ## 2. When It Is Required
 
-This artifact is required for work that passes Validation Assessment and completes full business analysis before the final Stage 1 decision is made.
+This artifact is required for work that passes Validation Assessment and completes focused analysis before the final work assessment decision is made.
 
 ## 3. Intended Readers and Users
 
@@ -19,13 +19,13 @@ This artifact is required for work that passes Validation Assessment and complet
 - ITS leadership
 - Outcome Owner candidate
 - Delivery Owner candidate
-- practitioners preparing Stage 2 definition artifacts
+- practitioners preparing definition artifacts
 
 ## 4. Intended Project Context
 
-Use this artifact at the end of Stage 1 - Work Assessment.
+Use this artifact at the end of Work Assessment.
 
-This document should bridge business analysis and definition. It should not replace the Initiative Definition Document or the Project Charter.
+This document should bridge work assessment and definition. It should not replace the Initiative Definition Document or the Project Charter.
 
 ## 5. How Much Detail to Include
 
@@ -34,12 +34,14 @@ Include enough detail to support a sound decision on whether Work Definition sho
 At minimum, the report should make visible:
 
 - what need has been validated
+- what current-state context and stakeholder needs materially shape the work
 - what outcome and success measures are being pursued
-- what the business analysis found
+- what the analysis found
+- what high-level requirements or capabilities any viable answer must address
 - what broad options were considered
 - what path is recommended and why
 - what material risks, dependencies, and constraints exist
-- what Stage 2 must define if the work proceeds
+- what definition must clarify if the work proceeds
 
 The governing principle is:
 
@@ -59,7 +61,7 @@ Must include:
 - Delivery Owner candidate where known
 - intended decision authority
 - references to the Initial Review and Validation Assessment
-- reference to the business analysis basis used
+- reference to the analysis basis used
 
 ### 6.2. Executive summary
 
@@ -83,7 +85,7 @@ Must include:
 
 Must include:
 
-- what this assessment concluded is likely in scope for Stage 2 definition
+- what this assessment concluded is likely in scope for definition
 - what is clearly out of scope at this point
 - key assumptions and constraints
 
@@ -97,18 +99,20 @@ Must include:
 - the preferred path
 - why the preferred path is better than the alternatives at this stage
 
-### 6.6. Business analysis findings summary
+### 6.6. Current-state, stakeholder, and analysis findings summary
 
 Must include:
 
-- the key findings from the full business analysis
+- a concise current-state summary including the systems, workflows, constraints, dependencies, or prior attempts that materially shape the recommendation
+- the key stakeholder groups and their material needs or requirements
+- the key findings from the focused analysis
 - the important assumptions, evidence points, or conclusions that shape the recommendation
 
-### 6.7. High-level capability and work profile summary
+### 6.7. High-level requirements, capabilities, and work profile summary
 
 Must include:
 
-- the key high-level capabilities or outcome areas the work would need to address
+- the key high-level requirements or capabilities the work would need to address
 - likely work classification or initiative type where helpful
 - rough indication of whether the work appears small, medium, or large in governance terms
 
@@ -120,16 +124,34 @@ Must include:
 - key dependencies and timing constraints
 - sponsorship, funding, supportability, security, privacy, regulatory, or organizational readiness concerns that matter to the recommendation
 
-### 6.9. Recommended Stage 2 focus
+### 6.9. Recommended definition focus and handoff baseline
 
 Must include:
 
 - what Work Definition must clarify or confirm next
-- likely owner or stakeholder involvement needed in Stage 2
+- likely owner or stakeholder involvement needed in definition
 - any gating questions that must be resolved before Work Authorization could be considered later
-- recommended Stage 2 starting artifact: Initiative Definition Document or Work Brief for appropriately small governed work
+- recommended next definition artifact: Initiative Definition Document or Work Brief for appropriately small governed work
+- why that definition artifact is the right governance fit
+- the carry-forward baseline that definition should start from without re-analysis:
+  - approved statement of need
+  - concise current-state summary
+  - intended outcome and success measures to preserve
+  - key stakeholder groups and their material needs or requirements
+  - high-level requirements or capabilities to preserve
+  - proposed in-scope and out-of-scope boundary
+  - preferred path to define
+  - major risks, dependencies, and constraints that already shape definition
+  - assumptions that definition must preserve, validate, or resolve explicitly
+- the likely deliverable domains that appear to be in scope for definition, with a short reason for each
+- which of those domains appear material enough to require authorization-level visibility in definition, and which can likely remain summary-level until later elaboration
+- likely Acceptance Authority signals for the relevant deliverable domains or deliverable groupings where visible
+- named sponsor, Outcome Owner, Delivery Owner, Decision Authority, and Acceptance Authority signals where known, or an explicit statement of which of these still remain unresolved
+- any operational, support, financial, or service-ownership implications that definition must treat as inputs rather than rediscovering from scratch
 
-This section is the bridge into the Initiative Definition Document.
+This section is the bridge into Initiative Definition or a Work Brief.
+
+The goal is not to finish definition inside Work Assessment. The goal is to give definition an explicit starting baseline and an explicit list of open definition decisions.
 
 ### 6.10. Work assessment recommendation
 
@@ -172,48 +194,50 @@ Keep the following out of this artifact:
 
 ## 8. Relationships to Other Artifacts
 
-This artifact builds on the [Initial Review](initial_review_specification.md), the [Validation Assessment](validation_assessment_specification.md), and the full business analysis completed after validation.
+This artifact builds on the [Initial Review](initial_review_specification.md), the [Validation Assessment](validation_assessment_specification.md), and the focused analysis completed after validation.
 
 If the final decision is to proceed, it becomes a primary input to:
 
-- [Work Delivery Framework Stage 2](../work_delivery_framework.md)
+- [Work Delivery Framework](../work_delivery_framework.md)
 - [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md)
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
-The Assessment Owner or business analysis lead usually coordinates this document with input from the sponsor, key stakeholders, and ITS leadership.
+The Assessment Owner or analysis lead usually coordinates this document with input from the sponsor, key stakeholders, and ITS leadership.
 
-The final Stage 1 decision should be confirmed by the relevant decision authority or delegated governance body before Stage 2 begins.
+The final work assessment decision should be confirmed by the relevant decision authority or delegated governance body before definition begins.
 
 ## 10. Maintenance Expectations
 
-This artifact is normally stable once the Stage 1 decision is recorded. If the work is deferred and later revisited, either update the report or issue a new version so the changed basis is visible.
+This artifact is normally stable once the assessment decision is recorded. If the work is deferred and later revisited, either update the report or issue a new version so the changed basis is visible.
 
 ## 11. Validation Guide
 
 - Does the report make a clear recommendation on whether Work Definition should begin?
-- Does it clearly reflect the findings of the full business analysis?
+- Does it clearly reflect the findings of the focused analysis?
 - Can a decision-maker understand the need, preferred path, and major concerns quickly?
+- Are current-state context, stakeholder needs, and high-level requirements visible enough to support definition without rediscovery?
 - Does it stop short of becoming an Initiative Definition Document or Project Charter?
 - Are the main risks, dependencies, and conditions visible enough to guide the next step?
-- Does Stage 2 have a clear handoff basis if the recommendation is to proceed?
+- Does definition have a clear handoff basis if the recommendation is to proceed?
+- Does the definition section clearly separate what should be carried forward as baseline input from what still needs to be defined or confirmed?
 
 ## 12. Prompt Guide for Drafting the Artifact
 
 ### 12.1. Starter prompt
 
-> Draft a Work Assessment Report that synthesizes the Initial Review, Validation Assessment, and completed business analysis into a final Stage 1 recommendation.
-> Explain the validated need, desired outcomes, success measures, business analysis findings, preferred path, major risks and dependencies, and what Work Definition must clarify next.
+> Draft a Work Assessment Report that synthesizes the Initial Review, Validation Assessment, and completed focused analysis into a final assessment recommendation.
+> Explain the validated need, current state, stakeholder needs, desired outcomes, success measures, high-level requirements or capabilities, analysis findings, preferred path, major risks and dependencies, and what Work Definition must clarify next.
 > Keep it decision-ready, practical, and lighter than an Initiative Definition Document.
 
 ### 12.2. Section prompts
 
 > Write the preferred-path section so it explains why the recommended option is better than the alternatives at this stage, including the do-nothing option.
 
-> Draft the Stage 2 focus section so the next team can see what must be clarified, who needs to be involved, and what questions remain open.
+> Draft the definition-focus section so the next team can see what must be carried forward as the starting baseline, what still must be clarified, who needs to be involved, and what questions remain open.
 
 ### 12.3. Validation prompts
 
-> Check whether this report works as the final Stage 1 decision artifact and handoff basis without drifting into Work Definition or authorization.
+> Check whether this report works as the final work assessment decision artifact and handoff basis without drifting into Work Definition or authorization.
 
 > Rewrite any section that behaves like an approved scope baseline, project charter, or design brief.

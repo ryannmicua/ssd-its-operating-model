@@ -1,9 +1,9 @@
 # Work Assessment Report Form
 
-Use this form at the end of Stage 1 - Work Assessment.
+Use this form at the end of Work Assessment.
 
 Purpose:
-Capture the culmination of the full business analysis and make the final recommendation on whether the initiative should enter Work Definition.
+Capture the culmination of the focused analysis and make the final recommendation on whether the initiative should enter Work Definition.
 
 Recommendation options:
 
@@ -19,7 +19,7 @@ Recommendation options:
 
 **Assessment Version / Date:**  
 
-**Assessment Owner / Business Analysis Lead:**  
+**Assessment Owner / Analysis Lead:**  
 
 **Sponsor:**  
 
@@ -33,7 +33,7 @@ Recommendation options:
 
 **Reference to Validation Assessment:**  
 
-**Reference to business analysis basis used:**  
+**Reference to analysis basis used:**  
 
 ---
 
@@ -61,7 +61,7 @@ Summarize the need, the recommendation, and why that recommendation is being mad
 
 ## 4. Assessment Scope Boundary
 
-What appears likely to be in scope for Stage 2 definition, and what is clearly out of scope at this point?
+What appears likely to be in scope for definition, and what is clearly out of scope at this point?
 
 **Likely in scope for Work Definition:**  
 
@@ -91,9 +91,13 @@ What appears likely to be in scope for Stage 2 definition, and what is clearly o
 
 ---
 
-## 6. Business Analysis Findings Summary
+## 6. Current-State, Stakeholder, and Analysis Findings Summary
 
-What did the full business analysis establish that most shapes the recommendation?
+What did the focused analysis establish that most shapes the recommendation?
+
+**Current-state summary:**  
+
+**Key stakeholder groups and their material needs or requirements:**  
 
 **Key findings:**  
 
@@ -101,9 +105,9 @@ What did the full business analysis establish that most shapes the recommendatio
 
 ---
 
-## 7. High-Level Capability and Work Profile Summary
+## 7. High-Level Requirements, Capabilities, and Work Profile Summary
 
-**Key high-level capabilities or outcome areas required:**  
+**Key high-level requirements or capabilities to preserve:**  
 
 **Likely work classification / initiative type:**  
 
@@ -135,20 +139,66 @@ What did the full business analysis establish that most shapes the recommendatio
 
 ---
 
-## 9. Recommended Stage 2 Focus
+## 9. Recommended Definition Focus and Handoff Baseline
 
 If this proceeds, what must Work Definition clarify, confirm, or resolve next?
 
-**Required Stage 2 focus areas:**  
+**Required definition focus areas:**  
 
-**People / roles that must be involved in Stage 2:**  
+**People / roles that must be involved in definition:**  
 
 **Questions that must be resolved before later authorization:**  
 
-**Recommended Stage 2 starting artifact:**
+**Recommended next definition artifact:**
 
 - [ ] Initiative Definition Document
 - [ ] Work Brief (scaled governed work)
+
+**Why this is the right definition artifact:**  
+
+### Carry-forward baseline for definition
+
+These are the assessment conclusions that definition should start from rather than rediscovering.
+
+**Approved statement of need to carry forward:**  
+
+**Current-state summary to carry forward:**  
+
+**Intended outcome and success measures to preserve:**  
+
+**Key stakeholder groups and their material needs to carry forward:**  
+
+**High-level requirements or capabilities to carry forward:**  
+
+**Proposed in-scope and out-of-scope boundary for definition:**  
+
+**Preferred path to define:**  
+
+**Major risks, dependencies, and constraints that already shape definition:**  
+
+**Assumptions definition must preserve, validate, or resolve explicitly:**  
+
+**Likely deliverable domains in scope for definition and why:**  
+
+**Which domains appear material enough for authorization-level visibility in definition:**  
+
+**Likely Acceptance Authority signals by domain or deliverable grouping:**  
+
+### Ownership and authority readiness for definition
+
+**Named sponsor for definition:**  
+
+**Outcome Owner signal:**  
+
+**Delivery Owner signal:**  
+
+**Decision Authority for later authorization:**  
+
+**Acceptance Authority signal or ownership gap:**  
+
+**Operational / support owner signals if materially relevant:**  
+
+**Unresolved ownership or authority gaps definition must close early:**  
 
 ---
 
@@ -190,7 +240,7 @@ If this proceeds, what must Work Definition clarify, confirm, or resolve next?
 
 ## 12. Handoff References
 
-List the key supporting records that Stage 2 should use.
+List the key supporting records that definition should use.
 
 **Upstream assessment references:**  
 

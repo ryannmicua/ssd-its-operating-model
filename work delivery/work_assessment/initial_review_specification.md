@@ -10,7 +10,7 @@ The intended outcome is that every new work idea receives an early triage decisi
 
 ## 2. When It Is Required
 
-This artifact is required at the start of Stage 1 - Work Assessment for any proposed planned work that may need governance, definition, or later authorization.
+This artifact is required at the start of Work Assessment for any proposed planned work that may need governance, definition, or later authorization.
 
 ## 3. Intended Readers and Users
 

@@ -1,6 +1,6 @@
 # Initial Review Form
 
-Use this form for the quick IT-side sanity check at the start of Stage 1 - Work Assessment.
+Use this form for the quick IT-side sanity check at the start of Work Assessment.
 
 Purpose:
 Decide whether the request is worth more assessment effort and broadly aligns with what the organization does.

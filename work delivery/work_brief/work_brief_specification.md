@@ -14,6 +14,16 @@ Use a Work Brief when the work is small enough to manage as one item, but import
 
 For standalone governed work, the brief should normally be created from the completed Stage 1 assessment output rather than from raw intake notes.
 
+For that reason, Stage 2 should normally carry forward the validated need, intended outcome, success measures, scope boundary, preferred path, key risks, key dependencies, and owner signals already established in Stage 1.
+
+Stage 2 does not need to rediscover those basics. It does need to confirm, complete, and formalize the work-level control details that assessment may only indicate at signal level, especially:
+
+- Acceptance Authority
+- deliverables and acceptance evidence
+- parent or child governance position
+- operational and support ownership where relevant
+- any approval conditions that must become explicit before delivery starts
+
 Within the Work Delivery Framework, it is mainly used as:
 
 - a scaled Stage 2 Work Definition artifact for small governed work

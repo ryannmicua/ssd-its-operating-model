@@ -2,15 +2,15 @@
 
 ## 1. Purpose and Intended Outcome
 
-The Validation Assessment tests whether a screened opportunity is strong enough to justify full business analysis.
+The Validation Assessment tests whether a screened opportunity is strong enough to justify focused analysis.
 
-It exists to validate business alignment, test sponsorship, confirm the primary organizational beneficiary, confirm outcomes and success measures, clarify scope boundaries and high-level capabilities, compare conceptual options, and identify obvious kill risks before more effort is invested. A useful Validation Assessment is evidence-based enough to support a stop, defer, or proceed decision without becoming a design pack.
+It exists to validate business alignment, test sponsorship, confirm the primary organizational beneficiary, confirm outcomes and success measures, clarify current state, scope boundaries, stakeholder needs, and high-level requirements, compare conceptual options, and identify obvious kill risks before more effort is invested. A useful Validation Assessment is evidence-based enough to support a stop, defer, or proceed decision without becoming a design pack.
 
-The intended outcome is that only opportunities with credible need, plausible sponsorship, clear organizational value, and manageable risk move into full business analysis.
+The intended outcome is that only opportunities with credible need, plausible sponsorship, clear organizational value, and manageable risk move into focused analysis.
 
 ## 2. When It Is Required
 
-This artifact is required for work that passes the Initial Review and needs a stronger evidence base before deciding whether to invest in full business analysis.
+This artifact is required for work that passes the Initial Review and needs a stronger evidence base before deciding whether to invest in focused analysis.
 
 ## 3. Intended Readers and Users
 
@@ -23,7 +23,7 @@ This artifact is required for work that passes the Initial Review and needs a st
 
 ## 4. Intended Project Context
 
-Use this artifact in the middle of Stage 1 - Work Assessment after the request survives initial triage but before the organization decides whether to do full business analysis.
+Use this artifact in the middle of Work Assessment after the request survives initial triage but before the organization decides whether to do focused analysis.
 
 ## 5. How Much Detail to Include
 
@@ -35,11 +35,11 @@ Include enough detail to answer five practical questions:
 - what must any viable answer be able to do
 - what broad approaches exist
 - what major risks or feasibility concerns are visible now
-- is full business analysis justified
+- is focused analysis justified
 
 The governing principle is:
 
-> Add enough evidence to decide whether full business analysis should happen, but stop short of detailed definition, design, or planning.
+> Add enough evidence to decide whether focused analysis should happen, but stop short of detailed definition, design, or planning.
 
 ## 6. Required Content or Minimum Structure
 
@@ -74,7 +74,7 @@ Where no sponsor is willing to own and advocate for the initiative, treat this a
 
 Must include:
 
-- the relevant current systems, processes, constraints, dependencies, or prior attempts that shape the opportunity
+- the relevant current systems, workflows, constraints, dependencies, or prior attempts that shape the opportunity
 
 ### 6.5. Scope boundaries
 
@@ -84,17 +84,19 @@ Must include:
 - what is clearly out of scope at this stage
 - key assumptions or boundary conditions
 
-### 6.6. Functional capabilities at high level
+### 6.6. High-level requirements and capabilities
 
 Must include:
 
 - a short list of what any viable solution must be able to do
+- any material stakeholder requirements, conditions, or non-negotiables already visible at this stage
 
-Capabilities must be:
+These requirements or capabilities must be:
 
 - outcome-oriented
 - technology-agnostic
 - concise enough to support option comparison
+- light enough to guide later definition without behaving like detailed specifications
 
 ### 6.7. Viable options
 
@@ -131,7 +133,7 @@ Must include one explicit recommendation:
 
 - stop
 - defer
-- proceed to full business analysis
+- proceed to focused analysis
 
 Include rationale and optional relative priority where useful.
 
@@ -155,8 +157,12 @@ Must include:
 - key context to carry forward
 - assumptions that need testing
 - priority risks or constraints
-- stakeholder sensitivities or history that the later business analysis should not rediscover
+- stakeholder sensitivities or history that the later analysis should not rediscover
+- key stakeholder groups and their material needs or requirements to carry forward
 - likely sponsor, Outcome Owner candidate, and Delivery Owner candidate signals where known
+- early signal on whether the work appears likely to remain small enough for a Work Brief or is more likely to require an Initiative Definition Document
+- likely Acceptance Authority or a clear note that acceptance ownership is still unresolved
+- operational or support ownership signals where service impact already appears likely
 
 ## 7. What to Keep Out
 
@@ -173,7 +179,7 @@ Keep the following out of this artifact:
 
 This artifact builds on the [Initial Review](initial_review_specification.md).
 
-If the item proceeds, it authorizes full business analysis and provides input to the later [Work Assessment Report](work_assessment_report_specification.md).
+If the item proceeds, it justifies focused analysis and provides input to the later [Work Assessment Report](work_assessment_report_specification.md).
 
 ## 9. Ownership, Review, and Acceptance Expectations
 
@@ -187,11 +193,11 @@ This artifact is usually stable once the recommendation and decision are recorde
 
 ## 11. Validation Guide
 
-- Is the need validated enough to justify or reject full business analysis?
+- Is the need validated enough to justify or reject focused analysis?
 - Is business alignment clear?
 - Is there a willing sponsor, or is the lack of sponsorship being treated as a major red flag?
-- Are the primary organizational beneficiary, desired outcomes, success measures, and scope boundaries visible?
-- Are the capabilities outcome-oriented and free of design detail?
+- Are the primary organizational beneficiary, desired outcomes, success measures, scope boundaries, and current-state constraints visible?
+- Are the high-level requirements or capabilities outcome-oriented and free of design detail?
 - Are credible options compared, including doing nothing?
 - Are major risk and feasibility concerns visible?
 - Does the recommendation clearly state whether the item should stop, defer, or proceed?
@@ -201,17 +207,17 @@ This artifact is usually stable once the recommendation and decision are recorde
 ### 12.1. Starter prompt
 
 > Draft a Validation Assessment for a proposed work item that has passed initial triage.
-> Validate business alignment, sponsorship, the primary organizational beneficiary, desired outcomes, success measures, scope boundaries, high-level capabilities, viable options, major risk and feasibility signals, cost of inaction, and a clear recommendation to stop, defer, or proceed to full business analysis.
+> Validate business alignment, sponsorship, the primary organizational beneficiary, desired outcomes, success measures, current state, scope boundaries, stakeholder needs, high-level requirements or capabilities, viable options, major risk and feasibility signals, cost of inaction, and a clear recommendation to stop, defer, or proceed to focused analysis.
 > Keep it evidence-based, practical, and free of detailed design or delivery planning.
 
 ### 12.2. Section prompts
 
-> Rewrite the high-level capabilities so they describe what a viable solution must do without naming technology, implementation detail, or vendor choices.
+> Rewrite the high-level requirements or capabilities so they describe what a viable solution must do without naming technology, implementation detail, or vendor choices.
 
 > Compare the conceptual options in a short table that includes advantages, drawbacks, and the do-nothing option.
 
 ### 12.3. Validation prompts
 
-> Check whether this Validation Assessment supports an evidence-based decision on whether full business analysis should happen without drifting into Work Definition.
+> Check whether this Validation Assessment supports an evidence-based decision on whether focused analysis should happen without drifting into Work Definition.
 
 > Rewrite any section that behaves like a requirement set, design brief, or implementation plan.
