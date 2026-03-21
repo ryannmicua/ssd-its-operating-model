@@ -171,5 +171,6 @@ References:
 - [Microsoft Support: Visio diagram types](https://support.microsoft.com/en-us/office/types-of-diagrams-that-are-supported-in-visio-in-microsoft-365-877c30a8-0951-4b7a-a53b-daa3d81bea03)
 - [IBM: workflow diagram overview](https://www.ibm.com/think/topics/workflow-diagram)
 - [Lucidchart: UML use case diagram tutorial](https://www.lucidchart.com/pages/uml-use-case-diagram)
+- [Figma: Types of Flow Charts]([https://www.lucidchart.com/pages/uml-use-case-diagram](https://www.figma.com/resource-library/types-of-flow-charts/))
 
 Use these as reading support. They should not override the lighter drafting and governance boundaries defined in this repository.
