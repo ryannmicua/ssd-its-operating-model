@@ -21,7 +21,7 @@ Where the Initial Review already contains some of this content, this artifact sh
 - Assessment Owner
 - requestor or submitter
 - sponsor or sponsor candidate
-- requester SMEs and immediate team
+- requestor SMEs and immediate team
 - ITS leadership or governance reviewers
 - practitioners preparing the Validation Assessment or later analysis
 

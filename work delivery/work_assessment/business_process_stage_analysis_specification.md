@@ -132,7 +132,7 @@ Must include:
 - the current-process facts that Validation Assessment, Current State Analysis, or the Work Assessment Report should be able to reference directly
 - any areas where the process understanding is still partial, disputed, or needs confirmation
 
-### 6.6. Example content showing the minimum structure
+### 6.7. Example content showing the minimum structure
 
 Example only. Adapt to the real work request.
 
