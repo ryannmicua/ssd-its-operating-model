@@ -258,9 +258,8 @@ Before treating this artifact as ready, confirm that it is:
 - Does it explain how the solution is built and what it depends on?
 - Does it clearly define the technical scope and boundaries of the design?
 - Are the key technical assumptions, constraints, and control-relevant choices visible?
-- Are major dependencies, interfaces, and support-sensitive constraints visible enough for operations and handover review?
+- Are major dependencies, interfaces, support-sensitive constraints, and dependency risks visible enough for operations and handover review?
 - Are design decisions and unresolved limitations explicit enough for future maintainers?
-- Does it make support-sensitive constraints and dependency risks visible enough for operations and handover review?
 - Does it stay at design level rather than drifting into operational procedure?
 - Could another technical team understand the solution without relying on the original implementer?
 
