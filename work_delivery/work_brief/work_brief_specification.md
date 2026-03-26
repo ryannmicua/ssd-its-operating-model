@@ -2,156 +2,109 @@
 
 ## 1. Purpose
 
-The Work Brief is the ITS standard tool for defining work. It makes every piece of work clear to all stakeholders — why it is needed, what must be delivered, what the delivery basis is, and what evidence confirms the work is done.
+The Work Brief is the ITS standard tool for defining any planned work so that the work is understood before it is executed and delivered. It gives every piece of work clear purpose, named ownership, delivery basis, and acceptance criteria — regardless of the size or complexity of the work.
 
-Use it to show the problem, need, or intended outcome, make the work clear before delivery starts, keep it visible while it is in progress, and confirm who owns delivery, acceptance, and decisions.
+A Work Brief can be used to partially implement the Work Delivery Framework, concentrating on the definition, decision, delivery, and closure elements without requiring the full staged structure a larger initiative would need.
+
+For larger planned work, multiple Work Briefs may be used together — each defining a specific deliverable or discrete work item while staying traceable to the broader purpose of the work.
 
 It is lighter than an Initiative Definition Document but stronger than a task note, chat thread, or Kanban card title.
 
-## 2. When to Use It
+## 2. Minimum Required Content
 
-Use a Work Brief when the work is small enough to manage as one item, but important enough that scope, ownership, decision, and closure need to be clear.
+Every Work Brief must address the following questions in enough detail for the work to be understood, owned, authorized, delivered, and closed.
 
-For standalone governed work, the brief should normally be created from the completed Stage 1 assessment output rather than from raw intake notes.
-
-For that reason, Stage 2 should normally carry forward the validated need, intended outcome, success measures, scope boundary, preferred path, key risks, key dependencies, and owner signals already established in Stage 1.
-
-Stage 2 does not need to rediscover those basics. It does need to confirm, complete, and formalize the work-level control details that assessment may only indicate at signal level, especially:
-
-- Acceptance Authority
-- deliverables and acceptance evidence
-- parent or child governance position
-- operational and support ownership where relevant
-- any approval conditions that must become explicit before delivery starts
-
-Within the Work Delivery Framework, it is mainly used as:
-
-- a scaled Stage 2 Work Definition artifact for small governed work
-- a supporting Stage 3 authorization artifact for that same small work
-- a live control record through Stage 6 and Stage 7 for that same small work
-- a child work order under an approved initiative during delivery
-
-Common use cases:
-
-- a small standalone improvement, change, investigation, or correction
-- a work order inside a larger initiative
-- a controlled deliverable package within an initiative
-- a task-sized item that needs visible ownership and formal acceptance
-
-## 3. When Not to Use It
-
-Do not use a Work Brief as the main control record when the work is too large, too broad, or too dependent to behave like one clear work item.
-
-Escalate to an Initiative Definition Document when:
-
-- the work spans multiple workstreams or multiple dependent work briefs
-- the work needs broader funding, scope, or approval decisions
-- the work materially changes service ownership, security posture, support load, or operating model
-- leadership needs a broader record than a brief can hold clearly
-
-If this happens, keep the Work Brief as the originating record and reference the superseding Initiative Definition Document.
-
-## 4. How It Fits with Larger Initiatives
-
-Multiple Work Briefs may sit under one initiative.
-
-In that case, the Work Brief acts like a work order inside the parent initiative or deliverable set. It should:
-
-- reference the parent initiative, deliverable, or work package
-- stay within the parent scope and approval boundaries
-- define only the specific piece of work being controlled
-- avoid restating the full initiative case unless needed for local clarity
-
-In Work Delivery Framework terms:
-
-- use the Work Brief in Stage 2 when the work is small enough that a full Initiative Definition Document would be too heavy
-- use the Work Brief in Stage 3 as part of the approval basis for that small work
-- keep using the same Work Brief through Stage 6 and Stage 7 as the live control record
-- use child Work Briefs under a parent initiative when one initiative contains multiple controlled work items
-
-## 5. Minimum Content
-
-Every Work Brief must include the following.
-
-### 5.1. Work details and visibility
+### 2.1. Document Information
 
 - work brief title
-- work brief ID where used
-- current status
-- current stage
-- date raised
-- last updated date
-- parent initiative or parent deliverable reference where applicable
-- board or tracking reference where used
+- work brief ID (where used)
+- current status and current stage
+- date raised and last updated date
+- parent initiative or parent deliverable reference (where applicable)
+- board or tracking reference (where used)
 
-### 5.2. Why the work exists
+### 2.2. Who Are the Accountable Owners
 
-- problem, request, or need
-- intended outcome
-- success criteria or what acceptance will focus on
-- consequence of not doing the work where relevant
+Name the people who own and are accountable for the work:
 
-### 5.3. Scope boundaries
+- Requester
+- Outcome Owner — accountable for the intended result
+- Delivery Owner — accountable for delivery, stage discipline, and evidence
+- Acceptance Authority — must be named before delivery starts
+- Decision Authority — authorizes the work to proceed and approves major decisions
+- Operational or Support Owner (where relevant)
 
-- in scope
-- out of scope
-- assumptions
-- constraints
+### 2.3. Why Does This Work Need to Be Done
 
-### 5.4. Named owners
+State the reason the work exists:
 
-- requester
-- Outcome Owner
-- Delivery Owner
-- Acceptance Authority
-- Decision Authority
+- problem, need, or request that triggered the work
+- why it needs to be addressed now
+- consequence of not doing it (where relevant)
 
-Acceptance Authority must be named before delivery starts.
+### 2.4. What Is the Intended Outcome and How Will We Know We Achieved It
 
-### 5.5. Deliverables and acceptance
+State what success looks like and how it will be recognized:
 
-For each deliverable, record:
+- intended outcome — the result the work is expected to produce
+- success criteria — how stakeholders will know the outcome has been achieved
+- scope boundaries — what is in scope, out of scope, and what assumptions and constraints apply
+
+### 2.5. What Is Going to Be Delivered
+
+List the specific deliverables the work must produce. For each deliverable, record:
 
 - what must be produced
 - who owns delivery
 - who accepts it
-- what evidence shows it is complete
+- what evidence confirms it is complete
 
-### 5.6. Risks and dependencies
+### 2.6. When and How Is This Going to Be Delivered
 
-- material risks or constraints
-- dependencies or prerequisites
-- access requirements
-- operational, support, security, privacy, or recovery concerns if they matter
+Describe the delivery basis — how the work will be organized and executed:
 
-### 5.7. Decision log
+- target completion date or key milestones
+- approach or method of delivery
+- linked tasks, tickets, or tracking references
+- material risks, dependencies, or prerequisites
+- access requirements and any operational, support, security, privacy, or recovery considerations (where relevant)
 
-Keep a decision log in the Work Brief to record important decisions made about the work item over time.
+### 2.7. What Is the Acceptance Criteria
 
-At minimum, each decision log entry should include:
+State what acceptance means both at the deliverable level and for the work as a whole:
+
+- acceptance criteria for each deliverable (aligned with section 2.5)
+- overall acceptance focus — what the Acceptance Authority will check before confirming the work is done
+- closure criteria — the specific conditions that must be met before the work can be formally closed
+
+### 2.8. Decision Log
+
+Keep a running decision log for each important decision made about the work. At minimum, record:
 
 - decision being requested or made
 - decision taken
 - Decision Authority
 - decision date
-- artifact or evidence basis used for the decision
+- artifact or evidence basis used
 - rationale
-- conditions or risk acceptance where applicable
+- conditions or risk acceptance (where applicable)
 - owner for each follow-up action
 
-No delivery work starts without a recorded approval decision.
+No delivery starts without a recorded authorization decision.
 
-### 5.8. Closure and acceptance
+### 2.9. Closure
 
-- closure criteria
-- acceptance confirmation
+When closing the work, record:
+
+- acceptance confirmation from the named Acceptance Authority
 - closure date
-- resulting owner where relevant
+- resulting owner (where relevant — operational handover, support ownership)
 - references to evidence or resulting artifacts
+- any remaining follow-up actions and owners
 
-Work is not closed just because tasks are finished. It closes when the named acceptance authority confirms that the required outcome and deliverables have been met.
+Work is not closed just because tasks are finished. It closes when the named Acceptance Authority confirms that the required outcome, deliverables, and acceptance criteria have been met.
 
-## 6. Suggested Status and Stage Values
+## 3. Status and Stage Values
 
 Suggested status values:
 
@@ -165,28 +118,41 @@ Suggested status values:
 - Rejected
 - Converted
 
-Suggested decision values for the work-level authorization entry:
-
-- Approve
-- Approve with Conditions
-- Defer
-- Reject
-
-Suggested stage values for the Work Brief operating view:
+Suggested stage values for the Work Brief operating path:
 
 - Define
 - Decide
 - Deliver
 - Close
 
-Practical stage mapping to the Work Delivery Framework:
+Stage mapping to the Work Delivery Framework:
 
-- Define -> Stage 2 (Work Definition)
-- Decide -> Stage 3 (Work Authorization)
-- Deliver -> Stage 6 (Work Delivery)
-- Close -> Stage 7 (Acceptance, Transition & Closure)
+- Define → Stage 2 (Work Definition)
+- Decide → Stage 3 (Work Authorization)
+- Deliver → Stage 6 (Work Delivery)
+- Close → Stage 7 (Acceptance, Transition & Closure)
 
-## 7. What to Keep Out
+Suggested authorization decision values:
+
+- Approve
+- Approve with Conditions
+- Defer
+- Reject
+
+## 4. Scope and Scale Guidance
+
+Use a Work Brief when the work is small enough to manage as one item, but important enough that scope, ownership, decision, and closure need to be clear.
+
+Escalate to an Initiative Definition Document when:
+
+- the work spans multiple workstreams or dependent Work Briefs that need a governing baseline
+- the work needs broader funding, scope, or approval decisions
+- the work materially changes service ownership, security posture, support load, or operating model
+- leadership needs a broader control record than a brief can hold clearly
+
+When escalating, keep the Work Brief as the originating record and reference the superseding Initiative Definition Document.
+
+## 5. What to Keep Out
 
 Keep the Work Brief focused. Do not turn it into:
 
@@ -197,33 +163,33 @@ Keep the Work Brief focused. Do not turn it into:
 - a full task plan
 - a runbook or SOP
 
-If more detail is needed, link to the right supporting document.
+Link to the right supporting document where more detail is needed.
 
-## 8. Maintenance Standard
+## 6. Maintenance Standard
 
 Update the Work Brief when any of the following change:
 
 - scope boundaries
 - named owners
 - decision status
-- target dates where materially tracked
+- target dates (where materially tracked)
 - closure basis
 - escalation or conversion outcome
 
 The brief should stay short, up to date, and usable throughout the life of the work item.
 
-## 9. Quick Check
+## 7. Quick Check
 
 A Work Brief is working properly if:
 
-- a team member can understand the work quickly without extra verbal explanation
+- the work can be understood without extra verbal explanation
 - management can see what the work is, who owns it, and what stage it is in
-- Acceptance Authority is explicit
-- delivery does not start on assumed approval
+- Acceptance Authority is named and explicit
+- delivery does not start without a recorded authorization decision
 - the brief is short enough to stay current
 - the work can be escalated cleanly if it grows beyond work-brief level
 
-## 10. Related References
+## 8. Related References
 
 Use this standard alongside:
 
