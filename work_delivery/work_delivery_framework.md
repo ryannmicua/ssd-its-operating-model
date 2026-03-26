@@ -57,7 +57,7 @@ To keep the framework practical:
 - one document may satisfy multiple outputs if the required information is explicit and traceable
 - smaller initiatives may use concise versions of artifacts, but they must not skip decision points, ownership, or acceptance controls
 - use the Work Brief as the ITS standard tool for defining work where a full Initiative Definition Document would be too heavy
-- for standalone planned work, use a Work Brief instead of a simple task description when the work still needs clear purpose, scope, ownership, delivery control, traceability, and closure
+- for standalone planned work, use a Work Brief instead of a simple task description when the work still needs clear purpose, scope, ownership, delivery basis, traceability, and closure
 - use a Work Brief to support physical Kanban boards by acting as the corresponding digital record where the detail, owners, decisions, and acceptance basis are stored
 
 The framework is intentionally control-light for low-complexity work and should scale up only where risk, cost, impact, or cross-team coordination require it.
@@ -187,7 +187,7 @@ In practice, the framework works like this:
 - Stage 6 Work Delivery - delivers the approved outputs and gathers evidence as the work progresses
 - Stage 7 Acceptance, Transition & Closure - formally accepts the result, transfers operational responsibility, and closes the work
 
-A Work Brief is the ITS standard tool for defining work. It gives each piece of work a clear purpose, scope, ownership, and delivery control, whether the work is completed on its own or as part of a larger delivery framework.
+A Work Brief is the ITS standard tool for defining work. It makes every piece of work clear to all stakeholders — why it is needed, what must be delivered, what the delivery basis is, and what evidence confirms the work is done.
 
 For standalone planned work, the Work Brief may replace a simple task description when the work still needs clear scope, ownership, traceability, and formal closure.
 
@@ -244,7 +244,7 @@ The normal progression from Stage 1 into Stage 2 is:
 
 `Work Assessment Report -> Initiative Definition Document`
 
-For smaller governed work, the Stage 1 handoff may instead move into a [Work Brief](work_brief/work_brief_specification.md) when that gives enough definition, purpose, scope, ownership, and delivery control for the size and risk of the work.
+For smaller governed work, the Stage 1 handoff may instead move into a [Work Brief](work_brief/work_brief_specification.md) when that gives enough definition, ownership, and control for the size and risk of the work.
 
 ### 9.2. Minimum Outputs
 

@@ -8,7 +8,7 @@ It uses the approved executive description and reframes the Work Brief as the IT
 
 ## Executive Description
 
-A Work Brief is the ITS standard tool for defining work. It gives each piece of work a clear purpose, scope, ownership, and delivery basis, whether the work is completed on its own or as part of a larger delivery framework.
+A Work Brief is the ITS standard tool for defining work. It makes every piece of work clear to all stakeholders — why it is needed, what must be delivered, what the delivery basis is, and what evidence confirms the work is done.
 
 ## Intended Reframing in the Work Delivery Framework
 
@@ -34,19 +34,13 @@ Within a larger initiative, Work Briefs may be used as work orders for the deliv
 
 Where physical Kanban boards are used, the card may represent the work visually while the corresponding digital Work Brief holds the governing detail, owners, decisions, status, and acceptance basis.
 
-### 3. Stage 1 Handoff Wording
-
-Replace the Stage 1 handoff sentence with the following:
-
-For smaller governed work, the Stage 1 handoff may instead move into a [Work Brief](work_brief/work_brief_specification.md) when that gives enough definition, purpose, scope, ownership, and delivery basis for the size and risk of the work.
-
-### 4. Stage 2 Work Definition Wording
+### 3. Stage 2 Work Definition Wording
 
 Replace the current standalone sentence about Work Brief use in Stage 2 with the following:
 
 For small governed work using a Work Brief, the same rule still applies: the brief should be based on the completed Stage 1 assessment and should not restart definition from scratch. Where the work is standalone, the Work Brief may replace a simple task description. Where the work sits inside a larger initiative, the Work Brief may define a specific deliverable or controlled work item under the parent baseline.
 
-### 5. Stage Table Wording
+### 4. Stage Table Wording
 
 Replace the Stage 2 and Stage 3 rows in the stage summary table to make plain that Work Briefs serve two main uses: as the standard control record for standalone planned work and small governed work, and within a larger initiative as work orders for delivering specific initiative deliverables.
 
