@@ -30,7 +30,7 @@ Name the people who own and are accountable for the work:
 - Requester
 - Outcome Owner — accountable for the intended result
 - Delivery Owner — accountable for delivery, stage discipline, and evidence
-- Acceptance Authority — must be named before delivery starts
+- Acceptance Authority — accountable for confirming that deliverables satisfy the acceptance criteria, and for working with the Outcome Owner to ensure the acceptance criteria are set to produce the intended outcomes and meet the success criteria; must be named before delivery starts
 - Decision Authority — authorizes the work to proceed and approves major decisions
 - Operational or Support Owner (where relevant)
 
