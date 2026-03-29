@@ -28,9 +28,9 @@ Explain why the artifact exists before describing its structure. State what prob
 
 Use direct wording that tells the drafter what is needed in practice. Avoid abstract labels that sound formal but do not clearly guide drafting.
 
-### 2.3 Keep the artifact bounded
+### 2.3 Keep Each Artifact Focused
 
-Say what belongs in the artifact and what should go elsewhere. If detail belongs in another artifact, direct the drafter to reference it rather than duplicate it.
+Say what belongs in the artifact and what should go elsewhere. Each artifact should serve one clear purpose. If detail belongs in another artifact, direct the drafter to reference it rather than duplicate it.
 
 ### 2.4 Define usefulness, not just completeness
 
@@ -58,9 +58,23 @@ Use visible section numbering in specifications, especially for major sections a
 
 ## 3. When to Use Which Pattern
 
-There are two patterns. Most specifications use the **light pattern**. Some governance-critical or living documents use the **extended pattern**.
+There are two patterns: the **light pattern** and the **extended pattern**. Most specifications use the light pattern. Choose based on the properties of the artifact, not by default.
 
-### Light pattern — use for
+### Choosing a Pattern
+
+Use the **light pattern** when the artifact is:
+
+- produced once (or updated infrequently) during delivery
+- primarily used to enable a decision, build a solution, or record an outcome
+- unlikely to need formal version control or ongoing update obligations after it is accepted
+
+Use the **extended pattern** when the artifact is one or more of the following:
+
+- a **living document** that must be kept current over the life of an initiative or service (add Maintenance Expectations)
+- a **formal governance baseline** that an approver will sign off on and later compare against delivery outcomes (add Validation Guide)
+- a **complex operational or technical control document** where "done when" bullets alone are not sufficient to assess readiness
+
+### Light Pattern — Applies To
 
 - All solution deliverables
 - Work assessment specifications
@@ -71,7 +85,7 @@ There are two patterns. Most specifications use the **light pattern**. Some gove
 - User adoption specifications
 - Audit and monitoring design summary
 
-### Extended pattern — use for
+### Extended Pattern — Applies To
 
 - Initiative Definition Document
 - Project Charter

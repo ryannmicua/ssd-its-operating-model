@@ -6,7 +6,7 @@ The Business Process Stage Analysis makes the current business process visible s
 
 It exists to show the real flow of work, who does what, what inputs and records are used, where decisions or controls happen, and what outcomes or handoffs each stage produces. A useful Business Process Stage Analysis helps the team understand the present business process without drifting into process redesign, solution design, or implementation planning. It should also make cross-stage handoffs, dependencies, and exception paths visible enough that later assessment does not have to rediscover them.
 
-The intended outcome is that Work Assessment can reference a clear stage-by-stage view of the current business process where that understanding materially affects the recommendation, scope boundary, supportability view, or later definition work.
+Use this artifact when a clear picture of the current process is needed to make a sound assessment recommendation, set a scope boundary, think through supportability, or hand off confidently into Work Definition.
 
 ## 2. When to Use It
 
