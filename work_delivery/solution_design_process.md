@@ -1,437 +1,266 @@
 # Solution Design Process
 
-## Related Documents
-
-### Core Context
-
-- [Work Delivery Framework](work_delivery_framework.md)
-- [Standard Deliverables Guide](standard_deliverables_guide.md)
-- [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
-
-### Solution Deliverables
-
-- [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
-- [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
-- [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
-- [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
-- [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
-- [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
-- [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)
-
-### Governance and Mobilization
-
-- [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md)
-- [Delivery Charter Specification](governance_and_control_deliverables/delivery_charter_specification.md)
-
-### Operational Readiness
-
-- [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
-- [DevOps Guide Specification](operational_readiness_deliverables/devops_guide_specification.md)
-- [Operations & Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
-- [Backup, Restore & Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
-- [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
-
-## Quick Start
-
-Use this guide when your initiative includes new or changed solution behavior and you need a simple, governed path from approved scope to formal acceptance.
-
-In this guide, stage references mean stages in the Work Delivery Framework. You can still use this process as a practical solution-design guide even if your team is not applying the full framework strictly. In that case, use the stages as a helpful sequence and control check, not as a hard dependency.
-
-This guide is mainly for:
-
-- Delivery Owners and project managers
-- analysts and solution leads
-- developers and testers
-- Service Owners and Support Owners
-- reviewers and Acceptance Authorities
-
-If you are new to the process, follow this order:
-
-1. Start from the approved Stage 2 baseline, normally the [Initiative Definition Document](governance_and_control_deliverables/initiative_definition_document_specification.md) or the [Work Brief](work_brief/work_brief_specification.md) for small governed work.
-2. In Stage 2, define the approved scope in [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md) when solution behavior is in scope.
-3. In Stage 4, clarify actors in the [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md), group the scope into behavior-centered [Solution Modules](solution_deliverables/solution_modules_specification.md), create a detailed [Solution Module Definition](solution_deliverables/solution_module_definition_specification.md) for each non-trivial module, and describe behavior in [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md).
-4. In Stage 6, record what is actually live in the [Deployed Solution](solution_deliverables/deployed_solution_specification.md) and gather evidence.
-5. In Stage 7, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md) and get an explicit acceptance decision.
-
-What to produce by stage:
-
-| Stage | Main solution deliverables |
-| --- | --- |
-| Stage 2 - Work Definition | Functional Capabilities |
-| Stage 4 - Work Definition Details | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives, Technical Design Document, and draft operational-readiness artifacts where service impact exists |
-| Stage 6 - Work Delivery | Deployed Solution, linked evidence, and related operational artifacts as needed |
-| Stage 7 - Acceptance, Transition & Closure | Acceptance Record, Operational Readiness Confirmation Record, and final acceptance decision |
-
-What not to do:
-
-- do not add new scope in modules, use cases, or design notes
-- do not turn Stage 2 scope into detailed design too early
-- do not treat working drafts as approved baselines
-- do not wait until the end to reconstruct evidence
-- do not mark anything accepted without the named human authority
-
 ## 1. Purpose
 
-This document is the practical operating guide for solution design inside the Work Delivery Framework.
+This process governs solution design across the [Work Delivery Framework](work_delivery_framework.md). It runs at two levels:
 
-It shows teams how to move from approved scope to structured behavior, delivery evidence, and formal acceptance in a way that is easy to follow and easy to review.
+- **Stage 2 – Work Definition:** confirm the problem, select the active deliverable domains, define what the solution must do (Functional Capabilities), note what "done" means per domain, and flag cross-domain impacts. Keep this decision-ready, not design-heavy.
+- **Stage 4 – Work Definition Details:** define who uses the solution and how, structure it into modules and use cases, start domain-specific design work, and plan testing and acceptance. Elaborate only what was authorized.
+
+Use it together with:
+- [Work Delivery Framework](work_delivery_framework.md)
+- [Standard Deliverables Guide](standard_deliverables_guide.md) – which domains apply and what deliverables each needs
+- [Deliverable Specifications Index](deliverable_specifications_index.md) – individual deliverable specs
+- [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
 
 ## 2. Where This Process Fits
 
-This process works inside the [work_delivery_framework](work_delivery_framework.md). In this document, stage references refer to stages in the Work Delivery Framework. It does not replace stage decisions or governance controls.
+| Stage | Stage name | Solution design work at this stage |
+|---|---|---|
+| **2** | Work Definition | Confirm problem and outcomes; select active domains; define Functional Capabilities; note acceptance focus and cross-domain impacts per domain |
+| **3** | Work Authorization | Present the authorization package; no design work |
+| **4** | Work Definition Details | Define roles and access; structure modules and use cases; start domain-specific artifacts; plan testing and acceptance |
+| **5** | Delivery Mobilization | Confirm readiness to execute; finalize artifact set; no scope changes |
+| **6** | Work Delivery | Build, test, and collect evidence module by module |
+| **7** | Acceptance, Transition & Closure | Check each domain is ready; obtain formal acceptance; hand over ownership; close and capture lessons |
 
-The process can still be used outside strict Work Delivery Framework adoption. When teams use it that way, the stages should be read as practical checkpoints for scope, structure, evidence, and acceptance rather than as mandatory framework gates.
+## 3. Steps at a Glance
 
-| Stage | What solution design is doing |
-| --- | --- |
-| Stage 2 | Define the approval-level solution scope |
-| Stage 4 | Turn approved scope into delivery-ready, behavior-centered structure and behavior |
-| Stage 5 | Use the Delivery Charter and Delivery Roadmap to mobilize controlled execution |
-| Stage 6 | Implement, validate, and record evidence |
-| Stage 7 | Present the acceptance package and get a clear decision |
+Steps 0–2 = **Stage 2**. Steps 3–6 = **Stage 4**. Step 7 = **Stage 6**. Steps 8–9 = **Stage 7**.
 
-Coordination artifacts matter here:
+| Step | Stage | What to do | What to produce |
+|---|---|---|---|
+| **0. Confirm problem & outcomes** | 2 | Confirm the team is solving the right problem before writing any scope | Problem statement, current and future state, success measures, assumptions, exclusions – inside the Initiative Definition Document or Work Brief |
+| **1. Select domains & name Acceptance Authorities** | 2 | Decide which domains are active and how deep each needs to go; name who accepts each domain's output; note what "done" means and what evidence will be needed | Domain list with Acceptance Authorities and brief acceptance notes – inside the Initiative Definition Document |
+| **2. Define scope (Functional Capabilities)** | 2 | Write atomic business ability statements (FC‑###) traceable to outcomes from Step 0 | Functional Capabilities with assumptions and exclusions |
+| **3. Define roles & access** | 4 | Identify who uses the solution; define access boundaries and control rules | User Roles, Personas & Access Model |
+| **4. Structure modules & use cases** | 4 | Group behaviors into modules (SM‑###) and describe each user goal as a use case (UC‑###) | Solution Modules Register, Solution Module Definitions, Use Case Narratives |
+| **5. Start domain work alongside design** | 4 | Draft technical, operational, data, security, and adoption artifacts as modules are defined – not after | Technical Design Document, DevOps Guide, Operations & Support Model, Backup, Restore & Recovery Plan, data and security artifacts, adoption plans |
+| **6. Plan testing & acceptance** | 4 | For each module and use case, define what success looks like and how it will be evidenced | Acceptance criteria, test approach, evidence plan |
+| **7. Build, test & collect evidence** | 6 | Deliver in module-sized increments; validate against use cases; collect evidence; record defects | Delivered components, evidence records, Deployed Solution record |
+| **8. Check readiness across all domains** | 7 | Confirm every active domain has met its obligations before seeking formal acceptance | Readiness confirmation across active domains |
+| **9. Accept, hand over & close** | 7 | Obtain formal acceptance; confirm operational handover; close the initiative; capture early-life observations | Formal Acceptance & Closure Record, operational handover confirmation, early-life review note |
 
-- the [Delivery Roadmap](governance_and_control_deliverables/delivery_roadmap_specification.md) shows when solution work, validation, and acceptance checkpoints will happen
-- the [Delivery Charter](governance_and_control_deliverables/delivery_charter_specification.md) shows how the team will operate, escalate, and manage acceptance readiness
+## 4. Stage 2 – Guidance
 
-These artifacts support the process. They do not replace solution scope, behavior, traceability, or acceptance controls.
+Start from the completed Work Assessment. Do not start design until the problem is clear.
 
-## 3. Who Does What
+**Do not** use Stage 2 to produce User Roles, Solution Modules, Use Case Narratives, or detailed design. Those belong in Stage 4.
 
-| Role | What to focus on in this guide |
-| --- | --- |
-| Outcome Owner | Confirm that designed behavior still supports the intended outcomes and approved scope intent |
-| Delivery Owner | Keep the artifact set moving, controlled, owned, and ready for stage reviews |
-| Project Manager | Coordinate review cycles, version control, roadmap timing, follow-up actions, and evidence readiness |
-| Solution Lead / Analyst | Make scope, module boundaries, roles, and behavior clear enough to build and validate |
-| Developer / Tester | Build and validate only what traces back to approved scope and documented behavior |
-| IT Operations / Service Owner | Review supportability, administration, monitoring, recovery, and handover needs where operational impact exists |
-| Support Owner | Confirm support model, escalation path, and readiness conditions for live operation |
-| Reviewer / SME | Check that the content is correct, practical, and still inside scope |
-| Acceptance Authority | Decide based on visible scope, evidence, open conditions, and readiness for use |
+### Step 0: Confirm problem & outcomes
 
-Simple usage guidance:
+**Do:** Confirm the team is solving the right problem before drafting any scope.
 
-- IT managers should use this guide to check that scope, ownership, and acceptance decisions are visible.
-- Delivery Owners and PMs should use it to keep drafting, review, evidence, and handoff in the right order.
-- Analysts and solution leads should use it to write the artifacts in sequence without mixing stages.
-- Developers and testers should use it to confirm what behavior is approved and what evidence is needed.
-- Operations teams should use it to surface supportability and handover needs early enough to influence the design.
+**Produce** (inside the Initiative Definition Document or Work Brief):
+- Problem statement – what is wrong, missing, or changing, and why it matters
+- Current state and intended future state
+- Outcome statement and measurable success criteria
+- Key assumptions, constraints, and explicit exclusions
+- Affected stakeholders
 
-## 4. Before You Start
+**Do not:** Start drafting Functional Capabilities until outcomes and exclusions are agreed.
 
-Before drafting a governed solution artifact, make sure you have at least:
+**Done when:** The problem, intended outcomes, key assumptions, and exclusions are visible and agreed.
 
-- a clear objective
-- the current stage
-- the in-scope and out-of-scope boundary
-- the named owner and reviewer
-- the IDs already assigned, or the ID pattern you will use
-- the acceptance focus or validation intent
-- the known operational, support, monitoring, or recovery constraints where relevant
+---
 
-If any of these are missing, you can still draft a working document, but label it clearly as a working draft and do not treat it as controlled or decision-ready.
+### Step 1: Select domains & name Acceptance Authorities
 
-## 5. Step Summary
+**Do:** Review the [Standard Deliverables Guide](standard_deliverables_guide.md). For each domain, ask:
+- Does this initiative create, change, or govern data?
+- Does it introduce or modify sensitive access, approvals, or compliance obligations?
+- Does it create new operational ownership or recovery obligations?
+- Does it change how people work or what training they need?
 
-Use this table as the day-to-day entry point.
+For each active domain:
+- Name the **Acceptance Authority** (by name or role).
+- Note what **"done"** broadly means for that domain.
+- Note what **kind of evidence** will later be needed.
 
-| Step                             | Minimum inputs                                                                                                        | Required outputs                                                                                                                                                | Completion check                                                                                                                                                                                              | Accountable owner                                  |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 1. Define authorized scope       | approved initiative intent, scope boundary, owner, reviewer, acceptance focus                                         | Functional Capabilities                                                                                                                                         | scope is clear, IDs are stable, no design detail added                                                                                                                                                        | Delivery Owner with Solution Lead / Analyst        |
-| 2. Structure the solution        | approved Functional Capabilities, user context, business rules, review inputs, operational constraints where relevant | User Roles, Personas & Access Model, Solution Modules Register, Solution Module Definitions, Use Case Narratives, identified operational-readiness deliverables | every module and use case traces to approved capabilities, actors are clear, modules reflect meaningful behaviors, module-level detail exists where needed, operational needs are visible, no new scope added | Delivery Owner with Solution Lead / Analyst        |
-| 3. Implement and evidence        | approved design set, test and evidence approach, delivery roadmap, operational inputs                                 | Deployed Solution, linked evidence, related delivery records, and operational-readiness artifacts                                                               | delivered behavior can be traced back to approved scope and supported with evidence, and the solution is supportable beyond the delivery team                                                                 | Delivery Owner with delivery and operational leads |
-| 4. Prepare for formal acceptance | evidence, open issues, deployment status, operational handoff status                                                  | Acceptance Record and acceptance-ready package                                                                                                                  | acceptance authority can see what is being accepted, on what basis, and under what conditions                                                                                                                 | Delivery Owner with Acceptance Authority           |
+Also capture a brief impact note per active non-Solution domain:
 
-## 6. Guided Workflow
+| Domain | What to capture |
+|---|---|
+| Operational Readiness | Support ownership, operational change, recovery obligations |
+| Data Governance & Records | Data created, changed, or migrated; classification; stewardship |
+| Security, Privacy & Compliance | Sensitive access, privacy obligations, regulatory exposure |
+| User Adoption & Change Enablement | Users affected, expected behavior change, enablement needs |
 
-### 6.1. Step 1 - Define Authorized Scope
+**Do not:** Over-elaborate. These notes support the authorization decision; they are not domain deliverables.
 
-Use this step in Stage 2.
+**Done when:** Active domains are identified, Acceptance Authorities are named, and brief acceptance notes and impact notes are recorded.
 
-Goal:
-State clearly what the solution must be able to do before the team starts detailed design.
+---
 
-Use these specs:
+### Step 2: Define scope (Functional Capabilities)
 
-- [Functional Capabilities Specification](solution_deliverables/functional_capabilities_specification.md)
+**Do:** Write atomic business ability statements in plain language. Each FC‑### should:
+- Trace to a problem or outcome from Step 0
+- State a single ability the solution must provide
+- List any assumptions or exclusions
+- Stay free of workflows, screens, technical design, and actor detail
 
-Do this:
+**Do not:** Include design detail, user behavior, or system behavior in Functional Capabilities.
 
-1. Start from the approved initiative outcome, scope boundary, and exclusions.
-2. Write one Functional Capability per approved business ability.
-3. Assign stable `FC-###` IDs.
-4. Remove workflow detail, screen detail, and technical design.
-5. Review for overlap, ambiguity, and hidden scope growth.
+**Done when:**
+- Each FC traces to a problem or outcome
+- The FC set covers all intended scope without overlapping or including design
+- Assumptions and exclusions are stated
+- Acceptance Authorities are named
 
-Produce:
+---
 
-- Functional Capabilities
+## 5. Stage 4 – Guidance
 
-Do:
+Stage 4 turns the approved scope into design and build artifacts. Elaborate only what was authorized.
 
-- keep statements short and business-focused
-- make exclusions visible
-- keep IDs stable once assigned
+**Do not** introduce new Functional Capabilities, change approved outcomes, or expand domain activation without a change decision.
 
-Do not:
+### Step 3: Define roles & access
 
-- write use case flows
-- group by sprint, team, or system layer
-- add technical design or test evidence
+**Do:** Produce the **User Roles, Personas & Access Model**:
+- Identify roles based on responsibilities, not job titles
+- Define personas where user context affects behavior
+- Apply default-deny and least-privilege access rules
+- Flag control-sensitive actions and separation-of-duties requirements
 
-Step 1 is done when:
+**Do not:** Let access boundaries drift into new scope. If Step 3 reveals sensitive data handling or access not anticipated in Stage 2, record it in the domain activation log.
 
-- the approved scope is understandable to business and delivery readers
-- each capability is atomic enough to trace later
-- the owner and reviewer are named
+**Done when:** Roles, personas, and access boundaries are defined and traceable to approved scope.
 
-### 6.2. Step 2 - Structure the Solution
+---
 
-Use this step in Stage 4.
+### Step 4: Structure modules & use cases
 
-Goal:
-Turn approved scope into delivery-ready, behavior-centered structure and reviewable behavior without expanding scope.
+**Do:** Organize the solution into **Solution Modules (SM‑###)**. For each module, produce:
+- A row in the **Solution Modules Register** (purpose and FC‑IDs supported)
+- A **Solution Module Definition** (SM‑###) covering module boundary, included use cases, dependencies, flow, decisions, risks, and assumptions
+- **Use Case Narratives (UC‑###)** for each user goal, covering: actor, trigger, preconditions, success outcome, alternative paths, access expectations, and acceptance criteria
 
-Use these specs:
+**Do not:** Use modules or use cases to add scope. They elaborate approved FC‑IDs only.
 
-- [User Roles, Personas & Access Model Specification](solution_deliverables/user_roles_personas_and_access_model_specification.md)
-- [Solution Modules Specification](solution_deliverables/solution_modules_specification.md)
-- [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
-- [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
-- operational readiness specs where supportability, administration, monitoring, or recovery will matter
+**Done when:** Every module traces to approved FC‑IDs; every use case traces to a module; use cases have observable acceptance criteria.
 
-Do this in order:
+---
 
-1. Confirm who the users are and what boundaries matter.
-2. Identify meaningful user outcomes, behavior areas, or use case clusters.
-3. Group those behaviors into Solution Modules that can be explained, validated, and accepted as meaningful units.
-4. Create one detailed Solution Module Definition for each non-trivial module.
-5. Write Use Case Narratives that show how each module behaves. These may be kept in one combined use case set or inside each Solution Module Definition.
-6. Bring operations or service ownership into review where the module affects live support, administration, monitoring, recovery, or handover.
-7. Identify which operational-readiness deliverables will be needed later and capture the supportability concerns early.
-8. Check that every use case references a module and approved capability IDs, and that every module maps back to approved capabilities.
-9. Remove anything that introduces behavior not covered by the approved baseline.
+### Step 5: Start domain work alongside design
 
-Produce:
+**Do:** Begin domain-specific artifacts as modules are defined – not after. Examples:
+- **Technical Design Document** – architecture, components, technology choices, data flows
+- **DevOps Guide** – CI/CD, environment setup, config and secret management, monitoring
+- **Operations & Support Model** – support roles, monitoring, escalation, contact points
+- **Backup, Restore & Recovery Plan** – data protection strategy, RPO/RTO, test approach
+- **Data and governance artifacts** – data flows, classifications, stewardship, retention
+- **Security and privacy artifacts** – threat models, controls, compliance mapping
+- **User adoption and change enablement plans** – training, communications, enablement
 
-- User Roles, Personas & Access Model
-- Solution Modules Register
-- Solution Module Definitions
-- Use Case Narratives
-- identified operational-readiness needs where relevant
+**Do not:** Leave domain work until after modules are complete. Doing so forces late rework.
 
-Do:
+**Done when:** Active domain artifacts are drafted and are shaping module design.
 
-- use actors and access expectations consistently
-- keep module boundaries easy to explain in user terms
-- make acceptance criteria observable
-- surface supportability needs early enough to influence the design
+---
 
-Do not:
+### Step 6: Plan testing & acceptance
 
-- turn modules into task plans
-- turn use cases into UI scripts or technical specs
-- use personas to add hidden scope
-- let behavior grouping quietly replace capability traceability
-- leave operations out until the handover stage when the solution clearly has operational impact
+**Do:** For each module and use case, define:
+- **Acceptance criteria** – observable statements tied to use case outcomes
+- **Test approach** – unit, integration, end-to-end, security, performance tests as needed
+- **Evidence plan** – what evidence will be collected, where it will be stored, and how it links to FC‑IDs, SM‑IDs, and UC‑IDs
+- **Defect thresholds** – what blocks or conditions acceptance
 
-Step 2 is done when:
+**Do not:** Leave acceptance planning until late in delivery.
 
-- every module maps back to approved `FC-###` IDs even when the module is mainly defined by behaviors or use cases
-- every use case references one `SM-###` and one or more `FC-###` IDs
-- each non-trivial module has a reviewable Solution Module Definition
-- operational reviewers have been involved where supportability matters
-- reviewers can understand expected behavior without guessing
+**Done when:** Every module and use case has acceptance criteria and an evidence plan.
 
-### 6.3. Step 3 - Implement and Evidence
+---
 
-Use this step in Stage 6.
+## 6. Delivery, Acceptance & Closure – Guidance
 
-Goal:
-Show what was delivered, what is live, and what evidence proves the delivered behavior stays inside approved scope.
+### Step 7: Build, test & collect evidence
 
-Use these specs:
+**Do:** Deliver module by module:
+- Build to the design
+- Validate against use cases and acceptance criteria
+- Collect and store evidence as work progresses
+- Record and address defects
+- Update the **Deployed Solution** record with version, configuration, and environment details
 
-- [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
-- [Technical Design Document Specification](operational_readiness_deliverables/technical_design_document_specification.md)
-- [DevOps Guide Specification](operational_readiness_deliverables/devops_guide_specification.md)
-- [Operations & Support Model Specification](operational_readiness_deliverables/operations_and_support_model_specification.md)
-- [Backup, Restore & Recovery Plan Specification](operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
-- [Operational Readiness Confirmation Record Specification](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md)
+**Done when:** Each module is built, validated, evidenced, and defects are closed or accepted.
 
-Do this:
+---
 
-1. Build and validate only what is approved or formally changed.
-2. Collect evidence as work is completed.
-3. Record what is actually live, where it is live, and under what conditions.
-4. Link evidence back to capabilities, modules, and use cases where appropriate.
-5. Finalize the technical, DevOps, support, and recovery records needed for operations.
-6. Confirm operational ownership and support readiness for what is going live.
+### Step 8: Check readiness across all domains
 
-Produce:
+**Do:** Before seeking formal acceptance, confirm each active domain is ready:
+- **Solution** – all behaviors evidenced and traced to FC‑IDs; defects closed or accepted
+- **Operational Readiness** – support roles in place; monitoring and runbooks ready; backup and recovery tested
+- **Data Governance & Records** – data models approved; migration and retention complete
+- **Security, Privacy & Compliance** – controls implemented and tested; audit logs enabled
+- **User Adoption & Change Enablement** – users trained; enablement materials delivered
 
-- Deployed Solution
-- linked validation and deployment evidence
-- related technical and operational records where required
+**Do not:** Proceed to acceptance if any active domain has open gaps.
 
-Do:
+**Done when:** All active domains are ready and the readiness package is complete.
 
-- keep evidence attributable and reviewable
-- note any phased, deferred, or conditional live scope
-- make support conditions visible
-- make sure operations can support the solution without relying on undocumented delivery-team knowledge
+---
 
-Do not:
+### Step 9: Accept, hand over & close
 
-- invent evidence
-- hide defects or conditions in narrative text
-- claim that live scope is larger than what was approved
+**Do:**
+- Obtain formal acceptance from the named **Acceptance Authority**
+- Record acceptance in the **Formal Acceptance & Closure Record**, linking each deliverable to evidence
+- Confirm operational handover in the relevant Operational Readiness artifacts (for example, the Operations & Support Model or runbooks)
+- Close the work in the **Formal Acceptance & Closure Record** with outcomes, residual actions, and lessons
+- For initiatives with significant operational or behavior change, conduct an early-life review after 30–60 days and record observations
 
-Step 3 is done when:
+**Done when:** Acceptance is formally given, handover is confirmed, and the work is closed.
 
-- evidence exists for what is claimed as delivered
-- the live boundary is clear
-- support and handoff expectations are visible where required
+---
 
-### 6.4. Step 4 - Prepare for Formal Acceptance
+## 7. What Not To Do
 
-Use this step in Stage 7.
+| Do not | Why |
+|---|---|
+| Turn Stage 2 into detailed design | Stage 2 must be decision-ready. Detailed behavior design belongs in Stage 4 |
+| Produce roles, modules, or use cases in Stage 2 | These are Stage 4 artifacts. Producing them in Stage 2 bypasses authorization and creates uncontrolled scope |
+| Use modules or use cases to add new scope | They must elaborate approved FC‑IDs only. New scope requires a change to the Stage 2 baseline |
+| Produce domain deliverables not needed for authorization | Only produce what the decision needs. Over-elaboration wastes effort and obscures scope |
+| Replace the Initiative Definition Document with design artifacts | The Initiative Definition Document is the authorization baseline. Design artifacts trace to it |
+| Let AI define scope, assign Acceptance Authorities, or mark work complete | AI assists with drafting, summarizing, and traceability. If control inputs are missing, label the output as a working draft |
 
-Goal:
-Give the Acceptance Authority a clean, reviewable, evidence-based package for a clear decision.
+## 8. Traceability
 
-Use these specs:
+`Work Assessment → Initiative Definition / Work Brief → domain selection → Functional Capabilities (FC‑###) → roles / modules (SM‑###) / use cases (UC‑###) → domain artifacts → evidence → Deployed Solution → Formal Acceptance & Closure Record`
 
-- [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)
+Use stable IDs:
+- **FC‑###** – Functional Capabilities
+- **SM‑###** – Solution Modules
+- **UC‑###** – Use Case Narratives
 
-Do this:
+Each artifact references the IDs it supports. Modules and use cases link back to FC‑IDs. Evidence links to FC‑IDs, SM‑IDs, and UC‑IDs.
 
-1. Define the acceptance boundary clearly.
-2. List what was reviewed and the evidence used.
-3. Show whether delivered behavior stayed within approved scope.
-4. Make conditions, exclusions, deferred items, and open issues visible.
-5. Record the named authority, date, and decision outcome.
+Teams may optionally define local IDs (not part of the core scheme), for example **TS‑###** for test scripts or **EV‑###** for evidence records.
 
-Produce:
+## 9. AI-Assisted Authoring
 
-- Acceptance Record
-- acceptance-ready package with linked evidence
+**Use AI to:**
+- Draft Functional Capabilities, modules, and use cases from structured inputs
+- Summarize and transform existing specifications
+- Generate lists of risks, assumptions, dependencies, and test cases
+- Check whether scope is drifting from the approved baseline
+- Produce traceability tables linking FC‑IDs to modules, use cases, and tests
 
-Do:
+**Do not use AI to:**
+- Invent scope, requirements, or acceptance criteria
+- Decide which domains or deliverables are needed
+- Assign or change Acceptance Authorities
+- Mark work as accepted or evidence as complete
+- Present a draft as approved – label it as a working draft if control inputs are missing
 
-- keep the record concise
-- use controlled statuses
-- state conditions plainly
+See the [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md) for full guidance.
 
-Do not:
+## 10. Change Control
 
-- bury open items in notes
-- present conditional acceptance as full acceptance
-- approve on behalf of the named authority
-
-Step 4 is done when:
-
-- the acceptance basis is clear
-- the evidence trail is reviewable
-- the Acceptance Authority knows exactly what they are being asked to accept
-
-## 7. How the Artifacts Fit Together
-
-Use this traceability path throughout the process:
-
-`Work Assessment -> Initiative Definition or Work Brief -> Functional Capabilities -> User Roles -> Solution Modules Register -> Solution Module Definitions / Use Case Narratives -> Technical / Operational Readiness Artifacts -> Delivery Evidence / Deployed Solution -> Operational Readiness Confirmation Record -> Acceptance Record`
-
-Practical reading order for first-time practitioners:
-
-1. Read this guide.
-2. Draft [Functional Capabilities](solution_deliverables/functional_capabilities_specification.md).
-3. Draft [User Roles, Personas & Access Model](solution_deliverables/user_roles_personas_and_access_model_specification.md).
-4. Draft the [Solution Modules Register](solution_deliverables/solution_modules_specification.md).
-5. Draft one [Solution Module Definition](solution_deliverables/solution_module_definition_specification.md) per non-trivial module.
-6. Draft [Use Case Narratives](solution_deliverables/use_case_narratives_specification.md) as a combined set or inside the module definitions.
-7. If the solution affects live operations, involve operations during design and prepare the operational-readiness artifacts before go-live.
-8. During delivery, maintain the [Deployed Solution](solution_deliverables/deployed_solution_specification.md).
-9. Prepare the [Operational Readiness Confirmation Record](operational_readiness_deliverables/operational_readiness_confirmation_record_specification.md) for operational acceptance.
-10. At acceptance time, prepare the [Acceptance Record](solution_deliverables/acceptance_record_specification.md).
-
-## 8. AI-Assisted Authoring Workflow
-
-When AI is helping with solution artifacts, use this simple loop:
-
-1. Human states the artifact, stage, scope boundary, IDs, and review intent.
-2. AI drafts only within that boundary.
-3. Human reviews for scope, clarity, and traceability.
-4. AI revises using explicit comments.
-5. Human validates the result against the step checks in this guide.
-6. The named owner accepts the artifact for use.
-7. The Acceptance Authority signs only where formal acceptance is required.
-
-AI can help draft, revise, summarize, and check traceability.
-
-AI must not:
-
-- invent new scope
-- invent evidence
-- approve acceptance
-- hide missing ownership, missing IDs, or missing review inputs
-
-## 9. Prompting Standard for Solution Artifacts
-
-When prompting AI for a solution artifact, use this order:
-
-1. artifact type
-2. current stage
-3. objective
-4. in-scope and out-of-scope boundary
-5. required IDs and source references
-6. required structure
-7. review criteria
-
-Prompt skeleton:
-
-```text
-Draft a [artifact type] for Stage [stage].
-Objective: [what this artifact must achieve]
-In scope: [items]
-Out of scope: [items]
-Required IDs and references: [IDs and source artifacts]
-Required structure: [sections or table fields]
-Review criteria: [clarity, traceability, no new scope, etc.]
-```
-
-## 10. Appendix A - Acceptance-Readiness Checklist
-
-Use this checklist before asking for formal solution acceptance.
-
-- [ ] The acceptance boundary is clear.
-- [ ] All in-scope `FC-###` items are implemented, deferred, or otherwise explicitly dispositioned.
-- [ ] Solution Modules and Use Case Narratives are complete enough to support validation.
-- [ ] Evidence is linked and attributable.
-- [ ] The live release boundary is clear where deployment has occurred.
-- [ ] Operational ownership, support, and handoff conditions are visible where required.
-- [ ] Open defects, exceptions, exclusions, and conditions are stated clearly.
-- [ ] The named Acceptance Authority is identified.
-- [ ] The Acceptance Record states what was reviewed, on what basis, and with what decision outcome.
-
-## 11. Governance Health Signals
-
-Good signs:
-
-- approved capabilities stay stable through elaboration
-- modules organize the scope around meaningful user behaviors without changing it
-- use cases explain behavior in plain language
-- evidence is gathered during delivery, not reconstructed at the end
-- acceptance decisions are explicit and attributable
-
-Warning signs:
-
-- capabilities keep being renumbered or rewritten late
-- modules are grouped by team ownership only or have no clear user-behavior focus
-- use cases introduce new behavior not found in approved scope
-- evidence is missing, unclear, or not traceable
-- acceptance is being prepared before readiness gaps are visible
-The intent is not only to define what the solution will do. It is also to make the solution understandable for future enhancement and supportable by operations teams after delivery.
-
-
+- **Minor changes** that do not alter outcomes, acceptance criteria, budgets, or schedules may be handled in Stage 4 with a decision record.
+- **Material changes** require a major change decision, documented in a decision record, and may send the initiative back to Stage 2 for redefinition and authorization.
+- All changes must be recorded with decision authority, rationale, and effect on scope, cost, time, and risk.
