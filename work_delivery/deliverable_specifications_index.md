@@ -148,4 +148,5 @@ Folder: [user_adoption_and_change_enablement_deliverables](user_adoption_and_cha
 
 ## 12. Shared Reference
 
+- [Specification Writing Guide](../specification_writing_guide.md) — use when creating or revising any deliverable specification
 - [Specification Best Practice Reference](specification_best_practice_reference.md)
