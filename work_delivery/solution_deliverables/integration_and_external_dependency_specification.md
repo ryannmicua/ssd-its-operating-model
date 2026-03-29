@@ -116,27 +116,53 @@ For each item in the summary table, provide:
 
 Summarize any cross-integration concerns such as combined failure impacts, sequencing constraints, shared SLA requirements, or aggregated data sensitivity issues.
 
-## 7. Acceptance Criteria
+## 7. Writing Rules
 
-* All significant external integrations and dependencies are identified with `INT-###` IDs and documented.
-* Each integration entry describes the data exchanged, interface details, timing, operational behaviour, error handling, fallback, ownership, monitoring and security considerations.
-* SLAs, support contacts, and escalation paths are visible for each dependency.
-* Testing and validation plans are stated or linked.
-* The specification is reviewed and agreed by the Delivery Owner, Solution Lead, IT Operations and any external dependency owners.
+Each integration entry should be:
 
-## 8. Recommended Acceptance Evidence
+- assigned a unique `INT-###` ID before it is considered complete — integrations without stable IDs cannot be traced or referenced downstream
+- written with an explicit direction: inbound, outbound, or bidirectional — do not leave direction implicit
+- accompanied by a named contract owner — state who owns the API or interface definition and who is responsible for changes to it
+- complete with failure modes and fallback behavior — do not leave these blank or mark them as to be confirmed after implementation
 
-* Approved Integration & External Dependency Specification signed by the Delivery Owner and relevant dependency owners.
-* Linked test results or contract test evidence confirming interface compatibility.
-* Monitoring configuration evidence in DevOps or operations tools.
+Keep the following out of this specification:
 
-## 9. Recommended Acceptance Authority
+- architecture diagrams and low-level technical design (those belong in the Technical Design Document)
+- deployment or environment configuration (that belongs in the DevOps Guide)
 
-* IT Operations / Service Owner for operational feasibility.
-* Solution Lead for correctness and completeness.
-* External dependency owners for accuracy of described contracts.
+Where an integration has no documented SLA or support contact, call that gap out explicitly rather than omitting the row.
 
-## 10. Prompt Guide
+## 8. Traceability and Ownership Minimum
+
+Each integration entry should link upstream to at least one FC or SM identifier and downstream to test evidence and the DevOps Guide.
+
+Minimum ownership expectations:
+
+- Delivery Owner confirms all material integrations are identified and correctly described.
+- IT Operations / Service Owner confirms operational feasibility and monitoring requirements are addressed.
+- Solution Lead confirms the accuracy of described interface contracts.
+- External dependency owners should confirm the entries for their systems where practical.
+
+## 9. Done When
+
+This artifact is ready when:
+
+- all significant external integrations and dependencies have `INT-###` IDs and entries
+- each entry states direction, data exchanged, protocol, contract owner, failure modes, and fallback behavior
+- SLA and support contact details are visible for each dependency
+- no architecture diagrams or deployment configuration are embedded in this spec
+- monitoring and alerting responsibilities are identified for each integration
+- reviewed and agreed by the Delivery Owner, Solution Lead, and IT Operations
+
+## 10. What Comes Next
+
+After this specification is baselined:
+
+1. use integration details to inform architecture and interface decisions in the [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
+2. use dependency ownership, SLA, and monitoring requirements to inform the [DevOps Guide Specification](../operational_readiness_deliverables/devops_guide_specification.md)
+3. confirm that each material integration has been tested and meets its contract in the [Acceptance Record Specification](acceptance_record_specification.md)
+
+## 11. Prompt Guide
 
 Starter prompt:
 

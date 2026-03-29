@@ -74,25 +74,53 @@ Use a table like this:
 | BR-001 | Approver must be a manager in the requestor's department | Company Policy XYZ | SM-002, UC-008 | Requests from other departments require re-assignment to correct approver | UAT; audit log | Exceptions only for emergency scenarios |
 | BR-002 | Requests over $5,000 require finance approval | Finance Policy 12-B | SM-001, UC-003 | Adds finance approval step | Functional test; evidence of approval captured | Threshold indexed annually |
 
-## 7. Acceptance Criteria
+## 7. Writing Rules
 
-* Each rule has a unique `BR-###` ID and a clear statement.
-* The rationale and policy basis for each rule are recorded.
-* Affected modules and use cases are listed for each rule.
-* The decision impact and validation needs are documented.
-* The catalog is reviewed and approved by the Delivery Owner and relevant policy or compliance authorities.
+Each rule entry should be:
 
-## 8. Recommended Acceptance Evidence
+- assigned a unique `BR-###` ID before it is considered complete — rules without stable IDs cannot be traced or referenced
+- written as an assertion that stands alone ("Staff may not approve their own requests"), not as a process step or workflow description
+- kept separate from its rationale — the rule statement and the policy basis belong in distinct fields, not merged into a single sentence
+- atomic — one condition, one outcome; split compound rules into separate entries with their own IDs
 
-* Approved Business Rules Catalog with signatures or confirmations from the Delivery Owner and relevant policy owners.
-* Linked test results or evidence showing that critical rules have been implemented and validated.
+Keep the following out of rule entries:
 
-## 9. Recommended Acceptance Authority
+- workflow steps or UI behavior (those belong in Use Case Narratives)
+- implementation detail or technical conditions (those belong in the Technical Design Document)
 
-* Delivery Owner and Solution Lead for completeness and clarity.
-* Compliance or Policy Owner where rules originate from corporate or regulatory policies.
+Where a rule originates from a named policy, regulation, or governance obligation, reference that source explicitly rather than paraphrasing it.
 
-## 10. Prompt Guide
+## 8. Traceability and Ownership Minimum
+
+Each rule entry should link upstream to at least one FC, SM, or policy document and downstream to at least one test case or validation evidence item.
+
+Minimum ownership expectations:
+
+- Delivery Owner confirms the catalog is complete and entries are clearly stated.
+- Policy or Compliance Owner confirms that rules originating from regulation or corporate policy are accurately recorded.
+- Solution Lead confirms that all rules with cross-module impact are identified and linked to the relevant module and use case identifiers.
+
+## 9. Done When
+
+This artifact is ready when:
+
+- each rule has a unique `BR-###` ID and an assertion-style rule statement
+- the rule rationale and policy basis are recorded separately from the rule statement
+- each rule is linked to at least one affected SM or UC identifier
+- no workflow steps or UI behavior are embedded in rule entries
+- validation and evidence needs are noted for each rule
+- reviewed and confirmed by the Delivery Owner and the relevant policy or compliance authority
+
+## 10. What Comes Next
+
+After this catalog is baselined:
+
+1. reference `BR-###` IDs in the [Solution Module Definition Specification](solution_module_definition_specification.md) to link applicable rules to each module
+2. use business rules to inform decision logic, validation handling, and exception paths in the [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
+3. link `BR-###` entries to test cases and delivery evidence in the [Validation & Evidence Matrix Specification](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
+4. confirm that mandatory rules have been implemented and tested in the [Acceptance Record Specification](acceptance_record_specification.md)
+
+## 11. Prompt Guide
 
 Starter prompt:
 

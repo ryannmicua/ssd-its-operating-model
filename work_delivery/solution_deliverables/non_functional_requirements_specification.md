@@ -96,26 +96,54 @@ Describe the tools, metrics, dashboards or processes required to measure and mon
 
 List any assumptions, dependencies or constraints affecting the ability to meet the targets, such as infrastructure limitations, third-party SLAs, or phased roll-out scenarios.
 
-## 7. Acceptance Criteria
+## 7. Writing Rules
 
-* Material quality attributes are identified and documented for the solution.
-* Each attribute has a defined target, `QA-###` ID, measurement method and rationale.
-* Differences in quality expectations across modules or use cases are made visible.
-* Constraints, dependencies and assumptions affecting quality are documented.
-* The specification is reviewed and agreed by the Delivery Owner, Solution Lead, Outcome Owner and relevant operational stakeholders.
+Keep each quality attribute:
 
-## 8. Recommended Acceptance Evidence
+- measurable, not descriptive — write `< 200 ms response time at the 95th percentile`, not `fast`
+- assigned to a category (performance, availability, scalability, security, accessibility, etc.) — do not leave attributes uncategorized
+- linked to at least one upstream FC or SM identifier so scope traceability is maintained
+- paired with a stated measurement method — the target and the measurement belong together
 
-* Approved Non-Functional Requirements Specification signed by the Delivery Owner and Outcome Owner or delegate.
-* Linked test plans or results showing that quality targets were considered during Work Delivery (Stage 6).
-* Monitoring and alerting configuration in the DevOps or operations environment.
+Keep the following out of this specification:
 
-## 9. Recommended Acceptance Authority
+- test scripts or detailed test procedures (they belong in test plans)
+- infrastructure or architecture design detail (that belongs in the Technical Design Document)
+- NFRs that simply restate the organizational default without adding initiative-specific context — call out only where this initiative diverges from or depends on those defaults
 
-* Outcome Owner for business-facing qualities.
-* IT Operations / Service Owner for operational qualities.
+Where this initiative's quality requirements differ from organizational standards or defaults, call that out explicitly rather than leaving it implicit.
 
-## 10. Prompt Guide
+## 8. Traceability and Ownership Minimum
+
+Each quality attribute entry should link upstream to at least one FC or SM identifier and downstream to test evidence in the Validation & Evidence Matrix.
+
+Minimum ownership expectations:
+
+- Delivery Owner confirms quality targets align with approved scope and are achievable within budget.
+- Outcome Owner or delegate confirms business-facing targets reflect real operational needs.
+- IT Operations / Service Owner confirms operational quality expectations are viable and supportable.
+
+## 9. Done When
+
+This artifact is ready when:
+
+- each quality attribute has a stable `QA-###` ID, a measurable target, and a stated measurement method
+- NFRs are categorized and linked to relevant FC or SM identifiers
+- attributes that differ from organizational defaults are explicitly called out
+- no test scripts or technical design detail have been embedded
+- constraints and assumptions affecting quality are documented
+- reviewed and agreed by the Delivery Owner, Outcome Owner, and IT Operations
+
+## 10. What Comes Next
+
+After this specification is baselined:
+
+1. use NFR targets to drive design decisions in the [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
+2. use NFR monitoring and alerting requirements to inform the [DevOps Guide Specification](../operational_readiness_deliverables/devops_guide_specification.md)
+3. link each `QA-###` entry to test plans and delivery evidence in the [Validation & Evidence Matrix Specification](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
+4. reference NFR targets when confirming quality acceptance in the [Acceptance Record Specification](acceptance_record_specification.md)
+
+## 11. Prompt Guide
 
 Starter prompt:
 

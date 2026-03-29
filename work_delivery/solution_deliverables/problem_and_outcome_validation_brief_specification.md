@@ -93,23 +93,52 @@ Describe what is deliberately out of scope or will not be addressed by this init
 
 Identify the owner of the brief, the reviewers, and any accountable parties for problem and outcome definition. Record who validated the brief (Outcome Owner, Sponsor, or delegate), the date of validation, and any comments. This ensures the brief is treated as an authoritative baseline rather than an informal note.
 
-## 7. Acceptance Criteria
+## 7. Writing Rules
 
-* The problem statement clearly describes the underlying problem rather than potential solutions.
-* Intended outcomes reflect the desired business results rather than features or technical goals.
-* Success measures are defined and, where possible, quantified.
-* Assumptions, exclusions and dependencies are visible and reviewable.
-* The brief is endorsed by the named owner and reviewer.
+Keep the brief:
 
-## 8. Recommended Acceptance Evidence
+- decision-focused and concise — one or two pages is typical; expand only when genuine complexity requires it
+- grounded in the problem, not the solution — write about what is broken or missing, not what will be built to fix it
+- measurable where outcomes allow — write `reduce processing time by 30%` not `improve processing time`
+- explicit about stakeholder contradictions — if different stakeholders describe the problem differently, name the contradiction and note how it was resolved or left open
 
-* Approved Problem & Outcome Validation Brief signed by the Delivery Owner and Outcome Owner or delegate.
+Keep the following out of the brief:
 
-## 9. Recommended Acceptance Authority
+- solution scope, features, or design detail (those belong in the Functional Capabilities Specification)
+- delivery timelines or resource estimates (those belong in the Initiative Definition Document or Work Brief)
 
-* Outcome Owner or delegated business sponsor.
+Where assumptions or exclusions materially affect what outcomes are achievable, state them explicitly rather than embedding them in the narrative.
 
-## 10. Prompt Guide
+## 8. Traceability and Ownership Minimum
+
+The brief should link upstream to the Work Brief or Initiative Definition Document and downstream to the Functional Capabilities Specification.
+
+Minimum ownership expectations:
+
+- Outcome Owner or delegate confirms the problem statement and intended outcomes are accurate and reflect the actual business need.
+- Delivery Owner confirms the brief is consistent with the approved initiative objective.
+- Record who endorsed the brief, in what capacity, and at what date — this establishes the brief as an authoritative baseline rather than an informal note.
+
+## 9. Done When
+
+This artifact is ready when:
+
+- the problem statement describes the underlying problem, not a proposed solution
+- intended outcomes reflect business results, not features or technical goals
+- success measures are defined and quantified where possible
+- no solution scope or design detail has been introduced
+- any contradictions between stakeholders' views of the problem have been surfaced and noted
+- the brief is endorsed by the Outcome Owner or delegate
+
+## 10. What Comes Next
+
+After this brief is endorsed:
+
+1. use the problem statement and outcomes as the scope input when drafting the [Functional Capabilities Specification](functional_capabilities_specification.md)
+2. reference the brief as part of the authorization basis in the [Initiative Definition Document Specification](../governance_and_control_deliverables/initiative_definition_document_specification.md) if it is not yet baselined
+3. use the outcome statements and success measures to inform quality targets in the [Non-Functional Requirements Specification](non_functional_requirements_specification.md)
+
+## 11. Prompt Guide
 
 Starter prompt:
 
