@@ -41,7 +41,7 @@ If yes, add only the sections you actually need from:
 
 | Extra section | When to add it |
 |---|---|
-| **Who Uses This** | When audience shape significantly affects what to write (merges Intended Readers + Project Context) |
+| **Audience and Context** | When the audience or project context significantly shapes what to write (merges Intended Readers + Project Context into one section) |
 | **What to Keep Out** | When overlap with nearby specs is a real risk |
 | **Maintenance Expectations** | Only for living documents that must stay current |
 | **Review Checklist** | For complex approval artifacts where Done When is not enough |
@@ -70,7 +70,7 @@ Be direct. Avoid "may be useful when" unless genuinely optional.
 
 Name the delivery stage(s) where this artifact is produced. Identify what it consumes from upstream and what it hands to downstream. Keep the handoff description to one short line per direction.
 
-This section replaces the old upstream/downstream relationships section. Do not create a separate section for relationships.
+This section is the relationships section. Use it to capture upstream inputs and downstream handoffs. Do not create a separate "Relationships to Other Artifacts" section — Stage Fit and Handoffs covers that ground.
 
 ### 4.4 Before You Start
 
@@ -155,7 +155,7 @@ When converting an existing spec to this pattern:
 4. **Convert heavy validation to a short checklist.** Replace multi-level validation guides with a 6–8 item Done When list.
 5. **Collapse upstream/downstream into Stage Fit.** One section is enough.
 6. **Remove appendices** unless they contain reference material that cannot go elsewhere.
-7. **Check the result against the practical test**: Can a new reader tell they need this artifact? Can an author draft from it without guessing?
+7. **Check the result with two questions**: Can a new reader tell they need this artifact? Can an author draft from it without guessing?
 
 If the answer to both questions is yes, the migration is done.
 
@@ -191,7 +191,7 @@ Use this as the starting structure for any new spec. Remove or rename sections o
 ## 11. Prompt Guide
 ```
 
-For extended pattern, add only the sections listed in [Section 3](#3.%20When%20to%20Use%20the%20Extended%20Pattern) that are genuinely needed.
+For extended pattern, add only the sections listed in [Section 3](#3-when-to-use-the-extended-pattern) that are genuinely needed.
 
 ---
 
