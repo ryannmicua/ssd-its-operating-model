@@ -1,6 +1,6 @@
 # User Roles, Personas & Access Model Specification
 
-## 1. What This Artifact Is For
+## 1. What this artifact is for
 
 This artifact defines who uses the solution, what each role is trying to achieve, what user context matters, and what access boundaries apply.
 
@@ -20,7 +20,7 @@ The three parts are related but not the same:
 
 Use personas only when they help readers understand real-world context. Personas must not add new scope or replace role and access definitions.
 
-## 2. When to Use It
+## 2. When to use it
 
 Use this artifact when:
 
@@ -32,7 +32,7 @@ Use this artifact when:
 
 This artifact is usually drafted in Stage 4 before or alongside modules and use cases.
 
-## 3. Stage Fit and Handoffs
+## 3. Stage fit and handoffs
 
 - Stage 4: define actor, role, and access boundaries for delivery-ready behavior design.
 - Stage 6: use this model to validate live-role behavior and access expectations.
@@ -49,7 +49,7 @@ Downstream artifacts:
 - [Access Control and Authorization Model Specification](../security_privacy_and_compliance_deliverables/access_control_and_authorization_model_specification.md)
 - [Training and Enablement Materials Specification](../user_adoption_and_change_enablement_deliverables/training_and_enablement_materials_specification.md)
 
-## 4. Before You Start
+## 4. Before you start
 
 Make sure you have:
 
@@ -62,7 +62,7 @@ Make sure you have:
 
 If evidence is weak, keep personas light and treat assumptions as assumptions rather than facts.
 
-## 5. How to Draft It
+## 5. How to draft it
 
 Follow these steps:
 
@@ -83,7 +83,7 @@ Useful tests:
 - If access is written only as broad statements such as "has normal access," rewrite it as role plus action plus resource plus restriction.
 - If a permission exists only "just in case," remove it unless there is a named reason and owner.
 
-## 6. Minimum Structure
+## 6. Minimum structure
 
 ### 6.1. Document header and scope note
 
@@ -228,7 +228,7 @@ Add short notes for:
 
 Keep this section governance-focused and light. Do not turn it into platform configuration detail.
 
-## 7. Writing Rules
+## 7. Writing rules
 
 This artifact should define role boundaries, user context, and access expectations clearly enough that downstream artifacts stay consistent.
 
@@ -254,7 +254,7 @@ Keep the following out:
 
 For detailed authorization logic, use the formal access-control spec in the security domain.
 
-## 8. Traceability and Ownership Minimum
+## 8. Traceability, ownership, and review
 
 Minimum traceability expectation:
 
@@ -267,7 +267,7 @@ Minimum ownership expectation:
 - Solution lead or analyst owns drafting quality and cross-artifact consistency.
 - Security reviewer validates control-sensitive role boundaries where needed.
 
-## 9. Done When
+## 9. Done when
 
 This artifact is ready when:
 
@@ -278,7 +278,7 @@ This artifact is ready when:
 - privileged, supervisory, or separated duties are called out where they matter
 - downstream use cases can use the same actor model and access assumptions without guessing
 
-## 10. What Comes Next
+## 10. What comes next
 
 Use this artifact to support:
 
@@ -287,7 +287,7 @@ Use this artifact to support:
 3. security, training, adoption, and support artifacts where role boundaries matter
 4. the detailed [Access Control & Authorization Model Specification](../security_privacy_and_compliance_deliverables/access_control_and_authorization_model_specification.md) when deeper security design is required
 
-## 11. Prompt Guide
+## 11. Prompt guide
 
 Starter prompt:
 
