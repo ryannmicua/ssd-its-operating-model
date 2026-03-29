@@ -12,11 +12,11 @@ The matrix answers questions like:
 * **Who is responsible?** — the owner of the validation and the evidence.
 * **What is the status?** — planned, in progress, complete, or deferred.
 
-By making evidence design visible in Stage 4, the matrix supports early alignment between delivery and acceptance expectations and reduces later surprises.
+By making evidence design visible in Work Definition Details (Stage 4), the matrix supports early alignment between delivery and acceptance expectations and reduces later surprises.
 
 ## 2. When to Use It
 
-Use this artifact in **Stage 4** (Work Definition Details) when modules and use cases are being drafted. Identify validation methods and evidence types for each scope item. Maintain and update the matrix in **Stage 6** (Work Delivery) as work is completed and evidence is collected. Use it in **Stage 7** (Acceptance) as part of the acceptance package.
+Use this artifact in **Work Definition Details (Stage 4)** when modules and use cases are being drafted. Identify validation methods and evidence types for each scope item. Maintain and update the matrix in **Work Delivery (Stage 6)** (Work Delivery) as work is completed and evidence is collected. Use it in **Acceptance, Transition & Closure (Stage 7)** (Acceptance) as part of the acceptance package.
 
 It is especially useful when:
 
@@ -27,9 +27,9 @@ It is especially useful when:
 
 ## 3. Stage Fit and Handoffs
 
-* **Stage 4:** Draft the matrix using the list of approved Functional Capabilities, modules and use cases. Define the validation method and expected evidence type for each entry.
-* **Stage 6:** Update the matrix with references to actual evidence (test results, screenshots, logs, demonstrations, etc.) as work is completed. Track completion status.
-* **Stage 7:** Include the matrix in the Acceptance Record package to show that each scope item has evidence. Note any deferred or conditional items.
+* **Work Definition Details (Stage 4):** Draft the matrix using the list of approved Functional Capabilities, modules and use cases. Define the validation method and expected evidence type for each entry.
+* **Work Delivery (Stage 6):** Update the matrix with references to actual evidence (test results, screenshots, logs, demonstrations, etc.) as work is completed. Track completion status.
+* **Acceptance, Transition & Closure (Stage 7):** Include the matrix in the Acceptance Record package to show that each scope item has evidence. Note any deferred or conditional items.
 
 Upstream sources:
 
@@ -59,7 +59,7 @@ Make sure you have:
 2. **Define validation method.** For each row, specify how the item will be validated (e.g. unit test, integration test, system test, demo, inspection, compliance audit).
 3. **Specify evidence type.** State what type of evidence will be produced (e.g. test result, report, log file, screenshot, demonstration recording, code review record).
 4. **Assign owner.** Record who is responsible for performing the validation and collecting the evidence.
-5. **Track status.** Define status values such as Planned, In Progress, Complete, Deferred or N/A. Update these during Stage 6.
+5. **Track status.** Define status values such as Planned, In Progress, Complete, Deferred or N/A. Update these during Work Delivery (Stage 6).
 6. **Link to evidence.** As evidence is collected, provide a reference or link to where the evidence is stored (e.g. repository path, ticket ID, artifact name).
 7. **Review and update.** Regularly review the matrix with the delivery team, testers, and Acceptance Authority to ensure evidence requirements are being met.
 
@@ -98,9 +98,9 @@ You may include additional columns for priority, risk, or notes as needed.
 Starter prompt:
 
 ```text
-Create a Validation & Evidence Matrix for Stage 4.
+Create a Validation & Evidence Matrix for Work Definition Details (Stage 4).
 List each FC, SM and UC, the planned validation method, the expected evidence type, and the responsible owner.
-Use a table format and leave evidence reference blank until Stage 6.
+Use a table format and leave evidence reference blank until Work Delivery (Stage 6).
 ```
 
 Validation prompt:

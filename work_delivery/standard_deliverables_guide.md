@@ -48,7 +48,7 @@ Use this reference differently at each stage:
 - **Stage 1 - Work Assessment:** use the [Work Assessment Process](work_assessment/work_assessment_process.md) and its three assessment artifacts to decide whether the work should proceed into definition. This guide mainly becomes active after that decision.
 - **Stage 2 - Work Definition:** identify the required deliverables for the initiative, use domains to organize them where helpful, identify Acceptance Authorities, and define the minimum authorization-level output needed for a sound decision.
 - **Stage 3 - Work Authorization:** confirm that selected deliverables, owners, acceptance approach, and major cost/risk implications are decision-ready.
-- **Stage 4 - Work Definition Details:** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.
+- **Work Definition Details (Stage 4):** elaborate the required deliverables and any additional definition deliverables needed to build, test, transition, and accept the work.
 - **Stage 5 - Delivery Mobilization:** activate the delivery governance and execution controls needed to run the authorized work in a controlled and visible way.
 - **Stage 6 - Work Delivery:** produce the selected deliverables and collect evidence against the agreed acceptance criteria.
 - **Stage 7 - Acceptance, Transition & Closure:** confirm that each in-scope domain has evidence and explicit acceptance.
@@ -114,10 +114,10 @@ If a team is new to solution design, use the deliverables in this order:
 | Stage | Deliverable | Why it exists | Specification |
 | --- | --- | --- | --- |
 | Stage 2 | Functional Capabilities | Defines the approved solution scope baseline | [functional_capabilities_specification](solution_deliverables/functional_capabilities_specification.md) |
-| Stage 4 | User Roles, Personas & Access Model | Clarifies actors, boundaries, and control-sensitive roles | [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md) |
-| Stage 4 | Solution Modules Register | Lists all modules and their traceability at overview level | [solution_modules_specification](solution_deliverables/solution_modules_specification.md) |
-| Stage 4 | Solution Module Definition | Describes one module in detail, including use cases and module acceptance criteria | [solution_module_definition_specification](solution_deliverables/solution_module_definition_specification.md) |
-| Stage 4 | Use Case Narratives | Describes expected behavior in plain business language, either as a combined set or inside module definitions | [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md) |
+| Work Definition Details (Stage 4) | User Roles, Personas & Access Model | Clarifies actors, boundaries, and control-sensitive roles | [user_roles_personas_and_access_model_specification](solution_deliverables/user_roles_personas_and_access_model_specification.md) |
+| Work Definition Details (Stage 4) | Solution Modules Register | Lists all modules and their traceability at overview level | [solution_modules_specification](solution_deliverables/solution_modules_specification.md) |
+| Work Definition Details (Stage 4) | Solution Module Definition | Describes one module in detail, including use cases and module acceptance criteria | [solution_module_definition_specification](solution_deliverables/solution_module_definition_specification.md) |
+| Work Definition Details (Stage 4) | Use Case Narratives | Describes expected behavior in plain business language, either as a combined set or inside module definitions | [use_case_narratives_specification](solution_deliverables/use_case_narratives_specification.md) |
 | Stage 6 | Deployed Solution | Records what approved scope is actually live | [deployed_solution_specification](solution_deliverables/deployed_solution_specification.md) |
 | Stage 7 | Acceptance Record | Summarizes what was reviewed, what evidence was used, and what decision was made | [acceptance_record_specification](solution_deliverables/acceptance_record_specification.md) |
 
@@ -140,7 +140,7 @@ These governance artifacts support timing, coordination, and operating rhythm. T
 - **[Solution Module Definition](#7.7.%20Solution%20Module%20Definition)**
 - **[Use Case Narratives](#7.8.%20Use%20Case%20Narratives)**
 - **[Business Rules Catalog](#7.9.%20Business%20Rules%20Catalog)**
-- **[Quality Attributes / NFR Specification](#7.10.%20Quality%20Attributes%20%2F%20NFR%20Specification)**
+- **[Non-Functional Requirements Specification](#7.10.%20Non-Functional%20Requirements%20Specification)**
 - **[Integration & External Dependency Specification](#7.11.%20Integration%20%26%20External%20Dependency%20Specification)**
 - **[User Roles, Personas & Access Model](#7.12.%20User%20Roles,%20Personas%20&%20Access%20Model)**
 - **[Deployed Solution](#7.13.%20Deployed%20Solution)**
@@ -223,9 +223,9 @@ Use this when rules recur across multiple modules or use cases, audit or complia
 - Affected modules and use cases are identified for each rule.
 - The catalog does not introduce new scope — it consolidates and clarifies existing rules.
 
-### 7.10. Quality Attributes / NFR Specification
+### 7.10. Non-Functional Requirements Specification
 
-Specification: [quality_attributes_specification](solution_deliverables/quality_attributes_specification.md)
+Specification: [non_functional_requirements_specification](solution_deliverables/non_functional_requirements_specification.md)
 
 Defines the non-functional qualities the solution must exhibit — performance, availability, reliability, scalability, usability, accessibility, security, privacy, compliance, and others. Each attribute is assigned a `QA-###` identifier.
 
@@ -373,7 +373,7 @@ Shows the planned delivery path from mobilization through acceptance, including 
 Use this deliverable progressively across stages:
 
 - Stage 2: draft a high-level roadmap for authorization-level visibility
-- Stage 4: elaborate the roadmap with releases, dependencies, and control checkpoints
+- Work Definition Details (Stage 4): elaborate the roadmap with releases, dependencies, and control checkpoints
 - Stage 5: confirm and baseline the roadmap with the mobilized delivery team
 
 The roadmap should remain aligned to approved scope and should be revised through change control when material changes occur.
@@ -417,7 +417,7 @@ Use this from Stage 2 onwards whenever there are multiple unknowns or design unc
 
 Specification: [validation_and_evidence_matrix_specification](governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
 
-Maps each approved scope item (FC, SM, UC) to its validation method and the evidence required for acceptance. Created in Stage 4 as a validation planning tool and maintained in Stage 6 as an evidence tracker. Used in Stage 7 as part of the acceptance package.
+Maps each approved scope item (FC, SM, UC) to its validation method and the evidence required for acceptance. Created in Work Definition Details (Stage 4) as a validation planning tool and maintained in Stage 6 as an evidence tracker. Used in Stage 7 as part of the acceptance package.
 
 Use this when the initiative has multiple modules or capabilities needing explicit evidence for acceptance.
 
@@ -449,7 +449,7 @@ This prevents informal completion without accountability.
 - Approved Initiative Definition Document
 - Approved Project Charter
 - Approved Delivery Charter where controlled mobilization is required
-- Delivery Roadmap (drafted in Stage 2, elaborated in Stage 4, and confirmed in Stage 5)
+- Delivery Roadmap (drafted in Stage 2, elaborated in Work Definition Details (Stage 4), and confirmed in Stage 5)
 - Maintained Decision Record Log
 - Maintained Solution Assumptions & Issues Register (all critical items resolved or deferred with rationale)
 - Completed Validation & Evidence Matrix

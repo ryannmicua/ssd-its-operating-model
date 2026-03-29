@@ -30,18 +30,18 @@ It is most valuable when:
 * Failure handling, retries or fallback behaviour could materially affect user outcomes.
 * Operational ownership must span multiple teams or vendors.
 
-Draft the specification in **Stage 4** alongside the Technical Design Document, then refine it in Stage 5 and Stage 6 as details are clarified and tested.
+Draft the specification in **Work Definition Details (Stage 4)** alongside the Technical Design Document, then refine it in Delivery Mobilization (Stage 5) and Work Delivery (Stage 6) as details are clarified and tested.
 
 ## 3. Stage Fit and Handoffs
 
-* **Stage 4:** Identify all significant integrations and dependencies. Document their purpose, contract summary, data exchanged, timing, error handling and operational responsibilities. Assign `INT-###` identifiers.
-* **Stage 5:** Refine the specification with input from dependency owners, security and compliance teams, and operations. Confirm SLAs, fallback strategies and monitoring needs.
-* **Stage 6:** Validate integrations in testing. Update the specification with operational considerations discovered during delivery. Link integration tests and evidence in the Validation & Evidence Matrix.
-* **Stage 7:** Use the specification to support operational handover and acceptance. Ensure service owners and support teams understand the dependencies and their responsibilities.
+* **Work Definition Details (Stage 4):** Identify all significant integrations and dependencies. Document their purpose, contract summary, data exchanged, timing, error handling and operational responsibilities. Assign `INT-###` identifiers.
+* **Delivery Mobilization (Stage 5):** Refine the specification with input from dependency owners, security and compliance teams, and operations. Confirm SLAs, fallback strategies and monitoring needs.
+* **Work Delivery (Stage 6):** Validate integrations in testing. Update the specification with operational considerations discovered during delivery. Link integration tests and evidence in the Validation & Evidence Matrix.
+* **Acceptance, Transition & Closure (Stage 7):** Use the specification to support operational handover and acceptance. Ensure service owners and support teams understand the dependencies and their responsibilities.
 
 Upstream sources:
 
-* [Quality Attributes / Non-Functional Requirements Specification](quality_attributes_specification.md)
+* [Non-Functional Requirements Specification](non_functional_requirements_specification.md)
 * [Solution Module Definition Specification](solution_module_definition_specification.md)
 * [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
 
@@ -141,7 +141,7 @@ Summarize any cross-integration concerns such as combined failure impacts, seque
 Starter prompt:
 
 ```text
-Draft an Integration & External Dependency Specification for Stage 4.
+Draft an Integration & External Dependency Specification for Work Definition Details (Stage 4).
 List each significant integration or external dependency with a unique INT-### identifier, describe its purpose, data exchanged, interface details, timing, operational behaviour, failure handling, ownership, monitoring, and security considerations.
 Use a table for the summary and detailed entries for each integration.
 ```

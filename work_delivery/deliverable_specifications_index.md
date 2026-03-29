@@ -45,7 +45,7 @@ Use these when defining governed work and getting approval:
 6. [Problem & Outcome Validation Brief Specification](solution_deliverables/problem_and_outcome_validation_brief_specification.md) to confirm the problem and outcomes before scope is defined
 7. [Delivery Roadmap Specification](governance_and_control_deliverables/delivery_roadmap_specification.md) for authorization-level delivery visibility
 
-### 3.3. Stage 4 to Stage 7 - Design, Delivery, Acceptance, and Closure
+### 3.3. Work Definition Details (Stage 4) to Stage 7 - Design, Delivery, Acceptance, and Closure
 
 Use the process guides first, then the relevant domain specifications:
 
@@ -99,7 +99,7 @@ Folder: [solution_deliverables](solution_deliverables)
 - [Solution Module Definition Specification](solution_deliverables/solution_module_definition_specification.md)
 - [Use Case Narratives Specification](solution_deliverables/use_case_narratives_specification.md)
 - [Business Rules Catalog Specification](solution_deliverables/business_rules_catalog_specification.md)
-- [Quality Attributes / NFR Specification](solution_deliverables/quality_attributes_specification.md)
+- [Non-Functional Requirements Specification](solution_deliverables/non_functional_requirements_specification.md)
 - [Integration & External Dependency Specification](solution_deliverables/integration_and_external_dependency_specification.md)
 - [Deployed Solution Specification](solution_deliverables/deployed_solution_specification.md)
 - [Acceptance Record Specification](solution_deliverables/acceptance_record_specification.md)

@@ -1,8 +1,8 @@
-# Quality Attributes / Non-Functional Requirements Specification
+# Non-Functional Requirements Specification
 
 ## 1. What This Artifact Is For
 
-The **Quality Attributes / Non-Functional Requirements (NFR) Specification** defines the cross-cutting qualities that the solution must exhibit in order to be considered acceptable in production. While Functional Capabilities describe what the solution must do, quality attributes describe **how well** it must do it.
+The **Non-Functional Requirements (NFR) Specification** defines the cross-cutting qualities that the solution must exhibit in order to be considered acceptable in production. While Functional Capabilities describe what the solution must do, NFRs describe **how well** it must do it.
 
 This artifact answers questions such as:
 
@@ -16,7 +16,7 @@ Documenting these expectations early helps teams make design decisions, plan tes
 
 ## 2. When to Use It
 
-Use this specification during **Stage 4** (Work Definition Details) whenever the solution's success depends on qualities beyond basic correctness. It is especially useful when:
+Use this specification during **Work Definition Details (Stage 4)** whenever the solution's success depends on qualities beyond basic correctness. It is especially useful when:
 
 * Performance, throughput, latency or responsiveness matter for user satisfaction or operational viability.
 * Reliability, availability, failover or disaster recovery capabilities will influence design or cost.
@@ -29,10 +29,10 @@ For very small, non-critical initiatives, these qualities may be captured within
 
 ## 3. Stage Fit and Handoffs
 
-* **Stage 4:** Draft the quality attributes based on the Problem & Outcome Validation Brief, Functional Capabilities, and known operational expectations. Review them with the Outcome Owner, Delivery Owner, Solution Lead and operational stakeholders.
-* **Stage 5:** Refine and baseline the attributes as part of mobilization planning, linking them to test planning and budgeting.
-* **Stage 6:** Use the attributes to guide performance, reliability, usability and compliance testing. Record evidence and deviations in the Validation & Evidence Matrix.
-* **Stage 7:** Refer to the attributes when determining whether delivered behaviour meets the agreed acceptance quality.
+* **Work Definition Details (Stage 4):** Draft the quality attributes based on the Problem & Outcome Validation Brief, Functional Capabilities, and known operational expectations. Review them with the Outcome Owner, Delivery Owner, Solution Lead and operational stakeholders.
+* **Delivery Mobilization (Stage 5):** Refine and baseline the attributes as part of mobilization planning, linking them to test planning and budgeting.
+* **Work Delivery (Stage 6):** Use the attributes to guide performance, reliability, usability and compliance testing. Record evidence and deviations in the Validation & Evidence Matrix.
+* **Acceptance, Transition & Closure (Stage 7):** Refer to the attributes when determining whether delivered behaviour meets the agreed acceptance quality.
 
 Upstream sources:
 
@@ -106,8 +106,8 @@ List any assumptions, dependencies or constraints affecting the ability to meet 
 
 ## 8. Recommended Acceptance Evidence
 
-* Approved Quality Attributes / NFR Specification signed by the Delivery Owner and Outcome Owner or delegate.
-* Linked test plans or results showing that quality targets were considered during Stage 6.
+* Approved Non-Functional Requirements Specification signed by the Delivery Owner and Outcome Owner or delegate.
+* Linked test plans or results showing that quality targets were considered during Work Delivery (Stage 6).
 * Monitoring and alerting configuration in the DevOps or operations environment.
 
 ## 9. Recommended Acceptance Authority
@@ -120,7 +120,7 @@ List any assumptions, dependencies or constraints affecting the ability to meet 
 Starter prompt:
 
 ```text
-Draft a Quality Attributes / Non-Functional Requirements Specification for Stage 4.
+Draft a Non-Functional Requirements Specification for Work Definition Details (Stage 4).
 Include the material quality attributes for this initiative, the target levels for each, how they will be measured, and any assumptions or constraints.
 Assign a QA-### ID to each attribute and link them to relevant FC, SM or UC IDs where applicable.
 ```
@@ -128,5 +128,5 @@ Assign a QA-### ID to each attribute and link them to relevant FC, SM or UC IDs 
 Validation prompt:
 
 ```text
-Check whether the Quality Attributes specification lists all relevant non-functional qualities, defines measurable targets with QA-### IDs, explains how each will be measured and monitored, and records assumptions and constraints.
+Check whether the Non-Functional Requirements Specification lists all relevant non-functional qualities, defines measurable targets with QA-### IDs, explains how each will be measured and monitored, and records assumptions and constraints.
 ```

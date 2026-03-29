@@ -15,7 +15,7 @@ By explicitly recording these items up front, the brief reduces the risk of desi
 
 ## 2. When to Use It
 
-Use this artifact early in **Stage 2** (Work Definition) after the initiative has passed work assessment but before Functional Capabilities are drafted. It is especially useful when:
+Use this artifact early in **Work Definition (Stage 2)** (Work Definition) after the initiative has passed work assessment but before Functional Capabilities are drafted. It is especially useful when:
 
 * The problem statement is vague or contested.
 * There are multiple stakeholders with different interpretations of the desired outcome.
@@ -26,9 +26,9 @@ For very small initiatives or urgent fixes, these items may be recorded directly
 
 ## 3. Stage Fit and Handoffs
 
-* **Stage 2:** Draft and review the brief before writing Functional Capabilities. Use it to align stakeholders on problem, outcome, assumptions and success measures.
-* **Stage 3:** Treat this brief as part of the authorization basis when the Initiative Definition Document is light or absent.
-* **Stage 4:** Refer to the brief when structuring modules, drafting use cases and defining quality attributes. It should remain unchanged unless the initiative's purpose is formally revised through change control.
+* **Work Definition (Stage 2):** Draft and review the brief before writing Functional Capabilities. Use it to align stakeholders on problem, outcome, assumptions and success measures.
+* **Work Authorization (Stage 3):** Treat this brief as part of the authorization basis when the Initiative Definition Document is light or absent.
+* **Work Definition Details (Stage 4):** Refer to the brief when structuring modules, drafting use cases and defining quality attributes. It should remain unchanged unless the initiative's purpose is formally revised through change control.
 
 Upstream sources:
 
@@ -37,7 +37,7 @@ Upstream sources:
 Downstream artifacts:
 
 * [Functional Capabilities Specification](functional_capabilities_specification.md)
-* [Quality Attributes / Non-Functional Requirements Specification](quality_attributes_specification.md)
+* [Non-Functional Requirements Specification](non_functional_requirements_specification.md)
 * [Solution Modules Specification](solution_modules_specification.md)
 
 ## 4. Before You Start
@@ -114,7 +114,7 @@ Identify the owner of the brief, the reviewers, and any accountable parties for 
 Starter prompt:
 
 ```text
-Draft a Problem & Outcome Validation Brief for Stage 2.
+Draft a Problem & Outcome Validation Brief for Work Definition (Stage 2).
 Problem: [describe the problem to be solved]
 Affected users: [list key roles or personas]
 Outcomes: [list desired outcomes]

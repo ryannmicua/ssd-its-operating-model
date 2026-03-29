@@ -15,7 +15,7 @@ The register complements the [Decision Record Log](decision_record_log_specifica
 
 ## 2. When to Use It
 
-Use this register from **Stage 2** through **Stage 7**. It is most helpful when:
+Use this register from **Work Definition (Stage 2)** through **Acceptance, Transition & Closure (Stage 7)**. It is most helpful when:
 
 * There are multiple unknowns, dependencies or unanswered questions that could affect design or acceptance.
 * Design assumptions could significantly change cost, timeline, quality or scope if invalidated.
@@ -25,17 +25,17 @@ It should be maintained throughout the initiative and reviewed regularly. Items 
 
 ## 3. Stage Fit and Handoffs
 
-* **Stage 2 – Work Definition:** use the register to capture early assumptions and open questions that need to be addressed before Functional Capabilities are approved.
-* **Stage 4 – Work Definition Details:** create or update the register as design questions, assumptions and issues are identified. Review it during module definition and use case drafting.
-* **Stage 5 – Delivery Mobilization:** update the register during mobilization planning and risk assessment. Assign owners and target resolution dates.
-* **Stage 6 – Work Delivery:** track resolution of assumptions and issues during delivery. As items are resolved, record the outcome and reference the Decision Record Log if a decision was made.
-* **Stage 7 – Acceptance, Transition & Closure:** use the register to highlight any remaining assumptions or unresolved issues that affect acceptance or require post-acceptance management.
+* **Work Definition (Stage 2):** use the register to capture early assumptions and open questions that need to be addressed before Functional Capabilities are approved.
+* **Work Definition Details (Stage 4):** create or update the register as design questions, assumptions and issues are identified. Review it during module definition and use case drafting.
+* **Delivery Mobilization (Stage 5):** update the register during mobilization planning and risk assessment. Assign owners and target resolution dates.
+* **Work Delivery (Stage 6):** track resolution of assumptions and issues during delivery. As items are resolved, record the outcome and reference the Decision Record Log if a decision was made.
+* **Acceptance, Transition & Closure (Stage 7):** use the register to highlight any remaining assumptions or unresolved issues that affect acceptance or require post-acceptance management.
 
 Upstream sources:
 
 * [Solution Module Definition Specification](../solution_deliverables/solution_module_definition_specification.md)
 * [Use Case Narratives Specification](../solution_deliverables/use_case_narratives_specification.md)
-* [Quality Attributes / Non-Functional Requirements Specification](../solution_deliverables/quality_attributes_specification.md)
+* [Non-Functional Requirements Specification](../solution_deliverables/non_functional_requirements_specification.md)
 * Team workshops, risk assessments and design reviews
 
 Downstream artifacts:
@@ -68,8 +68,8 @@ Use a table like this:
 
 | Item ID | Type (Assumption/Issue/Risk) | Description | Impact | Related artifacts | Owner | Status | Target resolution | Resolution summary / Decision reference |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| AI-001 | Assumption | API provider will deliver v2 endpoints by Q3 | Could delay integration if API is late | SM-003, UC-010 | Delivery owner | Open | Stage 5 | |
-| AI-002 | Issue | Unclear whether finance approval is needed for small purchases | Could change approval flow in UC-003 | BR-002, UC-003 | SME for Finance | Under investigation | Stage 4 | |
+| AI-001 | Assumption | API provider will deliver v2 endpoints by Q3 | Could delay integration if API is late | SM-003, UC-010 | Delivery owner | Open | Delivery Mobilization (Stage 5) | |
+| AI-002 | Issue | Unclear whether finance approval is needed for small purchases | Could change approval flow in UC-003 | BR-002, UC-003 | SME for Finance | Under investigation | Work Definition Details (Stage 4) | |
 
 ## 7. Acceptance Criteria
 

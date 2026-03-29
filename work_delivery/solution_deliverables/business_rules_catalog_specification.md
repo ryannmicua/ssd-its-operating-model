@@ -15,7 +15,7 @@ Having a business rules catalog prevents rule duplication, fragmentation and inc
 
 ## 2. When to Use It
 
-Use this artifact in **Stage 4** (Work Definition Details) when the solution contains numerous validations, approval conditions or decision logic that cut across multiple modules or use cases. It is especially useful when:
+Use this artifact in **Work Definition Details (Stage 4)** when the solution contains numerous validations, approval conditions or decision logic that cut across multiple modules or use cases. It is especially useful when:
 
 * Policy or regulatory rules must be applied consistently throughout the solution.
 * Approvals or exception handling depend on clear and repeatable rules.
@@ -27,10 +27,10 @@ For simple systems with minimal rules, it may be sufficient to document rules di
 
 ## 3. Stage Fit and Handoffs
 
-* **Stage 4:** Draft the catalog alongside Solution Module Definitions and Use Case Narratives. Identify rules, rationale, affected modules/use cases, and validation implications.
-* **Stage 5:** Review the catalog with policy owners, compliance officers or subject matter experts. Refine as needed and baseline the rules.
-* **Stage 6:** Use the catalog to guide development and testing. Link rules to test cases and evidence in the Validation & Evidence Matrix.
-* **Stage 7:** Reference the catalog during acceptance to confirm that mandatory rules have been implemented and validated.
+* **Work Definition Details (Stage 4):** Draft the catalog alongside Solution Module Definitions and Use Case Narratives. Identify rules, rationale, affected modules/use cases, and validation implications.
+* **Delivery Mobilization (Stage 5):** Review the catalog with policy owners, compliance officers or subject matter experts. Refine as needed and baseline the rules.
+* **Work Delivery (Stage 6):** Use the catalog to guide development and testing. Link rules to test cases and evidence in the Validation & Evidence Matrix.
+* **Acceptance, Transition & Closure (Stage 7):** Reference the catalog during acceptance to confirm that mandatory rules have been implemented and validated.
 
 Upstream sources:
 
@@ -97,7 +97,7 @@ Use a table like this:
 Starter prompt:
 
 ```text
-Create a Business Rules Catalog for Stage 4.
+Create a Business Rules Catalog for Work Definition Details (Stage 4).
 List each rule with a unique BR-### ID, the rule statement, rationale or policy basis, affected modules and use cases, and the expected decision impact and validation method.
 Use a table format for clarity.
 ```
