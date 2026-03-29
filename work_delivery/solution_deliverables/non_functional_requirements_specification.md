@@ -1,6 +1,6 @@
 # Non-Functional Requirements Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The **Non-Functional Requirements Specification** defines the cross-cutting qualities the solution must exhibit to be acceptable in production. While Functional Capabilities describe what the solution must do, this artifact describes **how well** it must do it.
 
@@ -14,7 +14,7 @@ It answers questions such as:
 
 Documenting these expectations early helps teams make design decisions, plan testing, and agree on acceptance criteria that reflect real-world demands rather than implicit or conflicting assumptions. Intended readers include delivery owners, outcome owners, solution leads, technical designers, testers, and IT operations.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this specification during **Work Definition Details (Stage 4)** whenever the solution's success depends on qualities beyond basic correctness. It is especially useful when:
 
@@ -27,7 +27,7 @@ Use this specification during **Work Definition Details (Stage 4)** whenever the
 
 For very small, non-critical initiatives, these qualities may be captured within other artifacts such as use cases or module definitions. For anything with multiple users, integrations, or service-level commitments, a dedicated specification clarifies expectations and prevents unstated assumptions from driving late-stage disputes.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 * **Work Definition Details (Stage 4):** Draft quality attributes based on the Problem & Outcome Validation Brief, Functional Capabilities, and known operational expectations. Review them with the Outcome Owner, Delivery Owner, Solution Lead, and operational stakeholders.
 * **Delivery Mobilization (Stage 5):** Refine and baseline the attributes as part of mobilization planning, linking them to test planning and budgeting.
@@ -48,7 +48,7 @@ Downstream artifacts:
 * [Validation & Evidence Matrix Specification](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
 * [Acceptance Record Specification](acceptance_record_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -60,7 +60,7 @@ Make sure you have:
 
 If any of these are missing, treat the draft as a working draft and label it as such.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Identify applicable quality attributes.** Common categories include performance, reliability, scalability, usability, accessibility, maintainability, portability, security, privacy, auditability, interoperability, and regulatory compliance. Select only those that are material to the initiative.
 2. **Define target levels.** For each attribute, state the target or range — for example, response time under 2 seconds for 95% of interactions, availability 99.9%, time to restore under 4 hours, WCAG 2.1 AA compliance. Include the rationale and highlight trade-offs if targets may conflict.
@@ -70,7 +70,7 @@ If any of these are missing, treat the draft as a working draft and label it as 
 6. **Note constraints and assumptions.** Record any constraints, dependencies, or assumptions that affect the ability to meet the target — for example, third-party SLAs, network latency, or deployment environments.
 7. **Review and agree.** Validate the targets with stakeholders, ensuring they are realistic, measurable, and aligned with budget and delivery expectations.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Document header
 
@@ -98,7 +98,7 @@ Describe the tools, metrics, dashboards, or processes required to measure and mo
 
 List any assumptions, dependencies, or constraints affecting the ability to meet the targets, such as infrastructure limitations, third-party SLAs, or phased roll-out scenarios.
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Match target levels to real operational and business needs — avoid aspirational statements that cannot be tested. Where targets conflict or trade-offs exist, make the trade-off visible rather than hiding it. State rationale so reviewers and designers can understand why each target was set.
 
@@ -109,7 +109,7 @@ Keep the following out:
 * operational runbooks that belong in the Operations & Support Model
 * security controls or data handling rules that belong in security and privacy specifications
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 This artifact traces back to the Problem & Outcome Validation Brief and the Functional Capabilities Specification.
 
@@ -123,7 +123,7 @@ Ownership expectations:
 * IT Operations or Service Owner confirms operational qualities are feasible and supportable.
 * Reviewer validates that targets are measurable and linked to evidence.
 
-## 9. Done when
+## 9. Done When
 
 * Material quality attributes are identified and documented for the solution.
 * Each attribute has a defined target, `QA-###` ID, measurement method, and rationale.
@@ -131,14 +131,14 @@ Ownership expectations:
 * Constraints, dependencies, and assumptions affecting quality are documented.
 * The specification is reviewed and agreed by the Delivery Owner, Solution Lead, Outcome Owner, and relevant operational stakeholders.
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Use quality targets to guide the [Technical Design Document](../operational_readiness_deliverables/technical_design_document_specification.md).
 2. Feed `QA-###` IDs into the [Validation & Evidence Matrix](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md) for test planning and evidence tracking.
 3. Establish monitoring and alerting expectations in the [DevOps Guide](../operational_readiness_deliverables/devops_guide_specification.md).
 4. Reference quality targets when completing the [Acceptance Record](acceptance_record_specification.md) to confirm delivered behavior meets agreed acceptance quality.
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

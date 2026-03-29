@@ -1,12 +1,12 @@
 # Decision Record Log Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Decision Record Log keeps a traceable record of material decisions made during an initiative. It prevents decisions from being lost, forgotten, or re-litigated by making them visible with a clear owner, rationale, and current status.
 
 Intended readers include the Delivery Owner, governance coordinator, delivery team, and any reviewer or auditor who needs to understand why key choices were made.
 
-## 2. When to use it
+## 2. When to Use It
 
 Start the log in Stage 2 — Work Definition when the initiative begins making decisions about scope, funding, approach, or design. Keep it active until the initiative closes.
 
@@ -21,7 +21,7 @@ Do not use it for routine operational choices, meeting discussion notes, or mino
 
 This log is required for all governed initiatives. It is most valuable when decisions are numerous, cross-team, or when accountability and audit trail matter.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 **Upstream sources:**
 
@@ -43,7 +43,7 @@ This log is required for all governed initiatives. It is most valuable when deci
 | Work Delivery (Stage 6) | Decisions on implementation, evidence, or material changes |
 | Acceptance, Transition & Closure (Stage 7) | Acceptance decisions and closure decisions |
 
-## 4. Before you start
+## 4. Before You Start
 
 Before creating the log, confirm you have:
 
@@ -52,7 +52,7 @@ Before creating the log, confirm you have:
 - a naming convention using `DR-###` identifiers for stable traceability
 - a shared location where the log is visible to the delivery team and reviewers
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Assign a log owner.** The owner is accountable for maintaining currency and completeness.
 2. **Add a row immediately when a material decision is made** — while context is fresh.
@@ -61,7 +61,7 @@ Before creating the log, confirm you have:
 5. **If a decision changes, mark the original row `Superseded` and add a new row.** Never overwrite history.
 6. **Share the log** with the delivery team and reviewers so it is visible, not buried.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Baseline — simplest form
 
@@ -106,7 +106,7 @@ Use these status values consistently:
 | `Superseded` | Replaced by a later decision — keep row visible |
 | `Withdrawn` | No longer applicable |
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Each entry should record what was decided, not the deliberation that led to it. Keep entries short enough to scan but complete enough to understand without needing to trace back to meeting minutes.
 
@@ -117,7 +117,7 @@ Keep the following out:
 - operational instructions or how-to guidance
 - content that belongs in the [Solution Assumptions & Issues Register](solution_assumptions_and_issues_register_specification.md) until a decision is actually reached
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Delivery Owner or designated governance coordinator owns the log. They are accountable for its completeness, currency, and accessibility to the delivery team.
 
@@ -132,7 +132,7 @@ Decisions may affect and should link to:
 
 Acceptance evidence: updated Decision Record Log showing all material decisions with authority, rationale, and current status, plus confirmation by the Delivery Owner that the log is complete up to the acceptance point.
 
-## 9. Done when
+## 9. Done When
 
 The log is ready for review or acceptance when:
 
@@ -142,14 +142,14 @@ The log is ready for review or acceptance when:
 - any decision affecting scope, funding, or acceptance is included
 - the log owner has confirmed it is current and complete
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Keep the log current throughout Stage 6 — Work Delivery as implementation decisions arise.
 2. Reference decision IDs in affected domain artifacts (NFRs, business rules, integrations) for traceability.
 3. Include the completed log in the acceptance package for Stage 7 — Acceptance, Transition & Closure.
 4. Reference the log in the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md) for any conditions or exceptions.
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 ### Starter prompt
 

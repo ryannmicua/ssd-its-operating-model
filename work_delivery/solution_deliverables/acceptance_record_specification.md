@@ -1,6 +1,6 @@
 # Acceptance Record Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Acceptance Record is the decision-ready summary of what was reviewed, what evidence supports acceptance, what conditions remain, and what decision the named authority made.
 
@@ -10,7 +10,7 @@ This artifact answers one simple question:
 
 Use it to keep acceptance explicit, attributable, and easy to review.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in Stage 7 whenever Solution Deliverables are being formally accepted.
 
@@ -20,7 +20,7 @@ It is especially useful when:
 - some items are conditional or deferred
 - evidence comes from more than one source
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 - Stage 7: use this record to produce an explicit acceptance decision for solution-domain deliverables.
 - Closure: provide this record as one acceptance input to initiative-level closure records.
@@ -35,7 +35,7 @@ Downstream artifacts:
 
 - [Formal Acceptance and Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -45,7 +45,7 @@ Make sure you have:
 - the named Acceptance Authority
 - visibility of any exclusions, conditions, deferred items, or unresolved issues
 
-## 5. How to draft it
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -63,7 +63,7 @@ Recommended status values:
 - `deferred`
 - `not accepted`
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Record header
 
@@ -110,7 +110,7 @@ Include:
 - formal decision outcome
 - conditions, follow-up actions, and owners if needed
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Keep this artifact concise.
 
@@ -123,7 +123,7 @@ Keep the following out:
 
 Reference the evidence instead of copying it.
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 
@@ -137,7 +137,7 @@ Minimum ownership expectation:
 - Acceptance Authority makes and records the formal decision.
 - Follow-up owners are named for every condition or deferral.
 
-## 9. Done when
+## 9. Done When
 
 This artifact is ready when:
 
@@ -146,7 +146,7 @@ This artifact is ready when:
 - scope variance, exclusions, and conditions are visible
 - the named authority and decision are explicit
 
-## 10. What comes next
+## 10. What Comes Next
 
 Use this artifact to support:
 
@@ -154,7 +154,7 @@ Use this artifact to support:
 2. transition and closure records
 3. future audit or review of what was accepted
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

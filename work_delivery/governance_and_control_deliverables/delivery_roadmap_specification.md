@@ -1,6 +1,6 @@
 # Delivery Roadmap Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Delivery Roadmap defines the planned path for delivering the authorized initiative from mobilization through acceptance and closure. It makes sequencing, milestones, dependencies, and control points visible so delivery progress can be managed and governed.
 
@@ -8,7 +8,7 @@ A useful roadmap is drafted early enough to support authorization-level visibili
 
 Intended readers include: Delivery Owner, Project Manager (if assigned), Sponsor and Decision Authority, delivery team leads and domain owners, and governance, portfolio, and risk stakeholders.
 
-## 2. When to use it
+## 2. When to Use It
 
 This artifact is recommended for governed initiatives and required where controlled mobilization, cross-team dependencies, or milestone-based governance visibility are needed.
 
@@ -22,7 +22,7 @@ Use it when the initiative requires structured coordination and clear progress v
 
 It should align with the [Work Delivery Framework](../work_delivery_framework.md) and the governance and control section of the [Standard Deliverables Guide](../standard_deliverables_guide.md).
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 This artifact spans Stages 2 through 7 and is updated progressively at each stage gate.
 
@@ -37,7 +37,7 @@ This artifact spans Stages 2 through 7 and is updated progressively at each stag
 - [Decision Record Log](decision_record_log_specification.md) — change records tied to material roadmap revisions
 - Domain deliverables planned and tracked against roadmap phases
 
-## 4. Before you start
+## 4. Before You Start
 
 Before drafting, confirm you have:
 
@@ -54,7 +54,7 @@ For a Stage 2 draft, high-level phase and milestone intent is sufficient. For a 
 
 If key inputs are missing, label the roadmap as a **working draft** and state what needs confirmation.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Define delivery phases or waves.** Name the major segments of delivery and their purpose. Align them to authorized scope boundaries.
 2. **Identify milestones and governance checkpoints.** For each phase, name observable milestones and the governance review or decision points that mark readiness to proceed.
@@ -63,7 +63,7 @@ If key inputs are missing, label the roadmap as a **working draft** and state wh
 5. **Record major risks and change markers.** Identify sequencing constraints and state the conditions that would trigger a formal roadmap update.
 6. **Confirm with the delivery team at Stage 5.** Record who confirmed the roadmap, when, and what unresolved concerns remain with follow-up owners.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Roadmap identity
 
@@ -131,7 +131,7 @@ Recommended fields:
 | Governance checkpoint | Review or decision point |
 | Update reference | Linked decision or change record ID |
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Include enough detail to guide execution and governance without turning the roadmap into a full task plan.
 
@@ -146,7 +146,7 @@ Keep the following out:
 - unapproved scope proposals presented as committed work
 - duplicate copies of full project plans or RAID logs
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Delivery Owner is accountable for roadmap integrity and update discipline. The Project Manager (if assigned) typically coordinates updates and publication.
 
@@ -154,7 +154,7 @@ Roadmap acceptance normally sits with the Delivery Owner and is reviewed with th
 
 This artifact traces back to the [Initiative Definition Document](initiative_definition_document_specification.md) and [Project Charter](project_charter_specification.md). Material revisions should link to records in the [Decision Record Log](decision_record_log_specification.md).
 
-## Maintenance expectations
+## 9. Maintenance Expectations
 
 Update the roadmap whenever material sequence, milestone, dependency, or scope-aligned delivery assumptions change.
 
@@ -167,7 +167,7 @@ Each material revision should include:
 
 The roadmap is a living document from Stage 2 through Stage 7. Each stage gate (Stage 4 elaboration, Stage 5 confirmation) produces a new baseline version.
 
-## 9. Done when
+## 10. Done When
 
 The roadmap is ready to use when:
 
@@ -177,7 +177,7 @@ The roadmap is ready to use when:
 - major risks and conditions for escalation are recorded
 - at Stage 5: the roadmap has been confirmed with the delivery team and unresolved concerns have owners
 
-## 10. What comes next
+## 11. What Comes Next
 
 1. Use the confirmed roadmap to set up delivery cadence in the [Delivery Charter](delivery_charter_specification.md).
 2. Track material roadmap changes in the [Decision Record Log](decision_record_log_specification.md).
@@ -185,7 +185,7 @@ The roadmap is ready to use when:
 4. Use the roadmap to monitor progress against milestones during Stage 6 — Work Delivery.
 5. Reference the roadmap in the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md) to confirm what was delivered against the plan.
 
-## 11. Prompt guide
+## 12. Prompt Guide
 
 ### Starter prompt
 

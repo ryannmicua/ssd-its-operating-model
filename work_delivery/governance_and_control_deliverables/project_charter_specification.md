@@ -1,6 +1,6 @@
 # Project Charter Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Project Charter formally records sponsorship, authority, priority, funding commitment, and the Stage 3 — Work Authorization decision.
 
@@ -8,7 +8,7 @@ It exists to confirm that the initiative has been intentionally authorized and t
 
 Intended readers include: Sponsor, Decision Authorities, Delivery Owner, Outcome Owner, and finance, governance, and audit stakeholders.
 
-## 2. When to use it
+## 2. When to Use It
 
 This artifact is required in Stage 3 — Work Authorization when formal authorization, budget commitment, resource assignment, or named delivery authority is needed before delivery starts.
 
@@ -18,7 +18,7 @@ It should align with PMI charter practice by recording purpose, high-level scope
 
 It is normally stable once approved. Issue a new version or formal revision when sponsorship, funding, authority, decision conditions, or approved scope changes materially.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 This artifact is produced in Stage 3 — Work Authorization.
 
@@ -35,7 +35,7 @@ This artifact is produced in Stage 3 — Work Authorization.
 
 Where authorization is conditional, the charter should reference the tracked condition log or follow-up record used during delivery governance.
 
-## 4. Before you start
+## 4. Before You Start
 
 Before drafting, confirm you have:
 
@@ -47,7 +47,7 @@ Before drafting, confirm you have:
 
 If the Initiative Definition Document is incomplete or the authorization basis is unclear, label this document as a **working draft** and note what is missing.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Confirm the authorization basis.** Identify the decision authority or approving body, the type of authorization action (resolution, delegated approval, committee action), and the decision date.
 2. **State the decision outcome clearly.** Use one of: Approve, Defer, Reject, or Approve with Conditions. If the outcome is not Approve or Approve with Conditions, state explicitly that delivery is not authorized to start.
@@ -55,7 +55,7 @@ If the Initiative Definition Document is incomplete or the authorization basis i
 4. **Record any conditions.** For each condition attached to the authorization, name the responsible owner and the due date or resolution point.
 5. **Complete the charter identity section.** Fill in all identity fields and record the approval reference.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 This artifact is often short and table-based.
 
@@ -118,7 +118,7 @@ Recommended fields:
 
 Use short, decision-focused entries rather than narrative paragraphs where possible.
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Keep the charter concise and decision-ready. Include enough detail to show what is being authorized, by whom, with what funding and authority, and under what constraints.
 
@@ -130,13 +130,13 @@ Keep the following out:
 - full risk registers
 - repeated copies of the Initiative Definition Document
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The charter is usually prepared by the Delivery Owner or governance lead and approved by the Sponsor or Decision Authority.
 
 This artifact traces back to the [Initiative Definition Document](initiative_definition_document_specification.md). It feeds forward to the [Delivery Charter](delivery_charter_specification.md) and [Delivery Roadmap](delivery_roadmap_specification.md).
 
-## 9. Done when
+## 9. Done When
 
 The charter is ready to issue when:
 
@@ -159,14 +159,14 @@ The charter is ready to issue when:
 
 If weak, tighten the authorization statement, reduce duplicated project detail, and make the commitment summary easier to scan.
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. File the charter as the Stage 3 authorization record and record the approval reference in the [Initiative Definition Document](initiative_definition_document_specification.md).
 2. Begin Stage 4 — Work Definition Details to elaborate functional capabilities and domain deliverables.
 3. Produce the [Delivery Charter](delivery_charter_specification.md) at Stage 5 to mobilize the delivery team.
 4. Track any authorization conditions in the [Decision Record Log](decision_record_log_specification.md).
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 ### Starter prompt
 

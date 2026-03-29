@@ -1,6 +1,6 @@
 # Solution Assumptions & Issues Register Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Solution Assumptions & Issues Register is a living log of unresolved design assumptions, open questions, issues, and risks that emerge during solution definition and delivery. It provides transparency into uncertainties and design dependencies and helps ensure they are tracked to resolution rather than buried in scattered notes.
 
@@ -10,7 +10,7 @@ The register complements the [Decision Record Log](decision_record_log_specifica
 
 Intended readers include the Delivery Owner, domain designers, solution architects, and any reviewer or acceptance authority who needs confidence that unknowns are being actively managed.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this register from Stage 2 — Work Definition through Stage 7 — Acceptance, Transition & Closure. It is most helpful when:
 
@@ -20,7 +20,7 @@ Use this register from Stage 2 — Work Definition through Stage 7 — Acceptanc
 
 Maintain it throughout the initiative and review it regularly. Items that turn into decisions should cross-reference the [Decision Record Log](decision_record_log_specification.md).
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 **Upstream sources:**
 
@@ -42,7 +42,7 @@ Maintain it throughout the initiative and review it regularly. Items that turn i
 | Work Delivery (Stage 6) | Track resolution; record outcomes and reference the Decision Record Log for decisions made |
 | Acceptance, Transition & Closure (Stage 7) | Highlight remaining assumptions or unresolved issues that affect acceptance |
 
-## 4. Before you start
+## 4. Before You Start
 
 Before creating the register, confirm you have:
 
@@ -51,7 +51,7 @@ Before creating the register, confirm you have:
 - agreement on how often the register will be reviewed and updated
 - a named owner and reviewer for the register
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Create an entry for each assumption or issue.** Include the type (assumption, issue, open question, risk), a description, and context.
 2. **Identify the impact.** Describe how the assumption or issue could affect scope, cost, timeline, quality, compliance, or operations if not addressed.
@@ -61,7 +61,7 @@ Before creating the register, confirm you have:
 6. **Track status.** Use: Open, Under Investigation, Resolved, Deferred, or Closed. Update status as work progresses.
 7. **Record the resolution.** When resolved, summarize the outcome, any decisions made, implications for scope or design, and reference the Decision Record Log entry if appropriate.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 Use a table like this:
 
@@ -70,7 +70,7 @@ Use a table like this:
 | AI-001 | Assumption | API provider will deliver v2 endpoints by Q3 | Could delay integration if API is late | SM-003, UC-010 | Delivery owner | Open | Delivery Mobilization (Stage 5) | |
 | AI-002 | Issue | Unclear whether finance approval is needed for small purchases | Could change approval flow in UC-003 | BR-002, UC-003 | SME for Finance | Under investigation | Work Definition Details (Stage 4) | |
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Each entry should be specific enough to act on. Vague entries like "requirements unclear" are not useful — state what exactly is unknown and why it matters.
 
@@ -82,7 +82,7 @@ Keep the following out:
 - items that have already been formally decided (move those to the [Decision Record Log](decision_record_log_specification.md))
 - general risk register content that does not relate to solution design or delivery assumptions
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Delivery Owner is accountable for completeness and management oversight of the register. The Outcome Owner or Sponsor should review where assumptions or issues materially affect business outcomes.
 
@@ -90,7 +90,7 @@ This artifact traces back to the solution definition artifacts (functional capab
 
 Acceptance evidence: completed register showing all open and resolved items, with resolution summaries and references to the Decision Record Log, plus endorsement from the Delivery Owner that all critical assumptions and issues have been managed appropriately.
 
-## 9. Done when
+## 9. Done When
 
 The register is ready for acceptance review when:
 
@@ -101,14 +101,14 @@ The register is ready for acceptance review when:
 - decisions arising from resolved items are captured in the [Decision Record Log](decision_record_log_specification.md)
 - remaining open items at acceptance are explicitly flagged with handling instructions
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Keep the register current during Stage 6 — Work Delivery as new assumptions and issues emerge.
 2. Link resolved items to their corresponding `DR-###` entries in the [Decision Record Log](decision_record_log_specification.md).
 3. Include the register in the acceptance package for Stage 7 — Acceptance, Transition & Closure.
 4. Flag any items that remain open at closure in the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md).
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 ### Starter prompt
 

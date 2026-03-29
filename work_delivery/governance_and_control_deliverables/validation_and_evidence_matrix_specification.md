@@ -1,6 +1,6 @@
 # Validation & Evidence Matrix Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Validation & Evidence Matrix is a planning and tracking tool that maps approved scope items to validation methods and the evidence needed for acceptance. It ensures that evidence is designed and gathered proactively instead of reconstructed at the end of delivery.
 
@@ -10,7 +10,7 @@ By making evidence design visible in Stage 4, the matrix supports early alignmen
 
 Intended readers include the Delivery Owner, QA lead, Acceptance Authority, delivery team, and any compliance or audit reviewer.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in Stage 4 — Work Definition Details when modules and use cases are being drafted. Identify validation methods and evidence types for each scope item at this stage.
 
@@ -23,7 +23,7 @@ It is especially useful when:
 - evidence must satisfy compliance, audit, or regulatory requirements
 - there is a risk that evidence will be forgotten, lost, or misaligned with acceptance criteria
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 **Upstream sources:**
 
@@ -43,7 +43,7 @@ It is especially useful when:
 | Work Delivery (Stage 6) | Update with evidence references as work is completed; track completion status |
 | Acceptance, Transition & Closure (Stage 7) | Include in the acceptance package; note deferred or conditional items |
 
-## 4. Before you start
+## 4. Before You Start
 
 Before creating the matrix, confirm you have:
 
@@ -53,7 +53,7 @@ Before creating the matrix, confirm you have:
 - knowledge of regulatory or compliance evidence requirements where applicable
 - named individuals responsible for validation and evidence collection
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **List scope items.** Create rows for each Functional Capability, Solution Module, and Use Case. You may group related use cases under one module row for simplicity.
 2. **Define validation method.** For each row, specify how the item will be validated (for example: unit test, integration test, system test, demo, inspection, compliance audit).
@@ -63,7 +63,7 @@ Before creating the matrix, confirm you have:
 6. **Link to evidence.** As evidence is collected, provide a reference or link to where the evidence is stored (for example: repository path, ticket ID, artifact name).
 7. **Review and update regularly** with the delivery team, testers, and Acceptance Authority to ensure evidence requirements are being met.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 Use a table like this as a starting point:
 
@@ -75,7 +75,7 @@ Use a table like this as a starting point:
 
 You may include additional columns for priority, risk, or notes as needed.
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Keep the matrix focused on what is being validated and what evidence proves it. Avoid adding narrative commentary in table cells — use references to external evidence rather than inline summaries.
 
@@ -85,7 +85,7 @@ Keep the following out:
 - narrative descriptions of how testing was performed (reference the evidence instead)
 - items not traceable to an approved FC-###, SM-###, or UC-###
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Delivery Owner is accountable for completeness of validation planning. The Acceptance Authority is accountable for confirming adequacy of evidence.
 
@@ -93,7 +93,7 @@ This artifact traces back to the functional capabilities, modules, and use case 
 
 Acceptance evidence: completed Validation & Evidence Matrix with references to evidence for each scope item, plus sign-off from the Delivery Owner and Acceptance Authority confirming adequacy of evidence.
 
-## 9. Done when
+## 9. Done When
 
 The matrix is ready for acceptance review when:
 
@@ -104,14 +104,14 @@ The matrix is ready for acceptance review when:
 - deferred or conditional items are clearly marked with rationale and handling instructions
 - the Delivery Owner and Acceptance Authority have reviewed and confirmed it
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Keep the matrix current during Stage 6 — Work Delivery as evidence is collected and statuses update.
 2. Resolve any deferred or N/A items with explicit rationale before acceptance.
 3. Include the completed matrix in the acceptance package for Stage 7.
 4. Reference it in the [Acceptance Record](../solution_deliverables/acceptance_record_specification.md) as evidence of validated scope coverage.
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 ### Starter prompt
 

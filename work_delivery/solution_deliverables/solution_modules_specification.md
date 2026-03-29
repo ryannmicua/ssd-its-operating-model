@@ -1,6 +1,6 @@
 # Solution Modules Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 This specification describes the overall solution-module overview document.
 
@@ -19,7 +19,7 @@ Practical naming recommendation:
 
 This keeps the overview and the per-module detail clearly separate.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in Stage 4 after Functional Capabilities are approved.
 
@@ -32,7 +32,7 @@ It is especially useful when:
 
 For non-trivial systems, use this as the register that lists all modules, then create one `Solution Module Definition` for each module.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 - Stage 4: create the module register as the behavior-centered structure for approved scope.
 - Stage 5: use modules to organize delivery sequencing and acceptance-readiness tracking.
@@ -50,7 +50,7 @@ Downstream artifacts:
 - [Deployed Solution Specification](deployed_solution_specification.md)
 - [Acceptance Record Specification](acceptance_record_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -60,7 +60,7 @@ Make sure you have:
 - a clear idea of how delivery and acceptance will be grouped
 - named owner and reviewer
 
-## 5. How to draft it
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -81,7 +81,7 @@ Useful test:
 - If the grouping reflects a recognizable user outcome or behavior area, it is probably stronger.
 - If the grouping can be explained, demonstrated, and accepted as one unit, it is probably a strong module.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Document header
 
@@ -121,7 +121,7 @@ For non-trivial systems, include or reference a detail set such as:
 | --- | --- | --- | --- |
 | `SM-001` | `solution_module_sm_001_request_submission.md` | draft | Holds use cases and module acceptance criteria |
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Each module should:
 
@@ -140,7 +140,7 @@ Keep the following out:
 - sprint plans
 - technical design detail
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 
@@ -154,7 +154,7 @@ Minimum ownership expectation:
 - Solution lead or analyst owns module quality and behavior clarity.
 - Acceptance Authority should be known for each module or module grouping before delivery starts.
 
-## 9. Done when
+## 9. Done When
 
 This artifact is ready when:
 
@@ -166,7 +166,7 @@ This artifact is ready when:
 - the set supports straightforward use case drafting
 - each non-trivial module has a linked `Solution Module Definition`
 
-## 10. What comes next
+## 10. What Comes Next
 
 After the modules are stable:
 
@@ -175,7 +175,7 @@ After the modules are stable:
 3. keep the actor model aligned using the [User Roles, Personas & Access Model Specification](user_roles_personas_and_access_model_specification.md)
 4. use the module structure to plan evidence and acceptance
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

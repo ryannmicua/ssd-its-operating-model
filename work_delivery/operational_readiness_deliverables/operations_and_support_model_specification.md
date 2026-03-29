@@ -1,6 +1,6 @@
 # Operations and Support Model Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Operations and Support Model defines who owns the live service, how support is structured, where escalation occurs, and what operating assumptions govern steady-state service.
 
@@ -8,7 +8,7 @@ It exists to make long-term accountability explicit and to prevent unsupported h
 
 Intended readers include: IT Operations / Service Owner, Support Owner and support teams, Delivery Owner, and Business Owner where service outcomes are significant.
 
-## 2. When to use it
+## 2. When to Use It
 
 This artifact is required when the initiative creates or changes a service, application, integration, or platform component that must be operated after delivery.
 
@@ -20,7 +20,7 @@ For small, contained changes with an established and well-understood support arr
 
 Use this artifact during solution design, before go-live, and at formal handover. It should align with ITIL 4 Service Desk, Incident Management, Monitoring and Event Management, and Relationship Management practices by making service accountability, support channels, and escalation paths clear.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 - **Stage 4:** define the target support model and ownership boundaries early enough to influence design decisions.
 - **Stage 6:** confirm the model against real deployment and support arrangements.
@@ -39,7 +39,7 @@ Use this artifact during solution design, before go-live, and at formal handover
 
 This artifact should also align with the Initiative Definition Document or Work Brief so that named run and support ownership in operations is consistent with the ownership model approved earlier in the work lifecycle. It should be consistent with the [Backup, Restore and Recovery Plan Specification](backup_restore_and_recovery_plan_specification.md) and any monitoring or audit designs.
 
-## 4. Before you start
+## 4. Before You Start
 
 Before drafting, confirm you have:
 
@@ -51,7 +51,7 @@ Before drafting, confirm you have:
 
 If service ownership is not yet confirmed or support boundaries are still being negotiated, label the output as a **working draft** and identify the missing inputs explicitly.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Confirm scope.** Identify the service, integration, or platform component this model covers and the delivery boundary it reflects.
 2. **Name service and support ownership.** Identify the Service Owner and Support Owner; state what each is accountable for.
@@ -61,7 +61,7 @@ If service ownership is not yet confirmed or support boundaries are still being 
 6. **Draft the summary table.** Populate the recommended summary table with key areas, owners, boundaries, escalation paths, and notes.
 7. **Review for completeness.** Confirm that ownership, support boundaries, escalation, and operating assumptions are explicit enough for someone not on the delivery team to understand and act on.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Service ownership
 
@@ -116,7 +116,7 @@ Recommended summary table:
 
 Use short entries and point to detailed procedures elsewhere.
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Include enough detail to show ownership, support boundaries, escalation paths, monitoring expectations, and transition assumptions. Do not turn it into a full runbook.
 
@@ -127,7 +127,7 @@ Keep the following out:
 - deep technical design
 - project task assignments
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Service Owner or operational lead usually owns this artifact, with input from the Delivery Owner and support leads.
 
@@ -145,13 +145,13 @@ Minimum ownership expectation:
 - Support Owner is accountable for support execution clarity
 - Delivery Owner ensures the transition is complete before closure
 
-## 9. Maintenance expectations
+## 9. Maintenance Expectations
 
 This is a living document. Keep it current when ownership, support coverage, escalation paths, vendor dependencies, or operating assumptions change.
 
 The model should reflect the actual operating arrangements in place, not the arrangements planned at initial handover.
 
-## 10. Validation guide
+## 10. Validation Guide
 
 Before treating this artifact as ready for operational acceptance, confirm:
 
@@ -163,7 +163,7 @@ Before treating this artifact as ready for operational acceptance, confirm:
 
 If weak, clarify the responsibility split and make escalation routes easier to follow.
 
-## 11. Done when
+## 11. Done When
 
 - Service Owner and Support Owner are named with explicit accountabilities.
 - Support tiers, boundaries, and vendor or partner dependencies are documented.
@@ -172,7 +172,7 @@ If weak, clarify the responsibility split and make escalation routes easier to f
 - Transition and steady-state assumptions are visible.
 - The summary table is populated and reflects the agreed operating model.
 
-## 12. What comes next
+## 12. What Comes Next
 
 1. Validate the model with the Service Owner and Support Owner before handover.
 2. Reference this model in the [Operational Readiness Confirmation Record](operational_readiness_confirmation_record_specification.md).
@@ -180,7 +180,7 @@ If weak, clarify the responsibility split and make escalation routes easier to f
 4. Update before formal operational acceptance as part of Stage 7.
 5. Keep current after go-live when ownership, escalation, or operating assumptions change.
 
-## 13. Prompt guide
+## 13. Prompt Guide
 
 ### Starter prompt
 

@@ -1,6 +1,6 @@
 # Delivery Charter Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Delivery Charter formally charters and mobilizes the delivery team after work authorization. It defines how the team will operate, communicate, govern execution, and prepare for acceptance readiness.
 
@@ -8,7 +8,7 @@ A useful delivery charter makes delivery expectations explicit before execution 
 
 Intended readers include: Delivery Owner, Project Manager (if assigned), delivery team members and team leads, Sponsor and governance stakeholders, Acceptance Authorities, and operations and support stakeholders.
 
-## 2. When to use it
+## 2. When to Use It
 
 This artifact is required when an initiative needs controlled delivery mobilization, cross-team coordination, or explicit execution governance.
 
@@ -16,7 +16,7 @@ It is primarily used in Stage 5 — Delivery Mobilization, though it may be draf
 
 It does not replace the [Project Charter](project_charter_specification.md), detailed delivery plans, or active trackers.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 This artifact is produced in Stage 5 — Delivery Mobilization, once the [Project Charter](project_charter_specification.md) is in place.
 
@@ -32,7 +32,7 @@ This artifact is produced in Stage 5 — Delivery Mobilization, once the [Projec
 - [Solution Assumptions & Issues Register](solution_assumptions_and_issues_register_specification.md) — active RAID tracking during execution
 - Delivery plans, acceptance trackers, and communication records
 
-## 4. Before you start
+## 4. Before You Start
 
 Before drafting, confirm you have:
 
@@ -44,7 +44,7 @@ Before drafting, confirm you have:
 
 If the authorization basis is unclear or the delivery team is not yet assembled, label this document as a **working draft**.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **State the mobilization intent and scope guardrails.** Reference the authorized baseline and make clear that scope changes require formal governance.
 2. **Define team operating expectations.** Describe what is expected of delivery teams and role leads — accountability for deliverables, evidence readiness, and decision participation.
@@ -53,7 +53,7 @@ If the authorization basis is unclear or the delivery team is not yet assembled,
 5. **Set up control trackers.** Identify which trackers are required (RAID/dependency, decision, acceptance), name the owner of each, and confirm they are active.
 6. **If used as kickoff record:** capture the kickoff date, participants, decisions made, and open actions with owners.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Charter identity
 
@@ -131,7 +131,7 @@ Recommended fields:
 | Tracker ownership | Who maintains RAID/dependency, decision, and acceptance trackers |
 | Kickoff outcomes | Confirmed decisions and follow-up actions |
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Keep the charter practical and execution-focused. Include enough detail so team members know how delivery will be run and governed, without duplicating day-to-day planning artifacts.
 
@@ -142,7 +142,7 @@ Keep the following out:
 - detailed technical design content
 - unresolved scope proposals presented as agreed execution expectations
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Delivery Owner is accountable for producing and activating this artifact. The Project Manager (if assigned) supports coordination and maintenance.
 
@@ -152,7 +152,7 @@ This artifact traces back to the [Project Charter](project_charter_specification
 
 Update when delivery operating expectations, communication methods, governance controls, or key roles change materially. Keep revision history concise and attributable.
 
-## 9. Done when
+## 9. Done When
 
 The charter is ready to activate delivery when:
 
@@ -163,14 +163,14 @@ The charter is ready to activate delivery when:
 - the Delivery Owner has reviewed and confirmed the charter with team leads
 - if used as kickoff record: decisions and follow-up actions are captured
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Activate all control trackers named in section 6.6 before execution begins.
 2. Conduct or finalize the delivery team kickoff using this charter as the agenda.
 3. Confirm the [Delivery Roadmap](delivery_roadmap_specification.md) with the assembled team.
 4. Begin Stage 6 — Work Delivery with governance controls in place.
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 ### Starter prompt
 

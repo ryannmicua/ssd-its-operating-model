@@ -1,6 +1,6 @@
 # Use Case Narratives Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 Use Case Narratives describe how the solution should behave when a user or external actor tries to achieve a specific outcome.
 
@@ -17,7 +17,7 @@ Well-written use cases are:
 - bounded to approved scope
 - detailed enough that another person can understand correct behavior without guessing
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in Stage 4 after Solution Modules are defined.
 
@@ -30,7 +30,7 @@ It is especially useful when:
 
 Use cases may be stored in one combined use case document or inside the related `Solution Module Definition`. For non-trivial systems, module-by-module organization is often easier to review and maintain.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 - Stage 4: define expected business behavior and acceptance-relevant flow detail.
 - Stage 6: use the use cases to validate delivered behavior and collect evidence.
@@ -48,7 +48,7 @@ Downstream artifacts:
 - [Acceptance Record Specification](acceptance_record_specification.md)
 - [Training and Enablement Materials Specification](../user_adoption_and_change_enablement_deliverables/training_and_enablement_materials_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -59,7 +59,7 @@ Make sure you have:
 - important rules, controls, data sensitivity, and acceptance concerns
 - any known open questions that could affect behavior or scope
 
-## 5. How to draft it
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -80,7 +80,7 @@ Useful tests:
 - If an alternate path does not explain what happens next, finish it so the outcome is clear.
 - If it introduces behavior not found in the approved baseline, remove or escalate it.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 Use this structure for each use case.
 
@@ -241,7 +241,7 @@ Acceptance criteria:
 - Submission activity is traceable in the system record.
 ```
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Each use case must:
 
@@ -271,7 +271,7 @@ Useful drafting cautions:
 - If a use case is so narrow that it describes only a single click or UI gesture, raise it back to a meaningful user outcome.
 - Use the same role names and access assumptions as the User Roles, Personas & Access Model artifact.
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 
@@ -285,7 +285,7 @@ Minimum ownership expectation:
 - Delivery Owner confirms scope boundaries are respected.
 - Reviewers and testers confirm the narratives are usable for validation.
 
-## 9. Done when
+## 9. Done When
 
 This artifact is ready when:
 
@@ -297,7 +297,7 @@ This artifact is ready when:
 - acceptance criteria are observable
 - the use case is traceable to one module and approved capabilities
 
-## 10. What comes next
+## 10. What Comes Next
 
 After use cases are ready:
 
@@ -307,7 +307,7 @@ After use cases are ready:
 4. keep the live record current in the [Deployed Solution Specification](deployed_solution_specification.md)
 5. use them as part of the basis for the [Acceptance Record Specification](acceptance_record_specification.md)
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

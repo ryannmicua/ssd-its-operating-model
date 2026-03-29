@@ -1,6 +1,6 @@
 # Solution Module Definition Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Solution Module Definition is the detailed document for one solution module.
 
@@ -19,7 +19,7 @@ Example:
 
 - `solution_module_sm_001_request_submission.md`
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in Stage 4 after the `Solution Modules Register` identifies the module.
 
@@ -30,7 +30,7 @@ It is especially useful when:
 - reviewers need a module-by-module acceptance view
 - development teams will work module by module
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 - Stage 4: create module detail that is ready for build, review, and validation.
 - Stage 6: use this artifact as one evidence anchor for what was delivered.
@@ -49,7 +49,7 @@ Downstream artifacts:
 - [Acceptance Record Specification](acceptance_record_specification.md)
 - [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -60,7 +60,7 @@ Make sure you have:
 - the acceptance focus for the module
 - the known support, administration, monitoring, or recovery concerns where relevant
 
-## 5. How to draft it
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -73,7 +73,7 @@ Follow these steps:
 7. Note dependencies, exclusions, assumptions, and open questions that matter.
 8. Check that the module stays inside approved scope.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 Use this structure:
 
@@ -93,7 +93,7 @@ Example heading pattern:
 
 - `## SM-001 Request Submission`
 
-## 7. Writing rules
+## 7. Writing Rules
 
 This artifact should:
 
@@ -110,7 +110,7 @@ Keep the following out:
 - detailed task planning
 - deep technical design that belongs elsewhere
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 
@@ -123,7 +123,7 @@ Minimum ownership expectation:
 - Delivery Owner confirms scope control and review readiness.
 - Operational reviewers provide input when module behavior affects supportability.
 
-## 9. Done when
+## 9. Done When
 
 This artifact is ready when:
 
@@ -133,7 +133,7 @@ This artifact is ready when:
 - the module acceptance criteria are clear enough to review and test
 - reviewers can understand what this module will deliver without reading the whole solution set first
 
-## 10. What comes next
+## 10. What Comes Next
 
 Use this artifact to support:
 
@@ -142,7 +142,7 @@ Use this artifact to support:
 3. technical and operational readiness documentation
 4. delivery evidence and acceptance records
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

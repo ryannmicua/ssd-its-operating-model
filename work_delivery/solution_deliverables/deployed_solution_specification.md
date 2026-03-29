@@ -1,6 +1,6 @@
 # Deployed Solution Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Deployed Solution artifact records what approved solution behavior is actually live, where it is live, and under what conditions.
 
@@ -10,7 +10,7 @@ This artifact answers one simple question:
 
 Use it to make the live state visible to business, delivery, and operational readers.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in Stage 6 whenever a new or materially changed solution enters a live or formally controlled environment.
 
@@ -21,7 +21,7 @@ It is especially useful for:
 - limited releases
 - any release where ownership, evidence, or live boundary must be explicit
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 - Stage 6: maintain a clear record of what approved scope is live, where, and under what conditions.
 - Stage 7: use this artifact as one primary acceptance and closure evidence source.
@@ -37,7 +37,7 @@ Downstream artifacts:
 - [Acceptance Record Specification](acceptance_record_specification.md)
 - [Formal Acceptance and Closure Record Specification](../governance_and_control_deliverables/formal_acceptance_and_closure_record_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -47,7 +47,7 @@ Make sure you have:
 - the named deployment, service, and support owners
 - links to the evidence that supports the release
 
-## 5. How to draft it
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -64,7 +64,7 @@ Useful test:
 
 - If a reader asks "what is live?" or "what is still limited?" the answer should be visible immediately.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Release header
 
@@ -109,7 +109,7 @@ Include:
 - temporary workarounds
 - follow-up owners and due dates where useful
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Keep this artifact concise and evidence-based.
 
@@ -122,7 +122,7 @@ Keep the following out:
 
 Reference the authoritative technical and operational artifacts instead.
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 Minimum traceability expectation:
 
@@ -135,7 +135,7 @@ Minimum ownership expectation:
 - Delivery Owner maintains scope-to-live clarity.
 - Service Owner and Support Owner confirm live ownership and operating conditions.
 
-## 9. Done when
+## 9. Done When
 
 This artifact is ready when:
 
@@ -145,7 +145,7 @@ This artifact is ready when:
 - evidence links are present
 - open conditions are not hidden
 
-## 10. What comes next
+## 10. What Comes Next
 
 Use this artifact as part of the basis for:
 
@@ -153,7 +153,7 @@ Use this artifact as part of the basis for:
 2. operational handover and service readiness reviews
 3. closure and formal acceptance records where needed
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

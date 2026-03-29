@@ -1,6 +1,6 @@
 # Integration & External Dependency Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The **Integration & External Dependency Specification** documents the interfaces and dependencies the solution relies on to deliver its capabilities. It provides a clear, operational view of each integration, the contract it must meet, and how failure modes are handled.
 
@@ -13,7 +13,7 @@ It answers questions like:
 
 By making integrations explicit, this specification reduces the risk of hidden dependencies, unmanaged failure modes, or unclear operational ownership. It complements the Technical Design Document by focusing on operational and contractual aspects rather than low-level architecture. Intended readers include delivery owners, solution leads, technical designers, IT operations, security reviewers, and dependency owners.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this specification when the solution relies on **more than one external integration or material dependency**, including:
 
@@ -32,7 +32,7 @@ It is most valuable when:
 
 Draft this specification in **Work Definition Details (Stage 4)** alongside the Technical Design Document, then refine it in Delivery Mobilization (Stage 5) and Work Delivery (Stage 6) as details are clarified and tested.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 * **Work Definition Details (Stage 4):** Identify all significant integrations and dependencies. Document their purpose, contract summary, data exchanged, timing, error handling, and operational responsibilities. Assign `INT-###` identifiers.
 * **Delivery Mobilization (Stage 5):** Refine the specification with input from dependency owners, security and compliance teams, and operations. Confirm SLAs, fallback strategies, and monitoring needs.
@@ -52,7 +52,7 @@ Downstream artifacts:
 * [Backup, Restore & Recovery Plan Specification](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md)
 * [Validation & Evidence Matrix Specification](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -64,7 +64,7 @@ Make sure you have:
 
 If any of these are missing, treat the draft as a working draft and label it as such.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Create an integration list.** Identify each dependency by name and assign a unique `INT-###` identifier. Include systems, services, feeds, or interfaces external to the solution team's control.
 2. **Describe the purpose.** State why the dependency is needed and what capability it supports.
@@ -76,7 +76,7 @@ If any of these are missing, treat the draft as a working draft and label it as 
 8. **Note testing and validation.** Describe how the integration will be tested — mock environments, contract testing, end-to-end tests — and what evidence will be captured.
 9. **Record assumptions and dependencies.** Note assumptions about dependency availability, planned decommissioning, or future changes that could affect the integration.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Document header
 
@@ -110,7 +110,7 @@ For each item in the summary table, provide:
 
 Summarize any cross-integration concerns such as combined failure impacts, sequencing constraints, shared SLA requirements, or aggregated data sensitivity issues.
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Each integration entry should be specific about the contract and failure behavior — avoid vague statements such as "the system handles errors gracefully." State the failure mode, the fallback path, and who is responsible for resolution.
 
@@ -121,7 +121,7 @@ Keep the following out:
 * data schema definitions or field-level mapping tables that belong in technical design documents
 * security platform configuration that belongs in the access control or security specification
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 This artifact traces back to Non-Functional Requirements and Solution Module Definitions.
 
@@ -135,7 +135,7 @@ Ownership expectations:
 * External dependency owners confirm accuracy of described contracts and SLAs.
 * Security reviewer validates data sensitivity classifications, encryption requirements, and compliance obligations.
 
-## 9. Done when
+## 9. Done When
 
 * All significant external integrations and dependencies are identified with `INT-###` IDs and documented.
 * Each integration entry describes the data exchanged, interface details, timing, operational behavior, error handling, fallback, ownership, monitoring, and security considerations.
@@ -143,14 +143,14 @@ Ownership expectations:
 * Testing and validation plans are stated or linked.
 * The specification is reviewed and agreed by the Delivery Owner, Solution Lead, IT Operations, and any external dependency owners.
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Feed integration contracts and monitoring needs into the [DevOps Guide](../operational_readiness_deliverables/devops_guide_specification.md) for deployment and monitoring design.
 2. Use operational ownership and failure-handling entries to inform the [Operations & Support Model](../operational_readiness_deliverables/operations_and_support_model_specification.md).
 3. Reference `INT-###` IDs in the [Validation & Evidence Matrix](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md) for integration testing evidence.
 4. Include integration risk and recovery considerations in the [Backup, Restore & Recovery Plan](../operational_readiness_deliverables/backup_restore_and_recovery_plan_specification.md).
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

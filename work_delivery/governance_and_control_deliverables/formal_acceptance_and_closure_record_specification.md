@@ -1,6 +1,6 @@
 # Formal Acceptance & Closure Record Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Formal Acceptance & Closure Record confirms that required deliverables or deliverable domains have been accepted, that the relevant authorities have signed off, that operational handover has been confirmed where needed, and that the initiative is formally closed or conditionally closed.
 
@@ -8,7 +8,7 @@ It exists to prevent informal completion and to preserve a clear decision trail 
 
 Intended readers include: Sponsor, Decision Authorities, Delivery Owner, Acceptance Authorities, and audit and governance reviewers.
 
-## 2. When to use it
+## 2. When to Use It
 
 This artifact is required when the initiative reaches final acceptance, handover, or closure in Stage 7 — Acceptance, Transition & Closure.
 
@@ -16,7 +16,7 @@ Use it after the required deliverable domains have been accepted or formally dis
 
 The record is normally finalized once closure is approved. If closure is conditional, update the record or issue a superseding version once conditions are resolved.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 This artifact is produced in Stage 7 — Acceptance, Transition & Closure.
 
@@ -30,7 +30,7 @@ This artifact is produced in Stage 7 — Acceptance, Transition & Closure.
 
 **This record is the final governance artifact.** No downstream artifact supersedes it.
 
-## 4. Before you start
+## 4. Before You Start
 
 Before drafting, confirm you have:
 
@@ -42,7 +42,7 @@ Before drafting, confirm you have:
 
 If domain acceptance records are incomplete or handover is unconfirmed, label this document as a **working draft** and identify what is outstanding.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Complete the closure record identity section.** State the initiative name, record version, preparing party, closure status, and scope of closure (full, phase, or exception-based).
 2. **Populate the acceptance summary table.** For each required deliverable or domain, record acceptance status, reference to the acceptance record, open conditions, and owner.
@@ -51,7 +51,7 @@ If domain acceptance records are incomplete or handover is unconfirmed, label th
 5. **Summarize the final financial and delivery position.** Record approved versus actual at an appropriate level and note any material variance.
 6. **Record the closure decision.** State the final closure statement, closing authority, decision date, and approval reference. Where closure is being granted despite outstanding items, make that explicit.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 This artifact is usually a short record with a summary table.
 
@@ -142,7 +142,7 @@ Keep entries short:
 - Residual obligations should remain actionable, with clear owners and due dates rather than general comments
 - Handover confirmation should identify who is now accountable for running and supporting the outcome
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Keep the record concise and decision-focused. Include enough detail to show what has been accepted, what obligations remain, and who approved closure. Link to supporting records rather than duplicating them.
 
@@ -152,13 +152,13 @@ Keep the following out:
 - detailed retrospective content unless formally required
 - repeated copies of all acceptance records
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Delivery Owner or governance lead usually prepares the record. Formal closure is normally confirmed by the Sponsor or delegated Decision Authority after relevant Acceptance Authorities have completed their part.
 
 This artifact traces back to the [Initiative Definition Document](initiative_definition_document_specification.md) and all domain acceptance records. It should also reference the [Decision Record Log](decision_record_log_specification.md), operational readiness confirmation, residual risk acceptance where relevant, and final handover or contract records.
 
-## 9. Done when
+## 9. Done When
 
 The record is ready to issue when:
 
@@ -181,14 +181,14 @@ The record is ready to issue when:
 
 If weak, improve the acceptance references, clarify the closure status, and make outstanding conditions more explicit.
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Distribute the signed closure record to the Sponsor, Delivery Owner, Acceptance Authorities, and audit or governance record holders.
 2. Update the [Initiative Definition Document](initiative_definition_document_specification.md) status to Final and record the closure reference.
 3. Ensure any residual obligations are transferred to named owners with due dates visible outside this record.
 4. Archive the initiative record set including the closure record, acceptance records, and decision log.
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 ### Starter prompt
 

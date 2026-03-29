@@ -1,6 +1,6 @@
 # Initiative Definition Document Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The Initiative Definition Document explains what an initiative is, why it exists, what outcomes it is intended to achieve, what boundaries govern delivery, and what must be delivered for the initiative to be accepted.
 
@@ -10,7 +10,7 @@ In this specification, an approved definition means the version of the Initiativ
 
 Intended readers include: Sponsor and sponsoring body, Decision Authorities, Outcome Owner, Delivery Owner, delivery team, Acceptance Authorities, operations and support teams, audit, and future maintainers.
 
-## 2. When to use it
+## 2. When to Use It
 
 This artifact is the default Stage 2 — Work Definition baseline for projects, major enhancements, and planned initiatives that change systems, services, data, security posture, support load, or cost in a material way.
 
@@ -20,7 +20,7 @@ Use this artifact during initiative definition and keep it as the authoritative 
 
 This document should anchor project chartering, scope control, deliverable definition, authorization decisions, and downstream acceptance. It should remain understandable to leadership and maintainers while still being operationally useful to delivery and governance roles.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 This artifact is produced in Stage 2 — Work Definition. It is authorized in Stage 3 — Work Authorization and kept current throughout Stages 4–7.
 
@@ -43,7 +43,7 @@ Where delivery is broken into smaller controlled work items, this document may a
 
 The Project Charter must not contradict this document. If authorization, funding, scope, ownership, required deliverables, or major impacts change materially, update this document first or in controlled parallel with the related governance decision.
 
-## 4. Before you start
+## 4. Before You Start
 
 Before drafting, confirm you have:
 
@@ -55,7 +55,7 @@ Before drafting, confirm you have:
 
 If any of these are missing or unclear, label the document as a **working draft** and identify the missing inputs explicitly.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Start from the Work Assessment Report.** Carry forward the validated need, desired outcomes, major risks, dependencies, stakeholder context, and recommended Stage 2 focus.
 2. **Draft the executive summary and business need sections.** Confirm why the initiative exists, what it will achieve, and what the organization is being asked to commit.
@@ -66,7 +66,7 @@ If any of these are missing or unclear, label the document as a **working draft*
 7. **Complete the document identity and control section.** Fill all fields including owners, Decision Authorities, and authorization reference or path.
 8. **Check against the validation guide** before submitting for authorization review.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Document identity and control
 
@@ -224,7 +224,7 @@ Should include:
 
 This section prevents duplication while preserving traceability.
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Include enough detail to support decision-making, clarify scope boundaries, define deliverable expectations, make ownership explicit, and show key risk, financial, operational, and support implications. Use references for detailed design, planning, testing, and operating material rather than embedding them.
 
@@ -242,7 +242,7 @@ Keep the following out:
 - detailed risk register entries better managed elsewhere
 - technical specifications beyond what is needed to understand scope, risk, or approval implications
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 The Delivery Owner usually coordinates the document with input from the Outcome Owner and Sponsor.
 
@@ -250,7 +250,7 @@ It should be reviewed by key owners and Decision Authorities before authorizatio
 
 This document traces back to the [Work Assessment Report](../work_assessment/work_assessment_report_specification.md). It feeds forward to the [Project Charter](project_charter_specification.md), functional capabilities, domain deliverables, decision records, operational readiness artifacts, and the [Formal Acceptance & Closure Record](formal_acceptance_and_closure_record_specification.md).
 
-## Maintenance expectations
+## 9. Maintenance Expectations
 
 This is a living governance document. Keep deliverables, owners, decision references, scope status, major impacts, and acceptance status current. Use references to detailed artifacts rather than embedding large downstream content.
 
@@ -267,7 +267,7 @@ Changes that alter outcomes, scope boundaries, required deliverables, Acceptance
 2. be reviewed by the relevant owners and decision-makers
 3. be re-authorized where the change is material
 
-## 9. Done when
+## 10. Done When
 
 The document is ready for authorization review when:
 
@@ -278,7 +278,7 @@ The document is ready for authorization review when:
 - the authorization path is confirmed and the document control section is complete
 - operational support implications are addressed where the initiative impacts a service or system
 
-## Validation guide
+## 11. Validation Guide
 
 Use this checklist when reviewing a produced Initiative Definition Document. Compare the document against each item and identify any gaps, ambiguity, missing ownership, or misplaced detail.
 
@@ -320,7 +320,7 @@ Use this checklist when reviewing a produced Initiative Definition Document. Com
 
 20. Material changes are handled through controlled update and re-authorization where required.
 
-## 10. What comes next
+## 12. What Comes Next
 
 1. Submit the document to the Sponsor and Decision Authorities for authorization review.
 2. Produce the [Project Charter](project_charter_specification.md) to formally record the Stage 3 authorization decision.
@@ -328,7 +328,7 @@ Use this checklist when reviewing a produced Initiative Definition Document. Com
 4. Begin Stage 4 elaboration of functional capabilities and domain deliverables, staying within the approved baseline.
 5. Keep this document current throughout delivery, updating status, references, and the change log as the initiative progresses.
 
-## 11. Prompt guide
+## 13. Prompt Guide
 
 ### Starter prompt
 

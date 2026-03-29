@@ -172,7 +172,7 @@ When used, the validation guide should help a reviewer assess whether the artifa
 
 ## 6. Writing Style Rules
 
-- Use sentence-case for section headings within numbered sections.
+- Use title-case for section headings within numbered sections (e.g., "What This Artifact Is For", "Stage Fit and Handoffs", "Done When").
 - Use "Must include:" not "Required:".
 - Use relative markdown links between specifications.
 - Preserve stable IDs (FC-###, SM-###, UC-###, BR-###, etc.) wherever they appear.

@@ -1,6 +1,6 @@
 # Business Rules Catalog Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The **Business Rules Catalog** is a centralized record of the rules, validations, policies, and approval conditions that govern solution behavior across modules and use cases. It provides a single place to document and trace the rules that determine correct behavior, decision logic, and exception handling.
 
@@ -13,7 +13,7 @@ It answers questions like:
 
 Having a catalog prevents rule duplication, fragmentation, and inconsistency. It helps solution designers, developers, testers, and auditors see which rules matter, why they exist, and how they affect behavior. Intended readers include delivery owners, solution leads, developers, testers, compliance reviewers, and auditors.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in **Work Definition Details (Stage 4)** when the solution contains numerous validations, approval conditions, or decision logic that cut across multiple modules or use cases. It is especially useful when:
 
@@ -25,7 +25,7 @@ Use this artifact in **Work Definition Details (Stage 4)** when the solution con
 
 For simple systems with minimal rules, it may be sufficient to document rules directly in use case narratives or module definitions. As the number or complexity of rules grows, a separate catalog improves clarity and traceability.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 * **Work Definition Details (Stage 4):** Draft the catalog alongside Solution Module Definitions and Use Case Narratives. Identify rules, rationale, affected modules and use cases, and validation implications.
 * **Delivery Mobilization (Stage 5):** Review the catalog with policy owners, compliance officers, or subject matter experts. Refine as needed and baseline the rules.
@@ -44,7 +44,7 @@ Downstream artifacts:
 * [Use Case Narratives Specification](use_case_narratives_specification.md)
 * [Validation & Evidence Matrix Specification](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -56,7 +56,7 @@ Make sure you have:
 
 If any of these are missing, treat the catalog as a working draft and label it as such.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Identify rules.** Gather all business rules, approval conditions, validations, and exception criteria from Functional Capabilities, Use Case Narratives, policy documents, and SME interviews.
 2. **Assign a stable identifier.** Give each rule a unique `BR-###` ID to facilitate traceability and change control.
@@ -67,7 +67,7 @@ If any of these are missing, treat the catalog as a working draft and label it a
 7. **Define validation and evidence needs.** Note how the rule will be tested or validated and what evidence will demonstrate compliance.
 8. **Add notes or remarks.** Include any additional comments, open questions, or known exceptions.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 Use a table like this:
 
@@ -76,7 +76,7 @@ Use a table like this:
 | `BR-001` | Approver must be a manager in the requestor's department. | Company Policy XYZ | `SM-002`, `UC-008` | Requests from other departments require re-assignment to correct approver. | UAT; audit log | Exceptions only for emergency scenarios |
 | `BR-002` | Requests over $5,000 require finance approval. | Finance Policy 12-B | `SM-001`, `UC-003` | Adds finance approval step. | Functional test; evidence of approval captured | Threshold indexed annually |
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Each rule statement should be unambiguous and state both the condition and the required outcome or constraint clearly. Rationale entries should point to the policy, legal requirement, or control objective that requires the rule — not just say "required by policy."
 
@@ -87,7 +87,7 @@ Keep the following out:
 * UI design or screen behavior descriptions
 * implementation or platform configuration detail
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 This artifact traces back to Functional Capabilities and the policy or regulatory documents that govern the initiative.
 
@@ -100,7 +100,7 @@ Ownership expectations:
 * Compliance or policy owner reviews rules that originate from corporate or regulatory obligations.
 * Reviewer confirms that all material decision logic is represented and traceable.
 
-## 9. Done when
+## 9. Done When
 
 * Each rule has a unique `BR-###` ID and a clear statement.
 * The rationale and policy basis for each rule are recorded.
@@ -108,14 +108,14 @@ Ownership expectations:
 * The decision impact and validation needs are documented.
 * The catalog is reviewed and approved by the Delivery Owner and relevant policy or compliance authorities.
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Use catalog entries to complete and cross-reference [Solution Module Definitions](solution_module_definition_specification.md) and [Use Case Narratives](use_case_narratives_specification.md).
 2. Reference `BR-###` IDs in test planning and link evidence in the [Validation & Evidence Matrix](../governance_and_control_deliverables/validation_and_evidence_matrix_specification.md).
 3. Keep the catalog current during delivery as rules are clarified or policy guidance changes.
 4. Include catalog reference in acceptance and closure records where compliance or audit traceability is required.
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

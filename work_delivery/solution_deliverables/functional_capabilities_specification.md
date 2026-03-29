@@ -1,6 +1,6 @@
 # Functional Capabilities Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 Functional Capabilities define the approved business abilities the solution must provide.
 
@@ -12,7 +12,7 @@ Use this artifact to make scope clear before the team starts detailed structurin
 
 Functional Capabilities remain the approved scope baseline even when later Solution Modules are grouped mainly around user behaviors and use cases.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact in Stage 2 when solution behavior is in scope and you need an approval-level baseline.
 
@@ -24,7 +24,7 @@ It is especially useful when:
 - the initiative needs formal acceptance later
 - the team needs stable IDs for traceability
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 - Stage 2: use this artifact to define the approved solution scope baseline.
 - Stage 3: use this artifact as part of the authorization basis.
@@ -41,7 +41,7 @@ Downstream artifacts:
 - [Technical Design Document Specification](../operational_readiness_deliverables/technical_design_document_specification.md)
 - [Acceptance Record Specification](acceptance_record_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have:
 
@@ -52,7 +52,7 @@ Make sure you have:
 
 If any of these are missing, treat the draft as a working draft only.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 Follow these steps:
 
@@ -69,7 +69,7 @@ Useful test:
 - If the statement reads like a user journey, move that detail to a Use Case Narrative.
 - If the statement reads like design or implementation, remove it.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Document header
 
@@ -98,7 +98,7 @@ Use a simple table like this:
 | --- | --- | --- | --- | --- |
 | `FC-001` | Staff can submit a service request. | Creates a controlled intake path for support demand. | Staff member | Keep notes short. |
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Each capability should be:
 
@@ -116,7 +116,7 @@ Keep the following out:
 - test scripts
 - backlog items
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 Each capability entry should be traceable forward to at least one downstream behavior artifact.
 
@@ -126,7 +126,7 @@ Minimum ownership expectations:
 - Outcome Owner or delegate confirms the capability statements still reflect intended outcomes.
 - Acceptance Authority for the solution domain should be known by the end of Stage 2, even if acceptance occurs later.
 
-## 9. Done when
+## 9. Done When
 
 This artifact is ready when:
 
@@ -136,7 +136,7 @@ This artifact is ready when:
 - exclusions are visible
 - no detailed design has leaked in
 
-## 10. What comes next
+## 10. What Comes Next
 
 After this baseline is approved:
 
@@ -145,7 +145,7 @@ After this baseline is approved:
 3. write one detailed module document per non-trivial module using the [Solution Module Definition Specification](solution_module_definition_specification.md)
 4. describe behavior using the [Use Case Narratives Specification](use_case_narratives_specification.md)
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 

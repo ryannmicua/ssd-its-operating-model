@@ -1,6 +1,6 @@
 # Problem & Outcome Validation Brief Specification
 
-## 1. What this artifact is for
+## 1. What This Artifact Is For
 
 The **Problem & Outcome Validation Brief** is a lightweight document used to confirm that the team is solving the right problem, for the right reasons, before turning the work into formal scope and design artifacts.
 
@@ -13,7 +13,7 @@ It answers a set of foundational questions:
 
 By explicitly recording these items up front, the brief reduces the risk of designing a well-governed solution to the wrong problem. It provides a reference point for later discussions about scope, trade-offs, and acceptance. Intended readers include delivery owners, outcome owners, sponsors, solution leads, and anyone drafting Functional Capabilities.
 
-## 2. When to use it
+## 2. When to Use It
 
 Use this artifact early in **Work Definition (Stage 2)** after the initiative has passed work assessment but before Functional Capabilities are drafted. It is especially useful when:
 
@@ -24,7 +24,7 @@ Use this artifact early in **Work Definition (Stage 2)** after the initiative ha
 
 For very small initiatives or urgent fixes, these items may be recorded directly in the Work Brief or Initiative Definition Document. For anything with cross-team impact or material investment, a separate brief improves clarity and traceability.
 
-## 3. Stage fit and handoffs
+## 3. Stage Fit and Handoffs
 
 * **Work Definition (Stage 2):** Draft and review the brief before writing Functional Capabilities. Use it to align stakeholders on problem, outcome, assumptions, and success measures.
 * **Work Authorization (Stage 3):** Treat this brief as part of the authorization basis when the Initiative Definition Document is light or absent.
@@ -40,7 +40,7 @@ Downstream artifacts:
 * [Non-Functional Requirements Specification](non_functional_requirements_specification.md)
 * [Solution Modules Specification](solution_modules_specification.md)
 
-## 4. Before you start
+## 4. Before You Start
 
 Make sure you have access to:
 
@@ -52,7 +52,7 @@ Make sure you have access to:
 
 If any of these are missing, draft the brief as a working document and label it as such until the gaps are resolved.
 
-## 5. How to draft it
+## 5. How to Draft It
 
 1. **Summarize the problem.** Write one or two paragraphs describing the core problem the solution must address. Explain who experiences the problem, how it manifests, and why it matters.
 2. **Identify the affected user groups or stakeholders.** List the roles, teams, or personas for whom the problem exists. Note any special conditions or contexts that influence how they experience the problem.
@@ -63,7 +63,7 @@ If any of these are missing, draft the brief as a working document and label it 
 7. **Identify dependencies.** List any external factors, systems, or parallel initiatives that materially affect whether the outcomes can be achieved.
 8. **Name owners and reviewers.** Identify who is responsible for maintaining the brief and who must review and validate its content.
 
-## 6. Minimum structure
+## 6. Minimum Structure
 
 ### 6.1. Document header
 
@@ -93,7 +93,7 @@ Describe what is deliberately out of scope or will not be addressed by this init
 
 Identify the owner of the brief, the reviewers, and any accountable parties for problem and outcome definition. Record who validated the brief (Outcome Owner, Sponsor, or delegate), the date of validation, and any comments. This ensures the brief is treated as an authoritative baseline rather than an informal note.
 
-## 7. Writing rules
+## 7. Writing Rules
 
 Write the problem statement in plain language from the perspective of those experiencing the problem. Keep outcomes focused on business results and away from feature or solution language. State assumptions explicitly and label them clearly as assumptions rather than facts.
 
@@ -104,7 +104,7 @@ Keep the following out:
 * detailed scope or capability definitions that belong in Functional Capabilities
 * implementation or delivery plans
 
-## 8. Traceability, ownership, and review
+## 8. Traceability, Ownership, and Review
 
 This artifact traces back to the Work Brief or Initiative Definition Document.
 
@@ -118,7 +118,7 @@ Ownership expectations:
 
 Acceptance evidence: approved brief confirmed by the Delivery Owner and Outcome Owner or delegate.
 
-## 9. Done when
+## 9. Done When
 
 * The problem statement clearly describes the underlying problem rather than potential solutions.
 * Intended outcomes reflect the desired business results rather than features or technical goals.
@@ -126,14 +126,14 @@ Acceptance evidence: approved brief confirmed by the Delivery Owner and Outcome 
 * Assumptions, exclusions, and dependencies are visible and reviewable.
 * The brief is endorsed by the named owner and reviewer.
 
-## 10. What comes next
+## 10. What Comes Next
 
 1. Use this brief as the primary input when drafting [Functional Capabilities](functional_capabilities_specification.md).
 2. Use success measures to inform [Non-Functional Requirements](non_functional_requirements_specification.md).
 3. Keep this brief visible when structuring [Solution Modules](solution_modules_specification.md) to confirm that module scope stays anchored to the original problem.
 4. Revisit and formally revise through change control if the initiative's purpose or outcomes change.
 
-## 11. Prompt guide
+## 11. Prompt Guide
 
 Starter prompt:
 
