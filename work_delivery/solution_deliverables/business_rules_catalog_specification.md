@@ -69,14 +69,15 @@ If any of these are missing, treat the catalog as a working draft and label it a
 
 ## 6. Minimum Structure
 
-You may use a table like this:
+You may use multiple tables for each domain like this:
 
+[1. Domain Name]
 | Rule ID | Rule statement | Rationale / Policy basis | Affected modules / use cases | Decision impact | Validation & evidence | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| `BR-001` | Approver must be a manager in the requestor's department. | Company Policy XYZ | `SM-002`, `UC-008` | Requests from other departments require re-assignment to correct approver. | UAT; audit log | Exceptions only for emergency scenarios |
-| `BR-002` | Requests over $5,000 require finance approval. | Finance Policy 12-B | `SM-001`, `UC-003` | Adds finance approval step. | Functional test; evidence of approval captured | Threshold indexed annually |
+| `1.1` | Approver must be a manager in the requestor's department. | Company Policy XYZ | `SM-002`, `UC-008` | Requests from other departments require re-assignment to correct approver. | UAT; audit log | Exceptions only for emergency scenarios |
+| `1.2` | Requests over $5,000 require finance approval. | Finance Policy 12-B | `SM-001`, `UC-003` | Adds finance approval step. | Functional test; evidence of approval captured | Threshold indexed annually |
 
-You may also opt to organize the catalog as numbered domains (top-level sections). Within each domain, list business rules as numbered entries keyed by their `BR-###` identifiers and rule titles.
+You may also opt to organize the catalog as numbered domains (top-level sections). Within each domain, list business rules as numbered entries keyed by their identifiers and rule titles.
 
 Each rule entry must include the following attributes in order:
 
@@ -92,7 +93,7 @@ Each rule entry must include the following attributes in order:
 ```markdown
 ## 1. [Domain Name]
 
-### BR-001 — [Rule Title]
+### 1.1 — [Rule Title]
 
 - **Rule statement:** [Concise statement of the rule, including any conditions or thresholds.]
 - **Rationale / Policy basis:** [The policy, regulation, or business rationale that requires this rule.]
