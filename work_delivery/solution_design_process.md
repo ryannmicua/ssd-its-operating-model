@@ -13,6 +13,13 @@ Use it together with:
 - [Deliverable Specifications Index](deliverable_specifications_index.md) – individual deliverable specs
 - [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md)
 
+For larger engineering initiatives, this process also supports the simpler four-phase operating view used in the Work Delivery Framework:
+
+- **Assess** = Stage 1
+- **Define and Authorize** = Stages 2-3
+- **Elaborate and Mobilize** = Stages 4-5
+- **Deliver, Accept and Close** = Stages 6-7
+
 ## 2. Where This Process Fits
 
 | Stage | Stage name | Solution design work at this stage |
@@ -23,6 +30,21 @@ Use it together with:
 | **5** | Delivery Mobilization | Confirm readiness to execute; finalize artifact set; no scope changes |
 | **6** | Work Delivery | Build, test, and collect evidence module by module |
 | **7** | Acceptance, Transition & Closure | Check each domain is ready; obtain formal acceptance; hand over ownership; close and capture lessons |
+
+### 2.1. Default Engineering Path for Larger Initiatives
+
+For larger engineering initiatives, use this process through the four-phase operating view:
+
+| Four-phase view | What solution teams should focus on |
+| --- | --- |
+| **Assess** | Confirm the work is worth defining. No solution design yet beyond what assessment needs. |
+| **Define and Authorize** | Confirm problem and outcomes, select active deliverable domains, define Functional Capabilities, and support the authorization decision without drifting into detailed design. |
+| **Elaborate and Mobilize** | Produce delivery-ready design, modules, use cases, domain artifacts, testing and evidence approach, then activate the execution controls and initial task breakdown needed to start controlled delivery. |
+| **Deliver, Accept and Close** | Deliver module by module, collect evidence, confirm readiness across active domains, obtain acceptance, hand over, and close. |
+
+This simpler view is for navigation and operating clarity.
+
+The stage numbers remain authoritative for control and artifact discipline.
 
 ## 3. Steps at a Glance
 
@@ -40,6 +62,14 @@ Steps 0–2 = **Stage 2**. Steps 3–6 = **Stage 4**. Step 7 = **Stage 6**. Step
 | **7. Build, test & collect evidence** | 6 | Deliver in module-sized increments; validate against use cases; collect evidence; record defects | Delivered components, evidence records, Deployed Solution record |
 | **8. Check readiness across all domains** | 7 | Confirm every active domain has met its obligations before seeking formal acceptance | Readiness confirmation across active domains |
 | **9. Accept, hand over & close** | 7 | Obtain formal acceptance; confirm operational handover; close the initiative; capture early-life observations | Formal Acceptance & Closure Record, operational handover confirmation, early-life review note |
+
+### 3.1. Boundary Rule Between Stage 4 and Stage 5
+
+Stage 4 and Stage 5 sit in the same simplified operating phase, but they do different work:
+
+- Stage 4 creates delivery-ready design and acceptance-ready elaboration.
+- Stage 5 confirms execution readiness, team cadence, trackers, escalation path, and the initial execution plan.
+- Stage 5 must not be used to continue unresolved design work except for minor completion items that do not change scope.
 
 ## 4. Stage 2 – Guidance
 
@@ -264,3 +294,5 @@ See the [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md) for 
 - **Minor changes** that do not alter outcomes, acceptance criteria, budgets, or schedules may be handled in Stage 4 with a decision record.
 - **Material changes** require a major change decision, documented in a decision record, and may send the initiative back to Stage 2 for redefinition and authorization.
 - All changes must be recorded with decision authority, rationale, and effect on scope, cost, time, and risk.
+
+

@@ -17,6 +17,14 @@ For normal planned work, the path is:
 
 `Work Assessment -> Work Definition -> Work Authorization -> Work Definition Details -> Delivery Mobilization -> Work Delivery -> Acceptance, Transition & Closure`
 
+For larger engineering initiatives, this can also be read through a simpler four-phase operating view:
+
+`Assess -> Define and Authorize -> Elaborate and Mobilize -> Deliver, Accept and Close`
+
+Use the four-phase view for easier navigation, reporting, and day-to-day coordination.
+
+Use the seven-stage path as the authoritative governance model.
+
 Start here based on where the work is:
 
 - If the work has not yet been screened, use the [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md).
@@ -60,3 +68,4 @@ Escalate to an Initiative Definition Document when the work becomes too broad, t
 Planned ITS work should not move forward because people are busy, because effort has already started, or because the request feels urgent.
 
 It should move forward because the work has been assessed, defined, authorized, delivered with evidence, accepted explicitly, handed over where needed, and closed formally.
+

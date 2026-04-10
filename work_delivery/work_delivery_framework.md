@@ -43,6 +43,27 @@ When applied consistently:
 - operational support is prepared before handover
 - acceptance and closure are formal, attributable, and evidence-based
 
+
+### 2.1. Seven Stages with a Simpler Four-Phase Operating View
+
+The **seven-stage model** remains the authoritative governance spine for planned work.
+
+For larger engineering initiatives, teams may also use a simpler **four-phase operating view** for navigation, reporting, and day-to-day coordination.
+
+The four-phase view does not replace the seven stages. It groups them into a simpler operating picture while preserving the stage-level control points.
+
+| Four-phase operating view | Governing stages included | Practical use |
+| --- | --- | --- |
+| **Assess** | Stage 1 - Work Assessment | Screen the work before definition effort grows |
+| **Define and Authorize** | Stage 2 - Work Definition; Stage 3 - Work Authorization | Define what is being proposed, then make the formal go / no-go decision |
+| **Elaborate and Mobilize** | Stage 4 - Work Definition Details; Stage 5 - Delivery Mobilization | Turn approved intent into delivery-ready detail, then activate execution controls |
+| **Deliver, Accept and Close** | Stage 6 - Work Delivery; Stage 7 - Acceptance, Transition & Closure | Deliver the approved outputs, gather evidence, accept formally, hand over, and close |
+
+Use this rule when both views appear in repository documents:
+
+- the **seven-stage view** is the formal control model
+- the **four-phase view** is the simplified operating view
+
 ## 3. Applicability and Scaling
 
 This framework applies to:
@@ -88,6 +109,15 @@ The Define-Decide-Deliver model is the control logic underneath this framework.
 - **Deliver** happens across Stage 5 Delivery Mobilization, Stage 6 Work Delivery, and Stage 7 Acceptance, Transition & Closure.
 
 This means the repository is not describing two competing models. The DDD model is the simple control rule. The Work Delivery Framework is the practical staged operating path that puts that rule into day-to-day use.
+
+
+### 4.2. Boundary Rules for the Four-Phase View
+
+The four-phase view only works if these boundaries remain explicit:
+
+- **Define and Authorize** must stay decision-ready. It defines what is being approved and records the approval decision. It does not become detailed design or execution planning.
+- **Elaborate and Mobilize** starts only after authorization. Stage 4 produces delivery-ready detail. Stage 5 activates cadence, controls, trackers, and the initial execution plan. Stage 5 is a readiness checkpoint, not a second design stage.
+- **Deliver, Accept and Close** must keep execution, evidence, operational handover, and formal closure visible as separate control outcomes even when they are reported together.
 
 ## 5. Core Roles
 
@@ -195,6 +225,27 @@ In practice, the framework works like this:
 - Stage 6 Work Delivery - delivers the approved outputs and gathers evidence as the work progresses
 - Stage 7 Acceptance, Transition & Closure - formally accepts the result, transfers operational responsibility, and closes the work
 
+
+For larger engineering initiatives, the same path can be read more simply like this:
+
+- **Assess** = Stage 1
+- **Define and Authorize** = Stages 2-3
+- **Elaborate and Mobilize** = Stages 4-5
+- **Deliver, Accept and Close** = Stages 6-7
+
+Use the four-phase view when:
+
+- reporting progress to leadership
+- orienting a new delivery team
+- explaining where the work is in practical terms
+- simplifying repository navigation
+
+Use the seven-stage view when:
+
+- making or checking governance decisions
+- confirming whether the right artifacts exist
+- deciding whether work is allowed to move forward
+- checking acceptance, handover, and closure discipline
 A Work Brief is the ITS standard tool for defining work. It makes every piece of work clear to all stakeholders — why it is needed, what must be delivered, what the delivery basis is, and what evidence confirms the work is done.
 
 A Work Brief can be used to partially implement this framework, applying the definition, decision, delivery, and closure elements as a focused operating path without requiring the full staged structure a larger initiative would need.
@@ -510,6 +561,15 @@ AI must not:
 - no material scope expansion has been introduced
 - the work is ready for Delivery Mobilization
 
+
+### 12.5. Boundary Rule with Stage 5
+
+Stage 4 and Stage 5 sit in the same simplified operating phase, but they must not be treated as the same control point.
+
+- Stage 4 produces delivery-ready content.
+- Stage 5 confirms the team, cadence, trackers, escalation path, and initial execution plan are ready.
+- Stage 5 must not become a second design stage or a hidden scope-expansion stage.
+
 ## 13. Stage 5 - Delivery Mobilization
 
 **Purpose:** Prepare the team and governance rhythm to execute in a controlled, visible, and sustainable way.
@@ -519,6 +579,8 @@ AI must not:
 **Primary Owner:** Delivery Owner.
 
 ### 13.1. Minimum Outputs
+
+Stage 5 is the readiness checkpoint between delivery-ready design and controlled execution.
 
 - Delivery Charter
 - Delivery Roadmap confirmed with the delivery team
@@ -676,3 +738,6 @@ AI must not:
 ### 15.5. Hard Rule
 
 Delivered without acceptance is not complete.
+
+
+
