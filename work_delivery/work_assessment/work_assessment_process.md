@@ -1,4 +1,4 @@
-# Work Assessment Process
+﻿# Work Assessment Process
 
 Status: working draft
 
@@ -15,6 +15,7 @@ Use this document for:
 - deciding whether a request should enter Work Definition at all
 - running Stage 1 in a consistent, traceable way
 - producing an assessment handoff that definition can reuse (instead of rediscovering context)
+- routing ongoing delivery control to the [Delivery Owner Runbook](../delivery_owner_runbook.md) once work moves beyond assessment
 
 Do not use this document for:
 
@@ -484,3 +485,5 @@ Warning signs:
 - kill risks are visible but ignored
 - definition is forced to rediscover basic problem, stakeholder, and risk context
 - "proceed" is treated as approval to deliver
+
+

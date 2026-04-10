@@ -1,4 +1,4 @@
-# ITS Operating Model - Start Here
+﻿# ITS Operating Model - Start Here
 
 This repository is meant to read as one operating system for planned ITS work.
 
@@ -54,6 +54,7 @@ Escalate to an Initiative Definition Document when the work becomes too broad, t
 | If you want to...                                   | Start here                                                                              |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Understand the full planned-work lifecycle          | [Work Delivery Framework](work%20delivery/work_delivery_framework.md)                   |
+| Run day-to-day delivery control as a Delivery Owner | [Delivery Owner Runbook](work%20delivery/delivery_owner_runbook.md)                     |
 | Screen whether work should proceed at all           | [Work Assessment Process](work%20delivery/work_assessment/work_assessment_process.md)   |
 | Find the right deliverable specification            | [Deliverable Specifications Index](work%20delivery/deliverable_specifications_index.md) |
 | Choose which deliverables are needed                | [Standard Deliverables Guide](work%20delivery/standard_deliverables_guide.md)           |
@@ -78,4 +79,6 @@ Session digests capture decisions, created/changed artifacts, and next steps fro
 Planned ITS work should not move forward because people are busy, because effort has already started, or because the request feels urgent.
 
 It should move forward because the work has been assessed, defined, authorized, delivered with evidence, accepted explicitly, handed over where needed, and closed formally.
+
+
 

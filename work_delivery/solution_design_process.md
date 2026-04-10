@@ -1,4 +1,4 @@
-# Solution Design Process
+﻿# Solution Design Process
 
 Status: working draft
 
@@ -15,6 +15,7 @@ Use this document for:
 - routing solution design work to the correct stage (Stage 2 vs Stage 4)
 - choosing what to define now vs what to defer
 - linking solution deliverables to acceptance and evidence early
+- routing overall day-to-day delivery control back to the [Delivery Owner Runbook](delivery_owner_runbook.md)
 
 Do not use this document for:
 
@@ -379,5 +380,7 @@ See the [AI-Assisted Authoring Standard](ai_assisted_authoring_standard.md) for 
 - **Minor changes** that do not alter outcomes, acceptance criteria, budgets, or schedules may be handled in Stage 4 with a decision record.
 - **Material changes** require a major change decision, documented in a decision record, and may send the initiative back to Stage 2 for redefinition and authorization.
 - All changes must be recorded with decision authority, rationale, and effect on scope, cost, time, and risk.
+
+
 
 

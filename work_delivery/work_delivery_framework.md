@@ -1,4 +1,4 @@
-# Work Delivery Framework
+﻿# Work Delivery Framework
 
 Status: working draft
 
@@ -17,6 +17,7 @@ Use this document for:
 - understanding how planned ITS work should move from intake to closure
 - navigating what must be produced, decided, and evidenced at each stage
 - orienting Delivery Owners on "what's required next" without having to re-read the full framework every time
+- directing repeat-use operational work to the [Delivery Owner Runbook](delivery_owner_runbook.md)
 
 Do not use this document for:
 
@@ -884,6 +885,8 @@ AI must not:
 ### 15.5. Hard Rule
 
 Delivered without acceptance is not complete.
+
+
 
 
 
