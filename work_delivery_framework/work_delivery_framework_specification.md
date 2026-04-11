@@ -75,6 +75,8 @@ id: GATE-INTAKE-EXIT
 name: Intake Exit Gate
 pass_criteria: []
 fail_conditions: []
+default_decision_owner_role: Delivery Owner
+requires_named_decision_owner: true
 decision_rights: []
 ```
 
@@ -350,16 +352,28 @@ An agent would likely create tiers or classifications without your approval.
 **Question to resolve**  
 Should the framework have lightweight, standard, and complex paths, and if so, what determines which path applies?
 
-### 6.7 Governance and ownership are undefined
+### 6.7 Governance and ownership are resolved
 
-**What is ambiguous**  
-It is not clear who owns the framework, who enforces it, who approves outputs, or who decides a project cannot proceed.
+**Resolved decision**  
+1. The framework owner is the PMO. The PMO is accountable for maintaining, evolving, and publishing this framework.
+2. Every gate in the framework MUST have a single accountable Gate Decision Owner (a named person) for the stop/proceed decision.
+3. The Gate Decision Owner for each gate is assigned at Intake by the PMO or the project Delivery Owner and recorded in the Initiative Definition / Project Brief. For large projects with a formal project charter, this information MUST also be recorded in the Project Charter.
+4. There are no role-based veto rights in this framework. The Gate Decision Owner is accountable for decisions made.
+5. If there is substantive disagreement at a gate, the Gate Decision Owner MUST identify an alternative path forward (scope, sequencing, approach, or risk treatment) and record a plan of action forward in the project Decision Log.
 
-**Likely agent assumption**  
-An agent would likely assign this authority to PMO or delivery managers by default.
+**Default Gate Decision Owner roles (unless explicitly overridden by name in the Initiative Definition / Project Brief)**  
+1. Intake / ready to start definition: Delivery Owner
+2. Definition complete / ready for solution design: Delivery Owner
+3. Solution definition complete / ready for delivery planning: Delivery Owner
+4. Delivery plan complete / ready to execute: Delivery Owner
+5. Operational readiness / ready to go live and support: Operations / Support Owner
+6. External handoff readiness (if an external team will build): Delivery Owner
 
-**Question to resolve**  
-Who owns the framework, who reviews compliance, and who has authority to stop work due to incomplete definition?
+**Consent model (for being named as Gate Decision Owner)**  
+Consent is implied when there is no objection upon acceptance of the document where the person is listed. It is expected that the named Gate Decision Owner will be informed of their responsibilities.
+
+**Implication for implementation**  
+Gate definitions in the machine-consumable YAML model MUST specify a default_decision_owner_role and MUST require a named decision owner per project (recorded in the Initiative Definition / Project Brief).
 
 ### 6.8 Relationship to technical specification work is unclear
 

@@ -39,14 +39,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: This framework is a full operating model for work definition and delivery readiness. The canonical source of truth is Markdown-first (`work_delivery_framework_specification.md`) and it must embed machine-consumable YAML blocks (with stable IDs) for stages, artifacts, and gates so both humans and AI agents can apply the framework consistently.
-- [ ] **A03 — Governance, ownership, and decision rights are underdefined**
+- [x] **A03 — Governance, ownership, and decision rights are underdefined**
   - Relevant section(s): §1 System Overview; §2.2; §6.7
   - Description: The specification names internal teams, PMO, delivery managers, and engineers, but does not define who owns the framework, who maintains it, who approves outputs, who can reject work as incomplete, and who arbitrates disputes.
   - Why it matters: Without clear authority, gating rules may be ignored or applied inconsistently.
   - Dependencies: Blocks or materially affects A05, A13, A14.
   - Estimated complexity: Medium
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: PMO owns the framework. Every gate requires a single named Gate Decision Owner (assigned by PMO or Delivery Owner at Intake and recorded in the Initiative Definition / Project Brief; also in the Project Charter for large projects). No role has veto power; the Decision Owner is accountable, and substantive disagreements must have a documented plan of action forward recorded in the project Decision Log.
 - [ ] **A04 — Minimum intake inputs and entry readiness are not operationalized**
   - Relevant section(s): §2.1.1; §2.2.1-3; §4.3; §4.5
   - Description: The specification lists input categories such as business rules, constraints, dependencies, and acceptance criteria, but does not define the minimum information required before a request may enter the framework or proceed past intake.
@@ -194,7 +195,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 |---|---:|---|---|---|---|---|---|
 | [x] | 1 | **A01 — In-scope and out-of-scope work types** | Scope must be fixed before paths, artifacts, and controls can be defined. | A clear applicability statement and exclusions list. | Framework sponsor, PMO lead, delivery leadership | Scope decision with explicit inclusion/exclusion rules and examples. | Resolved |
 | [x] | 2 | **A02 — Framework form and publication model** | The team must know what it is actually building before detailing mechanics. | A defined framework packaging model, such as operating model plus templates and workflow. | Framework sponsor, knowledge owner, PMO | Decision on deliverable form, structure, and publishing approach. | Resolved |
-| [ ] | 3 | **A03 — Governance, ownership, and decision rights** | Enforcement cannot work without named owners and escalation authority. | A RACI-like ownership model and formal stop/proceed authority. | PMO, delivery leadership, framework owner | Governance decision with named roles and approval rights. | Unresolved |
+| [x] | 3 | **A03 — Governance, ownership, and decision rights** | Enforcement cannot work without named owners and escalation authority. | A RACI-like ownership model and formal stop/proceed authority. | PMO, delivery leadership, framework owner | Governance decision with named roles and approval rights. | Resolved |
 | [ ] | 4 | **A04 — Minimum intake inputs and entry readiness** | Intake quality determines whether the process starts with enough signal. | A minimum required input set and intake gate definition. | Request owners, PMO, delivery managers | Clarification plus intake checklist and blocker rules. | Unresolved |
 | [ ] | 5 | **A05 — Lifecycle stages, progression gates, and exit criteria** | Stages and gates operationalize the framework and unlock artifact design. | A formal staged flow with evidence required at each gate. | Framework owner, delivery managers, PMO | Workflow definition with gate criteria and examples. | Unresolved |
 | [ ] | 6 | **A06 — Required artifact taxonomy** | Once stages exist, outputs can be assigned to the correct points and conditions. | A canonical artifact set with core and conditional outputs. | Framework owner, delivery managers, engineering representatives | Artifact matrix with purpose, required contents, and applicability rules. | Unresolved |
@@ -217,6 +218,6 @@ These are not unimportant, but they are either conditional by delivery mode or e
 - **Foundational items:** 9
 - **Dependent items:** 5
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01 and A02 have been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A03.
+- **Tracking note:** A01, A02, and A03 have been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A04.
 
 
