@@ -48,14 +48,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: PMO owns the framework. Every gate requires a single named Gate Decision Owner (assigned by PMO or Delivery Owner at Intake and recorded in the Initiative Definition / Project Brief; also in the Project Charter for large projects). No role has veto power; the Decision Owner is accountable, and substantive disagreements must have a documented plan of action forward recorded in the project Decision Log.
-- [ ] **A04 - Minimum intake inputs and entry readiness are not operationalized**
+- [x] **A04 - Minimum intake inputs and entry readiness are not operationalized**
   - Relevant section(s): Section 2.1.1; Section 2.2.1-3; Section 4.3; Section 4.5
   - Description: The specification lists input categories such as business rules, constraints, dependencies, and acceptance criteria, but does not define the minimum information required before a request may enter the framework or proceed past intake.
   - Why it matters: Intake quality affects every downstream artifact and determines whether teams stop early or proceed with hidden gaps.
   - Dependencies: Depends on A01 and A03; blocks or materially affects A05, A06, A08, A14.
   - Estimated complexity: Medium
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The minimum entry payload to allow a request to enter Intake is: requester name; and a short description that includes background/problem/opportunity, desired outcome, success measures, and affected systems/processes. Success measures and affected systems/processes are allowed to be explicitly "Unknown/TBD" at entry. Requests may enter Intake even when in-scope is not yet confirmed. A triage owner is assigned immediately (provisional ownership allowed), and an initial clarification session is expected as part of the initial assessment.
 - [ ] **A05 - Lifecycle stages, progression gates, and exit criteria are not explicit**
   - Relevant section(s): Section 2.1.1-10; Section 2.2.1-7; Section 5.1-5.5; Section 6.3
   - Description: The specification implies a staged flow from intake through documentation and readiness evaluation, but does not define the formal stages, gate names, required evidence, or completion conditions for each stage.
@@ -196,7 +197,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 1 | **A01 - In-scope and out-of-scope work types** | Scope must be fixed before paths, artifacts, and controls can be defined. | A clear applicability statement and exclusions list. | Framework sponsor, PMO lead, delivery leadership | Scope decision with explicit inclusion/exclusion rules and examples. | Resolved |
 | [x] | 2 | **A02 - Framework form and publication model** | The team must know what it is actually building before detailing mechanics. | A defined framework packaging model, such as operating model plus templates and workflow. | Framework sponsor, knowledge owner, PMO | Decision on deliverable form, structure, and publishing approach. | Resolved |
 | [x] | 3 | **A03 - Governance, ownership, and decision rights** | Enforcement cannot work without named owners and escalation authority. | A RACI-like ownership model and formal stop/proceed authority. | PMO, delivery leadership, framework owner | Governance decision with named roles and approval rights. | Resolved |
-| [ ] | 4 | **A04 - Minimum intake inputs and entry readiness** | Intake quality determines whether the process starts with enough signal. | A minimum required input set and intake gate definition. | Request owners, PMO, delivery managers | Clarification plus intake checklist and blocker rules. | Unresolved |
+| [x] | 4 | **A04 - Minimum intake inputs and entry readiness** | Intake quality determines whether the process starts with enough signal. | A minimum required input set and intake gate definition. | Request owners, PMO, delivery managers | Clarification plus intake checklist and blocker rules. | Resolved |
 | [ ] | 5 | **A05 - Lifecycle stages, progression gates, and exit criteria** | Stages and gates operationalize the framework and unlock artifact design. | A formal staged flow with evidence required at each gate. | Framework owner, delivery managers, PMO | Workflow definition with gate criteria and examples. | Unresolved |
 | [ ] | 6 | **A06 - Required artifact taxonomy** | Once stages exist, outputs can be assigned to the correct points and conditions. | A canonical artifact set with core and conditional outputs. | Framework owner, delivery managers, engineering representatives | Artifact matrix with purpose, required contents, and applicability rules. | Unresolved |
 | [ ] | 7 | **A07 - Boundary between framework outputs and technical specification work** | The handoff line must be clear before readiness can be measured. | A defined boundary between framework deliverables and downstream engineering specs. | Engineering leadership, architects, PMO | Scope boundary decision supported by examples of in-framework vs downstream artifacts. | Unresolved |
@@ -213,11 +214,11 @@ These are not unimportant, but they are either conditional by delivery mode or e
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 16
-- **Resolved ambiguities:** 2
-- **Remaining unresolved ambiguities:** 14
+- **Resolved ambiguities:** 4
+- **Remaining unresolved ambiguities:** 12
 - **Foundational items:** 9
 - **Dependent items:** 5
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01, A02, and A03 have been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A04.
+- **Tracking note:** A01, A02, A03, and A04 have been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A05.
 
 

@@ -152,6 +152,24 @@ The framework currently operates as a standalone knowledge and delivery-definiti
 9. Support and maintenance expectations
 10. Vendor engagement context where applicable
 
+**Minimum request entry payload (Intake entry readiness)**  
+A request may enter Intake even if it is not yet confirmed in-scope. The purpose of Intake entry is to create a tracked item with an accountable triage owner and to schedule an initial clarification session.
+
+**Required at entry**  
+1. Requester name
+2. Short description that includes:
+   - Background / problem / opportunity
+   - Desired outcome
+   - Success measures (allowed to be explicitly "Unknown/TBD" at entry)
+   - Affected systems / processes (allowed to be explicitly "Unknown/TBD" at entry)
+
+**Required operational actions at entry**  
+1. Assign a triage owner immediately (provisional ownership is allowed).
+2. Perform an initial clarification session as part of the initial assessment.
+
+**Entry rejection conditions**  
+1. Requester name is missing.
+2. Short description is missing background / problem / opportunity, or missing desired outcome.
 ### 4.4 Data flowing out
 
 1. Project documentation
