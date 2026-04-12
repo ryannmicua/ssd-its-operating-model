@@ -65,16 +65,20 @@ gate: GATE-INTAKE-EXIT
 kind: artifact
 id: ARTIFACT-BUSINESS-REQUEST
 name: Business Request
-required_sections: []
-completeness_criteria: []
+purpose: ""
+required_contents: []
+artifact_specific_completeness_rules: []
+common_failure_conditions: []
 ```
 
 ```yaml
 kind: gate
 id: GATE-INTAKE-EXIT
 name: Intake Exit Gate
-pass_criteria: []
-fail_conditions: []
+mandatory_pass_conditions: []
+immediate_fail_conditions: []
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts: []
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -284,12 +288,15 @@ gate: GATE-CLOSURE-COMPLETE
 kind: gate
 id: GATE-QUALIFIED-REQUEST
 name: Qualified Request
-pass_criteria:
+mandatory_pass_conditions:
   - Request is in scope for the framework
   - Gate Decision Owner is named
-fail_conditions:
+immediate_fail_conditions:
   - Request is out of scope
   - Scope cannot be determined due to missing inputs
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -299,13 +306,16 @@ decision_rights: []
 kind: gate
 id: GATE-INITIATIVE-DEFINED
 name: Initiative Defined (for Authorization decision)
-pass_criteria:
+mandatory_pass_conditions:
   - Scope is bounded
   - Outcomes and success measures are defined at an appropriate level
   - Authorization requirement is declared (Required or Not Required)
-fail_conditions:
+immediate_fail_conditions:
   - Critical ambiguity remains unresolved
   - Authorization requirement cannot be decided due to missing information
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -316,10 +326,13 @@ kind: gate
 id: GATE-AUTHORIZED
 name: Authorized
 conditional: true
-pass_criteria:
+mandatory_pass_conditions:
   - Business authorization to invest resources is explicit and recorded
-fail_conditions:
+immediate_fail_conditions:
   - Authorization is required but not granted
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: Business / Product Owner (Budget Owner)
 requires_named_decision_owner: true
 decision_rights: []
@@ -329,11 +342,14 @@ decision_rights: []
 kind: gate
 id: GATE-SPECIFICATION-COMPLETE
 name: Specification Complete
-pass_criteria:
+mandatory_pass_conditions:
   - Solution definition is sufficient for planning and task breakdown
   - Acceptance criteria are defined
-fail_conditions:
+immediate_fail_conditions:
   - Downstream delivery would require inventing business requirements
+minimum_qualitative_threshold: strong
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -343,12 +359,15 @@ decision_rights: []
 kind: gate
 id: GATE-MVP-IDENTIFIED
 name: MVP Identified
-pass_criteria:
+mandatory_pass_conditions:
   - MVP scope is defined
   - MVP success measures are explicit
   - MVP acceptance criteria are explicit and approved
-fail_conditions:
+immediate_fail_conditions:
   - MVP is undefined or acceptance expectations are ambiguous
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: Delivery Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -358,10 +377,13 @@ decision_rights: []
 kind: gate
 id: GATE-DELIVERABLES-ACCEPTED
 name: All Deliverables Accepted
-pass_criteria:
+mandatory_pass_conditions:
   - Delivered solution is accepted by the Acceptance Owner against the specified acceptance criteria
-fail_conditions:
+immediate_fail_conditions:
   - Acceptance criteria are not met and no explicit deviation approval exists
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: Acceptance Owner (Business / Product Owner)
 requires_named_decision_owner: true
 decision_rights: []
@@ -371,10 +393,13 @@ decision_rights: []
 kind: gate
 id: GATE-TRANSITION-COMPLETE
 name: Transition Complete
-pass_criteria:
+mandatory_pass_conditions:
   - Support model and operating ownership are accepted
-fail_conditions:
+immediate_fail_conditions:
   - The solution cannot be supported as delivered
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: Operations / Support Owner
 requires_named_decision_owner: true
 decision_rights: []
@@ -384,10 +409,13 @@ decision_rights: []
 kind: gate
 id: GATE-CLOSURE-COMPLETE
 name: Closure Complete
-pass_criteria:
+mandatory_pass_conditions:
   - Closure requirements are satisfied and recorded
-fail_conditions:
+immediate_fail_conditions:
   - Closure evidence is incomplete
+minimum_qualitative_threshold: adequate
+critical_stage_defining_artifacts:
+  - TBD-DEFERRED-TO-A17
 default_decision_owner_role: PMO / ITS Director
 requires_named_decision_owner: true
 decision_rights: []
@@ -452,7 +480,8 @@ id: ARTIFACT-WORK-BRIEF
 name: Work Brief
 packaging_mode: packet
 required_by_gate: GATE-INITIATIVE-DEFINED
-required_sections:
+purpose: Consolidated packet for small-work initiatives that captures the minimum business, delivery, and operational definition needed to decide whether the initiative is sufficiently defined to proceed.
+required_contents:
   - Background / problem / opportunity
   - Desired outcome
   - Success measures (allowed: explicitly Unknown/TBD at entry)
@@ -466,6 +495,13 @@ required_sections:
   - Delivery approach (high-level)
   - Support and operational considerations (if applicable)
   - User adoption considerations (if applicable)
+artifact_specific_completeness_rules:
+  - Scope boundaries, desired outcome, and key constraints are explicit enough to determine whether the work is bounded.
+  - The packet is internally coherent across business need, scope, delivery approach, and operating implications.
+  - Unknowns are explicitly marked rather than implied or omitted.
+common_failure_conditions:
+  - The packet mixes multiple plausible interpretations of the work without resolving or exposing them.
+  - A downstream team would need to infer core business intent, scope boundaries, or ownership.
 ```
 
 ```yaml
@@ -474,7 +510,8 @@ id: ARTIFACT-PROJECT-BRIEF
 name: Initiative Definition / Project Brief
 packaging_mode: standalone
 required_by_gate: GATE-INITIATIVE-DEFINED
-required_sections:
+purpose: Primary large-work artifact that defines the initiative, its scope, business intent, operating context, and the named owners needed for gate decisions.
+required_contents:
   - Background / problem / opportunity
   - Desired outcomes and success measures
   - Scope boundaries (in-scope / out-of-scope) and assumptions
@@ -488,6 +525,13 @@ required_sections:
   - Delivery approach (high-level)
   - Support and operational considerations (if applicable)
   - User adoption considerations (if applicable)
+artifact_specific_completeness_rules:
+  - The initiative can be understood, bounded, and discussed without relying on tribal knowledge.
+  - Scope, business rules, and known unknowns are explicit enough to support gate decisions and downstream solution definition.
+  - Ownership and decision authority are visible from the document itself.
+common_failure_conditions:
+  - Business outcomes, scope boundaries, or stakeholder accountabilities remain materially ambiguous.
+  - The document appears complete but leaves foundational questions unresolved for the next stage.
 ```
 
 ```yaml
@@ -496,8 +540,16 @@ id: ARTIFACT-DECISION-LOG
 name: Decision Log
 packaging_mode: standalone
 required_by_gate: GATE-INITIATIVE-DEFINED
-required_sections:
+purpose: Durable record of material decisions, options considered, rationale, ownership, and implications so downstream teams do not silently reconstruct prior intent.
+required_contents:
   - Decision entries (one per decision)
+artifact_specific_completeness_rules:
+  - Material stop/proceed, scope, requirement, risk-treatment, and approach decisions are recorded when made.
+  - Each entry identifies the decision, owner, status, rationale, and implications clearly enough for later review.
+  - Open decisions are distinguishable from settled decisions.
+common_failure_conditions:
+  - Important decisions are only implied in other artifacts or meeting context.
+  - Entries omit enough rationale or status information that downstream teams must reinterpret why the decision exists.
 entry_schema_notes:
   - Each decision entry should include: decision statement, date, owner, status, options considered, rationale, and implications.
 ```
@@ -509,12 +561,19 @@ name: Project Charter (Approved)
 conditional_on:
   - Authorization is required
 required_by_gate: GATE-AUTHORIZED
-required_sections:
+purpose: Formal authorization artifact that records the approved purpose, scope, governance, and resource commitment for initiatives that require explicit authorization.
+required_contents:
   - Project purpose and scope summary
   - Sponsor and authorization statement
   - Budget/resource commitment (as applicable)
   - Governance and decision rights (including named Gate Decision Owners)
   - High-level risks and constraints
+artifact_specific_completeness_rules:
+  - The authorization decision, sponsor intent, and resource commitment are explicit and attributable.
+  - Governance and scope are clear enough that the team can act on the authorization without reopening its meaning.
+common_failure_conditions:
+  - Authorization is implied but not explicitly recorded.
+  - Scope or authority remains vague enough that the team cannot tell what was actually approved.
 ```
 
 ```yaml
@@ -526,12 +585,19 @@ conditional_on:
 required_by_gate_default: GATE-SPECIFICATION-COMPLETE
 may_be_required_by_gate:
   - GATE-AUTHORIZED
-required_sections:
+purpose: Defines the external delivery engagement model, delivery responsibilities, and working agreements needed for a usable vendor or partner handoff.
+required_contents:
   - Delivery engagement model and roles/responsibilities
   - Delivery cadence and working agreements
   - Communication and escalation paths
   - Handoff expectations and acceptance workflow (high-level)
   - Access and environment expectations (as applicable)
+artifact_specific_completeness_rules:
+  - Engagement roles, interfaces, and responsibilities are explicit enough to prevent delivery-governance gaps.
+  - External parties can understand how work, decisions, escalation, and acceptance will operate.
+common_failure_conditions:
+  - The delivery mode is too vague to determine responsibilities or handoff expectations.
+  - The document leaves unowned coordination or escalation gaps between internal and external teams.
 ```
 
 ```yaml
@@ -541,13 +607,20 @@ name: Technical Design Document (TDD)
 conditional_on:
   - Material ops/support impact
 required_by_gate: GATE-SPECIFICATION-COMPLETE
-required_sections:
+purpose: System-level design artifact that explains the proposed solution structure well enough for downstream engineering planning without dropping into code-level design.
+required_contents:
   - Design goals and non-goals
   - System context and boundaries
   - Major components and responsibilities
   - Data flows and key interactions
   - Non-functional requirements (as applicable)
   - Operational considerations relevant to supportability (as applicable)
+artifact_specific_completeness_rules:
+  - The proposed system shape, boundaries, and major interactions are clear enough to derive downstream technical planning without inventing business requirements.
+  - Design goals, non-goals, and operational implications align with the business and delivery artifacts.
+common_failure_conditions:
+  - Major components, boundaries, or key flows are absent or contradictory.
+  - The artifact drifts into code-level design while still failing to explain system-level behavior.
 explicitly_out_of_scope:
   - Task breakdown (epics/stories/tasks)
   - Code-level design
@@ -561,13 +634,20 @@ name: API/Contract Specification
 conditional_on:
   - New integration / API change
 required_by_gate: GATE-SPECIFICATION-COMPLETE
-required_sections:
+purpose: Defines externally visible contracts and integration expectations so downstream teams can implement and validate interfaces without guesswork.
+required_contents:
   - Endpoints and/or events
   - Schemas
   - Authentication and authorization
   - Error handling
   - Versioning and backward-compatibility expectations
   - Dependencies
+artifact_specific_completeness_rules:
+  - Interface behavior, schemas, and failure behavior are explicit enough for independent implementation and review.
+  - Contract assumptions align with security, access, and dependency constraints defined elsewhere.
+common_failure_conditions:
+  - Consumers or implementers would need to infer payload shape, error behavior, or compatibility expectations.
+  - The contract conflicts with other framework artifacts or leaves material interface decisions unstated.
 explicitly_out_of_scope:
   - Task breakdown (epics/stories/tasks)
   - Code-level design
@@ -581,12 +661,19 @@ name: Deployment Guide
 conditional_on:
   - Material ops/support impact
 required_by_gate: GATE-DELIVERABLES-ACCEPTED
-required_sections:
+purpose: Operational deployment and recovery artifact that enables controlled release, validation, rollback, and support handoff.
+required_contents:
   - Deployment steps and prerequisites
   - Environments and configuration expectations
   - Rollback / recovery approach
   - Operational validation steps
   - Monitoring and support handover notes (as applicable)
+artifact_specific_completeness_rules:
+  - A qualified operator can understand how to deploy, validate, and recover the solution in the intended environments.
+  - Release and support steps are explicit enough to establish a supported operating state.
+common_failure_conditions:
+  - Deployment or rollback depends on undocumented knowledge.
+  - Operational validation or handover expectations are too vague to support transition.
 ```
 
 ```yaml
@@ -597,12 +684,19 @@ conditional_on:
   - Customer-facing change
 start_by_gate: GATE-SPECIFICATION-COMPLETE
 required_by_gate: GATE-DELIVERABLES-ACCEPTED
-required_sections:
+purpose: Defines how affected users will be informed, enabled, and supported through rollout and adoption of the change.
+required_contents:
   - Impacted user groups and change scope
   - Communications plan
   - Training and enablement approach (as applicable)
   - Rollout plan and adoption checkpoints
   - Support and feedback loop plan
+artifact_specific_completeness_rules:
+  - Impacted users, rollout expectations, and support loops are explicit enough to avoid unmanaged adoption risk.
+  - Communications and enablement plans are proportionate to the change and aligned to the delivery plan.
+common_failure_conditions:
+  - The plan names user impact but provides no credible adoption or support path.
+  - Rollout assumptions depend on undocumented communications, training, or ownership.
 ```
 
 ```yaml
@@ -612,12 +706,19 @@ name: Data Asset Specification
 conditional_on:
   - Data migration
 required_by_gate: GATE-SPECIFICATION-COMPLETE
-required_sections:
+purpose: Defines the in-scope data assets, structures, constraints, and validation expectations required for safe migration or data-affecting change.
+required_contents:
   - Data assets in scope
   - Schemas and mappings (as applicable)
   - Data quality and validation expectations
   - Sensitivity classification and retention considerations (as applicable)
   - Access considerations (as applicable)
+artifact_specific_completeness_rules:
+  - In-scope data, mappings, and validation expectations are explicit enough to design migration and verification safely.
+  - Data sensitivity, access, and retention implications are visible where relevant.
+common_failure_conditions:
+  - The team cannot tell what data is moving, changing, or being validated.
+  - Material quality, sensitivity, or access implications are omitted or contradictory.
 ```
 
 ```yaml
@@ -627,11 +728,18 @@ name: Data Migration Plan
 conditional_on:
   - Data migration
 required_by_gate: GATE-SPECIFICATION-COMPLETE
-required_sections:
+purpose: Execution-level migration approach artifact that explains sequencing, cutover, validation, and rollback for data movement.
+required_contents:
   - Migration approach and sequencing
   - Cutover plan and downtime expectations (as applicable)
   - Validation plan
   - Rollback / backout approach
+artifact_specific_completeness_rules:
+  - Migration sequencing, validation, and recovery are explicit enough to assess feasibility and delivery risk.
+  - The plan aligns with the data asset definition and business continuity expectations.
+common_failure_conditions:
+  - Validation or rollback is missing, vague, or not credible.
+  - Migration sequencing depends on undocumented assumptions about systems, data, or operating windows.
 ```
 
 ```yaml
@@ -641,11 +749,18 @@ name: Access Model
 conditional_on:
   - Security/compliance impact
 required_by_gate: GATE-SPECIFICATION-COMPLETE
-required_sections:
+purpose: Defines the intended access-control model, role boundaries, and related lifecycle expectations for secure operation.
+required_contents:
   - Roles and permissions model
   - Authentication and authorization expectations
   - Provisioning and deprovisioning (as applicable)
   - Audit/logging expectations (as applicable)
+artifact_specific_completeness_rules:
+  - Access expectations are explicit enough to understand who can do what and how access is governed.
+  - The model aligns with user roles, security expectations, and operational ownership elsewhere in the documentation set.
+common_failure_conditions:
+  - The access model leaves material role, permission, or lifecycle gaps unresolved.
+  - Authentication, authorization, or audit assumptions conflict with other artifacts.
 ```
 
 ```yaml
@@ -655,11 +770,18 @@ name: Security/Privacy Risk Impact Assessment
 conditional_on:
   - Security/compliance impact
 required_by_gate: GATE-SPECIFICATION-COMPLETE
-required_sections:
+purpose: Captures the security, privacy, and compliance implications of the initiative so required controls and approvals are explicit before delivery proceeds.
+required_contents:
   - Data types and sensitivity (as applicable)
   - Key risks and threat considerations
   - Required controls and mitigations
   - Compliance/privacy considerations and approvals (as applicable)
+artifact_specific_completeness_rules:
+  - Material security/privacy risks and required mitigations are visible enough to guide scope, design, and approval decisions.
+  - Required approvals or control obligations are explicit where applicable.
+common_failure_conditions:
+  - Material security or privacy exposure is left implicit.
+  - Required controls or approvals are missing, unclear, or disconnected from the proposed solution.
 ```
 
 ```yaml
@@ -669,12 +791,118 @@ name: RAID Register (Risks/Assumptions/Issues/Dependencies)
 optional: true
 decision_owner_discretion: Delivery Owner
 recommended_by_gate: GATE-INITIATIVE-DEFINED
-required_sections:
+purpose: Optional tracking artifact for risks, assumptions, issues, and dependencies when a standalone register adds delivery-control value.
+required_contents:
   - Risks
   - Assumptions
   - Issues
   - Dependencies
+artifact_specific_completeness_rules:
+  - Entries are specific enough to support ownership, visibility, and review rather than acting as vague placeholders.
+  - The register complements rather than hides mandatory gate or artifact completeness requirements.
+common_failure_conditions:
+  - The register contains generic items with no decision value.
+  - Teams use the register to defer mandatory definition work without making that incompleteness explicit.
 ```
+
+### 2.6 Completeness and delivery-readiness model (resolved)
+
+This section resolves Ambiguity A08.
+
+#### 2.6.1 Model type
+
+Completeness is a **hybrid review model**:
+1. **Mandatory pass/fail criteria** determine whether an artifact or gate can pass.
+2. **Qualitative ratings** (`weak`, `adequate`, `strong`) describe the quality of the artifact or gate once mandatory criteria have been applied.
+
+If any mandatory criterion fails, the artifact or gate fails immediately. The qualitative rating does not override failure.
+
+#### 2.6.2 Scope of evaluation
+
+Completeness MUST be evaluated at both levels:
+1. **Artifact level** — each required artifact is judged on its own contents and coherence.
+2. **Gate level** — the documentation set for that gate is judged as a coherent whole.
+
+This is both:
+1. a **review standard** used by reviewers and Gate Decision Owners, and
+2. a **required design property** of this framework, meaning each artifact and gate definition in the specification MUST explicitly declare how completeness is judged.
+
+#### 2.6.3 Shared artifact-level core
+
+Every required artifact MUST be judged against this shared core:
+1. **Clarity** — the artifact states what it means clearly enough that the next consumer does not need to guess the intended meaning.
+2. **Internal consistency** — the artifact does not materially contradict itself.
+3. **Decision and assumption visibility** — decisions, assumptions, unknowns, and open issues are explicit rather than implicit.
+4. **Actionability for the next consumer** — the intended next consumer can use the artifact for its stated purpose without redefining the problem.
+
+Each artifact MUST also define:
+1. its **purpose**
+2. its **required contents**
+3. its **artifact-specific completeness rules**
+4. its **common failure conditions**
+
+#### 2.6.4 Shared gate-level mandatory checks
+
+Every gate review MUST check that:
+1. the documentation set is complete enough for that stage
+2. the required artifacts are cross-artifact consistent
+3. unresolved blockers do not force downstream teams to invent business requirements
+4. the documentation is sufficient for the named downstream consumer to proceed without redefining the problem
+
+Each gate definition MUST explicitly include:
+1. **mandatory pass conditions**
+2. **immediate fail conditions**
+3. **minimum qualitative threshold**
+4. **critical stage-defining artifacts**
+
+The exact mapping of critical stage-defining artifacts is deferred to a later ambiguity (see Section 6.13 / Ambiguity A17). Until that mapping is resolved, gate definitions MUST retain an explicit placeholder rather than silently assuming which artifacts are critical.
+
+#### 2.6.5 Blockers vs open issues
+
+The framework MUST distinguish between:
+1. **Blockers** — items that force gate failure
+2. **Open issues** — items that may remain open only if they are explicitly controlled
+
+An open issue MAY remain only if all of the following are true:
+1. the gap is stated explicitly
+2. a named owner is assigned
+3. a resolution plan or next action exists
+4. downstream work can proceed without inventing business requirements
+
+If any of those conditions are not satisfied, the issue is a blocker for completeness purposes.
+
+#### 2.6.6 Qualitative rating definitions
+
+Qualitative ratings are standardized globally using an execution-oriented definition:
+1. **Weak** — the downstream team would need to guess or reopen fundamentals
+2. **Adequate** — the downstream team can proceed safely with limited clarification
+3. **Strong** — the downstream team can proceed efficiently without material clarification
+
+The qualitative rating is descriptive. It is not a substitute for mandatory pass criteria and cannot override a blocker or immediate fail condition.
+
+#### 2.6.7 Gate-level rating thresholds
+
+Gate-level thresholds are:
+1. **Gates 1–3 and 5–8** — minimum rating is `adequate`
+2. **Gate 4 (Specification Complete)** — minimum rating is `strong`
+
+The gate-level qualitative judgment is separate from individual artifact ratings, but it is constrained by them:
+1. the gate judgment MUST consider both artifact ratings and cross-artifact coherence
+2. the gate rating cannot exceed the weakest materially relevant cross-artifact condition
+3. a gate cannot be rated `strong` unless all required artifacts are at least `adequate`, and the critical stage-defining artifacts are `strong`, with no meaningful cross-artifact inconsistencies
+
+#### 2.6.8 Reviewer discipline and evidence
+
+The framework explicitly forbids reviewers from upgrading an artifact or gate based on:
+1. confidence in the team
+2. prior knowledge not captured in the documentation
+3. verbal context, meeting memory, or undocumented side agreements
+
+Document presence is never evidence of completeness. Reviewers MUST judge content sufficiency against the defined criteria, not against template fill, formatting quality, or presentation polish.
+
+If an artifact or gate fails completeness, the review output MUST include a written deficiency list tied to the specific failed criteria.
+
+There is **no conditional progression** for completeness failure. If the artifact or gate fails, work stops until the documented deficiencies are corrected and re-reviewed.
 
 ## 3. Explicit Non-Behaviors
 
@@ -908,16 +1136,35 @@ The framework is optimized for software initiatives. It is in scope for greenfie
 **Implication for implementation**
 The default framework shape should be designed for software project delivery first. Conditional reuse is allowed where the same control logic fits, but this decision does not broaden the framework into a universal model for all organizational work.
 
-### 6.5 “Good” and “complete” are directionally defined but not operationalized
+### 6.5 Completeness and delivery-readiness criteria are resolved
 
-**What is ambiguous**
-You defined the intent of completeness, but not the explicit checklist or rubric by which reviewers decide that a document set is complete.
+**Resolved decision**
+Completeness is now defined as a hybrid model with:
+1. mandatory pass/fail criteria that fail immediately when unmet
+2. qualitative ratings (`weak`, `adequate`, `strong`) that describe quality after mandatory checks
 
-**Likely agent assumption**
-An agent would likely create its own quality rubric.
+The model applies at both the artifact level and the gate level. Every artifact definition must include purpose, required contents, artifact-specific completeness rules, and common failure conditions. Every gate definition must include mandatory pass conditions, immediate fail conditions, a minimum qualitative threshold, and a critical-artifact field.
 
-**Question to resolve**
-What observable criteria must be satisfied for documentation to be judged complete and delivery-ready?
+The shared artifact core is:
+1. clarity
+2. internal consistency
+3. decision/assumption visibility
+4. actionability for the next consumer
+
+The shared gate-level mandatory checks are:
+1. stage-appropriate completeness
+2. cross-artifact consistency
+3. no unresolved blockers that force assumption-making
+4. sufficiency for the named downstream consumer to proceed without redefining the problem
+
+Qualitative thresholds are:
+1. Gates 1-3 and 5-8 require at least `adequate`
+2. Gate 4 (`Specification Complete`) requires `strong`
+
+Open issues may remain only when they are explicit, owned, have a resolution path, and do not force downstream invention of business requirements. There is no conditional progression for completeness failure, and reviewers may not upgrade ratings based on team confidence or undocumented context.
+
+**Implication for implementation**
+Framework reviews and any AI-assisted validation logic MUST apply the explicit completeness model in Section 2.6 rather than inventing local quality heuristics.
 
 ### 6.6 Treatment of simple vs complex work is undefined
 
@@ -1023,6 +1270,17 @@ An agent would likely add an internal checklist or approval review without knowi
 
 **Question to resolve**
 How should framework outputs be reviewed: peer review, PMO checkpoint, architecture review, delivery readiness review, or another mechanism?
+
+### 6.13 Critical stage-defining artifact mapping is deferred
+
+**What is ambiguous**
+The completeness model now requires each gate to identify its critical stage-defining artifacts, but the exact artifact-to-gate mapping has not yet been defined.
+
+**Likely agent assumption**
+An agent would likely infer the critical artifacts for each gate from context and apply that inference as if it were canonical.
+
+**Question to resolve**
+Which artifacts are the critical stage-defining artifacts for each gate, and what mapping rules apply when packaging modes or conditional artifacts vary?
 
 ## 7. Implementation Constraints
 

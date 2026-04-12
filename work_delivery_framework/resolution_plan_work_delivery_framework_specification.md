@@ -84,13 +84,22 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: The framework includes business and system-level documentation sufficient to derive downstream technical specifications without foundational clarification (including architecture, major system components, and data flows when needed), but explicitly excludes downstream engineering planning and code-level technical specifications (task breakdown, code-level design, per-endpoint acceptance test suites). Acceptance criteria and behavior-level tests derived from use cases remain in-framework; detailed engineering test plans/cases are generally downstream. The boundary does not shift by delivery mode; AI may require a higher “good/completeness” standard (tracked separately as A15).
-- [ ] **A08 - Completeness and delivery-readiness criteria are not operationalized**
+- [x] **A08 - Completeness and delivery-readiness criteria are not operationalized**
   - Relevant section(s): Section 1; Section 2.1.9-10; Section 2.2.5-6; Section 3.4-8; Section 5.3-5.5; Section 6.5
   - Description: The specification defines completeness directionally but does not provide a formal rubric, checklist, scorecard, or pass/fail criteria for determining when outputs are sufficiently buildable, supportable, and unambiguous.
   - Why it matters: This is the core acceptance standard of the framework. Without it, all gates and reviews remain subjective.
   - Dependencies: Depends on A05, A06, A07; blocks or materially affects A09, A10, A11, A13, A15.
   - Estimated complexity: High
   - Risk if unresolved: High
+  - Status: Resolved
+  - Resolution note: Completeness is now defined as a hybrid model with immediate-fail mandatory criteria plus qualitative ratings (`weak`, `adequate`, `strong`). The model applies at both artifact and gate level. Every artifact definition must include purpose, required contents, artifact-specific completeness rules, and common failure conditions, with a shared review core of clarity, internal consistency, decision/assumption visibility, and actionability for the next consumer. Every gate definition must include mandatory pass conditions, immediate fail conditions, a minimum qualitative threshold, and a critical-artifact field. Gates 1-3 and 5-8 require at least `adequate`; Gate 4 requires `strong`. Open issues may remain only when explicit, owned, actionable, and non-blocking for downstream work. Reviewers may not use undocumented context to upgrade ratings, document presence is not evidence of completeness, failed reviews require a written deficiency list tied to criteria, and there is no conditional progression for completeness failure.
+- [ ] **A17 - Critical stage-defining artifact mapping is deferred**
+  - Relevant section(s): Section 2.6.4; gate YAML definitions; Section 6.13
+  - Description: The completeness model now requires each gate to identify its critical stage-defining artifacts, but the exact mapping between gates and critical artifacts has not yet been defined.
+  - Why it matters: The gate-level qualitative model, especially the rule for when a gate can be rated `strong`, depends on knowing which artifacts are stage-defining rather than merely present.
+  - Dependencies: Depends on A05, A06, A08; materially affects A09, A13, A15.
+  - Estimated complexity: Medium
+  - Risk if unresolved: Medium
   - Status: Unresolved
 - [ ] **A09 - Scaling rules for simple versus complex work are unresolved**
   - Relevant section(s): Section 2.3.1-3; Section 5.6-5.7; Section 6.6; Section 8
@@ -177,6 +186,7 @@ These items are foundational because they define the framework's basic operating
 - **A13 - Review, assurance, and audit mechanism**
 - **A14 - Blocker, risk, and open-issue handling model**
 - **A15 - AI-agent sufficiency standard**
+- **A17 - Critical stage-defining artifact mapping**
 
 These items depend on the foundational model because they rely on defined artifacts, gates, readiness criteria, and framework boundaries.
 
@@ -204,7 +214,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 5 | **A05 - Lifecycle stages, progression gates, and exit criteria** | Stages and gates operationalize the framework and unlock artifact design. | A formal staged flow with evidence required at each gate. | Framework owner, delivery managers, PMO | Workflow definition with gate criteria and examples. | Resolved |
 | [x] | 6 | **A06 - Required artifact taxonomy** | Once stages exist, outputs can be assigned to the correct points and conditions. | A canonical artifact set with core and conditional outputs. | Framework owner, delivery managers, engineering representatives | Artifact matrix with purpose, required contents, and applicability rules. | Resolved |
 | [x] | 7 | **A07 - Boundary between framework outputs and technical specification work** | The handoff line must be clear before readiness can be measured. | A defined boundary between framework deliverables and downstream engineering specs. | Engineering leadership, architects, PMO | Scope boundary decision supported by examples of in-framework vs downstream artifacts. | Resolved |
-| [ ] | 8 | **A08 - Completeness and delivery-readiness criteria** | This is the core pass/fail rule for the entire framework. | A reusable completeness rubric and readiness checklist. | PMO, engineering reviewers, framework owner | Decision plus rubric, checklist, and fail conditions. | Unresolved |
+| [x] | 8 | **A08 - Completeness and delivery-readiness criteria** | This is the core pass/fail rule for the entire framework. | A reusable completeness rubric and readiness checklist. | PMO, engineering reviewers, framework owner | Decision plus rubric, checklist, and fail conditions. | Resolved |
 | [ ] | 9 | **A09 - Scaling rules for simple versus complex work** | Scaling should be defined after artifacts and readiness criteria exist. | A tiering model or decision rule for path selection and artifact depth. | PMO, delivery managers, framework owner | Complexity classification model with thresholds and examples. | Unresolved |
 | [ ] | 10 | **A10 - Acceptance criteria and observable validation model** | Acceptance design depends on artifacts, boundary, and completeness rules already being known. | A standard acceptance format and definition of observable validation. | Product or business leads, QA or validation stakeholders, engineering | Rule definition plus examples or acceptance-writing pattern. | Unresolved |
 | [ ] | 11 | **A11 - Minimum supportability and maintainability definition** | Operational readiness content can be specified after artifact structure and scaling are known. | A minimum operational-readiness content standard. | Support owner, operations lead, delivery manager | Clarification of required support fields, responsibilities, and transition expectations. | Unresolved |
@@ -213,13 +223,14 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [ ] | 14 | **A15 - AI-agent sufficiency standard** | AI-readiness should be calibrated after the human baseline is explicit. | A defined precision standard for AI-consumable documentation. | Framework owner, engineering, AI delivery stakeholders | Clarification of additional structure, explicitness, and prohibited ambiguity. | Unresolved |
 | [ ] | 15 | **A12 - External engagement modes and handoff variants** | External variants should be derived from the core framework rather than invented upfront. | A handoff model adjusted by vendor engagement type. | Vendor management, PMO, delivery leadership | Scope decision plus conditional handoff requirements by engagement model. | Unresolved |
 | [ ] | 16 | **A16 - Anti-bureaucracy guardrails** | Guardrails are most credible once the full framework exists and can be pruned deliberately. | A clear rule for omitting low-value steps without weakening readiness. | Framework owner, PMO, delivery leadership | Principle-to-rule conversion using omission criteria, waiver rules, and examples. | Unresolved |
+| [ ] | 17 | **A17 - Critical stage-defining artifact mapping** | The completeness model now depends on identifying which artifacts are truly stage-defining at each gate. | A canonical gate-to-critical-artifact mapping, including packaging-mode and conditional-artifact rules. | Framework owner, PMO, delivery managers, engineering reviewers | Mapping decision with examples for packet mode, large-work mode, and conditional artifacts. | Unresolved |
 
 ## 5. Progress Tracking Summary
 
-- **Total ambiguities identified:** 16
-- **Resolved ambiguities:** 7
+- **Total ambiguities identified:** 17
+- **Resolved ambiguities:** 8
 - **Remaining unresolved ambiguities:** 9
 - **Foundational items:** 9
-- **Dependent items:** 5
+- **Dependent items:** 6
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01, A02, A03, A04, A05, A06, and A07 have been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A08.
+- **Tracking note:** A01, A02, A03, A04, A05, A06, A07, and A08 have been resolved and checked off in both the ambiguity register and the prioritized plan. A17 has been added as a deferred ambiguity for critical stage-defining artifact mapping. The next active ambiguity is A09.
