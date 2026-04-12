@@ -30,10 +30,10 @@ Conditional use does not make this a general enterprise change framework by defa
 
 This framework is a full **operating model** for work definition and delivery readiness. It is not optional guidance.
 
-**Canonical deliverable**  
+**Canonical deliverable**
 The canonical source of truth is this document (`work_delivery_framework_specification.md`). Teams MUST treat it as the authoritative operating model definition.
 
-**Workflow and control model**  
+**Workflow and control model**
 The framework MUST define:
 1. how a business request enters the system
 2. the sequence of stages a project moves through
@@ -41,7 +41,7 @@ The framework MUST define:
 4. what “good” and “complete” mean for each required output
 5. when work is blocked due to missing or unclear information
 
-**Machine-consumable structure (Markdown-first)**  
+**Machine-consumable structure (Markdown-first)**
 This document MUST include machine-consumable definitions embedded as fenced YAML blocks with stable IDs so AI agents can extract and apply the framework consistently.
 
 At minimum, the machine-consumable model MUST represent:
@@ -80,7 +80,7 @@ requires_named_decision_owner: true
 decision_rights: []
 ```
 
-**Behavioral implication**  
+**Behavioral implication**
 The framework MUST support human teams using AI agents as assistants while keeping the final outputs reviewable and enforceable by humans.
 
 ## 2. Behavioral Contract
@@ -122,8 +122,8 @@ The framework MUST support human teams using AI agents as assistants while keepi
 
 The framework lifecycle is defined as a sequence of formal stages with explicit progression gates. A project MAY be blocked at any gate if the required evidence is missing or ambiguity remains unresolved.
 
-**Important boundary note**  
-Stages and gates define the control model. The exact required artifact taxonomy is resolved separately (see Ambiguity A06). Until A06 is resolved, stage definitions may list `required_artifacts: []` in YAML and rely on entry/exit criteria instead of naming specific artifacts.
+**Important boundary note**
+Stages and gates define the control model. The canonical artifact taxonomy is now defined (see Section 2.5). However, scaling thresholds for “small vs large work” are still unresolved (see Ambiguity A09), so the framework defines both packaging modes without yet defining the full tiering/threshold model.
 
 **Stages (in order)**
 1. Intake
@@ -393,6 +393,281 @@ requires_named_decision_owner: true
 decision_rights: []
 ```
 
+### 2.5 Required artifact taxonomy (resolved)
+
+This section defines the canonical artifact taxonomy for this framework (Ambiguity A06).
+
+#### 2.5.1 Category labels vs artifacts
+
+Some labels in this framework are **category labels** rather than artifacts. Category labels are used to organize thinking and required content, but do not imply a mandatory standalone file.
+
+The following are category labels (not artifacts):
+1. Project Governance
+2. Solution Design
+3. DevOps & Support
+4. User Adoption
+
+#### 2.5.2 Packaging model: small-work packet vs large-work artifact set
+
+The framework supports two packaging modes:
+1. **Small work:** one packet artifact called **Work Brief**.
+2. **Large work:** separate canonical artifacts (files) as defined in this section.
+
+**Important note (scaling unresolved):**
+The thresholds for “small vs large work” and formal tiering are not yet defined (see Ambiguity A09). Until A09 is resolved, the Delivery Owner MUST explicitly declare whether the project will use **Work Brief** (packet mode) or the **separate artifact set** (large-work mode) no later than Gate 2.
+
+Both names MUST exist:
+- **Work Brief** is the small-work form.
+- **Initiative Definition / Project Brief** is the large-work form.
+
+#### 2.5.3 Canonical artifacts (names, triggers, and required-by gates)
+
+**Always required**
+1. Initiative Definition / Project Brief (large-work mode) **OR** Work Brief (small-work mode) — required by **Gate 2**
+2. Decision Log — must exist for every initiative and must exist no later than **Gate 2**
+
+**Conditional artifacts (trigger → artifact(s) → required-by gate)**
+1. External vendor involved → Delivery Charter → **Gate 4** (or **Gate 3** when early delivery-team commitment is required)
+2. Authorization required → Approved Project Charter → **Gate 3**
+3. Material ops/support impact → Technical Design Document (TDD) + Deployment Guide → TDD by **Gate 4**, Deployment Guide by **Gate 6**
+4. Data migration → Data Asset Specification + Data Migration Plan → **Gate 4**
+5. Security/compliance impact → Access Model + Security/Privacy Risk Impact Assessment → **Gate 4**
+6. New integration / API change → API/Contract Specification → **Gate 4**
+7. Customer-facing change → User Adoption Plan → start between **Gate 4** and **Gate 6** (earlier is better); must be complete no later than **Gate 6**
+
+**Optional artifact (Delivery Owner discretion)**
+1. RAID Register (Risks/Assumptions/Issues/Dependencies) — optional; if used, it SHOULD be created early enough to affect gate decisions and is RECOMMENDED no later than Gate 2.
+
+**Filename guidance**
+Artifact names are canonical. Exact filenames are not enforced, but projects are strongly encouraged to use the canonical artifact names as filenames to support consistent discovery and audit.
+
+**Framework evolution note**
+The artifact set is expected to evolve as the framework is made clearer. Changes MUST be applied by updating this specification’s artifact definitions (including the machine-consumable YAML blocks) rather than introducing parallel shadow taxonomies.
+
+#### 2.5.4 Machine-consumable artifact model (YAML)
+
+```yaml
+kind: artifact
+id: ARTIFACT-WORK-BRIEF
+name: Work Brief
+packaging_mode: packet
+required_by_gate: GATE-INITIATIVE-DEFINED
+required_sections:
+  - Background / problem / opportunity
+  - Desired outcome
+  - Success measures (allowed: explicitly Unknown/TBD at entry)
+  - Affected systems / processes (allowed: explicitly Unknown/TBD at entry)
+  - In-scope statement and scope boundaries
+  - Stakeholders and owners (including Gate Decision Owner assignments)
+  - Constraints, dependencies, and known unknowns (explicit TBD allowed where appropriate)
+  - Functional requirements and use cases (as applicable)
+  - User roles (as applicable)
+  - Business rules (as applicable)
+  - Delivery approach (high-level)
+  - Support and operational considerations (if applicable)
+  - User adoption considerations (if applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-PROJECT-BRIEF
+name: Initiative Definition / Project Brief
+packaging_mode: standalone
+required_by_gate: GATE-INITIATIVE-DEFINED
+required_sections:
+  - Background / problem / opportunity
+  - Desired outcomes and success measures
+  - Scope boundaries (in-scope / out-of-scope) and assumptions
+  - Stakeholders and owners (including Gate Decision Owner assignments)
+  - Constraints and dependencies
+  - Known unknowns and open questions (explicitly tracked as such)
+  - Functional requirements and use cases
+  - User roles
+  - Business rules
+  - Solution direction (high-level)
+  - Delivery approach (high-level)
+  - Support and operational considerations (if applicable)
+  - User adoption considerations (if applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-DECISION-LOG
+name: Decision Log
+packaging_mode: standalone
+required_by_gate: GATE-INITIATIVE-DEFINED
+required_sections:
+  - Decision entries (one per decision)
+entry_schema_notes:
+  - Each decision entry should include: decision statement, date, owner, status, options considered, rationale, and implications.
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-PROJECT-CHARTER
+name: Project Charter (Approved)
+conditional_on:
+  - Authorization is required
+required_by_gate: GATE-AUTHORIZED
+required_sections:
+  - Project purpose and scope summary
+  - Sponsor and authorization statement
+  - Budget/resource commitment (as applicable)
+  - Governance and decision rights (including named Gate Decision Owners)
+  - High-level risks and constraints
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-DELIVERY-CHARTER
+name: Delivery Charter
+conditional_on:
+  - External vendor involved
+required_by_gate_default: GATE-SPECIFICATION-COMPLETE
+may_be_required_by_gate:
+  - GATE-AUTHORIZED
+required_sections:
+  - Delivery engagement model and roles/responsibilities
+  - Delivery cadence and working agreements
+  - Communication and escalation paths
+  - Handoff expectations and acceptance workflow (high-level)
+  - Access and environment expectations (as applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-TDD
+name: Technical Design Document (TDD)
+conditional_on:
+  - Material ops/support impact
+required_by_gate: GATE-SPECIFICATION-COMPLETE
+required_sections:
+  - Design goals and non-goals
+  - System context and boundaries
+  - Major components and responsibilities
+  - Data flows and key interactions
+  - Non-functional requirements (as applicable)
+  - Operational considerations relevant to supportability (as applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-API-CONTRACT-SPEC
+name: API/Contract Specification
+conditional_on:
+  - New integration / API change
+required_by_gate: GATE-SPECIFICATION-COMPLETE
+required_sections:
+  - Endpoints and/or events
+  - Schemas
+  - Authentication and authorization
+  - Error handling
+  - Versioning and backward-compatibility expectations
+  - Dependencies
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-DEPLOYMENT-GUIDE
+name: Deployment Guide
+conditional_on:
+  - Material ops/support impact
+required_by_gate: GATE-DELIVERABLES-ACCEPTED
+required_sections:
+  - Deployment steps and prerequisites
+  - Environments and configuration expectations
+  - Rollback / recovery approach
+  - Operational validation steps
+  - Monitoring and support handover notes (as applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-USER-ADOPTION-PLAN
+name: User Adoption Plan
+conditional_on:
+  - Customer-facing change
+start_by_gate: GATE-SPECIFICATION-COMPLETE
+required_by_gate: GATE-DELIVERABLES-ACCEPTED
+required_sections:
+  - Impacted user groups and change scope
+  - Communications plan
+  - Training and enablement approach (as applicable)
+  - Rollout plan and adoption checkpoints
+  - Support and feedback loop plan
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-DATA-ASSET-SPEC
+name: Data Asset Specification
+conditional_on:
+  - Data migration
+required_by_gate: GATE-SPECIFICATION-COMPLETE
+required_sections:
+  - Data assets in scope
+  - Schemas and mappings (as applicable)
+  - Data quality and validation expectations
+  - Sensitivity classification and retention considerations (as applicable)
+  - Access considerations (as applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-DATA-MIGRATION-PLAN
+name: Data Migration Plan
+conditional_on:
+  - Data migration
+required_by_gate: GATE-SPECIFICATION-COMPLETE
+required_sections:
+  - Migration approach and sequencing
+  - Cutover plan and downtime expectations (as applicable)
+  - Validation plan
+  - Rollback / backout approach
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-ACCESS-MODEL
+name: Access Model
+conditional_on:
+  - Security/compliance impact
+required_by_gate: GATE-SPECIFICATION-COMPLETE
+required_sections:
+  - Roles and permissions model
+  - Authentication and authorization expectations
+  - Provisioning and deprovisioning (as applicable)
+  - Audit/logging expectations (as applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-SECURITY-PRIVACY-RIA
+name: Security/Privacy Risk Impact Assessment
+conditional_on:
+  - Security/compliance impact
+required_by_gate: GATE-SPECIFICATION-COMPLETE
+required_sections:
+  - Data types and sensitivity (as applicable)
+  - Key risks and threat considerations
+  - Required controls and mitigations
+  - Compliance/privacy considerations and approvals (as applicable)
+```
+
+```yaml
+kind: artifact
+id: ARTIFACT-RAID-REGISTER
+name: RAID Register (Risks/Assumptions/Issues/Dependencies)
+optional: true
+decision_owner_discretion: Delivery Owner
+recommended_by_gate: GATE-INITIATIVE-DEFINED
+required_sections:
+  - Risks
+  - Assumptions
+  - Issues
+  - Dependencies
+```
+
 ## 3. Explicit Non-Behaviors
 
 1. The system must not add bureaucracy for its own sake because extra process that does not improve delivery quality weakens adoption and slows execution.
@@ -427,10 +702,10 @@ The framework currently operates as a standalone knowledge and delivery-definiti
 9. Support and maintenance expectations
 10. Vendor engagement context where applicable
 
-**Minimum request entry payload (Intake entry readiness)**  
+**Minimum request entry payload (Intake entry readiness)**
 A request may enter Intake even if it is not yet confirmed in-scope. The purpose of Intake entry is to create a tracked item with an accountable triage owner and to schedule an initial clarification session.
 
-**Required at entry**  
+**Required at entry**
 1. Requester name
 2. Short description that includes:
    - Background / problem / opportunity
@@ -438,11 +713,11 @@ A request may enter Intake even if it is not yet confirmed in-scope. The purpose
    - Success measures (allowed to be explicitly "Unknown/TBD" at entry)
    - Affected systems / processes (allowed to be explicitly "Unknown/TBD" at entry)
 
-**Required operational actions at entry**  
+**Required operational actions at entry**
 1. Assign a triage owner immediately (provisional ownership is allowed).
 2. Perform an initial clarification session as part of the initial assessment.
 
-**Entry rejection conditions**  
+**Entry rejection conditions**
 1. Requester name is missing.
 2. Short description is missing background / problem / opportunity, or missing desired outcome.
 ### 4.4 Data flowing out
@@ -477,184 +752,186 @@ These scenarios are intended for external evaluation of the framework’s outcom
 
 ### 5.1 Happy-path scenario 1: Greenfield project reaches delivery-ready definition
 
-**Setup conditions**  
-1. A new internal software project request is received.  
-2. Required stakeholders are available.  
-3. Business objectives and constraints are known.  
+**Setup conditions**
+1. A new internal software project request is received.
+2. Required stakeholders are available.
+3. Business objectives and constraints are known.
 
-**Actions**  
-1. A delivery manager and internal team enter the framework.  
-2. They follow the framework from request intake through documentation production.  
-3. They produce the required solution, delivery, and support artifacts.  
+**Actions**
+1. A delivery manager and internal team enter the framework.
+2. They follow the framework from request intake through documentation production.
+3. They produce the required solution, delivery, and support artifacts.
 
-**Expected observable outcomes**  
-1. A reviewer can identify the proposed solution, delivery approach, support expectations, and acceptance criteria from the resulting documentation.  
-2. An engineering team can explain what needs to be built without redefining the business problem.  
+**Expected observable outcomes**
+1. A reviewer can identify the proposed solution, delivery approach, support expectations, and acceptance criteria from the resulting documentation.
+2. An engineering team can explain what needs to be built without redefining the business problem.
 3. The documentation contains enough detail for technical specifications and delivery planning to proceed without requesting foundational clarification.
 
 ### 5.2 Happy-path scenario 2: External development team receives a usable handoff
 
-**Setup conditions**  
-1. A project will be delivered by an external development team.  
-2. Stakeholders have provided the needed business context and objectives.  
+**Setup conditions**
+1. A project will be delivered by an external development team.
+2. Stakeholders have provided the needed business context and objectives.
 
-**Actions**  
-1. The internal team uses the framework to prepare the project documentation and external handoff pack.  
-2. The handoff is given to an independent delivery reviewer acting as the external team.  
+**Actions**
+1. The internal team uses the framework to prepare the project documentation and external handoff pack.
+2. The handoff is given to an independent delivery reviewer acting as the external team.
 
-**Expected observable outcomes**  
-1. The reviewer can state what the external team is expected to build, how success will be judged, and what support expectations exist after delivery.  
-2. The reviewer does not need undocumented tribal knowledge to understand the assignment.  
+**Expected observable outcomes**
+1. The reviewer can state what the external team is expected to build, how success will be judged, and what support expectations exist after delivery.
+2. The reviewer does not need undocumented tribal knowledge to understand the assignment.
 3. The reviewer can identify what is in scope and what is not in scope from the artifacts alone.
 
 ### 5.3 Happy-path scenario 3: AI-assisted delivery can proceed without requirement redefinition
 
-**Setup conditions**  
-1. A project is intended to be delivered with material AI-agent participation.  
-2. The business request includes rules and intended outcomes.  
+**Setup conditions**
+1. A project is intended to be delivered with material AI-agent participation.
+2. The business request includes rules and intended outcomes.
 
-**Actions**  
-1. The framework is used to define the project and produce its documentation.  
-2. A separate evaluator reviews the documentation from the perspective of an AI-enabled engineering team.  
+**Actions**
+1. The framework is used to define the project and produce its documentation.
+2. A separate evaluator reviews the documentation from the perspective of an AI-enabled engineering team.
 
-**Expected observable outcomes**  
-1. The evaluator can derive build specifications or implementation plans from the documentation without inventing missing business rules.  
-2. Acceptance criteria are expressed in a way that allows observable validation rather than subjective interpretation.  
+**Expected observable outcomes**
+1. The evaluator can derive build specifications or implementation plans from the documentation without inventing missing business rules.
+2. Acceptance criteria are expressed in a way that allows observable validation rather than subjective interpretation.
 3. The evaluator finds no critical area where the only path forward is to guess what the business intended.
 
 ### 5.4 Error scenario 1: Missing dependency blocks progression
 
-**Setup conditions**  
+**Setup conditions**
 1. A business request exists, but a required dependency or decision is unavailable or unclear.
 
-**Actions**  
-1. The team begins using the framework.  
-2. During definition, they discover the missing dependency.  
+**Actions**
+1. The team begins using the framework.
+2. During definition, they discover the missing dependency.
 
-**Expected observable outcomes**  
-1. The missing dependency is explicitly documented.  
-2. The issue is visible as a blocker requiring stakeholder resolution.  
-3. The work is not marked ready to proceed.  
+**Expected observable outcomes**
+1. The missing dependency is explicitly documented.
+2. The issue is visible as a blocker requiring stakeholder resolution.
+3. The work is not marked ready to proceed.
 4. No artifact falsely presents the project as complete.
 
 ### 5.5 Error scenario 2: Documentation looks finished but hides critical gaps
 
-**Setup conditions**  
-1. A team has completed the framework artifacts.  
-2. The artifacts are formatted well and appear complete on first review.  
+**Setup conditions**
+1. A team has completed the framework artifacts.
+2. The artifacts are formatted well and appear complete on first review.
 
-**Actions**  
-1. An independent engineering reviewer attempts to derive technical specifications from the documentation.  
-2. The reviewer checks whether assumptions are required to continue.  
+**Actions**
+1. An independent engineering reviewer attempts to derive technical specifications from the documentation.
+2. The reviewer checks whether assumptions are required to continue.
 
-**Expected observable outcomes**  
-1. If critical business logic, constraints, support expectations, or acceptance conditions are missing, the framework evaluation fails the documentation.  
-2. The output is judged incomplete even though documents exist.  
+**Expected observable outcomes**
+1. If critical business logic, constraints, support expectations, or acceptance conditions are missing, the framework evaluation fails the documentation.
+2. The output is judged incomplete even though documents exist.
 3. The gaps are surfaced explicitly rather than being absorbed into downstream interpretation.
 
 ### 5.6 Edge-case scenario 1: Small request with pressure to over-document
 
-**Setup conditions**  
-1. A relatively small change request is raised.  
-2. Team members are concerned the framework may force unnecessary work.  
+**Setup conditions**
+1. A relatively small change request is raised.
+2. Team members are concerned the framework may force unnecessary work.
 
-**Actions**  
-1. The team applies the framework to the request.  
-2. A reviewer compares the produced outputs with the actual delivery need.  
+**Actions**
+1. The team applies the framework to the request.
+2. A reviewer compares the produced outputs with the actual delivery need.
 
-**Expected observable outcomes**  
-1. The documentation is sufficient to make the work buildable and supportable.  
-2. The framework does not require obviously irrelevant or non-value-adding outputs merely to satisfy process formality.  
+**Expected observable outcomes**
+1. The documentation is sufficient to make the work buildable and supportable.
+2. The framework does not require obviously irrelevant or non-value-adding outputs merely to satisfy process formality.
 3. Reviewers conclude that the framework supported delivery readiness without adding avoidable bureaucracy.
 
 ### 5.7 Edge-case scenario 2: Large multi-team initiative with long-term support needs
 
-**Setup conditions**  
+**Setup conditions**
 1. A complex enterprise initiative spans multiple internal teams and has long-term operational impact.
 
-**Actions**  
-1. The framework is applied across the initiative.  
+**Actions**
+1. The framework is applied across the initiative.
 2. Multiple teams review the resulting documentation independently.
 
-**Expected observable outcomes**  
-1. Teams can align on the intended solution and delivery shape from the same documentation set.  
-2. Supportability and maintainability expectations are visible, not implied.  
+**Expected observable outcomes**
+1. Teams can align on the intended solution and delivery shape from the same documentation set.
+2. Supportability and maintainability expectations are visible, not implied.
 3. Reviewers judge the artifacts sufficient for coordinated downstream planning across teams without conflicting interpretations of core requirements.
 
 ## 6. Ambiguity Warnings
 
 ### 6.1 Framework format is resolved
 
-**Resolved decision**  
+**Resolved decision**
 This framework is a full operating model for work definition and delivery readiness, expressed as a Markdown-first canonical specification with enforceable workflow stages, stage gates, and artifact definitions.
 
-**Publication model**  
+**Publication model**
 The canonical source of truth is this specification file. It MUST embed machine-consumable YAML blocks (with stable IDs) for stages, artifacts, and gates so AI agents can apply it consistently.
 
-**Implication for implementation**  
+**Implication for implementation**
 Subsequent framework refinements MUST extend the structured YAML model in this document rather than creating parallel “shadow” definitions elsewhere.
-### 6.2 Required artifact set is unspecified
+### 6.2 Required artifact set is resolved
 
-**What is ambiguous**  
-You said teams should produce the artifacts specified in the framework, but the required artifact list is not yet defined.
+**Resolved decision**
+The canonical artifact taxonomy is now defined in Section 2.5, including:
+1. The small-work packet model (Work Brief)
+2. The large-work separate-artifact model
+3. The always-required artifacts (including a Decision Log)
+4. The conditional artifacts and their triggers
+5. Gate timing expectations for when each artifact must exist
 
-**Likely agent assumption**  
-An agent would likely invent a standard set such as business requirements, architecture overview, implementation plan, support runbook, and test plan.
-
-**Question to resolve**  
-What exact artifacts must every project produce, and which artifacts are conditional?
+**Implication for implementation**
+Implementations and downstream templates MUST align to the canonical artifact names and the machine-consumable artifact YAML blocks in Section 2.5, rather than inventing alternative local artifact taxonomies.
 
 ### 6.3 Entry and exit criteria are not explicit
 
-**What is ambiguous**  
+**What is ambiguous**
 The framework’s starting trigger is broadly “a new business request,” but the exact readiness gates for entering, progressing, and completing the framework are not fully defined.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely invent stage gates such as intake, discovery, definition, handoff, and approval.
 
-**Question to resolve**  
+**Question to resolve**
 What are the formal stages, and what evidence is required to move from one stage to the next?
 
 ### 6.4 Scope differentiation by work type is resolved
 
-**Resolved decision**  
+**Resolved decision**
 The framework is optimized for software initiatives. It is in scope for greenfield and brownfield software projects. It is out of scope for minor low-risk changes, research spikes, support work, and small internal process changes. It may be used conditionally for complex operational changes affecting multiple organizations, complex internal process changes affecting the whole organization, and non-software initiatives that can use the framework with minimum changes.
 
-**Implication for implementation**  
+**Implication for implementation**
 The default framework shape should be designed for software project delivery first. Conditional reuse is allowed where the same control logic fits, but this decision does not broaden the framework into a universal model for all organizational work.
 
 ### 6.5 “Good” and “complete” are directionally defined but not operationalized
 
-**What is ambiguous**  
+**What is ambiguous**
 You defined the intent of completeness, but not the explicit checklist or rubric by which reviewers decide that a document set is complete.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely create its own quality rubric.
 
-**Question to resolve**  
+**Question to resolve**
 What observable criteria must be satisfied for documentation to be judged complete and delivery-ready?
 
 ### 6.6 Treatment of simple vs complex work is undefined
 
-**What is ambiguous**  
+**What is ambiguous**
 You want to avoid bureaucracy, but there is no rule for how the framework scales up or down based on project size, risk, or complexity.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely create tiers or classifications without your approval.
 
-**Question to resolve**  
+**Question to resolve**
 Should the framework have lightweight, standard, and complex paths, and if so, what determines which path applies?
 
 ### 6.7 Governance and ownership are resolved
 
-**Resolved decision**  
+**Resolved decision**
 1. The framework owner is the PMO. The PMO is accountable for maintaining, evolving, and publishing this framework.
 2. Every gate in the framework MUST have a single accountable Gate Decision Owner (a named person) for the stop/proceed decision.
 3. The Gate Decision Owner for each gate is assigned at Intake by the PMO or the project Delivery Owner and recorded in the Initiative Definition / Project Brief. For large projects with a formal project charter, this information MUST also be recorded in the Project Charter.
 4. There are no role-based veto rights in this framework. The Gate Decision Owner is accountable for decisions made.
 5. If there is substantive disagreement at a gate, the Gate Decision Owner MUST identify an alternative path forward (scope, sequencing, approach, or risk treatment) and record a plan of action forward in the project Decision Log.
 
-**Default Gate Decision Owner roles (unless explicitly overridden by name in the Initiative Definition / Project Brief)**  
+**Default Gate Decision Owner roles (unless explicitly overridden by name in the Initiative Definition / Project Brief)**
 1. Qualified Request: Delivery Owner
 2. Initiative Defined (for Authorization decision): Delivery Owner
 3. Authorized (when Authorization is required): Business / Product Owner (Budget Owner)
@@ -665,65 +942,65 @@ Should the framework have lightweight, standard, and complex paths, and if so, w
 8. Closure Complete: PMO / ITS Director
 9. External handoff readiness (if an external team will build): Delivery Owner
 
-**Consent model (for being named as Gate Decision Owner)**  
+**Consent model (for being named as Gate Decision Owner)**
 Consent is implied when there is no objection upon acceptance of the document where the person is listed. It is expected that the named Gate Decision Owner will be informed of their responsibilities.
 
-**Implication for implementation**  
+**Implication for implementation**
 Gate definitions in the machine-consumable YAML model MUST specify a default_decision_owner_role and MUST require a named decision owner per project (recorded in the Initiative Definition / Project Brief).
 
 ### 6.8 Relationship to technical specification work is unclear
 
-**What is ambiguous**  
+**What is ambiguous**
 The framework is supposed to produce documentation that allows technical specifications to be created, but it is unclear whether technical specs are part of the framework output or a downstream activity.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely include technical specification templates inside the framework.
 
-**Question to resolve**  
+**Question to resolve**
 Does the framework end at delivery-ready business and solution definition, or must it also define the structure of technical specifications?
 
 ### 6.9 Acceptance and holdout pattern expectations are underdefined
 
-**What is ambiguous**  
+**What is ambiguous**
 You mentioned acceptance criteria and holdout patterns as examples of the context engineering teams need, but their required form and level of rigor are not specified.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely introduce its own testing or acceptance-writing model.
 
-**Question to resolve**  
+**Question to resolve**
 What form should acceptance criteria take, and what do you mean by “testable using holdout patterns” in this framework?
 
 ### 6.10 External team engagement modes are underspecified
 
-**What is ambiguous**  
+**What is ambiguous**
 You mentioned external development teams, but not whether this includes full outsourced delivery, co-delivery, staff augmentation, or advisory vendors.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely design for one generic vendor handoff model.
 
-**Question to resolve**  
+**Question to resolve**
 What external engagement models must the framework support, and how should handoff requirements differ across them?
 
 ### 6.11 Supportability and maintainability expectations are not yet decomposed
 
-**What is ambiguous**  
+**What is ambiguous**
 You require long-term supportability and maintainability, but the exact observable requirements are not stated.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely invent generic operational-readiness sections.
 
-**Question to resolve**  
+**Question to resolve**
 What minimum support and maintenance information must always be defined before work is considered ready?
 
 ### 6.12 Review and audit method is unclear
 
-**What is ambiguous**  
+**What is ambiguous**
 It is not defined how humans will evaluate whether the framework output is sufficient in practice.
 
-**Likely agent assumption**  
+**Likely agent assumption**
 An agent would likely add an internal checklist or approval review without knowing your preferred review mechanism.
 
-**Question to resolve**  
+**Question to resolve**
 How should framework outputs be reviewed: peer review, PMO checkpoint, architecture review, delivery readiness review, or another mechanism?
 
 ## 7. Implementation Constraints

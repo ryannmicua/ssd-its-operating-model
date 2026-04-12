@@ -66,14 +66,15 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: The framework lifecycle is now explicitly defined as formal stages with explicit progression gates and gate decision owners. Stages (in order): Intake; Assessment/Qualification; Discovery/Initiative Definition; Authorization (conditional); Solution Definition; Planning/Mobilization/MVP Plan; Delivery/Execution; Handoff/Transition; Closure. Gates (in order): Qualified Request; Initiative Defined (for Authorization decision); Authorized (conditional); Specification Complete; MVP Identified (MVP scope + MVP success/acceptance criteria approved); All Deliverables Accepted (Acceptance Owner accepts delivered solution against specified acceptance criteria); Transition Complete (supported operating state accepted); Closure Complete (ITS Director or PMO depending on project). Authorization applicability is explicitly conditional and must be declared at Gate 2 until scaling thresholds are resolved in A09.
-- [ ] **A06 - Required artifact taxonomy is incomplete**
+- [x] **A06 - Required artifact taxonomy is incomplete**
   - Relevant section(s): Section 2.1.2-9; Section 4.4; Section 5.1-5.3; Section 6.2
   - Description: The specification refers to project documentation, solution definition artifacts, delivery approach documentation, support documentation, and external handoff packs, but does not define the canonical artifact set, the contents of each artifact, or which outputs are mandatory versus conditional.
   - Why it matters: The framework cannot be executed consistently until teams know what outputs are expected.
   - Dependencies: Depends on A01, A02, A05; blocks or materially affects A07, A08, A09, A10, A11, A12, A16.
   - Estimated complexity: High
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The canonical artifact taxonomy is now defined in `work_delivery_framework_specification.md` Section 2.5, including packaging modes (Work Brief packet for small work; separate artifacts for large work), the always-required artifacts (Project Brief or Work Brief; Decision Log), conditional artifacts with triggers (Project Charter, Delivery Charter, TDD, API/Contract Spec, Deployment Guide, User Adoption Plan, Data Asset Spec, Data Migration Plan, Access Model, Security/Privacy RIA), and gate timing expectations. RAID is optional at Delivery Owner discretion. Canonical artifact names are defined, with filenames strongly recommended but not strictly enforced.
 - [ ] **A07 - Boundary between framework outputs and technical specification work is unclear**
   - Relevant section(s): Section 2.1.8-10; Section 4.4.6; Section 5.1.3; Section 6.8
   - Description: The specification says the framework should enable technical specifications to be derived, but does not state whether technical specifications are outside the framework, standardized by it, or partially included.
@@ -200,7 +201,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 3 | **A03 - Governance, ownership, and decision rights** | Enforcement cannot work without named owners and escalation authority. | A RACI-like ownership model and formal stop/proceed authority. | PMO, delivery leadership, framework owner | Governance decision with named roles and approval rights. | Resolved |
 | [x] | 4 | **A04 - Minimum intake inputs and entry readiness** | Intake quality determines whether the process starts with enough signal. | A minimum required input set and intake gate definition. | Request owners, PMO, delivery managers | Clarification plus intake checklist and blocker rules. | Resolved |
 | [x] | 5 | **A05 - Lifecycle stages, progression gates, and exit criteria** | Stages and gates operationalize the framework and unlock artifact design. | A formal staged flow with evidence required at each gate. | Framework owner, delivery managers, PMO | Workflow definition with gate criteria and examples. | Resolved |
-| [ ] | 6 | **A06 - Required artifact taxonomy** | Once stages exist, outputs can be assigned to the correct points and conditions. | A canonical artifact set with core and conditional outputs. | Framework owner, delivery managers, engineering representatives | Artifact matrix with purpose, required contents, and applicability rules. | Unresolved |
+| [x] | 6 | **A06 - Required artifact taxonomy** | Once stages exist, outputs can be assigned to the correct points and conditions. | A canonical artifact set with core and conditional outputs. | Framework owner, delivery managers, engineering representatives | Artifact matrix with purpose, required contents, and applicability rules. | Resolved |
 | [ ] | 7 | **A07 - Boundary between framework outputs and technical specification work** | The handoff line must be clear before readiness can be measured. | A defined boundary between framework deliverables and downstream engineering specs. | Engineering leadership, architects, PMO | Scope boundary decision supported by examples of in-framework vs downstream artifacts. | Unresolved |
 | [ ] | 8 | **A08 - Completeness and delivery-readiness criteria** | This is the core pass/fail rule for the entire framework. | A reusable completeness rubric and readiness checklist. | PMO, engineering reviewers, framework owner | Decision plus rubric, checklist, and fail conditions. | Unresolved |
 | [ ] | 9 | **A09 - Scaling rules for simple versus complex work** | Scaling should be defined after artifacts and readiness criteria exist. | A tiering model or decision rule for path selection and artifact depth. | PMO, delivery managers, framework owner | Complexity classification model with thresholds and examples. | Unresolved |
@@ -215,9 +216,9 @@ These are not unimportant, but they are either conditional by delivery mode or e
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 16
-- **Resolved ambiguities:** 5
-- **Remaining unresolved ambiguities:** 11
+- **Resolved ambiguities:** 6
+- **Remaining unresolved ambiguities:** 10
 - **Foundational items:** 9
 - **Dependent items:** 5
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01, A02, A03, A04, and A05 have been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A06.
+- **Tracking note:** A01, A02, A03, A04, A05, and A06 have been resolved and checked off in both the ambiguity register and the prioritized plan. The next active ambiguity is A07.
