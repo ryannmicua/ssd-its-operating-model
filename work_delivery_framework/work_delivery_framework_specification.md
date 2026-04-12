@@ -548,6 +548,10 @@ required_sections:
   - Data flows and key interactions
   - Non-functional requirements (as applicable)
   - Operational considerations relevant to supportability (as applicable)
+explicitly_out_of_scope:
+  - Task breakdown (epics/stories/tasks)
+  - Code-level design
+  - Per-endpoint acceptance tests
 ```
 
 ```yaml
@@ -564,6 +568,10 @@ required_sections:
   - Error handling
   - Versioning and backward-compatibility expectations
   - Dependencies
+explicitly_out_of_scope:
+  - Task breakdown (epics/stories/tasks)
+  - Code-level design
+  - Per-endpoint acceptance tests
 ```
 
 ```yaml
@@ -948,16 +956,29 @@ Consent is implied when there is no objection upon acceptance of the document wh
 **Implication for implementation**
 Gate definitions in the machine-consumable YAML model MUST specify a default_decision_owner_role and MUST require a named decision owner per project (recorded in the Initiative Definition / Project Brief).
 
-### 6.8 Relationship to technical specification work is unclear
+### 6.8 Relationship to technical specification work is resolved
 
-**What is ambiguous**
-The framework is supposed to produce documentation that allows technical specifications to be created, but it is unclear whether technical specs are part of the framework output or a downstream activity.
+**Resolved decision**
+The framework MUST produce business and system-level documentation that is strong enough for engineering teams to derive downstream technical specifications **without needing foundational clarification**.
 
-**Likely agent assumption**
-An agent would likely include technical specification templates inside the framework.
+The framework does **not** require downstream engineering planning outputs (task breakdown) or code-level technical specification artifacts.
 
-**Question to resolve**
-Does the framework end at delivery-ready business and solution definition, or must it also define the structure of technical specifications?
+**In-framework (this framework produces / requires)**
+1. Business and functional definition sufficient to avoid redefinition of intent (including functional requirements, use cases, user roles, and business rules).
+2. System-level technical documentation sufficient to derive downstream specs when needed, including:
+   - architecture and major system components
+   - data flows and/or system process diagrams
+3. In-framework design artifacts (as applicable), such as the Technical Design Document (TDD) and API/Contract Specification.
+4. Acceptance criteria and behavior-level tests derived from in-framework use cases (not detailed engineering test cases).
+
+**Out-of-scope / downstream (engineering planning and code-level technical specification work)**
+1. Work breakdown structures (epics/stories/tasks), sprint planning, and detailed implementation sequencing.
+2. Code-level design (module/class/function-level details) and per-endpoint acceptance test suites.
+3. Detailed engineering test plans and test cases (except where acceptance criteria require observable validation statements).
+
+**Notes**
+1. This boundary does not shift based on delivery mode (internal vs vendor), but completeness standards MAY need to be higher for AI-agent consumption (see Ambiguity A15).
+2. Long-term maintainability is supported by requiring durable business + system-level documentation, and by requiring operational artifacts (e.g., Deployment Guide) where applicable; it is not achieved by forcing in-framework task breakdowns or code-level specs.
 
 ### 6.9 Acceptance and holdout pattern expectations are underdefined
 
