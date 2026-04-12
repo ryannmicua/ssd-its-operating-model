@@ -1032,6 +1032,161 @@ reclassification_rule: >
   missing artifacts to satisfy the gate requirements of the large-work tier.
 ```
 
+### 2.8 Acceptance criteria and observable validation model (resolved: A10)
+
+This section resolves Ambiguity A10 using clarified user intent: acceptance criteria must be **observable**, **quantifiable** where possible, and expressed in **hybrid Gherkin** (Gherkin-style Given/When/Then mixed with explicit success metrics and testability rules). The model prioritizes validation that downstream teams (human, vendor, or AI) can execute without subjective interpretation.
+
+#### 2.8.1 Core principle (observable/quantifiable)
+
+Every acceptance criterion **MUST** be:
+- **Observable**: Can be verified by inspecting outputs, running tests, or querying system state (no "feels good" language)
+- **Quantifiable** when feasible (e.g., "response time < 200ms for 95% of requests" vs "fast enough")
+- **Testable** with defined success conditions (pass/fail, thresholds, or holdout examples)
+
+If a requirement cannot be made observable, it is treated as an open issue (see Section 2.6.5) and blocks Gate 4 until resolved.
+
+#### 2.8.2 Hybrid Gherkin guidance
+
+Use this hybrid format for all acceptance criteria:
+
+```
+Given [preconditions and context]
+When [action or event occurs]
+Then [observable outcome] 
+  - Metric: [quantifiable success threshold]
+  - Validation method: [test, query, inspection, or holdout pattern]
+  - Holdout example: [concrete input/output pair for verification]
+```
+
+**Rules for embedding**:
+- Place acceptance criteria in the **Initiative Definition / Project Brief** (or Work Brief) under a dedicated "Acceptance Criteria" section
+- Cross-reference in relevant artifacts (TDD, API/Contract Spec, User Adoption Plan)
+- For complex features, group by use case or user story
+- Always include at least one concrete holdout example per major criterion
+
+#### 2.8.3 Scaling and gate expectations
+
+- **Small-work**: 5-8 acceptance criteria focused on core outcomes sufficient for Gate 4 (`strong` rating required)
+- **Large-work**: Comprehensive set covering functional, non-functional, data, integration, security, and operational validation
+- **Gate 4 (Specification Complete)**: All acceptance criteria must be present, observable, and rated `strong`. Gate fails if any criterion requires downstream reinterpretation.
+- **Gate 6 (All Deliverables Accepted)**: Acceptance Owner verifies delivered solution against the exact criteria (no deviations without explicit recorded approval).
+
+#### 2.8.4 Updated machine-consumable artifacts and gates (YAML additions)
+
+Add/update the following in existing YAML blocks (or as new blocks):
+
+```yaml
+kind: artifact
+id: ARTIFACT-ACCEPTANCE-CRITERIA
+name: Acceptance Criteria
+packaging_mode: embedded
+required_by_gate: GATE-SPECIFICATION-COMPLETE
+purpose: Defines observable, quantifiable success conditions for the delivered solution using hybrid Gherkin.
+required_contents:
+  - Hybrid Gherkin statements (Given/When/Then + metrics + validation method)
+  - Holdout examples for each major criterion
+  - Non-functional thresholds (performance, reliability, etc.)
+artifact_specific_completeness_rules:
+  - Every criterion is observable and testable without subjective judgment.
+  - Quantifiable metrics are provided where applicable.
+  - Holdout examples exist for core paths.
+  - Criteria are cross-referenced from primary artifacts and align with business outcomes.
+common_failure_conditions:
+  - Uses vague language ("works well", "user friendly").
+  - Lacks validation method or holdout examples.
+  - Requires downstream team to invent test conditions.
+```
+
+Update GATE-SPECIFICATION-COMPLETE and GATE-DELIVERABLES-ACCEPTED YAML:
+- Add to `mandatory_pass_conditions`: "- Acceptance criteria are observable, quantifiable, and include validation methods/holdout examples"
+- Update `minimum_qualitative_threshold` for Gate 4 to enforce `strong` on acceptance quality.
+
+#### 2.8.5 Examples
+
+**Good (observable hybrid Gherkin)**:
+```
+Given a registered user with valid credentials
+When they POST to /api/v1/orders with a valid payload
+Then order is created with status "pending"
+  - Metric: HTTP 201, response time < 300ms (p95)
+  - Validation: Query orders table + API response schema match
+  - Holdout: Input {"item":"widget","qty":2} → Output orderId=123, status=pending
+```
+
+**Bad (vague)**: "The order creation should work correctly and be fast."
+
+### 2.9 Minimum supportability and maintainability definition (resolved: A11)
+
+This section resolves Ambiguity A11. Supportability and maintainability are now explicit minimum requirements embedded in the **Deployment Guide** (for large-work) or **Work Brief** (small-work) and cross-referenced in TDD.
+
+#### 2.9.1 Minimum required content (always)
+
+The following MUST be defined before Gate 6 (Transition Complete):
+
+1. **Ownership**
+   - Named Support Owner (role or individual)
+   - Escalation path and RACI for incidents
+
+2. **Support model**
+   - Tiered support levels (L1/L2/L3)
+   - Expected response times (e.g., P1 incident < 15min)
+   - On-call rotation (if applicable)
+
+3. **Observability**
+   - Key metrics, logs, and alerts required
+   - Monitoring thresholds and dashboard references
+
+4. **Maintainability**
+   - Versioning and backward compatibility rules
+   - Patching/upgrade process
+   - Technical debt acceptance criteria
+   - Knowledge transfer requirements (runbooks, architecture decision records)
+
+5. **Transition checklist**
+   - Handover activities with owners and evidence
+   - Post-transition support window
+
+#### 2.9.2 Scaling
+
+- **Small-work**: Summary in Work Brief + basic runbook (1-2 pages)
+- **Large-work**: Full Deployment Guide + TDD operational section + dedicated runbooks
+
+Gate 7 fails if support model leaves material gaps or cannot establish "supported operating state".
+
+#### 2.9.3 Updated YAML for artifacts/gates
+
+Add to ARTIFACT-DEPLOYMENT-GUIDE and ARTIFACT-TDD `required_contents`:
+- Support ownership, observability plan, maintainability commitments, transition checklist.
+
+Update GATE-TRANSITION-COMPLETE:
+```yaml
+kind: gate
+id: GATE-TRANSITION-COMPLETE
+...
+mandatory_pass_conditions:
+  - Support model, ownership, observability, and maintainability are explicitly defined and accepted
+  - Transition checklist is complete with evidence
+immediate_fail_conditions:
+  - No named Support Owner or unaddressed operational gaps
+minimum_qualitative_threshold: adequate
+```
+
+**Example snippet for Deployment Guide**:
+```yaml
+support_owner: "Platform Ops Team (J. Smith)"
+incident_response:
+  p1: "< 15 minutes"
+  p2: "< 1 hour"
+observability:
+  metrics: ["error_rate", "latency_p95", "throughput"]
+  alerting: "PagerDuty + Grafana"
+maintainability:
+  mttr_target: "< 4 hours"
+  upgrade_process: "Blue-green with automated rollback"
+```
+
+This completes resolution of A10 and A11. The framework now provides enforceable, observable standards for validation and long-term operations.
+
 ## 3. Explicit Non-Behaviors
 
 1. The system must not add bureaucracy for its own sake because extra process that does not improve delivery quality weakens adoption and slows execution.

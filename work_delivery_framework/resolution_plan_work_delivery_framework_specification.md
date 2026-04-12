@@ -110,22 +110,24 @@ Recommended high-level order of resolution:
   - Risk if unresolved: High
   - Status: Resolved
   - Resolution note: Two tiers: small-work (Work Brief packet) and large-work (separate artifact set). Single-factor trigger (OR logic): any one of scope (multi-team, multi-system, multi-component, or greenfield), business impact (cross-department, material impact, or requires approved budget), or effort/complexity (Delivery Owner judgment; default to large-work when uncertain) forces large-work. External involvement is context, not a forcing factor. Small-work quick-passes Gates 1, 3, 5, 7, 8; substantive review at Gates 2, 4, 6. Small-work requires only Work Brief; conditional artifacts at Delivery Owner discretion. Classification declared by Gate 2. Reclassification required if thresholds exceeded; recorded in Decision Log. No intermediate tier.
-- [ ] **A10 - Acceptance criteria and observable validation model are underdefined**
-  - Relevant section(s): Section 2.1.9; Section 2.3.6; Section 5.1.1; Section 5.3.2; Section 6.9
+- [x] **A10 - Acceptance criteria and observable validation model are underdefined**
+  - Relevant section(s): Section 2.1.9; Section 2.3.6; Section 5.1.1; Section 5.3.2; Section 6.9; new Section 2.8
   - Description: Acceptance criteria are required, but the required syntax, level of rigor, and meaning of terms such as testable acceptance patterns and holdout patterns are not defined.
   - Why it matters: Acceptance structure determines whether outputs can be validated objectively by humans, vendors, or AI agents.
   - Dependencies: Depends on A06, A07, A08.
   - Estimated complexity: Medium
   - Risk if unresolved: High
-  - Status: Unresolved
-- [ ] **A11 - Minimum supportability and maintainability definition is missing**
-  - Relevant section(s): Section 2.1.6; Section 2.3.3; Section 3.7; Section 5.2.1; Section 5.7.2; Section 6.11
+  - Status: Resolved
+  - Resolution note: Hybrid Gherkin (Given/When/Then + quantifiable metrics, validation method, holdout examples). Observable/quantifiable principle enforced. Embedded in primary artifacts. Updated YAML for ARTIFACT-ACCEPTANCE-CRITERIA (embedded), gates, scaling rules, and examples added in new Section 2.8. Gate 4 requires `strong` rating on acceptance quality.
+- [x] **A11 - Minimum supportability and maintainability definition is missing**
+  - Relevant section(s): Section 2.1.6; Section 2.3.3; Section 3.7; Section 5.2.1; Section 5.7.2; Section 6.11; new Section 2.9
   - Description: The specification requires supportability and maintainability but does not decompose them into minimum required information, such as ownership, support model, incident expectations, transition needs, or maintenance responsibilities.
   - Why it matters: The framework could otherwise produce delivery-ready documents that are operationally incomplete.
   - Dependencies: Depends on A06, A08, A09.
   - Estimated complexity: Medium
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: Minimum 5 fields required (ownership, support model, observability, maintainability commitments, transition checklist). Embedded in Deployment Guide / Work Brief and TDD. Updated YAML for affected artifacts and GATE-TRANSITION-COMPLETE. Scaling rules defined. Gate 7 enforces supported operating state. New Section 2.9 added.
 - [ ] **A12 - External engagement modes and handoff variants are underspecified**
   - Relevant section(s): Section 2.1.7; Section 4.3.10; Section 4.4.5; Section 5.2; Section 6.10
   - Description: The specification mentions external development teams but does not distinguish among full outsourced delivery, co-delivery, staff augmentation, implementation partners, or advisory vendors, nor define how handoff expectations change by engagement model.
@@ -229,9 +231,9 @@ These are not unimportant, but they are either conditional by delivery mode or e
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 17
-- **Resolved ambiguities:** 9
-- **Remaining unresolved ambiguities:** 8
+- **Resolved ambiguities:** 11
+- **Remaining unresolved ambiguities:** 6
 - **Foundational items:** 9
 - **Dependent items:** 6
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01, A02, A03, A04, A05, A06, A07, A08, and A09 have been resolved and checked off in both the ambiguity register and the prioritized plan. A17 has been added as a deferred ambiguity for critical stage-defining artifact mapping. The next active ambiguity is A10.
+- **Tracking note:** A01-A09, A10, and A11 have been resolved (11 of 17). A17 remains deferred. Next active ambiguity is now A13 (Review, assurance, and audit mechanism).
