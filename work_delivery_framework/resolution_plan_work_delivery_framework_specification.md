@@ -101,14 +101,15 @@ Recommended high-level order of resolution:
   - Estimated complexity: Medium
   - Risk if unresolved: Medium
   - Status: Unresolved
-- [ ] **A09 - Scaling rules for simple versus complex work are unresolved**
+- [x] **A09 - Scaling rules for simple versus complex work are resolved**
   - Relevant section(s): Section 2.3.1-3; Section 5.6-5.7; Section 6.6; Section 8
   - Description: The specification states that the framework must avoid bureaucracy for simple work and scale up for complex work, but it does not define classification criteria, path variants, or thresholds for selecting a lighter or heavier path.
   - Why it matters: This is the main control for balancing rigor with usability.
   - Dependencies: Depends on A01, A06, A08; materially affects A11, A12, A16.
   - Estimated complexity: High
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: Two tiers: small-work (Work Brief packet) and large-work (separate artifact set). Single-factor trigger (OR logic): any one of scope (multi-team, multi-system, multi-component, or greenfield), business impact (cross-department, material impact, or requires approved budget), or effort/complexity (Delivery Owner judgment; default to large-work when uncertain) forces large-work. External involvement is context, not a forcing factor. Small-work quick-passes Gates 1, 3, 5, 7, 8; substantive review at Gates 2, 4, 6. Small-work requires only Work Brief; conditional artifacts at Delivery Owner discretion. Classification declared by Gate 2. Reclassification required if thresholds exceeded; recorded in Decision Log. No intermediate tier.
 - [ ] **A10 - Acceptance criteria and observable validation model are underdefined**
   - Relevant section(s): Section 2.1.9; Section 2.3.6; Section 5.1.1; Section 5.3.2; Section 6.9
   - Description: Acceptance criteria are required, but the required syntax, level of rigor, and meaning of terms such as testable acceptance patterns and holdout patterns are not defined.
@@ -215,7 +216,7 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 6 | **A06 - Required artifact taxonomy** | Once stages exist, outputs can be assigned to the correct points and conditions. | A canonical artifact set with core and conditional outputs. | Framework owner, delivery managers, engineering representatives | Artifact matrix with purpose, required contents, and applicability rules. | Resolved |
 | [x] | 7 | **A07 - Boundary between framework outputs and technical specification work** | The handoff line must be clear before readiness can be measured. | A defined boundary between framework deliverables and downstream engineering specs. | Engineering leadership, architects, PMO | Scope boundary decision supported by examples of in-framework vs downstream artifacts. | Resolved |
 | [x] | 8 | **A08 - Completeness and delivery-readiness criteria** | This is the core pass/fail rule for the entire framework. | A reusable completeness rubric and readiness checklist. | PMO, engineering reviewers, framework owner | Decision plus rubric, checklist, and fail conditions. | Resolved |
-| [ ] | 9 | **A09 - Scaling rules for simple versus complex work** | Scaling should be defined after artifacts and readiness criteria exist. | A tiering model or decision rule for path selection and artifact depth. | PMO, delivery managers, framework owner | Complexity classification model with thresholds and examples. | Unresolved |
+| [x] | 9 | **A09 - Scaling rules for simple versus complex work** | Scaling should be defined after artifacts and readiness criteria exist. | A tiering model or decision rule for path selection and artifact depth. | PMO, delivery managers, framework owner | Complexity classification model with thresholds and examples. | Resolved |
 | [ ] | 10 | **A10 - Acceptance criteria and observable validation model** | Acceptance design depends on artifacts, boundary, and completeness rules already being known. | A standard acceptance format and definition of observable validation. | Product or business leads, QA or validation stakeholders, engineering | Rule definition plus examples or acceptance-writing pattern. | Unresolved |
 | [ ] | 11 | **A11 - Minimum supportability and maintainability definition** | Operational readiness content can be specified after artifact structure and scaling are known. | A minimum operational-readiness content standard. | Support owner, operations lead, delivery manager | Clarification of required support fields, responsibilities, and transition expectations. | Unresolved |
 | [ ] | 12 | **A13 - Review, assurance, and audit mechanism** | Review design depends on governance, stages, and readiness criteria. | A standard review model with reviewer roles, checkpoints, and evidence. | PMO, framework owner, engineering review leads | Review workflow definition and approval policy. | Unresolved |
@@ -228,9 +229,9 @@ These are not unimportant, but they are either conditional by delivery mode or e
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 17
-- **Resolved ambiguities:** 8
-- **Remaining unresolved ambiguities:** 9
+- **Resolved ambiguities:** 9
+- **Remaining unresolved ambiguities:** 8
 - **Foundational items:** 9
 - **Dependent items:** 6
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01, A02, A03, A04, A05, A06, A07, and A08 have been resolved and checked off in both the ambiguity register and the prioritized plan. A17 has been added as a deferred ambiguity for critical stage-defining artifact mapping. The next active ambiguity is A09.
+- **Tracking note:** A01, A02, A03, A04, A05, A06, A07, A08, and A09 have been resolved and checked off in both the ambiguity register and the prioritized plan. A17 has been added as a deferred ambiguity for critical stage-defining artifact mapping. The next active ambiguity is A10.

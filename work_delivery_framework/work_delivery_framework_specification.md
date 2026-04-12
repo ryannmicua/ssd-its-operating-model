@@ -127,7 +127,7 @@ The framework MUST support human teams using AI agents as assistants while keepi
 The framework lifecycle is defined as a sequence of formal stages with explicit progression gates. A project MAY be blocked at any gate if the required evidence is missing or ambiguity remains unresolved.
 
 **Important boundary note**
-Stages and gates define the control model. The canonical artifact taxonomy is now defined (see Section 2.5). However, scaling thresholds for “small vs large work” are still unresolved (see Ambiguity A09), so the framework defines both packaging modes without yet defining the full tiering/threshold model.
+Stages and gates define the control model. The canonical artifact taxonomy is now defined (see Section 2.5). Scaling thresholds for “small vs large work” are now resolved (see Section 2.7, Ambiguity A09).
 
 **Stages (in order)**
 1. Intake
@@ -156,7 +156,7 @@ Stages and gates define the control model. The canonical artifact taxonomy is no
 3. Discovery / Initiative Definition ends at Gate 2 (Initiative Defined).
 4. Authorization (conditional) ends at Gate 3 (Authorized).
    - If Authorization is not required, the project transitions from Discovery directly to Solution Definition after Gate 2.
-   - Authorization applicability thresholds are defined elsewhere (see Ambiguity A09); until then, Authorization is explicitly conditional and must be declared as “Required” or “Not Required” by the Gate Decision Owner at Gate 2.
+   - Authorization applicability is now informed by the scaling model (see Section 2.7). For small-work, Authorization is typically “Not Required” since requiring an approved budget would already trigger large-work classification. For large-work, the Gate Decision Owner must declare Authorization as “Required” or “Not Required” at Gate 2.
 5. Solution Definition ends at Gate 4 (Specification Complete).
 6. Planning / Mobilization / MVP Plan ends at Gate 5 (MVP Identified).
 7. Delivery / Execution ends at Gate 6 (All Deliverables Accepted).
@@ -441,8 +441,8 @@ The framework supports two packaging modes:
 1. **Small work:** one packet artifact called **Work Brief**.
 2. **Large work:** separate canonical artifacts (files) as defined in this section.
 
-**Important note (scaling unresolved):**
-The thresholds for “small vs large work” and formal tiering are not yet defined (see Ambiguity A09). Until A09 is resolved, the Delivery Owner MUST explicitly declare whether the project will use **Work Brief** (packet mode) or the **separate artifact set** (large-work mode) no later than Gate 2.
+**Important note (scaling resolved):**
+The thresholds for “small vs large work” and formal tiering are now defined (see Section 2.7, Ambiguity A09). The Delivery Owner MUST classify the project as small-work or large-work no later than Gate 2.
 
 Both names MUST exist:
 - **Work Brief** is the small-work form.
@@ -904,6 +904,134 @@ If an artifact or gate fails completeness, the review output MUST include a writ
 
 There is **no conditional progression** for completeness failure. If the artifact or gate fails, work stops until the documented deficiencies are corrected and re-reviewed.
 
+### 2.7 Scaling rules for small-work vs large-work (resolved)
+
+This section resolves Ambiguity A09.
+
+#### 2.7.1 Tiers
+
+The framework defines two tiers:
+1. **Small-work** — uses the Work Brief packet (see Section 2.5.2)
+2. **Large-work** — uses the separate artifact set (see Section 2.5.3)
+
+There is no intermediate tier.
+
+#### 2.7.2 Classification factors
+
+A project is classified as **large-work** if **any one** of the following primary factors is true (single-factor trigger, OR logic):
+
+1. **Scope** — any of the following:
+   - Multi-team
+   - Multi-system
+   - Multi-component
+   - Greenfield (all greenfield projects are large-work regardless of team size or system count)
+
+2. **Business impact** — any of the following:
+   - Affects multiple departments, employees, or organizations (cross-department)
+   - Material impact on operations, revenue, or strategic objectives
+   - Requires an approved budget
+
+3. **Effort/complexity** — Delivery Owner judgment; when uncertain, **default to large-work**
+
+External involvement is relevant context but is not a primary forcing factor.
+
+#### 2.7.3 Classification timing and declaration
+
+The Delivery Owner MUST declare the classification (small-work or large-work) no later than Gate 2 (Initiative Defined). The classification determines the packaging mode (Work Brief or separate artifact set).
+
+Classification documentation is not required beyond the declaration in the Initiative Definition / Project Brief or Work Brief.
+
+#### 2.7.4 Reclassification
+
+If a project initially classified as small-work grows beyond the small-work thresholds (e.g., scope expands to multi-team, a budget requirement is discovered, or effort/complexity increases materially), the project MUST be reclassified to large-work. Reclassification requires switching to the separate artifact set and completing any missing artifacts to satisfy the gate requirements of the new tier.
+
+Reclassification events MUST be recorded in the Decision Log.
+
+#### 2.7.5 Small-work gate passage profile
+
+All gates apply to small-work. However, the following gates allow **quick passage** for small-work (brief confirmation, lighter evidence, Delivery Owner can mark as passed with documented rationale):
+
+1. **Gate 1 (Qualified Request)** — in-scope confirmation and owner assignment is straightforward for small-work
+2. **Gate 3 (Authorized)** — typically "Not Required" for small-work since requiring an approved budget would already trigger large-work classification
+3. **Gate 5 (MVP Identified)** — for small-work, MVP scope often equals the full scope; brief confirmation suffices
+4. **Gate 7 (Transition Complete)** — transition is typically simpler for small-work
+5. **Gate 8 (Closure Complete)** — closure is typically simpler for small-work
+
+The following gates still require **substantive review** for small-work (the Work Brief packet serves as evidence, but the gate standard still applies):
+
+1. **Gate 2 (Initiative Defined)** — scope, outcomes, and ownership must still be clear
+2. **Gate 4 (Specification Complete)** — this is the core quality gate; minimum `strong` rating still required
+3. **Gate 6 (All Deliverables Accepted)** — acceptance must still be verified
+
+Quick passage does not mean gate bypass. Every gate must still be formally evaluated and recorded.
+
+#### 2.7.6 Small-work conditional artifacts
+
+For small-work, only the Work Brief is required. Conditional artifacts (e.g., Delivery Charter, Access Model, Security/Privacy RIA) are at Delivery Owner and team discretion. There is no automatic upgrade to large-work triggered by a conditional artifact.
+
+If the Delivery Owner determines that a conditional artifact is needed for small-work, it is produced and included as a companion to the Work Brief, and its completeness is still judged against the standard completeness model (see Section 2.6).
+
+#### 2.7.7 Machine-consumable scaling model (YAML)
+
+```yaml
+kind: scaling
+id: SCALING-MODEL
+name: Work Delivery Framework Scaling Model
+tiers:
+  - id: TIER-SMALL-WORK
+    name: Small-Work
+    packaging_mode: packet
+    primary_artifact: ARTIFACT-WORK-BRIEF
+    classification_rule: >
+      None of the primary forcing factors are true.
+      Scope is single-team, single-system, and non-greenfield.
+      Business impact does not cross departments, is not material, and does not require approved budget.
+      Effort/complexity is judged manageable as small-work.
+    gate_passage_profile: quick_pass
+    quick_pass_gates:
+      - GATE-QUALIFIED-REQUEST
+      - GATE-AUTHORIZED
+      - GATE-MVP-IDENTIFIED
+      - GATE-TRANSITION-COMPLETE
+      - GATE-CLOSURE-COMPLETE
+    substantive_review_gates:
+      - GATE-INITIATIVE-DEFINED
+      - GATE-SPECIFICATION-COMPLETE
+      - GATE-DELIVERABLES-ACCEPTED
+    conditional_artifacts: delivery_owner_discretion
+    reclassification_required: true
+  - id: TIER-LARGE-WORK
+    name: Large-Work
+    packaging_mode: separate_artifacts
+    primary_artifact: ARTIFACT-PROJECT-BRIEF
+    classification_rule: >
+      Any one primary forcing factor is true:
+      scope is multi-team OR multi-system OR multi-component OR greenfield;
+      business impact is cross-department OR material OR requires approved budget;
+      effort/complexity is judged beyond small-work.
+      Default to large-work when uncertain.
+    gate_passage_profile: full_review
+    quick_pass_gates: []
+    substantive_review_gates:
+      - GATE-QUALIFIED-REQUEST
+      - GATE-INITIATIVE-DEFINED
+      - GATE-AUTHORIZED
+      - GATE-SPECIFICATION-COMPLETE
+      - GATE-MVP-IDENTIFIED
+      - GATE-DELIVERABLES-ACCEPTED
+      - GATE-TRANSITION-COMPLETE
+      - GATE-CLOSURE-COMPLETE
+    conditional_artifacts: triggered_per_section_2_5_3
+    reclassification_required: not_applicable
+classification_timing: no_later_than_gate_GATE-INITIATIVE-DEFINED
+classification_declaration: Initiative_Definition_or_Work_Brief
+reclassification_rule: >
+  If a small-work project exceeds any primary forcing factor threshold,
+  it MUST be reclassified to large-work. Reclassification events MUST be
+  recorded in the Decision Log. The project MUST then complete any
+  missing artifacts to satisfy the gate requirements of the large-work tier.
+```
+
 ## 3. Explicit Non-Behaviors
 
 1. The system must not add bureaucracy for its own sake because extra process that does not improve delivery quality weakens adoption and slows execution.
@@ -1166,16 +1294,17 @@ Open issues may remain only when they are explicit, owned, have a resolution pat
 **Implication for implementation**
 Framework reviews and any AI-assisted validation logic MUST apply the explicit completeness model in Section 2.6 rather than inventing local quality heuristics.
 
-### 6.6 Treatment of simple vs complex work is undefined
+### 6.6 Scaling rules for simple vs complex work are resolved
 
-**What is ambiguous**
-You want to avoid bureaucracy, but there is no rule for how the framework scales up or down based on project size, risk, or complexity.
+**Resolved decision**
+The framework defines two tiers: small-work (Work Brief packet) and large-work (separate artifact set). Classification is a single-factor trigger: if any one of scope (multi-team, multi-system, multi-component, or greenfield), business impact (cross-department, material impact, or requires approved budget), or effort/complexity (Delivery Owner judgment; default to large-work when uncertain) hits the large-work threshold, the project is large-work. External involvement is relevant context but not a primary forcing factor.
 
-**Likely agent assumption**
-An agent would likely create tiers or classifications without your approval.
+Small-work uses a quick-pass gate profile for Gates 1, 3, 5, 7, and 8; substantive review is still required at Gates 2, 4, and 6. Small-work requires only the Work Brief; conditional artifacts are at Delivery Owner discretion. Large-work follows the full gate and artifact model.
 
-**Question to resolve**
-Should the framework have lightweight, standard, and complex paths, and if so, what determines which path applies?
+Classification is declared no later than Gate 2. Reclassification from small-work to large-work is required if thresholds are exceeded mid-stream, and must be recorded in the Decision Log.
+
+**Implication for implementation**
+The scaling model MUST be applied as defined in Section 2.7. No intermediate tiers are introduced. The Delivery Owner MUST declare the tier no later than Gate 2 and MUST reclassify if thresholds are exceeded.
 
 ### 6.7 Governance and ownership are resolved
 
