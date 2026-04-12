@@ -136,14 +136,15 @@ Recommended high-level order of resolution:
   - Estimated complexity: Medium
   - Risk if unresolved: Medium
   - Status: Unresolved
-- [ ] **A13 - Review, assurance, and audit mechanism is unclear**
+- [x] **A13 - Review, assurance, and audit mechanism is unclear**
   - Relevant section(s): Section 5; Section 6.12
   - Description: The specification uses reviewers, evaluators, and independent reviewers in scenarios, but does not define the official review process, review timing, required reviewers, approval model, or evidence retention expectations.
   - Why it matters: The framework depends on independent evaluation, but the method for that evaluation is not standardized.
   - Dependencies: Depends on A03, A05, A08.
   - Estimated complexity: Medium
   - Risk if unresolved: High
-  - Status: Unresolved
+  - Status: Resolved
+  - Resolution note: The default model is Delivery Owner-led review with PMO assurance oversight. PMO defines the standard, assigns the Gate Decision Owner, checks evidence completeness, attends every substantive gate, audits samples, and intervenes on escalation, non-compliance, or dispute. Review mode follows the existing gate profile (small-work substantive at Gates 2/4/6 and quick-pass elsewhere; large-work substantive at all gates). Substantive gates require live meetings and committee-action style review records; quick-pass gates require a Decision Log entry only. Independent review is trigger-based only (architecture, security/privacy, external vendor handoff, material business/regulatory risk) and requires explicit domain signoff when triggered. PMO audits may reopen a passed gate only for material completeness or control failure.
 - [ ] **A14 - Blocker, risk, and open-issue handling model is incomplete**
   - Relevant section(s): Section 2.2.1-7; Section 2.3.7; Section 4.5.3-4; Section 5.4-5.5
   - Description: The specification requires missing information, dependencies, risks, and open questions to be documented, but it does not define the taxonomy, recording method, ownership, escalation path, or closure criteria for those items.
@@ -186,7 +187,6 @@ These items are foundational because they define the framework's basic operating
 ### Dependent
 - **A10 - Acceptance criteria and observable validation model**
 - **A11 - Minimum supportability and maintainability definition**
-- **A13 - Review, assurance, and audit mechanism**
 - **A14 - Blocker, risk, and open-issue handling model**
 - **A15 - AI-agent sufficiency standard**
 - **A17 - Critical stage-defining artifact mapping**
@@ -219,9 +219,9 @@ These are not unimportant, but they are either conditional by delivery mode or e
 | [x] | 7 | **A07 - Boundary between framework outputs and technical specification work** | The handoff line must be clear before readiness can be measured. | A defined boundary between framework deliverables and downstream engineering specs. | Engineering leadership, architects, PMO | Scope boundary decision supported by examples of in-framework vs downstream artifacts. | Resolved |
 | [x] | 8 | **A08 - Completeness and delivery-readiness criteria** | This is the core pass/fail rule for the entire framework. | A reusable completeness rubric and readiness checklist. | PMO, engineering reviewers, framework owner | Decision plus rubric, checklist, and fail conditions. | Resolved |
 | [x] | 9 | **A09 - Scaling rules for simple versus complex work** | Scaling should be defined after artifacts and readiness criteria exist. | A tiering model or decision rule for path selection and artifact depth. | PMO, delivery managers, framework owner | Complexity classification model with thresholds and examples. | Resolved |
-| [ ] | 10 | **A10 - Acceptance criteria and observable validation model** | Acceptance design depends on artifacts, boundary, and completeness rules already being known. | A standard acceptance format and definition of observable validation. | Product or business leads, QA or validation stakeholders, engineering | Rule definition plus examples or acceptance-writing pattern. | Unresolved |
-| [ ] | 11 | **A11 - Minimum supportability and maintainability definition** | Operational readiness content can be specified after artifact structure and scaling are known. | A minimum operational-readiness content standard. | Support owner, operations lead, delivery manager | Clarification of required support fields, responsibilities, and transition expectations. | Unresolved |
-| [ ] | 12 | **A13 - Review, assurance, and audit mechanism** | Review design depends on governance, stages, and readiness criteria. | A standard review model with reviewer roles, checkpoints, and evidence. | PMO, framework owner, engineering review leads | Review workflow definition and approval policy. | Unresolved |
+| [x] | 10 | **A10 - Acceptance criteria and observable validation model** | Acceptance design depends on artifacts, boundary, and completeness rules already being known. | A standard acceptance format and definition of observable validation. | Product or business leads, QA or validation stakeholders, engineering | Rule definition plus examples or acceptance-writing pattern. | Resolved |
+| [x] | 11 | **A11 - Minimum supportability and maintainability definition** | Operational readiness content can be specified after artifact structure and scaling are known. | A minimum operational-readiness content standard. | Support owner, operations lead, delivery manager | Clarification of required support fields, responsibilities, and transition expectations. | Resolved |
+| [x] | 12 | **A13 - Review, assurance, and audit mechanism** | Review design depends on governance, stages, and readiness criteria. | A standard review model with reviewer roles, checkpoints, and evidence. | PMO, framework owner, engineering review leads | Review workflow definition and approval policy. | Resolved |
 | [ ] | 13 | **A14 - Blocker, risk, and open-issue handling model** | Blocker handling should align to the approved workflow and governance model. | A standard issue register model and stop/proceed rules. | Delivery managers, PMO, framework owner | Decision on taxonomy, ownership, escalation, and closure rules. | Unresolved |
 | [ ] | 14 | **A15 - AI-agent sufficiency standard** | AI-readiness should be calibrated after the human baseline is explicit. | A defined precision standard for AI-consumable documentation. | Framework owner, engineering, AI delivery stakeholders | Clarification of additional structure, explicitness, and prohibited ambiguity. | Unresolved |
 | [ ] | 15 | **A12 - External engagement modes and handoff variants** | External variants should be derived from the core framework rather than invented upfront. | A handoff model adjusted by vendor engagement type. | Vendor management, PMO, delivery leadership | Scope decision plus conditional handoff requirements by engagement model. | Unresolved |
@@ -231,9 +231,9 @@ These are not unimportant, but they are either conditional by delivery mode or e
 ## 5. Progress Tracking Summary
 
 - **Total ambiguities identified:** 17
-- **Resolved ambiguities:** 11
-- **Remaining unresolved ambiguities:** 6
+- **Resolved ambiguities:** 12
+- **Remaining unresolved ambiguities:** 5
 - **Foundational items:** 9
-- **Dependent items:** 6
+- **Dependent items:** 5
 - **Optional / lower-impact items:** 2
-- **Tracking note:** A01-A09, A10, and A11 have been resolved (11 of 17). A17 remains deferred. Next active ambiguity is now A13 (Review, assurance, and audit mechanism).
+- **Tracking note:** A01-A11 and A13 have been resolved (12 of 17). A17 remains deferred. Next active ambiguity is now A14 (Blocker, risk, and open-issue handling model).

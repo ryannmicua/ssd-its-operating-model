@@ -1187,6 +1187,162 @@ maintainability:
 
 This completes resolution of A10 and A11. The framework now provides enforceable, observable standards for validation and long-term operations.
 
+### 2.10 Review, assurance, and audit mechanism (resolved: A13)
+
+This section resolves Ambiguity A13.
+
+#### 2.10.1 Default review ownership model
+
+The default review model is **Delivery Owner-led review with PMO assurance oversight**.
+
+The Delivery Owner-led model means:
+1. the Delivery Owner is responsible for preparing the evidence package, convening the review, and ensuring the required artifact owners are present
+2. the named **Gate Decision Owner** remains accountable for the final stop/proceed decision at the gate
+3. the Gate Decision Owner and Delivery Owner MAY be the same person for a given gate
+
+The PMO is the framework assurance function. PMO responsibilities are:
+1. define and maintain the review standard for this framework
+2. assign the named Gate Decision Owner
+3. check evidence completeness for gate reviews
+4. attend every substantive gate review meeting
+5. audit a sample of completed gate reviews for compliance and quality
+6. intervene when escalation, non-compliance, or dispute occurs
+
+#### 2.10.2 Review modes by gate profile
+
+The review mechanism MUST align to the gate profiles already defined in Section 2.7.
+
+1. **Small-work** uses:
+   - **substantive review** at Gate 2, Gate 4, and Gate 6
+   - **quick-pass review** at Gate 1, Gate 3, Gate 5, Gate 7, and Gate 8
+2. **Large-work** uses **substantive review** at every gate
+
+Review-mode definitions:
+1. **Substantive review** requires a live gate review meeting
+2. **Quick-pass review** does not require a live gate review meeting and requires only the minimum record defined in Section 2.10.5
+
+Quick-pass does not remove the gate. It only changes the review depth and evidence-retention model.
+
+#### 2.10.3 Substantive review meeting model
+
+Every substantive gate review MUST include the following attendees by default:
+1. the named Gate Decision Owner
+2. the Delivery Owner
+3. the relevant artifact owner(s)
+4. PMO
+5. any triggered independent reviewer
+
+Unless a required domain signoff is triggered (see Section 2.10.4), the Gate Decision Owner makes the final pass/fail decision after hearing the reviewers.
+
+Formal pre-gate artifact review is not required by this framework. Teams MAY perform informal pre-reviews, but the formal decision point remains the gate review itself.
+
+#### 2.10.4 Trigger-based independent review
+
+Independent review is **not** required at every substantive gate. It becomes mandatory only when one or more trigger conditions are present.
+
+The mandatory trigger conditions are:
+1. architecture impact
+2. security or privacy impact
+3. external delivery or vendor handoff
+4. material business risk or regulatory exposure
+
+When triggered:
+1. the relevant independent reviewer MUST participate for that domain
+2. explicit **domain signoff** is required before the gate can pass
+3. this required signoff is a domain-assurance precondition, not a transfer of overall gate ownership; the Gate Decision Owner still makes the overall gate decision once required domain signoffs are present
+
+If a normally quick-pass gate hits one of the trigger conditions above, PMO decides case by case whether that gate remains quick-pass with targeted domain review or is converted into a substantive gate review.
+
+#### 2.10.5 Review records and evidence retention
+
+Review evidence retention is standardized by review mode.
+
+For **quick-pass** gates:
+1. a **Decision Log** entry is sufficient
+
+For **substantive** gates:
+1. a written **committee-action style** review record is required
+2. the record MUST include:
+   - gate reviewed
+   - review date
+   - attendees
+   - decision
+   - deficiencies or conditions (if any)
+   - action items
+
+The framework does not require transcripts, full meeting notes, or full informal comment capture unless a local policy outside this framework requires them.
+
+#### 2.10.6 PMO evidence completeness, intervention, and audit reopening
+
+PMO MUST perform an evidence-completeness check for every substantive gate review.
+
+If PMO determines that the evidence package is incomplete:
+1. the Gate Decision Owner MAY still proceed with the review and decision
+2. the rationale for proceeding despite PMO's completeness concern MUST be documented in the committee-action style review record and/or Decision Log
+
+PMO intervention is required when:
+1. a formal escalation is raised
+2. non-compliance with the framework is identified
+3. a material dispute about gate passage cannot be resolved within the normal gate review
+
+PMO audit findings MAY reopen or invalidate a previously passed gate only when a **material completeness failure** or **material control failure** is discovered after passage.
+
+#### 2.10.7 Machine-consumable review model (YAML)
+
+```yaml
+kind: review_model
+id: REVIEW-MODEL-GATE-ASSURANCE
+name: Gate Review, Assurance, and Audit Model
+default_model: delivery_owner_led_with_pmo_assurance
+pmo_responsibilities:
+  - Define review standard
+  - Assign Gate Decision Owner
+  - Check evidence completeness
+  - Attend every substantive gate review
+  - Audit sample reviews
+  - Intervene on escalation, non-compliance, or dispute
+review_modes:
+  quick_pass:
+    live_meeting_required: false
+    minimum_record:
+      - Decision Log entry
+  substantive:
+    live_meeting_required: true
+    required_attendees:
+      - Gate Decision Owner
+      - Delivery Owner
+      - Relevant artifact owner(s)
+      - PMO
+      - Triggered independent reviewer(s)
+    final_decision_rule: >
+      Gate Decision Owner decides after hearing reviewers unless a required
+      domain signoff is still missing.
+    minimum_record:
+      - Gate reviewed
+      - Review date
+      - Attendees
+      - Decision
+      - Deficiencies or conditions
+      - Action items
+independent_review_triggers:
+  - Architecture impact
+  - Security or privacy impact
+  - External delivery or vendor handoff
+  - Material business risk or regulatory exposure
+triggered_independent_review_rule: >
+  Independent review is mandatory only when triggered. Required domain signoff
+  must be present before the gate can pass.
+quick_pass_trigger_override: >
+  If a quick-pass gate hits an independent-review trigger, PMO decides whether
+  the gate stays quick-pass with targeted review or becomes substantive.
+evidence_completeness_override: >
+  If PMO identifies incomplete evidence for a substantive gate, the Gate
+  Decision Owner may still proceed if the rationale is documented.
+audit_reopen_rule: >
+  PMO audit findings may reopen a passed gate only when a material completeness
+  failure or material control failure is discovered.
+```
+
 ## 3. Explicit Non-Behaviors
 
 1. The system must not add bureaucracy for its own sake because extra process that does not improve delivery quality weakens adoption and slows execution.
@@ -1544,16 +1700,19 @@ An agent would likely invent generic operational-readiness sections.
 **Question to resolve**
 What minimum support and maintenance information must always be defined before work is considered ready?
 
-### 6.12 Review and audit method is unclear
+### 6.12 Review and audit mechanism is resolved
 
-**What is ambiguous**
-It is not defined how humans will evaluate whether the framework output is sufficient in practice.
+**Resolved decision**
+1. The default model is Delivery Owner-led review with PMO assurance oversight.
+2. PMO defines the review standard, assigns the Gate Decision Owner, checks evidence completeness, attends every substantive gate review, audits samples, and intervenes on escalation, non-compliance, or dispute.
+3. Review mode follows the existing gate profile: small-work uses substantive review at Gates 2, 4, and 6 and quick-pass for the remaining gates; large-work uses substantive review at every gate.
+4. Substantive gate reviews require a live meeting. Quick-pass gates require only a Decision Log entry.
+5. Independent review is trigger-based only: architecture impact, security/privacy impact, external delivery/vendor handoff, or material business risk/regulatory exposure.
+6. When triggered, explicit domain signoff is required before the gate can pass, but overall gate ownership remains with the Gate Decision Owner.
+7. PMO audit findings may reopen a passed gate only when a material completeness failure or material control failure is later discovered.
 
-**Likely agent assumption**
-An agent would likely add an internal checklist or approval review without knowing your preferred review mechanism.
-
-**Question to resolve**
-How should framework outputs be reviewed: peer review, PMO checkpoint, architecture review, delivery readiness review, or another mechanism?
+**Implication for implementation**
+The framework MUST apply the review mechanism in Section 2.10 rather than inventing local review boards, ad hoc signoff chains, or informal audit rules.
 
 ### 6.13 Critical stage-defining artifact mapping is deferred
 
